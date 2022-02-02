@@ -1,5 +1,4 @@
 baseURL: "https://wenrong274.github.io/devblog/"
-publishDir : "docs"
 title: 開發焦油坑
 paginate: 5
 theme: PaperMod
