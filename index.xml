@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>開發焦油坑</title>
+    <link>https://wenrong274.github.io/devblog/</link>
+    <description>Recent content on 開發焦油坑</description>
+    <image>
+      <url>https://i.imgur.com/9AfQkBz.png</url>
+      <link>https://i.imgur.com/9AfQkBz.png</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 03 Feb 2022 00:49:46 +0800</lastBuildDate><atom:link href="https://wenrong274.github.io/devblog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://wenrong274.github.io/devblog/posts/hello-world/</link>
+      <pubDate>Thu, 03 Feb 2022 00:49:46 +0800</pubDate>
+      
+      <guid>https://wenrong274.github.io/devblog/posts/hello-world/</guid>
+      <description>Hello world 我在2022-02-03建立了第一篇文章。</description>
+    </item>
+    
+  </channel>
+</rss>
