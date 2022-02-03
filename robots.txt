@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://wenrongdev.com/sitemap.xml
+Sitemap: https://wenrong274.github.io/blog/sitemap.xml
