@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Vuforia on Wenrong&#39;s Note</title>
+    <link>https://wenrongdev.com/tags/vuforia/</link>
+    <description>Recent content in Vuforia on Wenrong&#39;s Note</description>
+    <image>
+      <url>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IOS Build Note for Unity 2019 Vuforia</title>
+      <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <description>前言  Unity 2019.2.11f1 Vuforia 8.5.9  iOS Build and Run Error ld: library not found for -liPhone-lib clang: error: linker command failed with exit code 1 (use -v to see invocation) Solution - iOS Build and Run Error Build Setting -&amp;gt; Search Paths -&amp;gt; Library Search Paths
+移除 &amp;quot;$(SECROOT)&amp;quot; 參數
+iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but attempting to link with file built for iOS-arm64.</description>
+    </item>
+    
+  </channel>
+</rss>

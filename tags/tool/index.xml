@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>tool on Wenrong&#39;s Note</title>
+    <link>https://wenrongdev.com/tags/tool/</link>
+    <description>Recent content in tool on Wenrong&#39;s Note</description>
+    <image>
+      <url>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 19 Dec 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Example Inno Setup</title>
+      <link>https://wenrongdev.com/posts/example-inno-setup/</link>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
+      <description>Install 去官網下載 Inno Setup，請下載 Stable Release 版本。
+Add Language  下載官方提供的 Github，直接下載 Releases 版本，完成後解壓縮。 複製 root/Files/Languages 資料夾，貼上並且覆蓋 Inno Setup 安裝資料夾。  使用方式 可以參考以下腳本，也可以自己寫，不知道寫法可以參考官方文件。
+#define MyAppGUID &amp;quot;{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}&amp;quot; #define MyAppName &amp;quot;Examle&amp;quot; #define MyAppFolder &amp;quot;ExampleFolder&amp;quot; #define MyAppSetupExeName &amp;quot;Examle&amp;quot; #define MyAppExeName &amp;quot;Examle.exe&amp;quot; #define MyAppURL &amp;quot;https://wenrongdev.com/&amp;quot; #define MyAppPublisher &amp;quot;wen rong studio&amp;quot; [Setup] AppId={#MyAppGUID} AppName={#MyAppName} AppVersion=0.1.0 AppVerName={#MyAppName} AppPublisher = {#MyAppPublisher} AppPublisherURL = {#MyAppURL} AppSupportURL = {#MyAppURL} AppUpdatesURL = {#MyAppURL} Compression = lzma2 DefaultDirName={commonpf32}\{#MyAppFolder} DisableProgramGroupPage=yes DefaultGroupName={#MyAppName} UninstallDisplayIcon={app}ForwardSlash{#MyAppExeName} SolidCompression = no OutputDir = &amp;quot;Setup&amp;quot; OutputBaseFilename = {#MyAppSetupExeName} ShowLanguageDialog=yes // 是否需要分割 DiskSpanning=yes SlicesPerDisk=3 DiskSliceSize=1566000000 /// [Languages] Name: EN; MessagesFile: &amp;quot;compiler:Default.</description>
+    </item>
+    
+  </channel>
+</rss>

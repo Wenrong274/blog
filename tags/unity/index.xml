@@ -1,30 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Wenrong&#39;s Note</title>
-    <link>https://wenrongdev.com/</link>
-    <description>Recent content on Wenrong&#39;s Note</description>
+    <title>Unity on Wenrong&#39;s Note</title>
+    <link>https://wenrongdev.com/tags/unity/</link>
+    <description>Recent content in Unity on Wenrong&#39;s Note</description>
     <image>
       <url>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Feb 2022 19:24:34 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://wenrongdev.com/profile/about/</link>
-      <pubDate>Thu, 03 Feb 2022 19:24:34 +0800</pubDate>
-      
-      <guid>https://wenrongdev.com/profile/about/</guid>
-      <description>我是黃文榮，是一位 Unity 工程師。
-從 2015 年 11 月開發到現在，有 5 年以上的獨立開發時間，且有上架超過 10 隻 App 至雙平台的經驗，並且長期維護公司主力產品。
-擁有 AR、VR、MR 等開發經驗，且能夠獨立完成內容。
-Experiences   2015/11月 - 至今 錦田雲端科技股份有限公司
- 維護、製作公司主力產品 Quest Cloud「探索雲」數位學習方塊。 製作 AR、VR、MR 遊戲。 客製化遊戲 App。    Skills   Unity Tools
- DOTween AssetBundle Addressable Assets System Vuforia Google Cardboard AR Foundation UniTask    Other
- Android Studio Xcode Windows Forms Git Inno Setup    Contact E-Mail：hybrid0930@gmail.</description>
-    </item>
-    
+    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Launch From Within a Unity App Another Unity App Android</title>
       <link>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
@@ -47,28 +32,6 @@ Demo Script private class PropertyInfo { public string elementA = string.Empty; 
     </item>
     
     <item>
-      <title>Example Inno Setup</title>
-      <link>https://wenrongdev.com/posts/example-inno-setup/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
-      <description>Install 去官網下載 Inno Setup，請下載 Stable Release 版本。
-Add Language  下載官方提供的 Github，直接下載 Releases 版本，完成後解壓縮。 複製 root/Files/Languages 資料夾，貼上並且覆蓋 Inno Setup 安裝資料夾。  使用方式 可以參考以下腳本，也可以自己寫，不知道寫法可以參考官方文件。
-#define MyAppGUID &amp;quot;{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}&amp;quot; #define MyAppName &amp;quot;Examle&amp;quot; #define MyAppFolder &amp;quot;ExampleFolder&amp;quot; #define MyAppSetupExeName &amp;quot;Examle&amp;quot; #define MyAppExeName &amp;quot;Examle.exe&amp;quot; #define MyAppURL &amp;quot;https://wenrongdev.com/&amp;quot; #define MyAppPublisher &amp;quot;wen rong studio&amp;quot; [Setup] AppId={#MyAppGUID} AppName={#MyAppName} AppVersion=0.1.0 AppVerName={#MyAppName} AppPublisher = {#MyAppPublisher} AppPublisherURL = {#MyAppURL} AppSupportURL = {#MyAppURL} AppUpdatesURL = {#MyAppURL} Compression = lzma2 DefaultDirName={commonpf32}\{#MyAppFolder} DisableProgramGroupPage=yes DefaultGroupName={#MyAppName} UninstallDisplayIcon={app}ForwardSlash{#MyAppExeName} SolidCompression = no OutputDir = &amp;quot;Setup&amp;quot; OutputBaseFilename = {#MyAppSetupExeName} ShowLanguageDialog=yes // 是否需要分割 DiskSpanning=yes SlicesPerDisk=3 DiskSliceSize=1566000000 /// [Languages] Name: EN; MessagesFile: &amp;quot;compiler:Default.</description>
-    </item>
-    
-    <item>
-      <title>Whitelist for Windows UAC</title>
-      <link>https://wenrongdev.com/posts/whitelist-for-windows-uac/</link>
-      <pubDate>Mon, 04 Nov 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
-      <description>前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
-已知限制條件  程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC  解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。
- Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker  C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @&amp;#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&amp;#34;; private readonly string keyValue = &amp;#34;~ RunAsInvoker&amp;#34;; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry.</description>
-    </item>
-    
-    <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
       <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
@@ -77,23 +40,6 @@ Add Language  下載官方提供的 Github，直接下載 Releases 版本，完�
       <description>前言  Unity 2019.2.11f1 Vuforia 8.5.9  iOS Build and Run Error ld: library not found for -liPhone-lib clang: error: linker command failed with exit code 1 (use -v to see invocation) Solution - iOS Build and Run Error Build Setting -&amp;gt; Search Paths -&amp;gt; Library Search Paths
 移除 &amp;quot;$(SECROOT)&amp;quot; 參數
 iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but attempting to link with file built for iOS-arm64.</description>
-    </item>
-    
-    <item>
-      <title>Install IPA With OTA</title>
-      <link>https://wenrongdev.com/posts/install-ipa-with-ota/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
-      
-      <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
-      <description>前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-  將分享網址裡的 www.dropbox.com 替換為 dl.</description>
     </item>
     
     <item>
@@ -138,8 +84,6 @@ Path: root/Assets/WebGLTemplates/LogoTemplate/logo.png
 使用方式 直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。
 Script public class FixRectMask2dWebGL : MonoBehaviour { #if PlatformWebGL  private void Awake() { var items = GetComponentsInChildren&amp;lt;MaskableGraphic&amp;gt;(true); for (int i = 0; i &amp;lt; items.Length; i++) { Material m = items[i].materialForRendering; if (m != null) m.EnableKeyword(&amp;#34;UNITY_UI_CLIP_RECT&amp;#34;); } } #endif }  參考文章</description>
     </item>
-    
-    
     
   </channel>
 </rss>

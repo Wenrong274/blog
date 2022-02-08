@@ -3,11 +3,11 @@
 <meta http-equiv=x-ua-compatible content="IE=edge">
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
-<title>Tags | Wenrong's Note</title>
+<title>C# | Wenrong's Note</title>
 <meta name=keywords content>
 <meta name=description content>
 <meta name=author content>
-<link rel=canonical href=https://wenrongdev.com/tags/>
+<link rel=canonical href=https://wenrongdev.com/tags/c#/>
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
 <link rel=icon href=https://wenrongdev.com/icons/logo.png>
 <link rel=icon type=image/png sizes=16x16 href=https://wenrongdev.com/icons/logo.png>
@@ -17,20 +17,20 @@
 <meta name=theme-color content="#2e2e33">
 <meta name=msapplication-TileColor content="#2e2e33">
 <meta name=generator content="Hugo 0.91.2">
-<link rel=alternate type=application/rss+xml href=https://wenrongdev.com/tags/index.xml>
+<link rel=alternate type=application/rss+xml href=https://wenrongdev.com/tags/c#/index.xml>
 <noscript>
 <style>#theme-toggle,.top-link{display:none}</style>
 <style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style>
 </noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-GRV3BQC1BQ',{anonymize_ip:!1})}</script>
-<meta property="og:title" content="Tags">
+<meta property="og:title" content="C#">
 <meta property="og:description" content>
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://wenrongdev.com/tags/"><meta property="og:image" content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="Wenrong's Note">
+<meta property="og:url" content="https://wenrongdev.com/tags/c#/"><meta property="og:image" content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="og:site_name" content="Wenrong's Note">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
-<meta name=twitter:title content="Tags">
+<meta name=twitter:title content="C#">
 <meta name=twitter:description content>
 </head>
 <body class=list id=top>
@@ -57,7 +57,7 @@
 </li>
 <li>
 <a href=https://wenrongdev.com/tags/ title=Tags>
-<span class=active>Tags</span>
+<span>Tags</span>
 </a>
 </li>
 <li>
@@ -74,26 +74,22 @@
 </nav>
 </header>
 <main class=main>
-<header class=page-header>
-<h1>Tags</h1>
+<header class=page-header><div class=breadcrumbs><a href=https://wenrongdev.com/>Home</a>&nbsp;»&nbsp;<a href=https://wenrongdev.com/tags/>Tags</a></div>
+<h1>C#</h1>
 </header>
-<ul class=terms-tags>
-<li>
-<a href=https://wenrongdev.com/tags/c#/>C# <sup><strong><sup>1</sup></strong></sup> </a>
-</li>
-<li>
-<a href=https://wenrongdev.com/tags/ios/>iOS <sup><strong><sup>1</sup></strong></sup> </a>
-</li>
-<li>
-<a href=https://wenrongdev.com/tags/tool/>tool <sup><strong><sup>1</sup></strong></sup> </a>
-</li>
-<li>
-<a href=https://wenrongdev.com/tags/unity/>Unity <sup><strong><sup>6</sup></strong></sup> </a>
-</li>
-<li>
-<a href=https://wenrongdev.com/tags/vuforia/>Vuforia <sup><strong><sup>1</sup></strong></sup> </a>
-</li>
-</ul>
+<article class="post-entry tag-entry">
+<header class=entry-header>
+<h2>Whitelist for Windows UAC
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
+已知限制條件 程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC 解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。
+Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @"Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; private readonly string keyValue = "~ RunAsInvoker"; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry....</p>
+</section>
+<footer class=entry-footer><span title="2019-11-04 00:00:00 +0800 +0800">2019-11-04</span></footer>
+<a class=entry-link aria-label="post link to Whitelist for Windows UAC" href=https://wenrongdev.com/posts/whitelist-for-windows-uac/></a>
+</article>
 </main>
 <footer class=footer>
 <span>&copy; 2022 <a href=https://wenrongdev.com/>Wenrong's Note</a></span>
