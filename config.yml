@@ -8,11 +8,21 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-# googleAnalytics: UA-123-45
+googleAnalytics: G-GRV3BQC1BQ
 
 minify:
     disableXML: true
     minifyOutput: true
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -21,7 +31,7 @@ params:
     keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
     # author: ["Me", "You"] # multiple authors
     images: ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat: "2006-02-06"
+    DateFormat: "2006-01-02"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
 
@@ -69,7 +79,7 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Hi \U0001F44B"
+        Title: "Hi 歡迎來到焦油坑"
         Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
 
     socialIcons:
@@ -118,6 +128,7 @@ menu:
           name: Search
           url: /search/
           weight: 20
+
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
 # markup:
