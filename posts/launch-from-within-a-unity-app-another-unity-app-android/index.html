@@ -9,6 +9,9 @@
 Demo Script private class PropertyInfo { public string elementA = string.Empty; public string elementB = string.Empty; public string elementC = string.Empty; } public void Launch(string bundleId, string storelink) { bool fail = false; AndroidJavaClass up = new AndroidJavaClass(&#34;com.unity3d.player.UnityPlayer&#34;); AndroidJavaObject ca = up.GetStatic<AndroidJavaObject>(&#34;currentActivity&#34;); AndroidJavaObject packageManager = ca.Call<AndroidJavaObject>(&#34;getPackageManager&#34;); AndroidJavaObject launchIntent = null; try { launchIntent = packageManager.Call<AndroidJavaObject>(&#34;getLaunchIntentForPackage&#34;, bundleId); } catch (Exception e) { fail = true; } if (fail || launchIntent == null) Application.">
 <meta name=author content>
 <link rel=canonical href=https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/>
+<meta name=google-site-verification content="XYZabc">
+<meta name=yandex-verification content="XYZabc">
+<meta name=msvalidate.01 content="XYZabc">
 <link crossorigin=anonymous href=/assets/css/stylesheet.min.c88963fe2d79462000fd0fb1b3737783c32855d340583e4523343f8735c787f0.css integrity="sha256-yIlj/i15RiAA/Q+xs3N3g8MoVdNAWD5FIzQ/hzXHh/A=" rel="preload stylesheet" as=style>
 <script defer crossorigin=anonymous src=/assets/js/highlight.min.7680afc38aa6b15ddf158a4f3780b7b1f7dde7e91d26f073e6229bb7a0793c92.js integrity="sha256-doCvw4qmsV3fFYpPN4C3sffd5+kdJvBz5iKbt6B5PJI=" onload=hljs.initHighlightingOnLoad()></script>
 <link rel=icon href=https://wenrongdev.com/icons/logo.png>
