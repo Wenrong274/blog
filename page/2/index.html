@@ -81,75 +81,92 @@
 <main class=main>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Install IPA With OTA
+<h2>Add Text Spacing for Unity
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link 先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-將分享網址裡的 www.dropbox.com 替換為 dl....</p>
+<p>前言 在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。
+Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.UI; [AddComponentMenu("UI/Effects/TextSpacing")] public class TextSpacing : BaseMeshEffect { #region Struct public enum HorizontalAligmentType { Left, Center, Right } public class Line { // 起點索引 public int StartVertexIndex { get { return _startVertexIndex; } } private int _startVertexIndex = 0; // 終點索引 public int EndVertexIndex { get { return _endVertexIndex; } } private int _endVertexIndex = 0; // 該行佔的點數目 public int VertexCount { get { return _vertexCount; } } private int _vertexCount = 0; public Line(int startVertexIndex, int length) { _startVertexIndex = startVertexIndex; _endVertexIndex = length * 6 - 1 + startVertexIndex; _vertexCount = length * 6; } } #endregion public float Spacing = 1f; public override void ModifyMesh(VertexHelper vh) { if (!...</p>
 </section>
-<footer class=entry-footer><span title="2019-10-10 00:00:00 +0800 +0800">2019-10-10</span></footer>
-<a class=entry-link aria-label="post link to Install IPA With OTA" href=https://wenrongdev.com/posts/install-ipa-with-ota/></a>
+<footer class=entry-footer><span title="2020-04-08 02:11:48 +0800 +0800">2020-04-08</span></footer>
+<a class=entry-link aria-label="post link to Add Text Spacing for Unity" href=https://wenrongdev.com/posts/add-text-spacing-for-unity/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Unity 5.3 Native System Language
+<h2>Mobile Joystick
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 在 Unity API 中有 Application.systemLanguage 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。
-Windows Platform 利用 GetSystemDefaultLCID 取得本機端語系，再利用 CultureInfo.GetCultureInfo 轉化為本機端語系文化。
-[DllImport("kernel32.dll")] 參考文章
-Android Platform 直接呼叫原生系統 API 取得。
-private static string CurrentAndroidLanguage() { string result = ""; using (AndroidJavaClass cls = new AndroidJavaClass("java.util.Locale")) { if (cls != null) { using (AndroidJavaObject locale = cls.CallStatic("getDefault")) { if (locale != null) { result = locale.Call("getLanguage") + "_" + locale.Call("getDefault"); Debug....</p>
+<p>前言 主要是用來測試虛擬搖桿功能。
+使用 Joystick Pack 支援各輸入端接口偛件。
+Tutorial Github </p>
 </section>
-<footer class=entry-footer><span title="2019-10-04 00:00:00 +0800 +0800">2019-10-04</span></footer>
-<a class=entry-link aria-label="post link to Unity 5.3 Native System Language" href=https://wenrongdev.com/posts/unity-5.3-native-system-language/></a>
+<footer class=entry-footer><span title="2020-03-30 02:17:14 +0800 +0800">2020-03-30</span></footer>
+<a class=entry-link aria-label="post link to Mobile Joystick" href=https://wenrongdev.com/posts/mobile-joystick/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Unity WebGL Template
+<h2>Folder Manager
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 執行 WebGL 時都會有 Unity Logo & Loading。目前此專案修改 Unity Logo 的部分。
-需要更詳細的內容可以參考官方文件（Unity Document）。
-會比較建議使用 Responsive WebGL Template，省去自己測試修改的麻煩，不過還是需要改 Logo、Icon 的部分。
-Setting Up Your Template Import Unitypackage
-Set up Unity Player Setting Edit -> Project Settings -> Player, On the WebGL tab -> Resolution and Presentation -> Selcet LogoTemplates
-Change Your Logo
-Logo 規格建議不要太大張。
-Path: root/Assets/WebGLTemplates/LogoTemplate/logo.png
-GitHub repo 參考文章
+<p>前言 視覺化管理使用路徑，不過目前功能還是很粗糙。
+Feature 視覺化管理
+Usage Create path 之後會在 Assets\FolderManager\StreamingAssets\FolderManager.asset 出現 asset。
+Asset 即是FolderManager.Folders，因此可以直接宣告此 class 使用。
+Github </p>
+</section>
+<footer class=entry-footer><span title="2020-03-29 02:11:48 +0800 +0800">2020-03-29</span></footer>
+<a class=entry-link aria-label="post link to Folder Manager" href=https://wenrongdev.com/posts/folder-manager/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
+<h2>Data Access WebGL
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。
+IndexedDB 是有容量大小限制，所以需要注意存儲的檔案大小。
+About IndexedDB Working with quota on mobile browsers
+GitHub Introduction File Path
+string.Format("{0}/{1}.dat", Application.persistentDataPath, FileName);
+Save Method
+DataAccess.Save(fileName, bytes);
+Load Method
+byte[] bytes = DataAccess.Load(fileName);
+Example Scene
+root\Assets\WebGL\Example\Scenes\Example
 </p>
 </section>
-<footer class=entry-footer><span title="2019-09-05 00:00:00 +0800 +0800">2019-09-05</span></footer>
-<a class=entry-link aria-label="post link to Unity WebGL Template" href=https://wenrongdev.com/posts/unity-webgl-template/></a>
+<footer class=entry-footer><span title="2020-02-27 01:58:17 +0800 +0800">2020-02-27</span></footer>
+<a class=entry-link aria-label="post link to Data Access WebGL" href=https://wenrongdev.com/posts/data-access-webgl/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
-<h2>Unity WebGL RectMask2D Does Not Work
+<h2>Unity Jenkins Build
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。
-建議還是先輸出測試確定 RectMask2D 失效再使用此 Script。
-使用方式 直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。
-Script public class FixRectMask2dWebGL : MonoBehaviour { #if PlatformWebGL private void Awake() { var items = GetComponentsInChildren&lt;MaskableGraphic>(true); for (int i = 0; i &lt; items.Length; i++) { Material m = items[i].materialForRendering; if (m != null) m.EnableKeyword("UNITY_UI_CLIP_RECT"); } } #endif } 參考文章</p>
+<p>前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
+Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL…）。
+並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
+Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
+Jenkins 頁面路徑為 Manage Jenkins -> Configure System -> Global properties。
+設定如下圖：
+Name：ANDROID_HOME
+Value：AndroidSDK 路徑。
+Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
+Jenkins 頁面路徑為 Manage Jenkins -> Global Tool Configuration -> JDK。
+Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
+Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available...</p>
 </section>
-<footer class=entry-footer><span title="2019-08-29 00:00:00 +0800 +0800">2019-08-29</span></footer>
-<a class=entry-link aria-label="post link to Unity WebGL RectMask2D Does Not Work" href=https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/></a>
+<footer class=entry-footer><span title="2020-02-25 02:05:19 +0800 +0800">2020-02-25</span></footer>
+<a class=entry-link aria-label="post link to Unity Jenkins Build" href=https://wenrongdev.com/posts/unity-jenkins-build/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=prev href=https://wenrongdev.com/>« Prev Page</a>
+<a class=next href=https://wenrongdev.com/page/3/>Next Page »</a>
 </nav>
 </footer>
 </main>

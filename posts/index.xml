@@ -9,7 +9,182 @@
       <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 02 Jan 2020 00:00:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Nov 2021 02:34:02 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity MathQuiz</title>
+      <link>https://wenrongdev.com/posts/unity-mathquiz/</link>
+      <pubDate>Mon, 29 Nov 2021 02:34:02 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
+      <description>前言 此專案為 Unity math quiz，是基於 Tutorial 2: Create a timed math quiz 文件改寫出來的專案。
+ </description>
+    </item>
+    
+    <item>
+      <title>Unity Calendar</title>
+      <link>https://wenrongdev.com/posts/unity-calendar/</link>
+      <pubDate>Thu, 17 Jun 2021 02:32:14 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-calendar/</guid>
+      <description>前言 使用方式 預設日期為當天日期。
+可以直接使用 UnityCalendar.GetDate() 取得使用者設定日期，假如有錯誤會回報錯誤。
+testGetDate.cs
+public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text = dt.ToString(&amp;#34;yyyy-MM-dd&amp;#34;); } public void OnClick_Clear() { text.text = string.Empty; unityCalendar.Init(); }  </description>
+    </item>
+    
+    <item>
+      <title>Unity Addressable</title>
+      <link>https://wenrongdev.com/posts/unity-addressable/</link>
+      <pubDate>Thu, 27 May 2021 02:29:03 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-addressable/</guid>
+      <description>前言 主要是實作 Addressable hotfix 的寫法。
+基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 Unity筆記 Addressable Asset System。
+詳細解說可以參考
+Unity Addressables 深入浅出(一)、(二)、(三)
+Unity Addressable 獨立資源包
+實例 Initialization Initial Addressable System 是必要的假如不初始化會造成一些使用上的問題。
+在 Start 上可直接初始化 Addressable System
+IEnumerator Start() { var InitAddressablesAsync = Addressables.InitializeAsync(); yield return InitAddressablesAsync; } Update Catalog Catalog 是所有檔案的紀錄檔(log)，不更新 Catalog 也是能下載 Asset，可是會造成無法 hotfix，所以需要再下載前更一次 Catalog。
+Catalog Path 依 Window 為例，Catalog 更新後會放自動放置在
+C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addressables
+   名稱 解釋     [PC Name] 系統使用者名稱   [Company Name] Unity 專案 Company Name   [Product Name] Unity 專案 Product Name    IEnumerator UpdateCatalogCoro() { List&amp;lt;string&amp;gt; catalogsToUpdate = new List&amp;lt;string&amp;gt;(); var checkCatalogHandle = Addressables.</description>
+    </item>
+    
+    <item>
+      <title>Unity ParticlePath</title>
+      <link>https://wenrongdev.com/posts/unity-particlepath/</link>
+      <pubDate>Sun, 09 May 2021 02:26:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-particlepath/</guid>
+      <description>GitHub  </description>
+    </item>
+    
+    <item>
+      <title>Unity Dimmer</title>
+      <link>https://wenrongdev.com/posts/unity-dimmer/</link>
+      <pubDate>Wed, 21 Oct 2020 02:26:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-dimmer/</guid>
+      <description>前言 Unity 調整 Android、iOS 系統亮度功能。
+使用方式 Dimmer.SetBrightness.DoAction(value); Github 參考連結 UnityからiOS&amp;amp;Androidの画面輝度をMAXにする方法
+ </description>
+    </item>
+    
+    <item>
+      <title>Add Text Spacing for Unity</title>
+      <link>https://wenrongdev.com/posts/add-text-spacing-for-unity/</link>
+      <pubDate>Wed, 08 Apr 2020 02:11:48 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/add-text-spacing-for-unity/</guid>
+      <description>前言 在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。
+Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.UI; [AddComponentMenu(&amp;#34;UI/Effects/TextSpacing&amp;#34;)] public class TextSpacing : BaseMeshEffect { #region Struct  public enum HorizontalAligmentType { Left, Center, Right } public class Line { // 起點索引  public int StartVertexIndex { get { return _startVertexIndex; } } private int _startVertexIndex = 0; // 終點索引  public int EndVertexIndex { get { return _endVertexIndex; } } private int _endVertexIndex = 0; // 該行佔的點數目  public int VertexCount { get { return _vertexCount; } } private int _vertexCount = 0; public Line(int startVertexIndex, int length) { _startVertexIndex = startVertexIndex; _endVertexIndex = length * 6 - 1 + startVertexIndex; _vertexCount = length * 6; } } #endregion  public float Spacing = 1f; public override void ModifyMesh(VertexHelper vh) { if (!</description>
+    </item>
+    
+    <item>
+      <title>Mobile Joystick</title>
+      <link>https://wenrongdev.com/posts/mobile-joystick/</link>
+      <pubDate>Mon, 30 Mar 2020 02:17:14 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/mobile-joystick/</guid>
+      <description>前言 主要是用來測試虛擬搖桿功能。
+使用 Joystick Pack 支援各輸入端接口偛件。
+Tutorial Github   </description>
+    </item>
+    
+    <item>
+      <title>Folder Manager</title>
+      <link>https://wenrongdev.com/posts/folder-manager/</link>
+      <pubDate>Sun, 29 Mar 2020 02:11:48 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/folder-manager/</guid>
+      <description>前言 視覺化管理使用路徑，不過目前功能還是很粗糙。
+Feature 視覺化管理
+Usage Create path 之後會在 Assets\FolderManager\StreamingAssets\FolderManager.asset 出現 asset。
+Asset 即是FolderManager.Folders，因此可以直接宣告此 class 使用。
+Github  </description>
+    </item>
+    
+    <item>
+      <title>Data Access WebGL</title>
+      <link>https://wenrongdev.com/posts/data-access-webgl/</link>
+      <pubDate>Thu, 27 Feb 2020 01:58:17 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
+      <description>前言 Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。
+IndexedDB 是有容量大小限制，所以需要注意存儲的檔案大小。
+About IndexedDB Working with quota on mobile browsers
+GitHub Introduction   File Path
+string.Format(&amp;quot;{0}/{1}.dat&amp;quot;, Application.persistentDataPath, FileName);
+  Save Method
+DataAccess.Save(fileName, bytes);
+  Load Method
+byte[] bytes = DataAccess.Load(fileName);
+  Example Scene
+root\Assets\WebGL\Example\Scenes\Example
+   </description>
+    </item>
+    
+    <item>
+      <title>Unity Jenkins Build</title>
+      <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
+      <pubDate>Tue, 25 Feb 2020 02:05:19 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
+      <description>前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
+Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&amp;hellip;）。
+並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
+Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
+Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Configure System -&amp;gt; Global properties。
+設定如下圖：
+Name：ANDROID_HOME
+Value：AndroidSDK 路徑。
+Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
+Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Global Tool Configuration -&amp;gt; JDK。
+Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
+Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Plugin Manager -&amp;gt; Available</description>
+    </item>
+    
+    <item>
+      <title>Hyperlinks in Unity Text</title>
+      <link>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</link>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</guid>
+      <description>前言 測試 LinkImageText 應用。
+主要內容 使用 QuickSheet 當資料庫，讓 FancyScrollView 顯示資料庫名字。
+點擊 FancyScrollView button 會在 HypeLinkText 顯示 name。
+點擊 HypeLinkText 超連結文字，會顯示超連結內容。
+GitHub repo  </description>
+    </item>
+    
+    <item>
+      <title>FCM Notifications Not Received on Android</title>
+      <link>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</link>
+      <pubDate>Thu, 16 Jan 2020 01:53:04 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</guid>
+      <description>前言 前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。
+測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。
+後來發現主因是省電模式（Doze mode）導致 APP 無法接受任何推波內容。
+參考連結 https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn
+https://blog.csdn.net/pkorochi/article/details/87186659
+ </description>
+    </item>
+    
+    <item>
+      <title>Android P HTTP Error</title>
+      <link>https://wenrongdev.com/posts/android-p-http-error/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/android-p-http-error/</guid>
+      <description>前言 在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（Google Doc）
+Error Log：Cleartext HTTP traffic to 45.xx.xxx.xx not permitted
+Solution 在 AndroidManifest.xml 的 application 加入 android:usesCleartextTraffic=&amp;quot;true&amp;quot;。
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;manifest ...&amp;gt; &amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; &amp;lt;application ... android:usesCleartextTraffic=&amp;#34;true&amp;#34; ...&amp;gt; ... &amp;lt;/application&amp;gt; &amp;lt;/manifest&amp;gt; 參考連結 Android中HTTP网络请求相关问题
+ </description>
+    </item>
+    
     <item>
       <title>Launch From Within a Unity App Another Unity App Android</title>
       <link>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>

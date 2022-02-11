@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Android on Wenrong&#39;s Note</title>
+    <link>https://wenrongdev.com/tags/android/</link>
+    <description>Recent content in Android on Wenrong&#39;s Note</description>
+    <image>
+      <url>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 16 Jan 2020 01:53:04 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>FCM Notifications Not Received on Android</title>
+      <link>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</link>
+      <pubDate>Thu, 16 Jan 2020 01:53:04 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</guid>
+      <description>前言 前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。
+測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。
+後來發現主因是省電模式（Doze mode）導致 APP 無法接受任何推波內容。
+參考連結 https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn
+https://blog.csdn.net/pkorochi/article/details/87186659
+ </description>
+    </item>
+    
+    <item>
+      <title>Android P HTTP Error</title>
+      <link>https://wenrongdev.com/posts/android-p-http-error/</link>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/android-p-http-error/</guid>
+      <description>前言 在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（Google Doc）
+Error Log：Cleartext HTTP traffic to 45.xx.xxx.xx not permitted
+Solution 在 AndroidManifest.xml 的 application 加入 android:usesCleartextTraffic=&amp;quot;true&amp;quot;。
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;manifest ...&amp;gt; &amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; &amp;lt;application ... android:usesCleartextTraffic=&amp;#34;true&amp;#34; ...&amp;gt; ... &amp;lt;/application&amp;gt; &amp;lt;/manifest&amp;gt; 參考連結 Android中HTTP网络请求相关问题
+ </description>
+    </item>
+    
+  </channel>
+</rss>
