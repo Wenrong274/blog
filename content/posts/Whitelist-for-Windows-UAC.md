@@ -2,6 +2,7 @@
 title: "Whitelist for Windows UAC"
 date: 2019-11-04T00:00:00+08:00
 draft: false
+showtoc: true
 tags: ["C#"]
 ---
 ## 前言

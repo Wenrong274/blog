@@ -1,0 +1,154 @@
+baseURL: "https://wenrongdev.com/"
+title: Wenrong's Note
+paginate: 5
+theme: PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: G-GRV3BQC1BQ
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+sitemap:
+  changefreq: monthly
+  filename: sitemap.xml
+  priority: 0.5
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+  series: "series"
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: Wenrong's Note
+    description: ""
+    keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
+    # author: ["Me", "You"] # multiple authors
+    images: ["<link or path of image for opengraph, twitter-cards>"]
+    DateFormat: "2006-01-02"
+    defaultTheme: auto # dark, light
+    disableThemeToggle: false
+
+    ShowReadingTime: false
+    ShowShareButtons: true
+    ShowPostNavLinks: true
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
+    disableSpecial1stPost: false
+    disableScrollToTop: false
+    comments: false
+    hidemeta: false
+    hideSummary: false
+    showtoc: false
+    tocopen: false
+
+    assets:
+        # disableHLJS: true # to disable highlight.js
+        # disableFingerprinting: true
+        favicon: "icons/logo.png"
+        favicon16x16: "icons/logo.png"
+        favicon32x32: "icons/logo.png"
+        apple_touch_icon: "icons/logo.png"
+        safari_pinned_tab: "icons/logo.png"
+
+    label:
+        text: "Wenrong's Note"
+       # icon: logo.png
+       # iconHeight: 28
+
+    # profile-mode
+    profileMode:
+        enabled: false # needs to be explicitly set
+        title: ExampleSite
+        subtitle: "This is subtitle"
+        imageUrl: "<img location>"
+        imageWidth: 120
+        imageHeight: 120
+        imageTitle: my image
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi 歡迎來到焦油坑"
+        Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
+
+    socialIcons:
+        - name: github
+          url: "https://github.com/Wenrong274"
+
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
+        bing:
+            SiteVerificationTag: "XYZabc"
+        yandex:
+            SiteVerificationTag: "XYZabc"
+
+    cover:
+        hidden: true # hide everywhere but not in structured data
+        hiddenInList: true # hide on list pages and home
+        hiddenInSingle: true # hide on single page
+
+    editPost:
+        URL: "https://github.com/Wenrong274/blog/tree/main/content"
+        Text: "Suggest Changes" # edit text
+        appendFilePath: true # to append file path to Edit link
+
+    # for search
+    # https://fusejs.io/api/options.html
+    fuseOpts:
+        isCaseSensitive: false
+        shouldSort: true
+        location: 0
+        distance: 1000
+        threshold: 0.4
+        minMatchCharLength: 0
+        keys: ["title", "permalink", "summary", "content"]
+menu:
+    main:
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 5
+        - identifier: categories
+          name: Categories
+          url: /categories/
+          weight: 10
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 10
+        - identifier: about
+          name: About
+          url: /profile/about/
+          weight: 20
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 20
+
+# Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
+# pygmentsUseClasses: true
+# markup:
+#     highlight:
+#         # anchorLineNos: true
+#         codeFences: true
+#         guessSyntax: true
+#         lineNos: true
+#         style: monokai
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary

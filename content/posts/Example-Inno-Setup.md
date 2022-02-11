@@ -2,6 +2,7 @@
 title: "Example Inno Setup"
 date: 2019-12-19T00:00:00+08:00
 draft: false
+showtoc: true
 tags: ["tool"]
 ---
 ## Install

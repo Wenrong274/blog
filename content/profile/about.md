@@ -4,6 +4,7 @@ date: 2022-02-03T19:24:34+08:00
 hideMeta: true
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
+searchHidden: true
 draft: fales
 ---
 

@@ -2,6 +2,7 @@
 title: "Install IPA With OTA"
 date: 2019-10-10T00:00:00+08:00
 draft: false
+showtoc: true
 tags: ["iOS"]
 ---
 ## 前言

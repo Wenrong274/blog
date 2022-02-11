@@ -2,6 +2,7 @@
 title: "Get Android Intent Data for Unity"
 date: 2019-12-26T00:00:00+08:00
 draft: false
+showtoc: true
 tags: ["Unity"]
 ---
 
