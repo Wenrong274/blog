@@ -10,7 +10,7 @@ buildExpired: false
 
 googleAnalytics: G-GRV3BQC1BQ
 
-disqusShortname: https-wenrongdev-com
+disqusShortname: wenrongdev
 
 minify:
     disableXML: true
