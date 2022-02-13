@@ -87,6 +87,10 @@ params:
     socialIcons:
         - name: github
           url: "https://github.com/Wenrong274"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/wen-rong-huang-032b69187/"
+        - name: email
+          url: "hybrid0930@gmail.com"
 
     analytics:
         google:

@@ -2,6 +2,7 @@
 title: "About"
 date: 2022-02-03T19:24:34+08:00
 hideMeta: true
+disableShare: true
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
 searchHidden: true
@@ -32,6 +33,7 @@ comments: false
   * Addressable Assets System
   * Vuforia
   * Google Cardboard
+  * Kinect
   * AR Foundation
   * UniTask
 
