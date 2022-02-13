@@ -6,6 +6,7 @@ ShowBreadCrumbs: false
 ShowPostNavLinks: false
 searchHidden: true
 draft: fales
+comments: false
 ---
 
 我是黃文榮，是一位 Unity 工程師。
