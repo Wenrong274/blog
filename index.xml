@@ -32,7 +32,7 @@ Experiences   2015/11月 - 至今 錦田雲端科技股份有限公司
       
       <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
       <description>前言 此專案為 Unity math quiz，是基於 Tutorial 2: Create a timed math quiz 文件改寫出來的專案。
- </description>
+Github  </description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@ Experiences   2015/11月 - 至今 錦田雲端科技股份有限公司
       <description>前言 使用方式 預設日期為當天日期。
 可以直接使用 UnityCalendar.GetDate() 取得使用者設定日期，假如有錯誤會回報錯誤。
 testGetDate.cs
-public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text = dt.ToString(&amp;#34;yyyy-MM-dd&amp;#34;); } public void OnClick_Clear() { text.text = string.Empty; unityCalendar.Init(); }  </description>
+public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text = dt.ToString(&amp;#34;yyyy-MM-dd&amp;#34;); } public void OnClick_Clear() { text.text = string.Empty; unityCalendar.Init(); } Github  </description>
     </item>
     
     <item>
