@@ -1,6 +1,8 @@
 ---
 title: "Unity WebGL Template"
 date: 2019-09-05T00:00:00+08:00
+description: 執行 WebGL 時都會有 Unity Logo & Loading。目前此專案修改 Unity Logo 的部分。
+keywords: ["Unity","WebGL"]
 draft: false
 showtoc: true
 tags: ["Unity"]

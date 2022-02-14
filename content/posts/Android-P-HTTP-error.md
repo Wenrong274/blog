@@ -1,6 +1,8 @@
 ---
 title: "Android P HTTP Error"
 date: 2020-01-09T00:00:00+08:00
+description: 在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。
+keywords: ["Android"]
 draft: false
 showtoc: true
 tags: ["Android"]

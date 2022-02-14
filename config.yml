@@ -29,7 +29,7 @@ taxonomies:
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
     title: Wenrong's Note
-    description: ""
+    description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
     keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
     # author: ["Me", "You"] # multiple authors
     images: ["<link or path of image for opengraph, twitter-cards>"]

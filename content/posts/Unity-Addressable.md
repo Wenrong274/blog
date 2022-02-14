@@ -1,6 +1,8 @@
 ---
 title: "Unity Addressable"
 date: 2021-05-27T02:29:03+08:00
+description: 主要是實作 Addressable hotfix 的寫法。
+keywords: ["Unity","Addressable"]
 draft: false
 showtoc: true
 tags: ["Unity"]

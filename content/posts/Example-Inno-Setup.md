@@ -1,6 +1,8 @@
 ---
 title: "Example Inno Setup"
 date: 2019-12-19T00:00:00+08:00
+description: 簡易使用 Inno Setup 打包教學。
+keywords: ["Inno Setup","script-driven installation"]
 draft: false
 showtoc: true
 tags: ["tool"]

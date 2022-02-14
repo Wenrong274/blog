@@ -1,6 +1,8 @@
 ---
 title: "Mobile Joystick"
 date: 2020-03-30T02:17:14+08:00
+description: 主要是用來測試 Unity 虛擬搖桿功能。
+keywords: ["Unity","Joystick"]
 draft: false
 showtoc: true
 tags: ["Unity"]
