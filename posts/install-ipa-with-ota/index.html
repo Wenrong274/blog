@@ -4,16 +4,8 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
 <title>Install IPA With OTA | Wenrong's Note</title>
-<meta name=keywords content="iOS">
-<meta name=description content="前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-  將分享網址裡的 www.dropbox.com 替換為 dl.">
+<meta name=keywords content="iOS,OTA,iPA">
+<meta name=description content="由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。">
 <meta name=author content>
 <link rel=canonical href=https://wenrongdev.com/posts/install-ipa-with-ota/>
 <meta name=google-site-verification content="XYZabc">
@@ -36,15 +28,7 @@ Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-GRV3BQC1BQ',{anonymize_ip:!1})}</script>
 <meta property="og:title" content="Install IPA With OTA">
-<meta property="og:description" content="前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-  將分享網址裡的 www.dropbox.com 替換為 dl.">
+<meta property="og:description" content="由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wenrongdev.com/posts/install-ipa-with-ota/"><meta property="og:image" content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2019-10-10T00:00:00+08:00">
@@ -52,17 +36,9 @@ Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:title content="Install IPA With OTA">
-<meta name=twitter:description content="前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-  將分享網址裡的 www.dropbox.com 替換為 dl.">
+<meta name=twitter:description content="由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wenrongdev.com/posts/"},{"@type":"ListItem","position":2,"name":"Install IPA With OTA","item":"https://wenrongdev.com/posts/install-ipa-with-ota/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Install IPA With OTA","name":"Install IPA With OTA","description":"前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。\n其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？\nUsing OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html\n.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。\n還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。\n所以只要使用 Host Website 就可以安裝了。\n參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1\nUpload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。\n  將分享網址裡的 www.dropbox.com 替換為 dl.","keywords":["iOS"],"articleBody":"前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。\n其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？\nUsing OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html\n.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。\n還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。\n所以只要使用 Host Website 就可以安裝了。\n參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1\nUpload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。\n  將分享網址裡的 www.dropbox.com 替換為 dl.dropboxusercontent.com。\n  紀錄修改 public link。\n  Create manifest.plist  items   assets   kind software-package url http://YOUR_SERVER_URL/YOUR-IPA-FILE.ipa   metadata  bundle-identifier com.yourCompany.productName bundle-version 1.0.0 kind software title YOUR APP NAME      修改好 public link、app info 就完成 .plist。\nCreate index.html  html head titleApp installtitle head body h2buildsh2 a href=\"itms-services://?action=download-manifest\u0026url=http://YOUR_SERVER_URL/manifest.plist\" Appabody body html 把 url=http://YOUR_SERVER_URL/manifest.plist 替換成 Website manifest.plist。\nHosting using Github  Create a new repository（教學文章） 上傳 manifest.plist、index.html  得到 Github Website index.html就可以安裝 .ipa\n參考文章 iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？\n從網路上下載ipa檔並且安裝在iPhone or iPad(Download and install an ipa from url on iOS)\nError when distributing an IPA over the air with dropbox - iOS 7.1\n使用 GitHub 免費製作個人網站\n ","wordCount":"192","inLanguage":"en","datePublished":"2019-10-10T00:00:00+08:00","dateModified":"2019-10-10T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/install-ipa-with-ota/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/icons/logo.png"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Install IPA With OTA","name":"Install IPA With OTA","description":"由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。","keywords":["iOS","OTA","iPA"],"articleBody":"前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。\n其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？\nUsing OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html\n.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。\n還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。\n所以只要使用 Host Website 就可以安裝了。\n參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1\nUpload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。\n  將分享網址裡的 www.dropbox.com 替換為 dl.dropboxusercontent.com。\n  紀錄修改 public link。\n  Create manifest.plist  items   assets   kind software-package url http://YOUR_SERVER_URL/YOUR-IPA-FILE.ipa   metadata  bundle-identifier com.yourCompany.productName bundle-version 1.0.0 kind software title YOUR APP NAME      修改好 public link、app info 就完成 .plist。\nCreate index.html  html head titleApp installtitle head body h2buildsh2 a href=\"itms-services://?action=download-manifest\u0026url=http://YOUR_SERVER_URL/manifest.plist\" Appabody body html 把 url=http://YOUR_SERVER_URL/manifest.plist 替換成 Website manifest.plist。\nHosting using Github  Create a new repository（教學文章） 上傳 manifest.plist、index.html  得到 Github Website index.html就可以安裝 .ipa\n參考文章 iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？\n從網路上下載ipa檔並且安裝在iPhone or iPad(Download and install an ipa from url on iOS)\nError when distributing an IPA over the air with dropbox - iOS 7.1\n使用 GitHub 免費製作個人網站\n ","wordCount":"192","inLanguage":"en","datePublished":"2019-10-10T00:00:00+08:00","dateModified":"2019-10-10T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/install-ipa-with-ota/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/icons/logo.png"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -111,6 +87,9 @@ Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上
 <h1 class=post-title>
 Install IPA With OTA
 </h1>
+<div class=post-description>
+由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
+</div>
 <div class=post-meta><span title="2019-10-10 00:00:00 +0800 +0800">2019-10-10</span>&nbsp;|&nbsp;<a href=https://github.com/Wenrong274/blog/tree/main/content/posts/Install-IPA-with-OTA.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>

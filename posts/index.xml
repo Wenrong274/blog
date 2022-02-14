@@ -16,8 +16,7 @@
       <pubDate>Mon, 29 Nov 2021 02:34:02 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
-      <description>前言 此專案為 Unity math quiz，是基於 Tutorial 2: Create a timed math quiz 文件改寫出來的專案。
-Github  </description>
+      <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
     </item>
     
     <item>
@@ -26,10 +25,7 @@ Github  </description>
       <pubDate>Thu, 17 Jun 2021 02:32:14 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-calendar/</guid>
-      <description>前言 使用方式 預設日期為當天日期。
-可以直接使用 UnityCalendar.GetDate() 取得使用者設定日期，假如有錯誤會回報錯誤。
-testGetDate.cs
-public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text = dt.ToString(&amp;#34;yyyy-MM-dd&amp;#34;); } public void OnClick_Clear() { text.text = string.Empty; unityCalendar.Init(); } Github  </description>
+      <description>Unity 實做日曆功能</description>
     </item>
     
     <item>
@@ -38,17 +34,7 @@ public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text
       <pubDate>Thu, 27 May 2021 02:29:03 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-addressable/</guid>
-      <description>前言 主要是實作 Addressable hotfix 的寫法。
-基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 Unity筆記 Addressable Asset System。
-詳細解說可以參考
-Unity Addressables 深入浅出(一)、(二)、(三)
-Unity Addressable 獨立資源包
-實例 Initialization Initial Addressable System 是必要的假如不初始化會造成一些使用上的問題。
-在 Start 上可直接初始化 Addressable System
-IEnumerator Start() { var InitAddressablesAsync = Addressables.InitializeAsync(); yield return InitAddressablesAsync; } Update Catalog Catalog 是所有檔案的紀錄檔(log)，不更新 Catalog 也是能下載 Asset，可是會造成無法 hotfix，所以需要再下載前更一次 Catalog。
-Catalog Path 依 Window 為例，Catalog 更新後會放自動放置在
-C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addressables
-   名稱 解釋     [PC Name] 系統使用者名稱   [Company Name] Unity 專案 Company Name   [Product Name] Unity 專案 Product Name    IEnumerator UpdateCatalogCoro() { List&amp;lt;string&amp;gt; catalogsToUpdate = new List&amp;lt;string&amp;gt;(); var checkCatalogHandle = Addressables.</description>
+      <description>主要是實作 Addressable hotfix 的寫法。</description>
     </item>
     
     <item>
@@ -57,7 +43,7 @@ C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addr
       <pubDate>Sun, 09 May 2021 02:26:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-particlepath/</guid>
-      <description>GitHub  </description>
+      <description>Unity 實作粒子路徑系統</description>
     </item>
     
     <item>
@@ -66,9 +52,7 @@ C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addr
       <pubDate>Wed, 21 Oct 2020 02:26:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-dimmer/</guid>
-      <description>前言 Unity 調整 Android、iOS 系統亮度功能。
-使用方式 Dimmer.SetBrightness.DoAction(value); Github 參考連結 UnityからiOS&amp;amp;Androidの画面輝度をMAXにする方法
- </description>
+      <description>Unity 調整 Android、iOS 系統亮度功能。</description>
     </item>
     
     <item>
@@ -77,8 +61,7 @@ C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addr
       <pubDate>Wed, 08 Apr 2020 02:11:48 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/add-text-spacing-for-unity/</guid>
-      <description>前言 在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。
-Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.UI; [AddComponentMenu(&amp;#34;UI/Effects/TextSpacing&amp;#34;)] public class TextSpacing : BaseMeshEffect { #region Struct  public enum HorizontalAligmentType { Left, Center, Right } public class Line { // 起點索引  public int StartVertexIndex { get { return _startVertexIndex; } } private int _startVertexIndex = 0; // 終點索引  public int EndVertexIndex { get { return _endVertexIndex; } } private int _endVertexIndex = 0; // 該行佔的點數目  public int VertexCount { get { return _vertexCount; } } private int _vertexCount = 0; public Line(int startVertexIndex, int length) { _startVertexIndex = startVertexIndex; _endVertexIndex = length * 6 - 1 + startVertexIndex; _vertexCount = length * 6; } } #endregion  public float Spacing = 1f; public override void ModifyMesh(VertexHelper vh) { if (!</description>
+      <description>在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。</description>
     </item>
     
     <item>
@@ -87,9 +70,7 @@ Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.U
       <pubDate>Mon, 30 Mar 2020 02:17:14 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/mobile-joystick/</guid>
-      <description>前言 主要是用來測試虛擬搖桿功能。
-使用 Joystick Pack 支援各輸入端接口偛件。
-Tutorial Github   </description>
+      <description>主要是用來測試 Unity 虛擬搖桿功能。</description>
     </item>
     
     <item>
@@ -98,11 +79,7 @@ Tutorial Github   </description>
       <pubDate>Sun, 29 Mar 2020 02:11:48 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/folder-manager/</guid>
-      <description>前言 視覺化管理使用路徑，不過目前功能還是很粗糙。
-Feature 視覺化管理
-Usage Create path 之後會在 Assets\FolderManager\StreamingAssets\FolderManager.asset 出現 asset。
-Asset 即是FolderManager.Folders，因此可以直接宣告此 class 使用。
-Github  </description>
+      <description>Unity 視覺化管理使用路徑</description>
     </item>
     
     <item>
@@ -111,18 +88,7 @@ Github  </description>
       <pubDate>Thu, 27 Feb 2020 01:58:17 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
-      <description>前言 Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。
-IndexedDB 是有容量大小限制，所以需要注意存儲的檔案大小。
-About IndexedDB Working with quota on mobile browsers
-GitHub Introduction   File Path
-string.Format(&amp;quot;{0}/{1}.dat&amp;quot;, Application.persistentDataPath, FileName);
-  Save Method
-DataAccess.Save(fileName, bytes);
-  Load Method
-byte[] bytes = DataAccess.Load(fileName);
-  Example Scene
-root\Assets\WebGL\Example\Scenes\Example
-   </description>
+      <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
     </item>
     
     <item>
@@ -131,18 +97,7 @@ root\Assets\WebGL\Example\Scenes\Example
       <pubDate>Tue, 25 Feb 2020 02:05:19 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
-      <description>前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
-Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&amp;hellip;）。
-並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
-Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
-Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Configure System -&amp;gt; Global properties。
-設定如下圖：
-Name：ANDROID_HOME
-Value：AndroidSDK 路徑。
-Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
-Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Global Tool Configuration -&amp;gt; JDK。
-Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
-Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Plugin Manager -&amp;gt; Available</description>
+      <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
     </item>
     
     <item>
@@ -151,11 +106,7 @@ Jenkins 頁面路徑為 Manage Jenkins -&amp;gt; Plugin Manager -&amp;gt; Availa
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</guid>
-      <description>前言 測試 LinkImageText 應用。
-主要內容 使用 QuickSheet 當資料庫，讓 FancyScrollView 顯示資料庫名字。
-點擊 FancyScrollView button 會在 HypeLinkText 顯示 name。
-點擊 HypeLinkText 超連結文字，會顯示超連結內容。
-GitHub repo  </description>
+      <description>Unity uGUI Text support insert link and image</description>
     </item>
     
     <item>
@@ -164,12 +115,7 @@ GitHub repo  </description>
       <pubDate>Thu, 16 Jan 2020 01:53:04 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</guid>
-      <description>前言 前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。
-測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。
-後來發現主因是省電模式（Doze mode）導致 APP 無法接受任何推波內容。
-參考連結 https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn
-https://blog.csdn.net/pkorochi/article/details/87186659
- </description>
+      <description>沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。</description>
     </item>
     
     <item>
@@ -178,11 +124,7 @@ https://blog.csdn.net/pkorochi/article/details/87186659
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/android-p-http-error/</guid>
-      <description>前言 在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（Google Doc）
-Error Log：Cleartext HTTP traffic to 45.xx.xxx.xx not permitted
-Solution 在 AndroidManifest.xml 的 application 加入 android:usesCleartextTraffic=&amp;quot;true&amp;quot;。
-&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt; &amp;lt;manifest ...&amp;gt; &amp;lt;uses-permission android:name=&amp;#34;android.permission.INTERNET&amp;#34; /&amp;gt; &amp;lt;application ... android:usesCleartextTraffic=&amp;#34;true&amp;#34; ...&amp;gt; ... &amp;lt;/application&amp;gt; &amp;lt;/manifest&amp;gt; 參考連結 Android中HTTP网络请求相关问题
- </description>
+      <description>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
     </item>
     
     <item>
@@ -191,8 +133,7 @@ Solution 在 AndroidManifest.xml 的 application 加入 android:usesCleartextTra
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
-      <description>前言 主要用來 Unity app A 如何傳遞資訊給 Unity app B。
-Demo Script private class PropertyInfo { public string elementA = string.Empty; public string elementB = string.Empty; public string elementC = string.Empty; } public void Launch(string bundleId, string storelink) { bool fail = false; AndroidJavaClass up = new AndroidJavaClass(&amp;#34;com.unity3d.player.UnityPlayer&amp;#34;); AndroidJavaObject ca = up.GetStatic&amp;lt;AndroidJavaObject&amp;gt;(&amp;#34;currentActivity&amp;#34;); AndroidJavaObject packageManager = ca.Call&amp;lt;AndroidJavaObject&amp;gt;(&amp;#34;getPackageManager&amp;#34;); AndroidJavaObject launchIntent = null; try { launchIntent = packageManager.Call&amp;lt;AndroidJavaObject&amp;gt;(&amp;#34;getLaunchIntentForPackage&amp;#34;, bundleId); } catch (Exception e) { fail = true; } if (fail || launchIntent == null) Application.</description>
+      <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
     </item>
     
     <item>
@@ -201,9 +142,7 @@ Demo Script private class PropertyInfo { public string elementA = string.Empty; 
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</guid>
-      <description>前言 主要用來 A App 呼叫 B App 時，B App 該如何接受資料。
-而 B App 是使用 Unity 接收。
-Demo Script private class PropertyInfo { public string elementA = string.Empty; public string elementB = string.Empty; public string elementC = string.Empty; } public class ExternalCall : MonoBehaviour { PropertyInfo info = new PropertyInfo(); private void Awake() { #if (!UNITY_EDITOR &amp;amp;&amp;amp; UNITY_ANDROID)  CreatePushClass(new AndroidJavaClass(&amp;#34;com.unity3d.player.UnityPlayer&amp;#34;)); #endif  } public void CreatePushClass(AndroidJavaClass UnityPlayer) { #if UNITY_ANDROID  AndroidJavaObject currentActivity = UnityPlayer.</description>
+      <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。</description>
     </item>
     
     <item>
@@ -212,9 +151,7 @@ Demo Script private class PropertyInfo { public string elementA = string.Empty; 
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
-      <description>Install 去官網下載 Inno Setup，請下載 Stable Release 版本。
-Add Language  下載官方提供的 Github，直接下載 Releases 版本，完成後解壓縮。 複製 root/Files/Languages 資料夾，貼上並且覆蓋 Inno Setup 安裝資料夾。  使用方式 可以參考以下腳本，也可以自己寫，不知道寫法可以參考官方文件。
-#define MyAppGUID &amp;quot;{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}&amp;quot; #define MyAppName &amp;quot;Examle&amp;quot; #define MyAppFolder &amp;quot;ExampleFolder&amp;quot; #define MyAppSetupExeName &amp;quot;Examle&amp;quot; #define MyAppExeName &amp;quot;Examle.exe&amp;quot; #define MyAppURL &amp;quot;https://wenrongdev.com/&amp;quot; #define MyAppPublisher &amp;quot;wen rong studio&amp;quot; [Setup] AppId={#MyAppGUID} AppName={#MyAppName} AppVersion=0.1.0 AppVerName={#MyAppName} AppPublisher = {#MyAppPublisher} AppPublisherURL = {#MyAppURL} AppSupportURL = {#MyAppURL} AppUpdatesURL = {#MyAppURL} Compression = lzma2 DefaultDirName={commonpf32}\{#MyAppFolder} DisableProgramGroupPage=yes DefaultGroupName={#MyAppName} UninstallDisplayIcon={app}ForwardSlash{#MyAppExeName} SolidCompression = no OutputDir = &amp;quot;Setup&amp;quot; OutputBaseFilename = {#MyAppSetupExeName} ShowLanguageDialog=yes // 是否需要分割 DiskSpanning=yes SlicesPerDisk=3 DiskSliceSize=1566000000 /// [Languages] Name: EN; MessagesFile: &amp;quot;compiler:Default.</description>
+      <description>簡易使用 Inno Setup 打包教學。</description>
     </item>
     
     <item>
@@ -223,9 +160,7 @@ Add Language  下載官方提供的 Github，直接下載 Releases 版本，完�
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
-      <description>前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
-已知限制條件  程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC  解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。
- Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker  C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @&amp;#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&amp;#34;; private readonly string keyValue = &amp;#34;~ RunAsInvoker&amp;#34;; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry.</description>
+      <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
     </item>
     
     <item>
@@ -234,9 +169,7 @@ Add Language  下載官方提供的 Github，直接下載 Releases 版本，完�
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
-      <description>前言  Unity 2019.2.11f1 Vuforia 8.5.9  iOS Build and Run Error ld: library not found for -liPhone-lib clang: error: linker command failed with exit code 1 (use -v to see invocation) Solution - iOS Build and Run Error Build Setting -&amp;gt; Search Paths -&amp;gt; Library Search Paths
-移除 &amp;quot;$(SECROOT)&amp;quot; 參數
-iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but attempting to link with file built for iOS-arm64.</description>
+      <description>Vuforia iOS Build and Run Error</description>
     </item>
     
     <item>
@@ -245,15 +178,7 @@ iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but atte
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
-      <description>前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-  將分享網址裡的 www.dropbox.com 替換為 dl.</description>
+      <description>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</description>
     </item>
     
     <item>
@@ -262,11 +187,7 @@ Upload .ipa to Dropbox and Get public link   先把輸出好的 .ipa(ad-Hoc) 上
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-5.3-native-system-language/</guid>
-      <description>前言 在 Unity API 中有 Application.systemLanguage 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。
-Windows Platform 利用 GetSystemDefaultLCID 取得本機端語系，再利用 CultureInfo.GetCultureInfo 轉化為本機端語系文化。
-[DllImport(&amp;#34;kernel32.dll&amp;#34;)] 參考文章
-Android Platform 直接呼叫原生系統 API 取得。
-private static string CurrentAndroidLanguage() { string result = &amp;#34;&amp;#34;; using (AndroidJavaClass cls = new AndroidJavaClass(&amp;#34;java.util.Locale&amp;#34;)) { if (cls != null) { using (AndroidJavaObject locale = cls.CallStatic(&amp;#34;getDefault&amp;#34;)) { if (locale != null) { result = locale.Call(&amp;#34;getLanguage&amp;#34;) + &amp;#34;_&amp;#34; + locale.Call(&amp;#34;getDefault&amp;#34;); Debug.</description>
+      <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
     </item>
     
     <item>
@@ -275,16 +196,7 @@ private static string CurrentAndroidLanguage() { string result = &amp;#34;&amp;#
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-webgl-template/</guid>
-      <description>前言 執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。
-需要更詳細的內容可以參考官方文件（Unity Document）。
-會比較建議使用 Responsive WebGL Template，省去自己測試修改的麻煩，不過還是需要改 Logo、Icon 的部分。
-Setting Up Your Template   Import Unitypackage
-  Set up Unity Player Setting Edit -&amp;gt; Project Settings -&amp;gt; Player, On the WebGL tab -&amp;gt; Resolution and Presentation -&amp;gt; Selcet LogoTemplates
-  Change Your Logo
-Logo 規格建議不要太大張。
-Path: root/Assets/WebGLTemplates/LogoTemplate/logo.png
-  GitHub repo 參考文章
- </description>
+      <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
     </item>
     
     <item>
@@ -293,10 +205,7 @@ Path: root/Assets/WebGLTemplates/LogoTemplate/logo.png
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
-      <description>前言 此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。
-建議還是先輸出測試確定 RectMask2D 失效再使用此 Script。
-使用方式 直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。
-Script public class FixRectMask2dWebGL : MonoBehaviour { #if PlatformWebGL  private void Awake() { var items = GetComponentsInChildren&amp;lt;MaskableGraphic&amp;gt;(true); for (int i = 0; i &amp;lt; items.Length; i++) { Material m = items[i].materialForRendering; if (m != null) m.EnableKeyword(&amp;#34;UNITY_UI_CLIP_RECT&amp;#34;); } } #endif }  參考文章</description>
+      <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>
     </item>
     
   </channel>

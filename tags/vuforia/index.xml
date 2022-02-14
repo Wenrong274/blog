@@ -16,9 +16,7 @@
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
-      <description>前言  Unity 2019.2.11f1 Vuforia 8.5.9  iOS Build and Run Error ld: library not found for -liPhone-lib clang: error: linker command failed with exit code 1 (use -v to see invocation) Solution - iOS Build and Run Error Build Setting -&amp;gt; Search Paths -&amp;gt; Library Search Paths
-移除 &amp;quot;$(SECROOT)&amp;quot; 參數
-iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but attempting to link with file built for iOS-arm64.</description>
+      <description>Vuforia iOS Build and Run Error</description>
     </item>
     
   </channel>

@@ -4,19 +4,8 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
 <title>Unity Jenkins Build | Wenrong's Note</title>
-<meta name=keywords content="Unity,DevOps">
-<meta name=description content="前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
-Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&mldr;）。
-並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
-Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
-Jenkins 頁面路徑為 Manage Jenkins -> Configure System -> Global properties。
-設定如下圖：
-Name：ANDROID_HOME
-Value：AndroidSDK 路徑。
-Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
-Jenkins 頁面路徑為 Manage Jenkins -> Global Tool Configuration -> JDK。
-Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
-Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
+<meta name=keywords content="Unity,DevOps,Jenkins">
+<meta name=description content="此為使用 Jenkins 輸出 Unity 專案注意事項。">
 <meta name=author content>
 <link rel=canonical href=https://wenrongdev.com/posts/unity-jenkins-build/>
 <meta name=google-site-verification content="XYZabc">
@@ -39,18 +28,7 @@ Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script>
 <script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date),gtag('config','G-GRV3BQC1BQ',{anonymize_ip:!1})}</script>
 <meta property="og:title" content="Unity Jenkins Build">
-<meta property="og:description" content="前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
-Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&mldr;）。
-並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
-Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
-Jenkins 頁面路徑為 Manage Jenkins -> Configure System -> Global properties。
-設定如下圖：
-Name：ANDROID_HOME
-Value：AndroidSDK 路徑。
-Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
-Jenkins 頁面路徑為 Manage Jenkins -> Global Tool Configuration -> JDK。
-Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
-Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
+<meta property="og:description" content="此為使用 Jenkins 輸出 Unity 專案注意事項。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://wenrongdev.com/posts/unity-jenkins-build/"><meta property="og:image" content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts">
 <meta property="article:published_time" content="2020-02-25T02:05:19+08:00">
@@ -58,20 +36,9 @@ Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
 <meta name=twitter:card content="summary_large_image">
 <meta name=twitter:image content="https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E">
 <meta name=twitter:title content="Unity Jenkins Build">
-<meta name=twitter:description content="前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
-Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&mldr;）。
-並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
-Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
-Jenkins 頁面路徑為 Manage Jenkins -> Configure System -> Global properties。
-設定如下圖：
-Name：ANDROID_HOME
-Value：AndroidSDK 路徑。
-Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
-Jenkins 頁面路徑為 Manage Jenkins -> Global Tool Configuration -> JDK。
-Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
-Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
+<meta name=twitter:description content="此為使用 Jenkins 輸出 Unity 專案注意事項。">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wenrongdev.com/posts/"},{"@type":"ListItem","position":2,"name":"Unity Jenkins Build","item":"https://wenrongdev.com/posts/unity-jenkins-build/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity Jenkins Build","name":"Unity Jenkins Build","description":"前言 此為使用 Jenkins 輸出 Unity 專案注意事項。\nSetting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL\u0026hellip;）。\n並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。\nJenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。\nJenkins 頁面路徑為 Manage Jenkins -\u0026gt; Configure System -\u0026gt; Global properties。\n設定如下圖：\nName：ANDROID_HOME\nValue：AndroidSDK 路徑。\nJenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。\nJenkins 頁面路徑為 Manage Jenkins -\u0026gt; Global Tool Configuration -\u0026gt; JDK。\nJenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。\nJenkins 頁面路徑為 Manage Jenkins -\u0026gt; Plugin Manager -\u0026gt; Available","keywords":["Unity","DevOps"],"articleBody":"前言 此為使用 Jenkins 輸出 Unity 專案注意事項。\nSetting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL…）。\n並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。\nJenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。\nJenkins 頁面路徑為 Manage Jenkins - Configure System - Global properties。\n設定如下圖：\nName：ANDROID_HOME\nValue：AndroidSDK 路徑。\nJenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。\nJenkins 頁面路徑為 Manage Jenkins - Global Tool Configuration - JDK。\nJenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。\nJenkins 頁面路徑為 Manage Jenkins - Plugin Manager - Available\n安裝完成後，需要設定 Unity Editor 路徑。\nName：unity version\nInstallation directory：unity installed path\nJenkins item 基本設置可參考 使用jenkins建置unity3d專案 介紹。\n最主要是設定 Editor command line arguments。\n頁面路徑：Configure - General - Build\n點選 Add build step - invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。\n在 Editor command line arguments 輸入\n-projectPath \"$WORKSPACE/\" -executeMethod JenkinsBuild.BuildPlatforms -buildPath \"$WORKSPACE\\Builds\" -android -batchmode -nographics -quit -buildPath \"$WORKSPACE\\Builds\" “$WORKSPACE\\Builds 輸出放置資料夾路徑。\n-android 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。\nGitHub Repo reference 使用jenkins建置unity3d專案\nJenkins for Unity with DigitalOcean\n ","wordCount":"145","inLanguage":"en","datePublished":"2020-02-25T02:05:19+08:00","dateModified":"2020-02-25T02:05:19+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unity-jenkins-build/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/icons/logo.png"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity Jenkins Build","name":"Unity Jenkins Build","description":"此為使用 Jenkins 輸出 Unity 專案注意事項。","keywords":["Unity","DevOps","Jenkins"],"articleBody":"前言 此為使用 Jenkins 輸出 Unity 專案注意事項。\nSetting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL…）。\n並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。\nJenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。\nJenkins 頁面路徑為 Manage Jenkins - Configure System - Global properties。\n設定如下圖：\nName：ANDROID_HOME\nValue：AndroidSDK 路徑。\nJenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。\nJenkins 頁面路徑為 Manage Jenkins - Global Tool Configuration - JDK。\nJenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。\nJenkins 頁面路徑為 Manage Jenkins - Plugin Manager - Available\n安裝完成後，需要設定 Unity Editor 路徑。\nName：unity version\nInstallation directory：unity installed path\nJenkins item 基本設置可參考 使用jenkins建置unity3d專案 介紹。\n最主要是設定 Editor command line arguments。\n頁面路徑：Configure - General - Build\n點選 Add build step - invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。\n在 Editor command line arguments 輸入\n-projectPath \"$WORKSPACE/\" -executeMethod JenkinsBuild.BuildPlatforms -buildPath \"$WORKSPACE\\Builds\" -android -batchmode -nographics -quit -buildPath \"$WORKSPACE\\Builds\" “$WORKSPACE\\Builds 輸出放置資料夾路徑。\n-android 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。\nGitHub Repo reference 使用jenkins建置unity3d專案\nJenkins for Unity with DigitalOcean\n ","wordCount":"145","inLanguage":"en","datePublished":"2020-02-25T02:05:19+08:00","dateModified":"2020-02-25T02:05:19+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unity-jenkins-build/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/icons/logo.png"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -120,6 +87,9 @@ Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available">
 <h1 class=post-title>
 Unity Jenkins Build
 </h1>
+<div class=post-description>
+此為使用 Jenkins 輸出 Unity 專案注意事項。
+</div>
 <div class=post-meta><span title="2020-02-25 02:05:19 +0800 +0800">2020-02-25</span>&nbsp;|&nbsp;<a href=https://github.com/Wenrong274/blog/tree/main/content/posts/Unity-Jenkins-Build.md rel="noopener noreferrer" target=_blank>Suggest Changes</a>
 </div>
 </header> <div class=toc>
