@@ -1,7 +1,7 @@
 ---
 title: "Unity 5.3 Native System Language"
 date: 2019-10-04T00:00:00+08:00
-description: 使用 Unity 取得 Windows、Android、iOS 原生語系。
+description: "使用 Unity 取得 Windows、Android、iOS 原生語系。"
 keywords: ["Unity"]
 draft: false
 showtoc: true

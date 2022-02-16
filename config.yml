@@ -53,11 +53,11 @@ params:
     assets:
         # disableHLJS: true # to disable highlight.js
         # disableFingerprinting: true
-        favicon: "icons/logo.png"
-        favicon16x16: "icons/logo.png"
-        favicon32x32: "icons/logo.png"
-        apple_touch_icon: "icons/logo.png"
-        safari_pinned_tab: "icons/logo.png"
+        favicon: "/favicon.ico"
+        favicon16x16:  "/favicon-16x16.png"
+        favicon32x32:  "/favicon-32x32.png"
+        apple_touch_icon:  "/apple-touch-icon.png"
+        safari_pinned_tab:  "/safari-pinned-tab.svg"
 
     label:
         text: "Wenrong's Note"
@@ -67,7 +67,7 @@ params:
     # profile-mode
     profileMode:
         enabled: false # needs to be explicitly set
-        title: ExampleSite
+        title: Wenrong's Note
         subtitle: "This is subtitle"
         imageUrl: "<img location>"
         imageWidth: 120

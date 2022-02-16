@@ -1,7 +1,7 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-description: write something
+description: "write something"
 keywords: []
 draft: false
 showtoc: true

@@ -1,7 +1,7 @@
 ---
 title: "FCM Notifications Not Received on Android"
 date: 2020-01-16T01:53:04+08:00
-description: 沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。
+description: "沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。"
 keywords: ["Android","notification"]
 draft: false
 showtoc: true

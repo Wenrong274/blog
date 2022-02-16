@@ -1,7 +1,7 @@
 ---
 title: "IOS Build Note for Unity 2019 Vuforia"
 date: 2019-10-17T00:00:00+08:00
-description: Vuforia iOS Build and Run Error
+description: "Vuforia iOS Build and Run Error。"
 keywords: ["Unity","Vuforia","iOS"]
 draft: false
 showtoc: true

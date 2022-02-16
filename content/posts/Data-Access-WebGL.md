@@ -1,7 +1,7 @@
 ---
 title: "Data Access WebGL"
 date: 2020-02-27T01:58:17+08:00
-description:  Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。
+description: "Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。"
 keywords: ["Unity","WebGL"]
 draft: false
 showtoc: true

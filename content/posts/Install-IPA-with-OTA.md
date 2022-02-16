@@ -1,7 +1,7 @@
 ---
 title: "Install IPA With OTA"
 date: 2019-10-10T00:00:00+08:00
-description: 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
+description: "由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。"
 keywords: ["iOS","OTA","iPA"]
 draft: false
 showtoc: true

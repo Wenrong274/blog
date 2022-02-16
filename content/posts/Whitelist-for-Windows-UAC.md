@@ -1,7 +1,7 @@
 ---
 title: "Whitelist for Windows UAC"
 date: 2019-11-04T00:00:00+08:00
-description: 為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
+description: "為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。"
 keywords: ["C#","WebGL"]
 draft: false
 showtoc: true
