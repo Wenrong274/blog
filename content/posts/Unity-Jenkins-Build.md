@@ -1,7 +1,7 @@
 ---
 title: "Unity Jenkins Build"
 date: 2020-02-25T02:05:19+08:00
-description: "此為使用 Jenkins 輸出 Unity 專案注意事項。"
+summary: "此為使用 Jenkins 輸出 Unity 專案注意事項。"
 keywords: ["Unity","DevOps","Jenkins"]
 draft: false
 showtoc: true

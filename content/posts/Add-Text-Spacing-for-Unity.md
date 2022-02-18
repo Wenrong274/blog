@@ -1,7 +1,7 @@
 ---
 title: "Add Text Spacing for Unity"
 date: 2020-04-08T02:11:48+08:00
-description: "在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。"
+summary: "在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。"
 keywords: ["Unity"]
 draft: false
 showtoc: true

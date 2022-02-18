@@ -1,7 +1,7 @@
 ---
 title: "Get Android Intent Data for Unity"
 date: 2019-12-26T00:00:00+08:00
-description: "主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。"
+summary: "主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。"
 keywords: ["Unity","Android"]
 draft: false
 showtoc: true

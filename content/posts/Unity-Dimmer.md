@@ -1,7 +1,7 @@
 ---
 title: "Unity Dimmer"
 date: 2020-10-21T02:26:00+08:00
-description: "Unity 調整 Android、iOS 系統亮度功能。"
+summary: "Unity 調整 Android、iOS 系統亮度功能。"
 keywords: ["Unity","iOS"]
 draft: false
 showtoc: true
