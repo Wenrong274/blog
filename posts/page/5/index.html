@@ -87,16 +87,7 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 執行 WebGL 時都會有 Unity Logo & Loading。目前此專案修改 Unity Logo 的部分。
-需要更詳細的內容可以參考官方文件（Unity Document）。
-會比較建議使用 Responsive WebGL Template，省去自己測試修改的麻煩，不過還是需要改 Logo、Icon 的部分。
-Setting Up Your Template Import Unitypackage
-Set up Unity Player Setting Edit -> Project Settings -> Player, On the WebGL tab -> Resolution and Presentation -> Selcet LogoTemplates
-Change Your Logo
-Logo 規格建議不要太大張。
-Path: root/Assets/WebGLTemplates/LogoTemplate/logo.png
-GitHub repo 參考文章
-</p>
+<p>執行 WebGL 時都會有 Unity Logo & Loading。目前此專案修改 Unity Logo 的部分。</p>
 </section>
 <footer class=entry-footer><span title="2019-09-05 00:00:00 +0800 +0800">2019-09-05</span></footer>
 <a class=entry-link aria-label="post link to Unity WebGL Template" href=https://wenrongdev.com/posts/unity-webgl-template/></a>
@@ -107,10 +98,7 @@ GitHub repo 參考文章
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。
-建議還是先輸出測試確定 RectMask2D 失效再使用此 Script。
-使用方式 直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。
-Script public class FixRectMask2dWebGL : MonoBehaviour { #if PlatformWebGL private void Awake() { var items = GetComponentsInChildren&lt;MaskableGraphic>(true); for (int i = 0; i &lt; items.Length; i++) { Material m = items[i].materialForRendering; if (m != null) m.EnableKeyword("UNITY_UI_CLIP_RECT"); } } #endif } 參考文章</p>
+<p>用於 WebGL RectMask2D 失去作用的簡易修正。</p>
 </section>
 <footer class=entry-footer><span title="2019-08-29 00:00:00 +0800 +0800">2019-08-29</span></footer>
 <a class=entry-link aria-label="post link to Unity WebGL RectMask2D Does Not Work" href=https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/></a>

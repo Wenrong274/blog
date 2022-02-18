@@ -85,9 +85,7 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>Install 去官網下載 Inno Setup，請下載 Stable Release 版本。
-Add Language 下載官方提供的 Github，直接下載 Releases 版本，完成後解壓縮。 複製 root/Files/Languages 資料夾，貼上並且覆蓋 Inno Setup 安裝資料夾。 使用方式 可以參考以下腳本，也可以自己寫，不知道寫法可以參考官方文件。
-#define MyAppGUID "{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}" #define MyAppName "Examle" #define MyAppFolder "ExampleFolder" #define MyAppSetupExeName "Examle" #define MyAppExeName "Examle.exe" #define MyAppURL "https://wenrongdev.com/" #define MyAppPublisher "wen rong studio" [Setup] AppId={#MyAppGUID} AppName={#MyAppName} AppVersion=0.1.0 AppVerName={#MyAppName} AppPublisher = {#MyAppPublisher} AppPublisherURL = {#MyAppURL} AppSupportURL = {#MyAppURL} AppUpdatesURL = {#MyAppURL} Compression = lzma2 DefaultDirName={commonpf32}\{#MyAppFolder} DisableProgramGroupPage=yes DefaultGroupName={#MyAppName} UninstallDisplayIcon={app}ForwardSlash{#MyAppExeName} SolidCompression = no OutputDir = "Setup" OutputBaseFilename = {#MyAppSetupExeName} ShowLanguageDialog=yes // 是否需要分割 DiskSpanning=yes SlicesPerDisk=3 DiskSliceSize=1566000000 /// [Languages] Name: EN; MessagesFile: "compiler:Default....</p>
+<p>簡易使用 Inno Setup 打包教學。</p>
 </section>
 <footer class=entry-footer><span title="2019-12-19 00:00:00 +0800 +0800">2019-12-19</span></footer>
 <a class=entry-link aria-label="post link to Example Inno Setup" href=https://wenrongdev.com/posts/example-inno-setup/></a>
@@ -98,9 +96,7 @@ Add Language 下載官方提供的 Github，直接下載 Releases 版本，完�
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
-已知限制條件 程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC 解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。
-Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @"Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers"; private readonly string keyValue = "~ RunAsInvoker"; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry....</p>
+<p>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</p>
 </section>
 <footer class=entry-footer><span title="2019-11-04 00:00:00 +0800 +0800">2019-11-04</span></footer>
 <a class=entry-link aria-label="post link to Whitelist for Windows UAC" href=https://wenrongdev.com/posts/whitelist-for-windows-uac/></a>
@@ -111,9 +107,7 @@ Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\Software\Mi
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 Unity 2019.2.11f1 Vuforia 8.5.9 iOS Build and Run Error ld: library not found for -liPhone-lib clang: error: linker command failed with exit code 1 (use -v to see invocation) Solution - iOS Build and Run Error Build Setting -> Search Paths -> Library Search Paths
-移除 "$(SECROOT)" 參數
-iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but attempting to link with file built for iOS-arm64....</p>
+<p>Vuforia iOS Build and Run Error。</p>
 </section>
 <footer class=entry-footer><span title="2019-10-17 00:00:00 +0800 +0800">2019-10-17</span></footer>
 <a class=entry-link aria-label="post link to IOS Build Note for Unity 2019 Vuforia" href=https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/></a>
@@ -124,15 +118,7 @@ iOS Archive Error ld: warning: ignoring file ... building for iOS-armv7 but atte
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
-其他的安裝方式：iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？
-Using OTA 使用 OTA（Over-the-Air）需要有三個檔案 .ipa(ad-Hoc)、.plist、index.html
-.ipa(ad-Hoc) 需要上傳去雲端空間，目前選擇的雲端空間是 Dropbox。
-還需要 Host Website 上傳 .plist、index.html，目前選擇的是 GitHub。
-所以只要使用 Host Website 就可以安裝了。
-參考文章：Error when distributing an IPA over the air with dropbox - iOS 7.1
-Upload .ipa to Dropbox and Get public link 先把輸出好的 .ipa(ad-Hoc) 上傳至 Dropbox 並且設定分享。
-將分享網址裡的 www.dropbox.com 替換為 dl....</p>
+<p>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</p>
 </section>
 <footer class=entry-footer><span title="2019-10-10 00:00:00 +0800 +0800">2019-10-10</span></footer>
 <a class=entry-link aria-label="post link to Install IPA With OTA" href=https://wenrongdev.com/posts/install-ipa-with-ota/></a>
@@ -143,11 +129,7 @@ Upload .ipa to Dropbox and Get public link 先把輸出好的 .ipa(ad-Hoc) 上�
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 在 Unity API 中有 Application.systemLanguage 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。
-Windows Platform 利用 GetSystemDefaultLCID 取得本機端語系，再利用 CultureInfo.GetCultureInfo 轉化為本機端語系文化。
-[DllImport("kernel32.dll")] 參考文章
-Android Platform 直接呼叫原生系統 API 取得。
-private static string CurrentAndroidLanguage() { string result = ""; using (AndroidJavaClass cls = new AndroidJavaClass("java.util.Locale")) { if (cls != null) { using (AndroidJavaObject locale = cls.CallStatic("getDefault")) { if (locale != null) { result = locale.Call("getLanguage") + "_" + locale.Call("getDefault"); Debug....</p>
+<p>使用 Unity 取得 Windows、Android、iOS 原生語系。</p>
 </section>
 <footer class=entry-footer><span title="2019-10-04 00:00:00 +0800 +0800">2019-10-04</span></footer>
 <a class=entry-link aria-label="post link to Unity 5.3 Native System Language" href=https://wenrongdev.com/posts/unity-5.3-native-system-language/></a>

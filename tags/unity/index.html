@@ -86,8 +86,7 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 此專案為 Unity math quiz，是基於 Tutorial 2: Create a timed math quiz 文件改寫出來的專案。
-Github </p>
+<p>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</p>
 </section>
 <footer class=entry-footer><span title="2021-11-29 02:34:02 +0800 +0800">2021-11-29</span></footer>
 <a class=entry-link aria-label="post link to Unity MathQuiz" href=https://wenrongdev.com/posts/unity-mathquiz/></a>
@@ -98,10 +97,7 @@ Github </p>
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 使用方式 預設日期為當天日期。
-可以直接使用 UnityCalendar.GetDate() 取得使用者設定日期，假如有錯誤會回報錯誤。
-testGetDate.cs
-public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text = dt.ToString("yyyy-MM-dd"); } public void OnClick_Clear() { text.text = string.Empty; unityCalendar.Init(); } Github </p>
+<p>Unity 實做日曆功能。</p>
 </section>
 <footer class=entry-footer><span title="2021-06-17 02:32:14 +0800 +0800">2021-06-17</span></footer>
 <a class=entry-link aria-label="post link to Unity Calendar" href=https://wenrongdev.com/posts/unity-calendar/></a>
@@ -112,17 +108,7 @@ public void OnClick_GetDate() { DateTime dt = unityCalendar.GetDate(); text.text
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 主要是實作 Addressable hotfix 的寫法。
-基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 Unity筆記 Addressable Asset System。
-詳細解說可以參考
-Unity Addressables 深入浅出(一)、(二)、(三)
-Unity Addressable 獨立資源包
-實例 Initialization Initial Addressable System 是必要的假如不初始化會造成一些使用上的問題。
-在 Start 上可直接初始化 Addressable System
-IEnumerator Start() { var InitAddressablesAsync = Addressables.InitializeAsync(); yield return InitAddressablesAsync; } Update Catalog Catalog 是所有檔案的紀錄檔(log)，不更新 Catalog 也是能下載 Asset，可是會造成無法 hotfix，所以需要再下載前更一次 Catalog。
-Catalog Path 依 Window 為例，Catalog 更新後會放自動放置在
-C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addressables
-名稱 解釋 [PC Name] 系統使用者名稱 [Company Name] Unity 專案 Company Name [Product Name] Unity 專案 Product Name IEnumerator UpdateCatalogCoro() { List&lt;string> catalogsToUpdate = new List&lt;string>(); var checkCatalogHandle = Addressables....</p>
+<p>主要是實作 Addressable hotfix 的寫法。</p>
 </section>
 <footer class=entry-footer><span title="2021-05-27 02:29:03 +0800 +0800">2021-05-27</span></footer>
 <a class=entry-link aria-label="post link to Unity Addressable" href=https://wenrongdev.com/posts/unity-addressable/></a>
@@ -133,7 +119,7 @@ C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addr
 </h2>
 </header>
 <section class=entry-content>
-<p>GitHub </p>
+<p>Unity 實作粒子路徑系統。</p>
 </section>
 <footer class=entry-footer><span title="2021-05-09 02:26:00 +0800 +0800">2021-05-09</span></footer>
 <a class=entry-link aria-label="post link to Unity ParticlePath" href=https://wenrongdev.com/posts/unity-particlepath/></a>
@@ -144,9 +130,7 @@ C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addr
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 Unity 調整 Android、iOS 系統亮度功能。
-使用方式 Dimmer.SetBrightness.DoAction(value); Github 參考連結 UnityからiOS&Androidの画面輝度をMAXにする方法
-</p>
+<p>Unity 調整 Android、iOS 系統亮度功能。</p>
 </section>
 <footer class=entry-footer><span title="2020-10-21 02:26:00 +0800 +0800">2020-10-21</span></footer>
 <a class=entry-link aria-label="post link to Unity Dimmer" href=https://wenrongdev.com/posts/unity-dimmer/></a>

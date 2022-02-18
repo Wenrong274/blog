@@ -157,7 +157,7 @@ Experiences   2015/11月 - 至今 錦田雲端科技股份有限公司
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0800</pubDate>
       
       <guid>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</guid>
-      <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。</description>
+      <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 &lt;code&gt;Unity&lt;/code&gt; 接收。</description>
     </item>
     
     <item>

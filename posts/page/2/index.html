@@ -87,8 +87,7 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。
-Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.UI; [AddComponentMenu("UI/Effects/TextSpacing")] public class TextSpacing : BaseMeshEffect { #region Struct public enum HorizontalAligmentType { Left, Center, Right } public class Line { // 起點索引 public int StartVertexIndex { get { return _startVertexIndex; } } private int _startVertexIndex = 0; // 終點索引 public int EndVertexIndex { get { return _endVertexIndex; } } private int _endVertexIndex = 0; // 該行佔的點數目 public int VertexCount { get { return _vertexCount; } } private int _vertexCount = 0; public Line(int startVertexIndex, int length) { _startVertexIndex = startVertexIndex; _endVertexIndex = length * 6 - 1 + startVertexIndex; _vertexCount = length * 6; } } #endregion public float Spacing = 1f; public override void ModifyMesh(VertexHelper vh) { if (!...</p>
+<p>在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。</p>
 </section>
 <footer class=entry-footer><span title="2020-04-08 02:11:48 +0800 +0800">2020-04-08</span></footer>
 <a class=entry-link aria-label="post link to Add Text Spacing for Unity" href=https://wenrongdev.com/posts/add-text-spacing-for-unity/></a>
@@ -99,9 +98,7 @@ Scripts using System.Collections.Generic; using UnityEngine; using UnityEngine.U
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 主要是用來測試虛擬搖桿功能。
-使用 Joystick Pack 支援各輸入端接口偛件。
-Tutorial Github </p>
+<p>主要是用來測試 Unity 虛擬搖桿功能。</p>
 </section>
 <footer class=entry-footer><span title="2020-03-30 02:17:14 +0800 +0800">2020-03-30</span></footer>
 <a class=entry-link aria-label="post link to Mobile Joystick" href=https://wenrongdev.com/posts/mobile-joystick/></a>
@@ -112,11 +109,7 @@ Tutorial Github </p>
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 視覺化管理使用路徑，不過目前功能還是很粗糙。
-Feature 視覺化管理
-Usage Create path 之後會在 Assets\FolderManager\StreamingAssets\FolderManager.asset 出現 asset。
-Asset 即是FolderManager.Folders，因此可以直接宣告此 class 使用。
-Github </p>
+<p>Unity 視覺化管理使用路徑。</p>
 </section>
 <footer class=entry-footer><span title="2020-03-29 02:11:48 +0800 +0800">2020-03-29</span></footer>
 <a class=entry-link aria-label="post link to Folder Manager" href=https://wenrongdev.com/posts/folder-manager/></a>
@@ -127,18 +120,7 @@ Github </p>
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。
-IndexedDB 是有容量大小限制，所以需要注意存儲的檔案大小。
-About IndexedDB Working with quota on mobile browsers
-GitHub Introduction File Path
-string.Format("{0}/{1}.dat", Application.persistentDataPath, FileName);
-Save Method
-DataAccess.Save(fileName, bytes);
-Load Method
-byte[] bytes = DataAccess.Load(fileName);
-Example Scene
-root\Assets\WebGL\Example\Scenes\Example
-</p>
+<p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</p>
 </section>
 <footer class=entry-footer><span title="2020-02-27 01:58:17 +0800 +0800">2020-02-27</span></footer>
 <a class=entry-link aria-label="post link to Data Access WebGL" href=https://wenrongdev.com/posts/data-access-webgl/></a>
@@ -149,18 +131,7 @@ root\Assets\WebGL\Example\Scenes\Example
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 此為使用 Jenkins 輸出 Unity 專案注意事項。
-Setting 須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL…）。
-並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。
-Jenkins Android SDK 需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。
-Jenkins 頁面路徑為 Manage Jenkins -> Configure System -> Global properties。
-設定如下圖：
-Name：ANDROID_HOME
-Value：AndroidSDK 路徑。
-Jenkins JDK JDK 版本請選 Java SE 8，因為 Unity 只支援 Java SE 8。
-Jenkins 頁面路徑為 Manage Jenkins -> Global Tool Configuration -> JDK。
-Jenkins Unity3d Plugin 需要至 Plugin Manager 安裝 Unity3d Plugin。
-Jenkins 頁面路徑為 Manage Jenkins -> Plugin Manager -> Available...</p>
+<p>此為使用 Jenkins 輸出 Unity 專案注意事項。</p>
 </section>
 <footer class=entry-footer><span title="2020-02-25 02:05:19 +0800 +0800">2020-02-25</span></footer>
 <a class=entry-link aria-label="post link to Unity Jenkins Build" href=https://wenrongdev.com/posts/unity-jenkins-build/></a>
