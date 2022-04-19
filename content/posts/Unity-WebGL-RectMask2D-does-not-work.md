@@ -1,7 +1,7 @@
 ---
 title: "Unity WebGL RectMask2D Does Not Work"
 date: 2019-08-29T00:00:00+08:00
-description: "用於 WebGL RectMask2D 失去作用的簡易修正。"
+summary: "用於 WebGL RectMask2D 失去作用的簡易修正。"
 keywords: ["Unity","WebGL"]
 draft: false
 showtoc: true

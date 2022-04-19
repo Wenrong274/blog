@@ -1,7 +1,7 @@
 ---
 title: "Launch From Within a Unity App Another Unity App Android"
 date: 2020-01-02T00:00:00+08:00
-description: "主要用來 Unity app A 如何傳遞資訊給 Unity app B。"
+summary: "主要用來 Unity app A 如何傳遞資訊給 Unity app B。"
 keywords: ["Unity","Android"]
 draft: false
 showtoc: true
