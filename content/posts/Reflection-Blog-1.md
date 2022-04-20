@@ -1,7 +1,7 @@
 ---
 title: "Blog 心得（1）"
 date: 2022-02-14T01:14:39+08:00
-description: "從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自找苦吃。"
+description: "從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。"
 keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
 draft: fales
 showtoc: true
@@ -47,7 +47,7 @@ tags: ["Blog"]
 
 到了第三年，就打算不續約 SiteGround，所以開始把文章轉移去 [Medium][medium]，不過 NameCheap 是有持續付費的，畢竟費用還是較少，而且網址現在還在使用。
 
-後來用 Hugo 架設這個 Blog，才知道 Wordpress 的好，很多事情都很簡單就完成(SEO、theme、等等)。
+後來用 Hugo 架設這個 Blog，才知道 Wordpress 的好，很多事情都很簡單就完成（SEO、theme、等等）。
 
 ## 結論
 

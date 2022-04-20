@@ -3,7 +3,7 @@ title: "Blog 心得（2）"
 date: 2022-02-21T01:14:39+08:00
 description: "Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 並且至找苦吃自己架設。"
 keywords: ["Hugo", "Medium", "Wordpress", "CoderBridge", "Blog"]
-draft: fales
+draft: true
 showtoc: true
 tags: ["Blog"]
 ---
