@@ -1,11 +1,11 @@
 ---
-title: "Hugo 轉移心得（3）"
-date: 2022-04-20T00:44:07+08:00
+title: "Blog 心得（3）"
+date: 2022-02-28T01:14:39+08:00
 description: "write something"
-keywords: []
-draft: true
+keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
+draft: fales
 showtoc: true
-tags: []
+tags: ["Blog"]
 ---
 
 ## 前言
