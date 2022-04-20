@@ -9,23 +9,32 @@
       <link>https://wenrongdev.com/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Apr 2022 00:43:47 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 01:14:39 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 轉移心得（2）</title>
-      <link>https://wenrongdev.com/posts/hugo-%E8%BD%89%E7%A7%BB%E5%BF%83%E5%BE%97_2/</link>
-      <pubDate>Wed, 20 Apr 2022 00:43:47 +0800</pubDate>
+      <title>Blog 心得（3）</title>
+      <link>https://wenrongdev.com/posts/reflection-blog-3/</link>
+      <pubDate>Mon, 28 Feb 2022 01:14:39 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/posts/hugo-%E8%BD%89%E7%A7%BB%E5%BF%83%E5%BE%97_2/</guid>
+      <guid>https://wenrongdev.com/posts/reflection-blog-3/</guid>
       <description>write something</description>
     </item>
     
     <item>
-      <title>Hugo 轉移心得（1）</title>
-      <link>https://wenrongdev.com/posts/hugo-%E8%BD%89%E7%A7%BB%E5%BF%83%E5%BE%97_1/</link>
+      <title>Blog 心得（2）</title>
+      <link>https://wenrongdev.com/posts/reflection-blog-2/</link>
+      <pubDate>Mon, 21 Feb 2022 01:14:39 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/reflection-blog-2/</guid>
+      <description>Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 並且至找苦吃自己架設。</description>
+    </item>
+    
+    <item>
+      <title>Blog 心得（1）</title>
+      <link>https://wenrongdev.com/posts/reflection-blog-1/</link>
       <pubDate>Mon, 14 Feb 2022 01:14:39 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/posts/hugo-%E8%BD%89%E7%A7%BB%E5%BF%83%E5%BE%97_1/</guid>
-      <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且至找苦吃自己架設。</description>
+      <guid>https://wenrongdev.com/posts/reflection-blog-1/</guid>
+      <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自找苦吃。</description>
     </item>
     
     <item>
