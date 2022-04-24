@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wenrongdev.com/tags/blog/</loc>
-    <lastmod>2022-02-14T01:14:39+08:00</lastmod>
+    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://wenrongdev.com/posts/reflection-blog-1/</loc>
-    <lastmod>2022-02-14T01:14:39+08:00</lastmod>
+    <loc>https://wenrongdev.com/posts/reflection-blog-2/</loc>
+    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/</loc>
-    <lastmod>2022-02-14T01:14:39+08:00</lastmod>
+    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/</loc>
-    <lastmod>2022-02-14T01:14:39+08:00</lastmod>
+    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/</loc>
+    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/reflection-blog-1/</loc>
     <lastmod>2022-02-14T01:14:39+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
