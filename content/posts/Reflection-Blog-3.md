@@ -1,7 +1,7 @@
 ---
 title: "Blog 心得（3）"
 date: 2022-02-28T01:14:39+08:00
-description: "使用 Hugo 心得，並且使用 PaperMod 當主題，遇到的問題。"
+description: "使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。"
 keywords: ["Hugo", "PaperMod", "Blog"]
 draft: false
 showtoc: true
