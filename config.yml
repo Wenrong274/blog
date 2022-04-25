@@ -9,21 +9,14 @@ buildFuture: false
 buildExpired: false
 
 googleAnalytics: G-GRV3BQC1BQ
-
 disqusShortname: wenrongdev
 
 minify:
     disableXML: true
     minifyOutput: true
 
-sitemap:
-  changefreq: monthly
-  filename: sitemap.xml
-  priority: 0.5
-
 taxonomies:
   tag: "tags"
-  category: "categories"
   series: "series"
 
 params:
@@ -32,7 +25,7 @@ params:
     description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
     keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
     # author: ["Me", "You"] # multiple authors
-    images: ["<link or path of image for opengraph, twitter-cards>"]
+    #images: ["<link or path of image for opengraph, twitter-cards>"]
     DateFormat: "2006-01-02"
     defaultTheme: auto # dark, light
     disableThemeToggle: false
@@ -126,22 +119,19 @@ menu:
           name: Archives
           url: /archives/
           weight: 5
-        - identifier: categories
-          name: Categories
-          url: /categories/
-          weight: 10
         - identifier: tags
           name: Tags
           url: /tags/
           weight: 10
-        - identifier: about
-          name: About
-          url: /profile/about/
-          weight: 20
         - identifier: search
           name: Search
           url: /search/
           weight: 20
+        - identifier: about
+          name: About
+          url: /profile/about/
+          weight: 30
+
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true

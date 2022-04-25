@@ -1,32 +1,146 @@
 ---
 title: "Blog 心得（3）"
 date: 2022-02-28T01:14:39+08:00
-description: "write something"
-keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
-draft: true
+description: "使用 Hugo 心得，並且使用 PaperMod 當主題，遇到的問題。"
+keywords: ["Hugo", "PaperMod", "Blog"]
+draft: false
 showtoc: true
 tags: ["Blog"]
 ---
 
 ## 前言
 
-write something cool...
+此篇在講如何使用 Hugo 在 Github 上自架 Blog。
 
-## 主要內容
+### 安裝 Hugo
 
-write something cool...
+關於安裝的部分可以參考這些文章
 
-## 小結
+* [Quick Start][hugo_0]
+* [GitHub 部署 Hugo 靜態網站][hugo_1]
+* [使用 Hugo 建立靜態網站，並部署在 Github Page][hugo_2]
 
-write something cool...
+與文章不同的地方主題我是選擇 [PaperMod][theme]，由於需要設定 **config.yml**，建議先參考 [PaperMod-Installation][theme-1]。
 
-## 參考連結
+### PaperMod
+
+由於 PaperMod 推薦使用 `config.yml`，因此推薦把原本的 `config.toml` 刪除。並且去複製官方提供的 [config.yml][theme-config]。
+
+### config.yml
+
+## Search Post
+
+先在 config menu main 新增一個 Search 頁面
+
+```text
+menu:
+    main:
+        - identifier: archives
+          name: Archives
+          url: /archives/
+          weight: 5
+        - identifier: tags
+          name: Tags
+          url: /tags/
+          weight: 10
+        - identifier: search
+          name: Search
+          url: /search/
+          weight: 20
+```
+
+且在最底下此內容。（[參考文件][theme-searchpage]）
+
+```text
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+```
+
+最後在專案的 `content` 底下新增 `search.md`，即可完成功能。（[參考文件][theme-searchpage]）
+
+``` markdown
+---
+title: "Search" # in any language you want
+layout: "search" # is necessary
+# url: "/archive"
+# description: "Description for Search"
+summary: "search"
+placeholder: "placeholder text in search input box"
+---
+```
+
+### Comments
+
+此功能是參考 [Day 20. Hugo Comments System][theme-comments] 文章製作出來的。
+
+## Github Action
+
+有使用 Custom domain 的話，且 workflows 沒有設定 domain的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。
+
+### work.yml
+
+```yml
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Set a branch to deploy
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-20.04
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: '0.91.2'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.HUGO_DEPLOY_TOKEN  }}
+          PUBLISH_BRANCH: gh-pages # 推送到 gh-pages 分支
+          commit_message: ${{ github.event.head_commit.message }}
+          publish_dir: ./public
+          cname: wenrongdev.com
+```
+
+只需要新增或替換掉 `cname` 後面為 domain 即可。
+
+## 結論
+
+Hugo 或 PaperMod 我都處於摸索階段。
+
+這次自己架起來的感覺各方面都不錯，不管是讀取 Blog 速度、支援 Markdown、架設 Github 上且順便保留原始檔，到目前為止沒有明顯的缺點。
+
+目前最大問題就是 `SEO`，這是我完全沒有接觸過的。因為目前問題是 Google 搜尋不到我目前的 Blog，之後要接訴處理這部分。
 
 ______________________________________________________________________
 
 <!-- Hugo 連結 -->
-[ref_1]:https://ithelp.ithome.com.tw/users/20106430/ironman/3613
-
-[ref_2]:https://yurepo.tw/2021/03/%E5%A6%82%E4%BD%95%E5%B0%87hugo%E9%83%A8%E8%90%BD%E6%A0%BC%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A/
+[hugo_0]:https://gohugo.io/getting-started/quick-start/
+[hugo_1]:https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40
+[hugo_2]:https://jimmylin212.github.io/post/0001_create_hugo_and_deploy_on-github_page/
 
 [theme]:https://github.com/adityatelange/hugo-PaperMod
+[theme-1]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
+[theme-config]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml
+[theme-searchpage]:https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+[theme-comments]:https://ithelp.ithome.com.tw/articles/10248312
