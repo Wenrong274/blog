@@ -28,7 +28,7 @@ tags: ["Blog"]
 
 ### config.yml
 
-## Search Post
+#### Search Post
 
 先在 config menu main 新增一個 Search 頁面
 
@@ -72,7 +72,7 @@ placeholder: "placeholder text in search input box"
 ---
 ```
 
-### Comments
+#### Comments
 
 此功能是參考 [Day 20. Hugo Comments System][theme-comments] 文章製作出來的。
 
@@ -80,7 +80,7 @@ placeholder: "placeholder text in search input box"
 
 有使用 Custom domain 的話，且 workflows 沒有設定 domain的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。
 
-### work.yml
+### GitHub Pages workflow.yml
 
 ```yml
 name: GitHub Pages
