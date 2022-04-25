@@ -3,209 +3,126 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://wenrongdev.com/tags/blog/</loc>
-    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/reflection-blog-3/</loc>
+    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/</loc>
+    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/tags/</loc>
+    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/</loc>
+    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/reflection-blog-2/</loc>
     <lastmod>2022-02-21T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://wenrongdev.com/posts/</loc>
-    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/</loc>
-    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://wenrongdev.com/</loc>
-    <lastmod>2022-02-21T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/reflection-blog-1/</loc>
     <lastmod>2022-02-14T01:14:39+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/profile/about/</loc>
     <lastmod>2022-02-03T19:24:34+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/profile/</loc>
     <lastmod>2022-02-03T19:24:34+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/unity/</loc>
     <lastmod>2021-11-29T02:34:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-mathquiz/</loc>
     <lastmod>2021-11-29T02:34:02+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-calendar/</loc>
     <lastmod>2021-06-17T02:32:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-addressable/</loc>
     <lastmod>2021-05-27T02:29:03+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-particlepath/</loc>
     <lastmod>2021-05-09T02:26:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-dimmer/</loc>
     <lastmod>2020-10-21T02:26:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/add-text-spacing-for-unity/</loc>
     <lastmod>2020-04-08T02:11:48+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/mobile-joystick/</loc>
     <lastmod>2020-03-30T02:17:14+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/folder-manager/</loc>
     <lastmod>2020-03-29T02:11:48+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/data-access-webgl/</loc>
     <lastmod>2020-02-27T01:58:17+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/webgl/</loc>
     <lastmod>2020-02-27T01:58:17+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/devops/</loc>
     <lastmod>2020-02-25T02:05:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-jenkins-build/</loc>
     <lastmod>2020-02-25T02:05:19+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</loc>
     <lastmod>2020-02-24T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/android/</loc>
     <lastmod>2020-01-16T01:53:04+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</loc>
     <lastmod>2020-01-16T01:53:04+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/android-p-http-error/</loc>
     <lastmod>2020-01-09T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</loc>
     <lastmod>2020-01-02T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</loc>
     <lastmod>2019-12-26T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/example-inno-setup/</loc>
     <lastmod>2019-12-19T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/tool/</loc>
     <lastmod>2019-12-19T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/c#/</loc>
     <lastmod>2019-11-04T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/whitelist-for-windows-uac/</loc>
     <lastmod>2019-11-04T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</loc>
     <lastmod>2019-10-17T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/vuforia/</loc>
     <lastmod>2019-10-17T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/install-ipa-with-ota/</loc>
     <lastmod>2019-10-10T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/tags/ios/</loc>
     <lastmod>2019-10-10T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-5.3-native-system-language/</loc>
     <lastmod>2019-10-04T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-webgl-template/</loc>
     <lastmod>2019-09-05T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</loc>
     <lastmod>2019-08-29T00:00:00+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/archives/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>https://wenrongdev.com/categories/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/search/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url><url>
     <loc>https://wenrongdev.com/series/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
 </urlset>
