@@ -19,6 +19,7 @@ tags: ["Blog"]
 * [Quick Start][hugo_0]
 * [GitHub 部署 Hugo 靜態網站][hugo_1]
 * [使用 Hugo 建立靜態網站，並部署在 Github Page][hugo_2]
+* [Hugo 貼身打造個人部落格 系列][hugo_3]
 
 與文章不同的地方主題我是選擇 [PaperMod][theme]，由於需要設定 **config.yml**，建議先參考 [PaperMod-Installation][theme-instal]。
 
@@ -140,9 +141,10 @@ ______________________________________________________________________
 [hugo_0]:https://gohugo.io/getting-started/quick-start/
 [hugo_1]:https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40
 [hugo_2]:https://jimmylin212.github.io/post/0001_create_hugo_and_deploy_on-github_page/
+[hugo_3]:https://ithelp.ithome.com.tw/users/20106430/ironman/3613
 
+<!-- theme 連結 -->
 [theme]:https://github.com/adityatelange/hugo-PaperMod
-
 [theme-instal]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
 [theme-issues]:https://github.com/adityatelange/hugo-PaperMod/issues
 [theme-faqs]:https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs
