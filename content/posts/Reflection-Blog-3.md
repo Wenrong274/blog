@@ -20,7 +20,9 @@ tags: ["Blog"]
 * [GitHub 部署 Hugo 靜態網站][hugo_1]
 * [使用 Hugo 建立靜態網站，並部署在 Github Page][hugo_2]
 
-與文章不同的地方主題我是選擇 [PaperMod][theme]，由於需要設定 **config.yml**，建議先參考 [PaperMod-Installation][theme-1]。
+與文章不同的地方主題我是選擇 [PaperMod][theme]，由於需要設定 **config.yml**，建議先參考 [PaperMod-Installation][theme-instal]。
+
+想要完整的設定或理解 PaperMod，最好是完整的看完 [PaperMod][theme] 的 repo，有不知道的問題可以在 [Issues][theme-issues] 或者 [FAQs][theme-faqs] 搜尋看看，會比 google 搜尋來得快。
 
 ### PaperMod
 
@@ -128,9 +130,9 @@ jobs:
 
 Hugo 或 PaperMod 我都處於摸索階段。
 
-這次自己架起來的感覺各方面都不錯，不管是讀取 Blog 速度、支援 Markdown、架設 Github 上且順便保留原始檔，到目前為止沒有明顯的缺點。
+這次架起來的感覺各方面都不錯，不管是讀取 Blog 速度、支援 Markdown、架設 Github 上且保留原始檔，到目前為止沒有明顯的缺點。
 
-目前最大問題就是 `SEO`，這是我完全沒有接觸過的。因為目前問題是 Google 搜尋不到我目前的 Blog，之後要接訴處理這部分。
+目前最大問題就是 `SEO`，這是我完全沒有接觸過的。問題在於 Google 搜尋不到我的 Blog，所以這是之後要研究的部分。
 
 ______________________________________________________________________
 
@@ -140,7 +142,10 @@ ______________________________________________________________________
 [hugo_2]:https://jimmylin212.github.io/post/0001_create_hugo_and_deploy_on-github_page/
 
 [theme]:https://github.com/adityatelange/hugo-PaperMod
-[theme-1]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
+
+[theme-instal]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
+[theme-issues]:https://github.com/adityatelange/hugo-PaperMod/issues
+[theme-faqs]:https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs
 [theme-config]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml
 [theme-searchpage]:https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
 [theme-comments]:https://ithelp.ithome.com.tw/articles/10248312
