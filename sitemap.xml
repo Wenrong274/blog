@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wenrongdev.com/tags/android/</loc>
+    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</loc>
+    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/</loc>
+    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/tags/</loc>
+    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/</loc>
+    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
+  </url><url>
     <loc>https://wenrongdev.com/tags/blog/</loc>
     <lastmod>2022-02-28T01:14:39+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/reflection-blog-3/</loc>
-    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/posts/</loc>
-    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/</loc>
-    <lastmod>2022-02-28T01:14:39+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/</loc>
     <lastmod>2022-02-28T01:14:39+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/reflection-blog-2/</loc>
@@ -70,9 +76,6 @@
   </url><url>
     <loc>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</loc>
     <lastmod>2020-02-24T00:00:00+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/android/</loc>
-    <lastmod>2020-01-16T01:53:04+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</loc>
     <lastmod>2020-01-16T01:53:04+08:00</lastmod>

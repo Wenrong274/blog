@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/tags/android/</link>
     <description>Recent content in Android on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 16 Jan 2020 01:53:04 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Mar 2022 00:40:34 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Android Build Failed Build tools 3X.0.0 Bug</title>
+      <link>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</link>
+      <pubDate>Mon, 07 Mar 2022 00:40:34 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</guid>
+      <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
+    </item>
+    
     <item>
       <title>FCM Notifications Not Received on Android</title>
       <link>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</link>
