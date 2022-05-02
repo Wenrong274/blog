@@ -9,9 +9,9 @@ tags: [Unity]
 ---
 ## 前言
 
-在前一篇 [Unity Addressable][blog-1] 介紹了簡易使用的方式，此篇是介紹下載/更新 Asset 的方法。
+在前一篇 [Unity Addressable][blog-1] 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。
 
-目前我個人使用過的方式有 單一 Asset、Asset Tag、 Array Asset 的方式。
+目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。
 
 ## Addressables.LoadAssetAsync
 
