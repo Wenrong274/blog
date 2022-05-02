@@ -1,7 +1,7 @@
 ---
 title: "Unity Addressable Download Assets"
 date: 2022-03-14T16:38:48+08:00
-description: "介紹 Unity Addressable AssetReference 下載方式"
+description: "介紹 Unity Addressable 多個下載方式"
 keywords: [Unity, Addressable, hotfix]
 draft: false
 showtoc: true
@@ -55,7 +55,7 @@ IEnumerator UpdateAsset(AssetReference asset)
 
 [AssetReference][ref_AssetReference] 的用法是我最推薦的下載方式，可以很明顯的知道更新物件，不會因為打錯文字導致更新失敗，而且也可以利用這個方式組合物件，讓更新的內容比較簡單方式處理。
 
-例如用一個物件或場景夾帶了多個不同的需要更新的物件，缺點就是這包 pack 輸出會過大，可能需要把每個物件獨立分成多個 AssetReference，利用系統特性夾帶物件變小。不過要是不喜歡這種方式可以看 [Update Multiple Asset References](#Update-Multiple-Asset-References)。
+例如用一個物件或場景夾帶了多個不同的需要更新的物件，缺點就是這包 pack 輸出會過大，可能需要把每個物件獨立分成多個 AssetReference，利用系統特性夾帶物件變小。不過要是不喜歡這種方式可以看 [Update Multiple Asset References](#update-multiple-asset-references)。
 
 不過 AssetReference 最方便還是使用它來生成、釋放、等等，才是最好用的方式。
 
