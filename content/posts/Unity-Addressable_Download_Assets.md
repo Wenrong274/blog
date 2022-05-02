@@ -76,14 +76,15 @@ IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 ## 取得下載容量大小方法
 
 ```C#
-private long size;
-
 IEnumerator CheckSizeAsync(string asset)
 {
     var async = Addressables.GetDownloadSizeAsync(asset);
     yield return async;
     if (async.Status == AsyncOperationStatus.Succeeded)
-        size = async.Result;
+    {
+        float size = Mathf.Round((float)async.Result / 1024 / 1024 * 1000) / 1000;
+        Debug.Log($"Total {size} MB");
+    }
     Addressables.Release(async);
 }
 ```
