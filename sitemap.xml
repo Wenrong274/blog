@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wenrongdev.com/posts/</loc>
+    <lastmod>2022-03-14T16:38:48+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/tags/</loc>
+    <lastmod>2022-03-14T16:38:48+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/tags/unity/</loc>
+    <lastmod>2022-03-14T16:38:48+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/unity-addressable_download_assets/</loc>
+    <lastmod>2022-03-14T16:38:48+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/</loc>
+    <lastmod>2022-03-14T16:38:48+08:00</lastmod>
+  </url><url>
     <loc>https://wenrongdev.com/tags/android/</loc>
     <lastmod>2022-03-07T00:40:34+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</loc>
-    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/posts/</loc>
-    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/</loc>
-    <lastmod>2022-03-07T00:40:34+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/</loc>
     <lastmod>2022-03-07T00:40:34+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/tags/blog/</loc>
@@ -34,9 +40,6 @@
   </url><url>
     <loc>https://wenrongdev.com/profile/</loc>
     <lastmod>2022-02-03T19:24:34+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/unity/</loc>
-    <lastmod>2021-11-29T02:34:02+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/unity-mathquiz/</loc>
     <lastmod>2021-11-29T02:34:02+08:00</lastmod>
