@@ -78,7 +78,7 @@ IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 ```C#
 private long size;
 
-public IEnumerator CheckSizeAsync(string asset)
+IEnumerator CheckSizeAsync(string asset)
 {
     var async = Addressables.GetDownloadSizeAsync(asset);
     yield return async;
@@ -103,6 +103,7 @@ IEnumerator UpdateAsset(AssetReference asset)
     Addressables.Release(downloadAsync);
 }
 ```
+
 ______________________________________________________________________
 
 [blog-1]:../posts/Unity-Addressable.md
