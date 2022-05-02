@@ -58,7 +58,7 @@ Catalog 是所有檔案的紀錄檔(log)，不更新 Catalog 也是能下載 Ass
 IEnumerator UpdateCatalogCoro()
 {
     List<string> catalogsToUpdate = new List<string>();
-    var checkCatalogHandle = Addressables.CheckForCatalogUpdates();
+    var checkCatalogHandle = Addressables.CheckForCatalogUpdates(false);
     yield return checkCatalogHandle;
 
     if (checkCatalogHandle.Status == AsyncOperationStatus.Succeeded)
@@ -216,8 +216,6 @@ ______________________________________________________________________
 
 [tutorial_3]:https://arclee0117.wordpress.com/2020/09/10/unity-addressable-%E7%8D%A8%E7%AB%8B%E8%B3%87%E6%BA%90%E5%8C%85/
 
-[update_1]:https://i.imgur.com/p4KrH0y.jpg
+[asset_1]:https://imgur.com/QAbjzCM.jpg
 
-[asset_1]:https://i.imgur.com/I0VTkCY.jpg
-
-[asset_2]:https://i.imgur.com/bxwlzNS.jpg
+[asset_2]:https://imgur.com/Av0faq4.jpg
