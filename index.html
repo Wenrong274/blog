@@ -97,13 +97,13 @@
 </h2>
 </header>
 <section class=entry-content>
-<p>前言 在前一篇 Unity Addressable 介紹了簡易使用的方式，此篇是介紹下載/更新 Asset 的方法。
-目前我個人使用過的方式有 單一 Asset、Asset Tag、 Array Asset 的方式。
+<p>前言 在前一篇 Unity Addressable 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。
+目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。
 Addressables.LoadAssetAsync 官方範例提供的下載方式 Addressables.LoadAsset(s)Async，雖然這個是要把 Asset 讀取出來，其實他也有下載功能
 Addressables.LoadAssetAsync&lt;GameObject>(asset); 我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。
 Update Addressable Name/ Addressable Label IEnumerator UpdateAsset(string asset) { var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false); yield return downloadAsync; Addressables.Release(downloadAsync); } 這個是下載 Addressable Name 或 Label的方法，可以利用 Label 下載多個不同 Group 的 Asset。
 Label 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Label 是必須要重新輸出 App 才會有新的 Label。
-Update Asset Reference IEnumerator UpdateAsset(AssetReference asset) { var downloadAsync = Addressables....</p>
+Update Asset Reference IEnumerator UpdateAsset(AssetReference asset) { var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false); yield return downloadAsync; Addressables....</p>
 </section>
 <footer class=entry-footer><span title="2022-03-14 16:38:48 +0800 +0800">2022-03-14</span></footer>
 <a class=entry-link aria-label="post link to Unity Addressable Download Assets" href=https://wenrongdev.com/posts/unity-addressable_download_assets/></a>
