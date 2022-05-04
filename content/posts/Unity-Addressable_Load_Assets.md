@@ -1,6 +1,6 @@
 ---
 title: "Unity Addressable Load Assets"
-date: 2022-05-04T00:27:52+08:00
+date: 2022-03-21T00:27:52+08:00
 description: "介紹 Unity Addressable 讀取、生成、釋放方式"
 keywords: [Unity, Addressable, hotfix]
 draft: false
