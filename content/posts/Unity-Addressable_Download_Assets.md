@@ -38,7 +38,7 @@ IEnumerator UpdateAsset(string asset)
 
 ![img-1]
 
-`Label` 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Label 是必須要重新輸出 App 才會有新的 Label。
+`Addressable Name`、`Label` 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Addressable Name、Label 是必須要`重新輸出` App 才會更新。
 
 ![img-2]
 
@@ -107,7 +107,7 @@ IEnumerator UpdateAsset(AssetReference asset)
 
 ______________________________________________________________________
 
-[blog-1]:../posts/Unity-Addressable.md
+[blog-1]:../unity-addressable
 
 [ref_1]:https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/DownloadDependenciesAsync.html
 [ref_LoadingAddressableAssets]:https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html
