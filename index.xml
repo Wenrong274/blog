@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/</link>
     <description>Recent content on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 04 May 2022 00:27:52 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 09 Aug 2022 00:21:50 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Shader For VSCode</title>
+      <link>https://wenrongdev.com/posts/openshaderforvscode/</link>
+      <pubDate>Tue, 09 Aug 2022 00:21:50 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/openshaderforvscode/</guid>
+      <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
+    </item>
+    
     <item>
       <title>Unity Addressable Load Assets</title>
       <link>https://wenrongdev.com/posts/unity-addressable_load_assets/</link>
