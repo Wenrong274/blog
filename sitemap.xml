@@ -2,9 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wenrongdev.com/posts/openshaderforvscode/</loc>
-    <lastmod>2022-08-09T00:21:50+08:00</lastmod>
-  </url><url>
     <loc>https://wenrongdev.com/posts/</loc>
     <lastmod>2022-08-09T00:21:50+08:00</lastmod>
   </url><url>
@@ -12,6 +9,9 @@
     <lastmod>2022-08-09T00:21:50+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/tags/unity/</loc>
+    <lastmod>2022-08-09T00:21:50+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/openshaderforvscode/</loc>
     <lastmod>2022-08-09T00:21:50+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/</loc>
