@@ -1,5 +1,5 @@
 ---
-title: "Open Shader For VSCode"
+title: "Unity Open Shader For VSCode"
 date: 2022-08-09T00:21:50+08:00
 description: "自動對應 Shader 檔案使用 VSCode 開啟"
 keywords: [Unity, Shader, Shaderlab, VSCode]
@@ -10,7 +10,7 @@ tags: [Unity]
 
 ## 前言
 
-真對 Unity Shader 檔案打開時，使用 VSCode 開啟而不是 Visual Studio，假如預設是 VSCode 則無需使用這功能。
+針對 Unity Shader 檔案打開時，使用 VSCode 開啟而不是 Visual Studio，假如預設是 VSCode 則無需使用這功能。
 
 會寫這功能是平常寫 C# 都是習慣使用 Visual Studio，而 Visual Studio 好像沒有針對 Unity Shaderlab 的關鍵字，而 VSCode 則有 [ShaderlabVSCode(Free)][shaderlab_vscode]，也因此這樣選擇使用 VSCode。
 
@@ -37,6 +37,56 @@ tags: [Unity]
 
 ``` C#
 startInfo.Arguments = $"{projectPath} -g {fileName}";
+```
+
+### Script
+
+詳細的方法可以參考 [Sublime Text & Unity Shader][ref_1]。
+
+``` C#
+public class OpenShaderForVSCodeEditor
+{
+    [UnityEditor.Callbacks.OnOpenAsset(0)]
+    public static bool CallbackShader(int instanceID, int line)
+    {
+        string projectPath = Directory.GetParent(Application.dataPath).ToString();
+        string strFilePath = AssetDatabase.GetAssetPath(EditorUtility.InstanceIDToObject(instanceID));
+        string fileName = projectPath + "/" + strFilePath;
+        if (fileName.EndsWith(".shader"))
+        {
+            var envUser = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User);
+            var envPaths = envUser["Path"].ToString().Split(";");
+            string vscodePath = string.Empty;
+            for (int i = 0; i < envPaths.Length; i++)
+            {
+                var path = Path.Combine(envPaths[i], "code");
+                if (File.Exists(path))
+                {
+                    vscodePath = path;
+                    break;
+                }
+            }
+            if (!string.IsNullOrEmpty(vscodePath))
+            {
+                Process process = new Process();
+                ProcessStartInfo startInfo = new ProcessStartInfo();
+                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+                startInfo.FileName = vscodePath;
+                ///vscode args "$(ProjectPath)" -g "$(File)":$(Line):$(Column)
+                startInfo.Arguments = $"{projectPath} -g {fileName}";
+                process.StartInfo = startInfo;
+                process.Start();
+                return true;
+            }
+            else
+            {
+                UnityEngine.Debug.Log("Not Found Enviroment Variable 'VSCode_Path'.");
+                return false;
+            }
+        }
+        return false;
+    }
+}
 ```
 
 ## [GitHub][github]
