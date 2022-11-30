@@ -93,6 +93,20 @@
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Oculus Auto Set Build Setting && Build
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。
+XR Setting 可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。
+private static void SetOculusXRLoader(BuildTargetGroup buildTarget, bool active) { XRGeneralSettingsPerBuildTarget buildTargetSettings = null; EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, out buildTargetSettings); XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget); if (active) XRPackageMetadataStore.AssignLoader(settings.Manager, "Unity.XR.Oculus.OculusLoader", buildTarget); else XRPackageMetadataStore.RemoveLoader(settings.Manager, "Unity.XR.Oculus.OculusLoader", buildTarget); } Build 利用這段自動輸出，options 可以設定 BuildOptions.None、BuildOptions.AutoRunPlayer，一般的 Build 和 Build and Run。
+private static void BuildRelease(string Path, BuildTarget Target, BuildOptions options) { Console.Clear(); BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options); BuildReport Report = BuildPipeline....</p>
+</section>
+<footer class=entry-footer><span title="2022-12-01 01:02:10 +0800 +0800">2022-12-01</span></footer>
+<a class=entry-link aria-label="post link to Oculus Auto Set Build Setting && Build" href=https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Unity Project Structure
 </h2>
 </header>
@@ -153,24 +167,6 @@ Update Asset Reference IEnumerator UpdateAsset(AssetReference asset) { var downl
 </section>
 <footer class=entry-footer><span title="2022-03-14 16:38:48 +0800 +0800">2022-03-14</span></footer>
 <a class=entry-link aria-label="post link to Unity Addressable Download Assets" href=https://wenrongdev.com/posts/unity-addressable_download_assets/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Android Build Failed Build tools 3X.0.0 Bug
-</h2>
-</header>
-<section class=entry-content>
-<p>前言 輸出 Apk 遇到的錯誤
-Fix Installed Build Tools revision 3X.0.0 is corrupted. 修改方式 修改 d8.bat 檔案路徑 &lt;Android SDK root>\build-tools\3X.0.0
-將 d8.bat 改為 dx.bat。
-修改 d8.jar 檔案路徑 &lt;Android SDK root>\build-tools\3X.0.0\lib
-將 d8.jar 改為 dx.jar。
-就完成修改。
-參考連結 Android Studio error “Installed Build Tools revision 31.0.0 is corrupted”
-</p>
-</section>
-<footer class=entry-footer><span title="2022-03-07 00:40:34 +0800 +0800">2022-03-07</span></footer>
-<a class=entry-link aria-label="post link to Android Build Failed Build tools 3X.0.0 Bug" href=https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
