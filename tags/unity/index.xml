@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Dec 2022 01:02:10 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 03 Dec 2022 00:42:48 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity Text Breaking Space</title>
+      <link>https://wenrongdev.com/posts/unitytextbreakingspace/</link>
+      <pubDate>Sat, 03 Dec 2022 00:42:48 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unitytextbreakingspace/</guid>
+      <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
+    </item>
+    
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
       <link>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</link>
