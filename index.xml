@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/</link>
     <description>Recent content on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 03 Dec 2022 00:42:48 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 07 Dec 2022 01:19:09 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UnityDeepLink</title>
+      <link>https://wenrongdev.com/posts/unitydeeplink/</link>
+      <pubDate>Wed, 07 Dec 2022 01:19:09 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unitydeeplink/</guid>
+      <description>write something</description>
+    </item>
+    
     <item>
       <title>Unity Text Breaking Space</title>
       <link>https://wenrongdev.com/posts/unitytextbreakingspace/</link>
