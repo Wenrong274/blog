@@ -5,14 +5,23 @@
     <link>https://wenrongdev.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Dec 2022 01:19:09 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 00:20:11 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>UnityDeepLink</title>
-      <link>https://wenrongdev.com/posts/unitydeeplink/</link>
+      <title>Unity Deep Link -2</title>
+      <link>https://wenrongdev.com/posts/unitydeeplink_2/</link>
+      <pubDate>Tue, 13 Dec 2022 00:20:11 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/unitydeeplink_2/</guid>
+      <description>介紹 Unity Deep Link 呼叫方式</description>
+    </item>
+    
+    <item>
+      <title>Unity Deep Link-1</title>
+      <link>https://wenrongdev.com/posts/unitydeeplink-1/</link>
       <pubDate>Wed, 07 Dec 2022 01:19:09 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/posts/unitydeeplink/</guid>
-      <description>write something</description>
+      <guid>https://wenrongdev.com/posts/unitydeeplink-1/</guid>
+      <description>介紹 Unity Deep Link 使用方式</description>
     </item>
     
     <item>
