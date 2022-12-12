@@ -57,12 +57,16 @@ Xcode 詳細設定可以參考這邊 [IOS Deep linking: URL Scheme vs Universal 
 
 這樣設定後就會與 Android 一樣的功能，在瀏覽器輸出該 link id 就會自動對應到 app。
 
+## 其他
+
+* [Github][repo]
+* [Unity Deep Link -1][blog-1]
+
 ______________________________________________________________________
 
-[unitydl]:https://docs.unity3d.com/Manual/deep-linking.html
-[unitydl_android]:https://docs.unity3d.com/Manual/deep-linking-android.html
 [unitydl_ios]:https://docs.unity3d.com/Manual/deep-linking-ios.html
-[wenrongIntent]:https://wenrongdev.com/posts/get-android-intent-data-for-unity/
 [dl_android]:https://developer.android.com/training/app-links/deep-linking
 [dl_ios]:https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97
 [img_1]:https://imgur.com/WIvC4gC.png
+[blog-1]:https://wenrongdev.com/posts/unitydeeplink_1/
+[repo]:https://github.com/WenRongDev/Unity-DeepLink

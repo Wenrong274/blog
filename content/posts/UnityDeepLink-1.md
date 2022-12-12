@@ -1,5 +1,5 @@
 ---
-title: "Unity Deep Link-1"
+title: "Unity Deep Link -1"
 date: 2022-12-07T01:19:09+08:00
 description: "介紹 Unity Deep Link 使用方式"
 keywords: ["Unity"]
@@ -40,6 +40,7 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
             OnDeepLinkActivated(Application.absoluteURL);
     }
 ```
+
 ## Script Url Arg
 
 拆解 Deep link 夾帶的參數，格式大概與 web 的 url get 類似，可以用這種方式去解析，夾帶的參數。
@@ -62,11 +63,16 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
     }
 ```
 
+## 其他
+
+* [Github][repo]
+* [Unity Deep Link -2][blog-2]
+
 ______________________________________________________________________
 
 [unitydl]:https://docs.unity3d.com/Manual/deep-linking.html
-[unitydl_android]:https://docs.unity3d.com/Manual/deep-linking-android.html
-[unitydl_ios]:https://docs.unity3d.com/Manual/deep-linking-ios.html
 [wenrongIntent]:https://wenrongdev.com/posts/get-android-intent-data-for-unity/
 [dl_android]:https://developer.android.com/training/app-links/deep-linking
 [dl_ios]:https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content
+[blog-2]:https://wenrongdev.com/posts/unitydeeplink_2/
+[repo]:https://github.com/WenRongDev/Unity-DeepLink
