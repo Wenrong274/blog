@@ -1,7 +1,7 @@
 ---
-title: "UnityDeepLink"
+title: "Unity Deep Link-1"
 date: 2022-12-07T01:19:09+08:00
-description: "write something"
+description: "介紹 Unity Deep Link 使用方式"
 keywords: ["Unity"]
 draft: false
 showtoc: true
