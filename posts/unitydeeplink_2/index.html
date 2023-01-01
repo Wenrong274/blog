@@ -37,7 +37,7 @@
 <meta name=twitter:title content="Unity Deep Link -2">
 <meta name=twitter:description content="介紹 Unity Deep Link 呼叫方式">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wenrongdev.com/posts/"},{"@type":"ListItem","position":2,"name":"Unity Deep Link -2","item":"https://wenrongdev.com/posts/unitydeeplink_2/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity Deep Link -2","name":"Unity Deep Link -2","description":"介紹 Unity Deep Link 呼叫方式","keywords":["Unity"],"articleBody":"前言 deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。\n也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store上面讓使用者直接下載該 app。\nAndroid 需要在 AndroidManifest 上寫上 link id，可以根據 Create Deep Links to App Content 參考詳細的設置方式。\n url 呼叫方式    android:name=\"android.intent.action.VIEW\" /  android:name=\"android.intent.category.DEFAULT\" /  android:name=\"android.intent.category.BROWSABLE\" /  android:scheme=\"http\" /  android:scheme=\"https\" /  android:host=\"wenrongdev.com\" /  可以利用這種方式，app 超連結開啟或者網頁輸入 https://wenrongdev.com/、http://wenrongdev.com/ 時就會自動對應到 App。\n 自訂 id    android:name=\"android.intent.action.VIEW\" /  android:name=\"android.intent.category.DEFAULT\" /  android:name=\"android.intent.category.BROWSABLE\" /  android:scheme=\"app\" /  android:host=\"wenrongdev\" /  可以利用這種方式，app 超連結開啟或者網頁輸入 app://wenrongdev 時就會自動對應到 App。\niOS Unity 設定 link id 的方式在 Deep linking on iOS 有介紹如何設定，而 Xcode 也能設定，不過建議是在 Unity 中設定非必要不建議額外自己在手動設置，主要是怕輸出時忘記導致功能失效。\nXcode 詳細設定可以參考這邊 IOS Deep linking: URL Scheme vs Universal Links\n這樣設定後就會與 Android 一樣的功能，在瀏覽器輸出該 link id 就會自動對應到 app。\n其他  Github Unity Deep Link -1   ","wordCount":"126","inLanguage":"en","datePublished":"2022-12-13T00:20:11+08:00","dateModified":"2022-12-13T00:20:11+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unitydeeplink_2/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity Deep Link -2","name":"Unity Deep Link -2","description":"介紹 Unity Deep Link 呼叫方式","keywords":["Unity"],"articleBody":"前言 deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。\n也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store上面讓使用者直接下載該 app。\nAndroid 需要在 AndroidManifest 上寫上 link id，可以根據 Create Deep Links to App Content 參考詳細的設置方式。\n url 呼叫方式    android:name=\"android.intent.action.VIEW\" /  android:name=\"android.intent.category.DEFAULT\" /  android:name=\"android.intent.category.BROWSABLE\" /  android:scheme=\"http\" /  android:scheme=\"https\" /  android:host=\"wenrongdev.com\" /  android:pathPrefix=\"/unitydeeplink_2\"/  host：網址\npathPrefix：節點\n可以利用這種方式，app 超連結開啟或者網頁輸入 https://wenrongdev.com/posts/unitydeeplink_2/ 時就會自動對應到 App。\n 自訂 id    android:name=\"android.intent.action.VIEW\" /  android:name=\"android.intent.category.DEFAULT\" /  android:name=\"android.intent.category.BROWSABLE\" /  android:scheme=\"app\" /  android:host=\"wenrongdev\" /  可以利用這種方式，app 超連結開啟或者網頁輸入 app://wenrongdev 時就會自動對應到 App。\niOS Unity 設定 link id 的方式在 Deep linking on iOS 有介紹如何設定，而 Xcode 也能設定，不過建議是在 Unity 中設定非必要不建議額外自己在手動設置，主要是怕輸出時忘記導致功能失效。\nXcode 詳細設定可以參考這邊 IOS Deep linking: URL Scheme vs Universal Links\n這樣設定後就會與 Android 一樣的功能，在瀏覽器輸出該 link id 就會自動對應到 app。\n其他  Github Unity Deep Link -1   ","wordCount":"130","inLanguage":"en","datePublished":"2022-12-13T00:20:11+08:00","dateModified":"2022-12-13T00:20:11+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unitydeeplink_2/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -120,8 +120,11 @@ Unity Deep Link -2
     <span style=color:#f92672>&lt;data</span> <span style=color:#a6e22e>android:scheme=</span><span style=color:#e6db74>&#34;http&#34;</span> <span style=color:#f92672>/&gt;</span>
     <span style=color:#f92672>&lt;data</span> <span style=color:#a6e22e>android:scheme=</span><span style=color:#e6db74>&#34;https&#34;</span> <span style=color:#f92672>/&gt;</span>
     <span style=color:#f92672>&lt;data</span> <span style=color:#a6e22e>android:host=</span><span style=color:#e6db74>&#34;wenrongdev.com&#34;</span> <span style=color:#f92672>/&gt;</span>
+    <span style=color:#f92672>&lt;data</span> <span style=color:#a6e22e>android:pathPrefix=</span><span style=color:#e6db74>&#34;/unitydeeplink_2&#34;</span><span style=color:#f92672>/&gt;</span>
 <span style=color:#f92672>&lt;/intent-filter&gt;</span>
-</code></pre></div><p>可以利用這種方式，app 超連結開啟或者網頁輸入 <code>https://wenrongdev.com/</code>、<code>http://wenrongdev.com/</code> 時就會自動對應到 App。</p>
+</code></pre></div><p><code>host</code>：網址</p>
+<p><code>pathPrefix</code>：節點</p>
+<p>可以利用這種方式，app 超連結開啟或者網頁輸入 <code>https://wenrongdev.com/posts/unitydeeplink_2/</code> 時就會自動對應到 App。</p>
 <ul>
 <li>自訂 id</li>
 </ul>
@@ -151,7 +154,12 @@ Unity Deep Link -2
 <li><a href=https://wenrongdev.com/tags/unity/>Unity</a></li>
 </ul>
 <nav class=paginav>
-<a class=next href=https://wenrongdev.com/posts/unitydeeplink-1/>
+<a class=prev href=https://wenrongdev.com/posts/oculussample/>
+<span class=title>« Prev Page</span>
+<br>
+<span>Oculus Sample</span>
+</a>
+<a class=next href=https://wenrongdev.com/posts/unitydeeplink_1/>
 <span class=title>Next Page »</span>
 <br>
 <span>Unity Deep Link -1</span>
@@ -177,7 +185,7 @@ Unity Deep Link -2
 </article>
 </main>
 <footer class=footer>
-<span>&copy; 2022 <a href=https://wenrongdev.com/>Wenrong's Note</a></span>
+<span>&copy; 2023 <a href=https://wenrongdev.com/>Wenrong's Note</a></span>
 <span>
 Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &

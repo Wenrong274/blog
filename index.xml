@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/</link>
     <description>Recent content on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Dec 2022 00:20:11 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 02 Jan 2023 01:14:40 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oculus Sample</title>
+      <link>https://wenrongdev.com/posts/oculussample/</link>
+      <pubDate>Mon, 02 Jan 2023 01:14:40 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/oculussample/</guid>
+      <description>簡易的 Oculus 功能介紹專案</description>
+    </item>
+    
     <item>
       <title>Unity Deep Link -2</title>
       <link>https://wenrongdev.com/posts/unitydeeplink_2/</link>
@@ -17,10 +26,10 @@
     
     <item>
       <title>Unity Deep Link -1</title>
-      <link>https://wenrongdev.com/posts/unitydeeplink-1/</link>
+      <link>https://wenrongdev.com/posts/unitydeeplink_1/</link>
       <pubDate>Wed, 07 Dec 2022 01:19:09 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/posts/unitydeeplink-1/</guid>
+      <guid>https://wenrongdev.com/posts/unitydeeplink_1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
     </item>
     

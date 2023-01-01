@@ -93,6 +93,20 @@
 </article>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Oculus Sample
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 這是簡易的 Oculus 功能介紹專案，是我製作 VR 專案以來經常使用到的操作行為，我把這些操作行為歸類起來。
+功能接紹有按鈕、抓取、放置、按壓、等操作行為，目前只要有這些功能就能完整製作 VR 的操作行為。
+配置 需要參考官方文件 Get Started with Oculus in Unity，也可以觀看該專案配置。
+</p>
+</section>
+<footer class=entry-footer><span title="2023-01-02 01:14:40 +0800 +0800">2023-01-02</span></footer>
+<a class=entry-link aria-label="post link to Oculus Sample" href=https://wenrongdev.com/posts/oculussample/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Unity Deep Link -2
 </h2>
 </header>
@@ -100,8 +114,9 @@
 <p>前言 deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。
 也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store上面讓使用者直接下載該 app。
 Android 需要在 AndroidManifest 上寫上 link id，可以根據 Create Deep Links to App Content 參考詳細的設置方式。
-url 呼叫方式 &lt;intent-filter> &lt;action android:name="android.intent.action.VIEW" /> &lt;category android:name="android.intent.category.DEFAULT" /> &lt;category android:name="android.intent.category.BROWSABLE" /> &lt;data android:scheme="http" /> &lt;data android:scheme="https" /> &lt;data android:host="wenrongdev.com" /> &lt;/intent-filter> 可以利用這種方式，app 超連結開啟或者網頁輸入 https://wenrongdev.com/、http://wenrongdev.com/ 時就會自動對應到 App。
-自訂 id &lt;intent-filter> &lt;action android:name="android....</p>
+url 呼叫方式 &lt;intent-filter> &lt;action android:name="android.intent.action.VIEW" /> &lt;category android:name="android.intent.category.DEFAULT" /> &lt;category android:name="android.intent.category.BROWSABLE" /> &lt;data android:scheme="http" /> &lt;data android:scheme="https" /> &lt;data android:host="wenrongdev.com" /> &lt;data android:pathPrefix="/unitydeeplink_2"/> &lt;/intent-filter> host：網址
+pathPrefix：節點
+可以利用這種方式，app 超連結開啟或者網頁輸入 https://wenrongdev.com/posts/unitydeeplink_2/ 時就會自動對應到 App。...</p>
 </section>
 <footer class=entry-footer><span title="2022-12-13 00:20:11 +0800 +0800">2022-12-13</span></footer>
 <a class=entry-link aria-label="post link to Unity Deep Link -2" href=https://wenrongdev.com/posts/unitydeeplink_2/></a>
@@ -122,7 +137,7 @@ iOS Deep Link
 Script Start 需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 Application.absoluteURL 才能讀取道 deep link 的資料。Application.deepLinkActivated 部分則是 app 的 deep link feedback。...</p>
 </section>
 <footer class=entry-footer><span title="2022-12-07 01:19:09 +0800 +0800">2022-12-07</span></footer>
-<a class=entry-link aria-label="post link to Unity Deep Link -1" href=https://wenrongdev.com/posts/unitydeeplink-1/></a>
+<a class=entry-link aria-label="post link to Unity Deep Link -1" href=https://wenrongdev.com/posts/unitydeeplink_1/></a>
 </article>
 <article class=post-entry>
 <header class=entry-header>
@@ -151,21 +166,6 @@ private static void BuildRelease(string Path, BuildTarget Target, BuildOptions o
 <footer class=entry-footer><span title="2022-12-01 01:02:10 +0800 +0800">2022-12-01</span></footer>
 <a class=entry-link aria-label="post link to Oculus Auto Set Build Setting && Build" href=https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/></a>
 </article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Unity Project Structure
-</h2>
-</header>
-<section class=entry-content>
-<p>Unity Project Structure 主要是建立一個自動建立簡易專案資料夾結構。
-此參考 UnityProjectTreeGenerator 方法建立資料夾，
-使用方式 Tools > Generate Project Structure
-必須要設定 Root Name 才能點擊 Create Structure
-資料夾結構 |- Assets |- Project Name /// 自己設定 |- 00_Art | |- 00_Profabs | | |- Models | | |- UI | |- 01_Shaders | | |- UI_Shaders | |- 02_Timeline | |- 03_Models | | |- Example_Model | | | |- 3D | | | |- Animation | | | |- Textures | | |- Example_Effect | | |- Textures | |- 04_Scenes | |- 05_UI | | |- Textures | | |- Effect | | |- Textures | | |- Animation | | |- Material | |- 07_Audio | |- 08_Video |- 01_Program |- 00_Scenes |- 01_Scripts |- 02_Tests |- 03_Prefabs |- 05_UI Github </p>
-</section>
-<footer class=entry-footer><span title="2022-10-05 01:53:56 +0800 +0800">2022-10-05</span></footer>
-<a class=entry-link aria-label="post link to Unity Project Structure" href=https://wenrongdev.com/posts/unit-unity-projectstructure/></a>
-</article>
 <footer class=page-footer>
 <nav class=pagination>
 <a class=next href=https://wenrongdev.com/page/2/>Next Page »</a>
@@ -173,7 +173,7 @@ private static void BuildRelease(string Path, BuildTarget Target, BuildOptions o
 </footer>
 </main>
 <footer class=footer>
-<span>&copy; 2022 <a href=https://wenrongdev.com/>Wenrong's Note</a></span>
+<span>&copy; 2023 <a href=https://wenrongdev.com/>Wenrong's Note</a></span>
 <span>
 Powered by
 <a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
