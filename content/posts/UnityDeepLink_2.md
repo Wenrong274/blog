@@ -28,10 +28,15 @@ deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址�
     <data android:scheme="http" />
     <data android:scheme="https" />
     <data android:host="wenrongdev.com" />
+    <data android:pathPrefix="/unitydeeplink_2"/>
 </intent-filter>
 ```
 
-可以利用這種方式，app 超連結開啟或者網頁輸入 `https://wenrongdev.com/`、`http://wenrongdev.com/` 時就會自動對應到 App。
+`host`：網址
+
+`pathPrefix`：節點
+
+可以利用這種方式，app 超連結開啟或者網頁輸入 `https://wenrongdev.com/posts/unitydeeplink_2/` 時就會自動對應到 App。
 
 * 自訂 id
 
