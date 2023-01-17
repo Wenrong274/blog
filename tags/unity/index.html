@@ -76,6 +76,21 @@
 </header>
 <article class="post-entry tag-entry">
 <header class=entry-header>
+<h2>Unity ParticleBezierPath
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 有使用 Job System 優化功能。
+100000 顆粒子使用路徑功能時，SAMSUNG GALAXY S7 在不使用 Job System FPS 約 8-9 FPS，使用後變成 18-20 FPS，PC 版多使用了 Burst 會從 30 FPS 提升至 100 FPS。
+可能因為測試的硬體裝置數據優化有所不同，建議還是實際測試後才決定。
+使用方式 可以先使用 demo 場景測試，必須要打開 IsJob，才會啟動 Job System。
+GitHub </p>
+</section>
+<footer class=entry-footer><span title="2023-01-18 01:06:00 +0800 +0800">2023-01-18</span></footer>
+<a class=entry-link aria-label="post link to Unity ParticleBezierPath" href=https://wenrongdev.com/posts/particlebezierpath/></a>
+</article>
+<article class="post-entry tag-entry">
+<header class=entry-header>
 <h2>Oculus Sample
 </h2>
 </header>
@@ -134,20 +149,6 @@ Code private static readonly string no_breaking_space = "\u00A0"; public static 
 </section>
 <footer class=entry-footer><span title="2022-12-03 00:42:48 +0800 +0800">2022-12-03</span></footer>
 <a class=entry-link aria-label="post link to Unity Text Breaking Space" href=https://wenrongdev.com/posts/unitytextbreakingspace/></a>
-</article>
-<article class="post-entry tag-entry">
-<header class=entry-header>
-<h2>Oculus Auto Set Build Setting && Build
-</h2>
-</header>
-<section class=entry-content>
-<p>前言 之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。
-XR Setting 可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。
-private static void SetOculusXRLoader(BuildTargetGroup buildTarget, bool active) { XRGeneralSettingsPerBuildTarget buildTargetSettings = null; EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, out buildTargetSettings); XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget); if (active) XRPackageMetadataStore.AssignLoader(settings.Manager, "Unity.XR.Oculus.OculusLoader", buildTarget); else XRPackageMetadataStore.RemoveLoader(settings.Manager, "Unity.XR.Oculus.OculusLoader", buildTarget); } Build 利用這段自動輸出，options 可以設定 BuildOptions.None、BuildOptions.AutoRunPlayer，一般的 Build 和 Build and Run。
-private static void BuildRelease(string Path, BuildTarget Target, BuildOptions options) { Console.Clear(); BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options); BuildReport Report = BuildPipeline....</p>
-</section>
-<footer class=entry-footer><span title="2022-12-01 01:02:10 +0800 +0800">2022-12-01</span></footer>
-<a class=entry-link aria-label="post link to Oculus Auto Set Build Setting && Build" href=https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

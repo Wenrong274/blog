@@ -5,7 +5,16 @@
     <link>https://wenrongdev.com/posts/</link>
     <description>Recent content in Posts on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 02 Jan 2023 01:14:40 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 18 Jan 2023 01:06:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unity ParticleBezierPath</title>
+      <link>https://wenrongdev.com/posts/particlebezierpath/</link>
+      <pubDate>Wed, 18 Jan 2023 01:06:00 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/particlebezierpath/</guid>
+      <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
+    </item>
+    
     <item>
       <title>Oculus Sample</title>
       <link>https://wenrongdev.com/posts/oculussample/</link>
