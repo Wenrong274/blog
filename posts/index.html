@@ -77,6 +77,19 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Unity2021 Video Player Crush
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop(); 時會造成 App Crush。
+官方論壇討論此問題文章。
+錯誤 log Stack trace: Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 Error AndroidRuntime Cause: null pointer dereference Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002 Error AndroidRuntime r4 0848fed2 r5 e5f9b138 r6 ea0e93e0 r7 00000000 Error AndroidRuntime r8 b5c5bfa8 r9 00000000 r10 b5c5bfe8 r11 00000002 Error AndroidRuntime ip e9e63e58 sp b5c5bf00 lr e9df8263 pc e9d823fa Error AndroidRuntime Error AndroidRuntime backtrace: Error AndroidRuntime #00 pc 000773fa /system/lib/libandroid_runtime....</p>
+</section>
+<footer class=entry-footer><span title="2023-02-01 00:14:21 +0800 +0800">2023-02-01</span></footer>
+<a class=entry-link aria-label="post link to Unity2021 Video Player Crush" href=https://wenrongdev.com/posts/unity2021-videoplayercrush/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Unity ParticleBezierPath
 </h2>
 </header>
@@ -138,19 +151,6 @@ Script Start 需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 App
 </section>
 <footer class=entry-footer><span title="2022-12-07 01:19:09 +0800 +0800">2022-12-07</span></footer>
 <a class=entry-link aria-label="post link to Unity Deep Link -1" href=https://wenrongdev.com/posts/unitydeeplink_1/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Unity Text Breaking Space
-</h2>
-</header>
-<section class=entry-content>
-<p>前言 Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 \u00A0 替代 Space。
-Code private static readonly string no_breaking_space = "\u00A0"; public static string ReplaceSpace(string context) { return context.Replace(" ", no_breaking_space); } 可以這樣替代全部的 Space。
-範例 使用前 使用後 </p>
-</section>
-<footer class=entry-footer><span title="2022-12-03 00:42:48 +0800 +0800">2022-12-03</span></footer>
-<a class=entry-link aria-label="post link to Unity Text Breaking Space" href=https://wenrongdev.com/posts/unitytextbreakingspace/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>

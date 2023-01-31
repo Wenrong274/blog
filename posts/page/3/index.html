@@ -77,6 +77,23 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Unity Addressable Download Assets
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 在前一篇 Unity Addressable 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。
+目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。
+Addressables.LoadAssetAsync 官方範例提供的下載方式 Addressables.LoadAsset(s)Async，雖然這個是要把 Asset 讀取出來，其實他也有下載功能
+Addressables.LoadAssetAsync&lt;GameObject>(asset); 我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。
+Update Addressable Name/ Addressable Label IEnumerator UpdateAsset(string asset) { var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false); yield return downloadAsync; Addressables.Release(downloadAsync); } 這個是下載 Addressable Name 或 Label的方法，可以利用 Label 下載多個不同 Group 的 Asset。
+Addressable Name、Label 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Addressable Name、Label 是必須要重新輸出 App 才會更新。
+Update Asset Reference IEnumerator UpdateAsset(AssetReference asset) { var downloadAsync = Addressables....</p>
+</section>
+<footer class=entry-footer><span title="2022-03-14 16:38:48 +0800 +0800">2022-03-14</span></footer>
+<a class=entry-link aria-label="post link to Unity Addressable Download Assets" href=https://wenrongdev.com/posts/unity-addressable_download_assets/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Android Build Failed Build tools 3X.0.0 Bug
 </h2>
 </header>
@@ -151,17 +168,6 @@ Wordpress 2018 時覺得自己的學習成長曲線變慢了，可能是因為�
 </section>
 <footer class=entry-footer><span title="2022-02-14 01:14:39 +0800 +0800">2022-02-14</span></footer>
 <a class=entry-link aria-label="post link to Blog 心得（1）" href=https://wenrongdev.com/posts/reflection-blog-1/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Unity MathQuiz
-</h2>
-</header>
-<section class=entry-content>
-<p>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</p>
-</section>
-<footer class=entry-footer><span title="2021-11-29 02:34:02 +0800 +0800">2021-11-29</span></footer>
-<a class=entry-link aria-label="post link to Unity MathQuiz" href=https://wenrongdev.com/posts/unity-mathquiz/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
