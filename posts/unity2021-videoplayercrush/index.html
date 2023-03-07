@@ -37,7 +37,7 @@
 <meta name=twitter:title content="Unity2021 Video Player Crush">
 <meta name=twitter:description content="在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wenrongdev.com/posts/"},{"@type":"ListItem","position":2,"name":"Unity2021 Video Player Crush","item":"https://wenrongdev.com/posts/unity2021-videoplayercrush/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity2021 Video Player Crush","name":"Unity2021 Video Player Crush","description":"在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。","keywords":["Unity"],"articleBody":"前言 在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop(); 時會造成 App Crush。\n官方論壇討論此問題文章。\n錯誤 log Stack trace: Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 Error AndroidRuntime Cause: null pointer dereference Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002 Error AndroidRuntime r4 0848fed2 r5 e5f9b138 r6 ea0e93e0 r7 00000000 Error AndroidRuntime r8 b5c5bfa8 r9 00000000 r10 b5c5bfe8 r11 00000002 Error AndroidRuntime ip e9e63e58 sp b5c5bf00 lr e9df8263 pc e9d823fa Error AndroidRuntime Error AndroidRuntime backtrace: Error AndroidRuntime #00 pc 000773fa /system/lib/libandroid_runtime.so (BuildId: cb59abe29c72e464af331ce6551ec035) Error AndroidRuntime #01 pc 00000136 [anon:.bss] Error AndroidRuntime Error AndroidRuntime at libandroid_runtime.0x773fa(Native Method) Error AndroidRuntime at [anon:.0x136(Native Method) 解決方式 官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。\n我解決的方式 VideoPlayer.Pause()，然後生成一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。\n不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 Issue Tracker。\n參考連結  ","wordCount":"122","inLanguage":"en","datePublished":"2023-02-01T00:14:21+08:00","dateModified":"2023-02-01T00:14:21+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unity2021-videoplayercrush/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Unity2021 Video Player Crush","name":"Unity2021 Video Player Crush","description":"在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。","keywords":["Unity"],"articleBody":"前言 在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop(); 時會造成 App Crush。\n官方論壇討論此問題文章。\n錯誤 log Stack trace: Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0 Error AndroidRuntime Cause: null pointer dereference Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002 Error AndroidRuntime r4 0848fed2 r5 e5f9b138 r6 ea0e93e0 r7 00000000 Error AndroidRuntime r8 b5c5bfa8 r9 00000000 r10 b5c5bfe8 r11 00000002 Error AndroidRuntime ip e9e63e58 sp b5c5bf00 lr e9df8263 pc e9d823fa Error AndroidRuntime Error AndroidRuntime backtrace: Error AndroidRuntime #00 pc 000773fa /system/lib/libandroid_runtime.so (BuildId: cb59abe29c72e464af331ce6551ec035) Error AndroidRuntime #01 pc 00000136 [anon:.bss] Error AndroidRuntime Error AndroidRuntime at libandroid_runtime.0x773fa(Native Method) Error AndroidRuntime at [anon:.0x136(Native Method) 解決方式 官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。\n我解決的方式 VideoPlayer.Pause()，然後生成一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。\n不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 Issue Tracker。\n ","wordCount":"121","inLanguage":"en","datePublished":"2023-02-01T00:14:21+08:00","dateModified":"2023-02-01T00:14:21+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/unity2021-videoplayercrush/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -97,9 +97,7 @@ Unity2021 Video Player Crush
 <li>
 <a href=#%e9%8c%af%e8%aa%a4-log aria-label="錯誤 log">錯誤 log</a></li>
 <li>
-<a href=#%e8%a7%a3%e6%b1%ba%e6%96%b9%e5%bc%8f aria-label=解決方式>解決方式</a></li>
-<li>
-<a href=#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90 aria-label=參考連結>參考連結</a>
+<a href=#%e8%a7%a3%e6%b1%ba%e6%96%b9%e5%bc%8f aria-label=解決方式>解決方式</a>
 </li>
 </ul>
 </div>
@@ -127,7 +125,6 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <p>官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。</p>
 <p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。</p>
 <p>不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 <a href=https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android>Issue Tracker</a>。</p>
-<h2 id=參考連結>參考連結<a hidden class=anchor aria-hidden=true href=#參考連結>#</a></h2>
 <hr>
 </div>
 <footer class=post-footer>
@@ -135,6 +132,11 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <li><a href=https://wenrongdev.com/tags/unity/>Unity</a></li>
 </ul>
 <nav class=paginav>
+<a class=prev href=https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/>
+<span class=title>« Prev Page</span>
+<br>
+<span>Xcode Command PhaseScriptExecution Failed</span>
+</a>
 <a class=next href=https://wenrongdev.com/posts/particlebezierpath/>
 <span class=title>Next Page »</span>
 <br>

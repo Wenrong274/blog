@@ -77,6 +77,24 @@
 </header>
 <article class=post-entry>
 <header class=entry-header>
+<h2>Unity Deep Link -1
+</h2>
+</header>
+<section class=entry-content>
+<p>前言 DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可以利用 Get Android Intent Data for Unity 這邊文章提到的方式，呼叫 App，不過這只限定 Android，iOS 則還是需要用 Deeplink 的方式呼叫。主要是當時 Unity 版本並不支援 DeepLink，所以只能自己寫原生的，才會有之前的這篇文章，更重要的是，使用之前的呼叫方式是需要某些權限，但目前 Google 也把這些權限關閉，無法正常上架需要自己寫信去解釋才會願意讓你正常上架。所以建議是棄用這種方法改用 Deeplink。
+詳細資料 Unity Deep Link
+Android Deep Link
+iOS Deep Link
+建議是一定要把 Unity Deep Link 看完，才會知道怎麼設定，其餘兩邊則是原生地設定方式，可以參考。
+使用方式 Unity Deep link Doc
+官方也有文件解釋 Deep link 的基礎設定。
+Script Start 需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 Application.absoluteURL 才能讀取道 deep link 的資料。Application.deepLinkActivated 部分則是 app 的 deep link feedback。...</p>
+</section>
+<footer class=entry-footer><span title="2022-12-07 01:19:09 +0800 +0800">2022-12-07</span></footer>
+<a class=entry-link aria-label="post link to Unity Deep Link -1" href=https://wenrongdev.com/posts/unitydeeplink_1/></a>
+</article>
+<article class=post-entry>
+<header class=entry-header>
 <h2>Unity Text Breaking Space
 </h2>
 </header>
@@ -133,20 +151,6 @@ VSCode CLI Args 根據 Unity 開啟 VSCode Args，可以使用 Process 填寫對
 </section>
 <footer class=entry-footer><span title="2022-08-09 00:21:50 +0800 +0800">2022-08-09</span></footer>
 <a class=entry-link aria-label="post link to Unity Open Shader For VSCode" href=https://wenrongdev.com/posts/openshaderforvscode/></a>
-</article>
-<article class=post-entry>
-<header class=entry-header>
-<h2>Unity Addressable Load Assets
-</h2>
-</header>
-<section class=entry-content>
-<p>前言 介紹我使用 Addressable 的讀取、生成、釋放方式。
-詳細設定還是可以先觀看官方文件。
-Event Viewer 可以利用 Event Viewer 在 Editor Runtime 時，隨時監控記憶體使用情況。就可以很明顯的發現，那些東西是忘記釋放掉的，或者不需要釋放的。
-Load Asset IEnumerator InstantiateAsset(string asset) { AsyncOperationHandle&lt;GameObject> async = asset.LoadAssetAsync&lt;GameObject>(); yield return async; GameObject go = Instantiate(async.Result); } IEnumerator InstantiateAssets(string label) { AsyncOperationHandle&lt;IList&lt;GameObject>> async = Addressables.LoadAssetsAsync&lt;GameObject>(label, null); yield return async; for (int i = 0; i &lt; async.Result.Count; i++) GameObject go = Instantiate(async.Result[i]); } IEnumerator InstantiateAsset(AssetReference asset) { AsyncOperationHandle&lt;GameObject> async = asset.LoadAssetAsync&lt;GameObject>(); yield return async; GameObject go = Instantiate(async....</p>
-</section>
-<footer class=entry-footer><span title="2022-05-04 00:27:52 +0800 +0800">2022-05-04</span></footer>
-<a class=entry-link aria-label="post link to Unity Addressable Load Assets" href=https://wenrongdev.com/posts/unity-addressable_load_assets/></a>
 </article>
 <footer class=page-footer>
 <nav class=pagination>
