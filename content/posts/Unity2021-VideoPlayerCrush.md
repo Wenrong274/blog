@@ -41,8 +41,6 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 
 不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 [Issue Tracker][issuetracker]。
 
-## 參考連結
-
 ______________________________________________________________________
 
 [post]:https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/
