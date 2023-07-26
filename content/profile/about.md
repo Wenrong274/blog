@@ -16,20 +16,27 @@ comments: false
 
 ## Projects
 
-[Quest Cloud 探索雲數位學習方塊](https://jt-qc.com/product-pages?p_id=1) _2019/01 – 2023/07_ : 數百互動式動畫，內含國高中自然學科。直覺操作，高品質數位教材，活化學習體驗，探索科學奧妙。
+[Quest Cloud 探索雲數位學習方塊](https://jt-qc.com/product-pages?p_id=1) *2019/01 – 2023/07*
+: 數百互動式動畫，內含國高中自然學科。直覺操作，高品質數位教材，活化學習體驗，探索科學奧妙。
 
-[寶馬曳引機 VR](https://www.youtube.com/watch?v=KTEeI7bDxHA) _2022/07 – 2022/09_ : Meta Quest 2 製作 Valtra 曳引機，打造真實駕駛車體驗。能夠實際模擬駕駛曳引機的操作步驟，且能夠駕駛曳引機。
+[寶馬曳引機 VR](https://www.youtube.com/watch?v=KTEeI7bDxHA) *2022/07 – 2022/09*
+: Meta Quest 2 製作 Valtra 曳引機，打造真實駕駛車體驗。能夠實際模擬駕駛曳引機的操作步驟，且能夠駕駛曳引機。
 
-[雲林好 Young](https://www.youtube.com/watch?v=e3VVoea3EBg) _2021/11 – 2022/05_ : AR、MR 展示雲林縣地圖、大富翁遊戲教知識、品德行為、數學計算。也有實境解謎遊戲，搭配當地景點解謎。
+[雲林好 Young](https://www.youtube.com/watch?v=e3VVoea3EBg) *2021/11 – 2022/05*
+: AR、MR 展示雲林縣地圖、大富翁遊戲教知識、品德行為、數學計算。也有實境解謎遊戲，搭配當地景點解謎。
 
 ## Experiences
 
-[錦田雲端科技](https://jt-qc.com/) _Unity Developer_ _2015/11 – 2023/07_ : QC Cube 主要維護者，也有參與內容的製作。製作多款 AR / MR / VR 專案。協助客戶 App 上架雙平台，能夠處裡各種官方回報問題。面對客戶處理各種功能需求，並且了解、理解客戶所需。擅長研究新工具，使用在專案上解決難題。
+[錦田雲端科技](https://jt-qc.com/) *2015/11 – 2023/07*
+: 擔任 **Unity Developer**，QC Cube 主要維護者，也有參與內容的製作，製作多款 AR / MR / VR 專案。協助客戶 App 上架雙平台，能夠處裡各種官方回報問題，面對客戶處理各種功能需求，並且了解、理解客戶所需，擅長研究新工具，使用在專案上解決難題。
 
 ## Skills
 
-Technical Skills : Unity, Visual Studio, XCode, Android Studio
-Tools And Software:C#, Lua, Git, AR Foundation, Vuforia, UniTask, Unity Addressables, DOTween, Inno Setup, WiX Toolset
+Technical Skills
+: Unity, Visual Studio, XCode, Android Studio
+
+Tools And Software
+: C#, Lua, Git, AR Foundation, Vuforia, UniTask, Unity Addressables, DOTween, Inno Setup, WiX Toolset
 
 ## Contact
 
