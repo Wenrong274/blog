@@ -1,9 +1,15 @@
 baseURL: "https://wenrongdev.com/"
+languageCode: zh # en-us
 title: Wenrong's Note
 paginate: 5
-theme: PaperMod
+theme: hugo-PaperMod
 
+enableInlineShortcodes: true
+enableEmoji: true # 允许使用 Emoji 表情，建议 true
 enableRobotsTXT: true
+hasCJKLanguage: true
+
+
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -13,7 +19,7 @@ disqusShortname: wenrongdev
 
 minify:
     disableXML: true
-    minifyOutput: true
+   # minifyOutput: true
 
 taxonomies:
   tag: "tags"
@@ -26,15 +32,18 @@ params:
     keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
     # author: ["Me", "You"] # multiple authors
     #images: ["<link or path of image for opengraph, twitter-cards>"]
-    DateFormat: "2006-01-02"
+    
     defaultTheme: auto # dark, light
     disableThemeToggle: false
-
-    ShowReadingTime: false
+    DateFormat: "2006-01-02"
     ShowShareButtons: true
+    ShowReadingTime: true
+    # disableSpecial1stPost: true
+    displayFullLangName: true
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
+
     disableSpecial1stPost: false
     disableScrollToTop: false
     comments: true
@@ -78,6 +87,8 @@ params:
         Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
 
     socialIcons:
+        - name: cv
+          url: "./profile/resume_wenrong.pdf"
         - name: github
           url: "https://github.com/Wenrong274"
         - name: linkedin
@@ -115,22 +126,30 @@ params:
         keys: ["title", "permalink", "summary", "content"]
 menu:
     main:
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 5
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 10
         - identifier: search
           name: Search
           url: /search/
+          weight: 1
+        - identifier: home
+          name: Home
+          url: /
+          weight: 2
+        - identifier: posts
+          name: Posts
+          url: posts
+          weight: 3
+        - identifier: tags
+          name: Tags
+          url: tags
+          weight: 15
+        - identifier: archives
+          name: Archives
+          url: archives/
           weight: 20
         - identifier: about
           name: About
-          url: /profile/about/
-          weight: 30
+          url: profile/about/
+          weight: 50
 
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
