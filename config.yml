@@ -2,7 +2,7 @@ baseURL: "https://wenrongdev.com/"
 languageCode: zh # en-us
 title: Wenrong's Note
 paginate: 5
-theme: hugo-PaperMod
+theme: PaperMod
 
 enableInlineShortcodes: true
 enableEmoji: true # 允许使用 Emoji 表情，建议 true
