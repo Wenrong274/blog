@@ -80,7 +80,7 @@ showtoc: true
 : 數學一點也不無聊　[Youtube 1](https://youtu.be/6swrBWThjtI)　[Youtube 2](https://youtu.be/9AZqCJJGFNw)　[介紹網站](https://jt-qc.com/works-pages?w_id=51)
 
 2019/11 - 2020/12
-: 越語致用 [Youtube](https://youtu.be/crGavyM_Cjs)
+: 越語致用　[Youtube](https://youtu.be/crGavyM_Cjs)
 
 2019/10 - 2019/11
 : 震銲AR　[GoolgPlay](https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR)　[介紹網站](https://jt-qc.com/works-pages?w_id=59)
