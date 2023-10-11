@@ -39,8 +39,7 @@ showtoc: true
 2021/02 - 2023/04
 : 康軒翻滾吧圖學　[AppleStore](https://apps.apple.com/tw/app/康軒翻滾吧圖學/id1474588832)　[GoolgPlay](https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733)
 
-
-2021/03 -2021/05
+2021/03 - 2021/05
 : 糖的科普知識　[Youtube](https://www.youtube.com/watch?v=inlLMzOoc60)　[介紹網站](https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116)
 
 2021/05 - 2021/05
@@ -81,8 +80,7 @@ showtoc: true
 : 數學一點也不無聊　[Youtube 1](https://youtu.be/6swrBWThjtI)　[Youtube 2](https://youtu.be/9AZqCJJGFNw)　[介紹網站](https://jt-qc.com/works-pages?w_id=51)
 
 2019/11 - 2020/12
-
-: 越語致用
+: 越語致用 [Youtube](https://youtu.be/crGavyM_Cjs)
 
 2019/10 - 2019/11
 : 震銲AR　[GoolgPlay](https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR)　[介紹網站](https://jt-qc.com/works-pages?w_id=59)
