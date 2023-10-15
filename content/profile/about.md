@@ -23,7 +23,7 @@ comments: false
 * 善於與客戶合作，理解和滿足客戶的功能需求，提供專業建議。
 * 積極研究新工具和技術，將其應用於專案中，解決複雜的技術挑戰。
 
-[Blog 技術文章和開源貢獻](https://wenrongdev.com/)
+[Blog 技術文章和開源貢獻](/)
 
 * 在 Blog 上分享了多篇技術文章，其中一個在 GitHub 上已經獲得了 20 個 Stars，反映專業知識和能力受到了認可。
 * 我的文章主要涵蓋了遊戲開發、AR/VR技術、Unity最佳實踐等主題。這些文章不僅有助於我自己的學習，還有助於社區中其他開發者的成長。
@@ -32,27 +32,27 @@ comments: false
 ## Projects
 
 *2019/01 – 2023/07*
-: [QC Cube](https://apps.apple.com/tw/app/qc-cube/id1480811031)
+: [QC Cube](/portfolios/jtqc_qccube)
 
 根據課程大綱制定內容，隨時更新課程大綱，支援離線使用、多語系。Unity Lua 製作內容，並且使用 AssetBundle 打包輸出。  
 
 *2021/11 – 2023/07*
-: [雲林好 Young](https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988) 
+: [雲林好 Young](/portfolios/jtqc_yunlinyoung)
 
 利用 AR Foundation 圖形辨識和多款遊戲，包括 AR 模型互動、MR 平面辨識遊戲、實境解謎等，並提供一體化的遊戲體驗。
 
 *2022/08 – 2022/09*
-: [寶馬曳引機 VR](https://www.youtube.com/watch?v=JwodlwHqAhU)
+: [寶馬曳引機 VR](/portfolios/jtqc_tractor)
 
 Unity 和 Meta Quest 開發曳引機駕駛模擬，包括外觀詳細觀察和實際駕駛模擬，並添加任務元素。
 
 *2022/06 – 2022/12*
-: [變動的大地](https://moevrar.tku.edu.tw/material_detail.cshtml?id=145)
+: [變動的大地](/portfolios/jtqc_elegeoscience)
 
 模擬各類岩石和地形變化，支援多平台，包括 PC、Oculus Quest 2 和 XRSpace 平台。
 
 *2021/03 – 2021/05*
-: [糖的科普知識](https://www.youtube.com/watch?v=inlLMzOoc60)
+: [糖的科普知識](/portfolios/jtqc_sugarfactory)
 
 利用 Kinect 實現製糖過程的操作方式，透過遊戲教育，學習製糖原理和綠能循環。
 

@@ -1,0 +1,18 @@
+---
+title: "寶馬曳引機 VR"
+date: 2023-10-15T23:15:50+08:00
+hideMeta: true
+disableShare: true
+ShowBreadCrumbs: false
+ShowPostNavLinks: false
+searchHidden: true
+comments: false
+showtoc: true
+---
+
+{{< youtube JwodlwHqAhU >}}
+
+[新聞介紹][mainUrl]
+
+----------
+[mainUrl]:https://tw.news.yahoo.com/彰化中農博vr曳引機模擬艙-全國首次曝光加碼體驗場次-110113353.html
