@@ -9,47 +9,56 @@
     <lastBuildDate>Sun, 15 Oct 2023 23:15:50 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/portfolios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QC Cube</title>
-      <link>https://wenrongdev.com/portfolios/jtqc_qccube/</link>
+      <link>https://wenrongdev.com/portfolios/jtqc/qccube/</link>
       <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/portfolios/jtqc_qccube/</guid>
-      <description>官網介紹 集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。 使用 sLua 製作主選單架構、互動式動畫。 課程內容</description>
+      <guid>https://wenrongdev.com/portfolios/jtqc/qccube/</guid>
+      <description>介紹 集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。 使用 sLua 製作主選單架構、互動式動畫。 課程內容可以</description>
     </item>
     
     <item>
       <title>寶馬曳引機 VR</title>
-      <link>https://wenrongdev.com/portfolios/jtqc_tractor/</link>
+      <link>https://wenrongdev.com/portfolios/jtqc/tractorvr/</link>
       <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/portfolios/jtqc_tractor/</guid>
-      <description>新聞介紹</description>
+      <guid>https://wenrongdev.com/portfolios/jtqc/tractorvr/</guid>
+      <description>介紹 模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。 使用 Unity 搭配 Meta Quest 製作而成。 模擬駕駛手排車 連結 新聞介紹</description>
     </item>
     
     <item>
       <title>糖的科普知識</title>
-      <link>https://wenrongdev.com/portfolios/jtqc_sugarfactory/</link>
+      <link>https://wenrongdev.com/portfolios/jtqc/sugarfactory/</link>
       <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/portfolios/jtqc_sugarfactory/</guid>
-      <description>介紹網址</description>
+      <guid>https://wenrongdev.com/portfolios/jtqc/sugarfactory/</guid>
+      <description>介紹 Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。 使用 Unity 搭配 Kinect SDK 製作而成。 支援多人遊玩。 連結 介紹網址</description>
     </item>
     
     <item>
       <title>變動的大地</title>
-      <link>https://wenrongdev.com/portfolios/jtqc_elegeoscience/</link>
+      <link>https://wenrongdev.com/portfolios/jtqc/elegeoscience/</link>
       <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/portfolios/jtqc_elegeoscience/</guid>
-      <description>介紹網址</description>
+      <guid>https://wenrongdev.com/portfolios/jtqc/elegeoscience/</guid>
+      <description>介紹 使用 VR 裝置了解台灣各類岩⽯和地形變化，每關關卡有任務目標跟題目作答來加深學習記憶，任務目標有判斷拿起岩石碰撞判斷硬度、呼叫海嘯使海岸侵蝕</description>
     </item>
     
     <item>
       <title>雲林好 Young</title>
-      <link>https://wenrongdev.com/portfolios/jtqc_yunlinyoung/</link>
+      <link>https://wenrongdev.com/portfolios/jtqc/yunlinyoung/</link>
       <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
       
-      <guid>https://wenrongdev.com/portfolios/jtqc_yunlinyoung/</guid>
-      <description></description>
+      <guid>https://wenrongdev.com/portfolios/jtqc/yunlinyoung/</guid>
+      <description>介紹 以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨</description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://wenrongdev.com/portfolios/projectlist/</link>
+      <pubDate>Tue, 25 Jul 2023 01:55:27 +0800</pubDate>
+      
+      <guid>https://wenrongdev.com/portfolios/projectlist/</guid>
+      <description>2023 2023/05 - 2023/07 AIR英語未來城 AppleStore GoolgPlay Youtube 2022 2022/01 - 2022/11 滅蚊大作戰 AppleStore GoolgPlay 介紹網站 2022/08 - 2022/09 寶馬曳引機 VR Youtube 2022/06 - 2022/12 變動的大地 Youtube 介紹網站 2022/06 - 2022/11 密室逃脫AR : 生化危機 AppleStore GoolgPlay Youtube</description>
     </item>
     
   </channel>
