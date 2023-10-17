@@ -9,9 +9,9 @@ searchHidden: true
 comments: false
 showtoc: true
 ---
-[官網介紹][mainUrl]
-
 {{< youtube IBSUoFfay-A >}}
+
+## 介紹
 
 集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。
 
@@ -20,6 +20,10 @@ showtoc: true
 * 課程內容可以根據客戶課綱客製化內容。
 
 * 使用 AssetBundle 可以隨時切換、更新課程內容。
+
+## 連結
+
+[官網介紹][mainUrl]
 
 [![appstore][img_appstore]][appstore]
 

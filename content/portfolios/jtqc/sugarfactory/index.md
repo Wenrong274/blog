@@ -12,6 +12,15 @@ showtoc: true
 
 {{< youtube inlLMzOoc60 >}}
 
+## 介紹
+
+Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。
+
+* 使用 Unity 搭配 Kinect SDK 製作而成。
+* 支援多人遊玩。
+
+## 連結
+
 [介紹網址][mainUrl]
 
 ----------

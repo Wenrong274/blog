@@ -8,68 +8,81 @@ ShowPostNavLinks: false
 searchHidden: true
 comments: false
 ---
-我是黃文榮，是一位五年以上遊戲開發經驗，專精於 AR/VR/MR/體感遊戲開發，曾與知名企業合作開發教育類 App。善於解決各種難題，並樂於挑戰自我，不斷學習新知識和技能。具有優秀的團隊合作能力，致力於創造令人驚艷的遊戲體驗。
+五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。
 
-在工作之餘，熱愛運動，喜歡健身、跑步和單車。這不僅有助於保持身體健康，還能激發我的創造力和專注力。我也以幽默風趣的個性著稱，相信工作應該充滿樂趣和挑戰，期待加入貴公司的優秀團隊，一同打造更多創新和有趣的遊戲產品。
+擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。
 
-## Experiences
+希望能參與更多元專案開發，學習到更不同面向的開發或研究經驗。
+
+## 聯絡方式
+
+📧 <hybrid0930@gmail.com>
+
+## 工作經歷
 
 *2015/11 – 2023/07*
 : [錦田雲端科技](https://jt-qc.com/)
 
-* 擔任 QC Cube 主要維護者，負責產品維護和內容更新。
-* 成功開發多款 AR / MR / VR 專案，展現卓越的遊戲開發技能。
-* 協助客戶上架多個平台，能夠迅速處理各種回報問題，確保順利上架。
-* 善於與客戶合作，理解和滿足客戶的功能需求，提供專業建議。
-* 積極研究新工具和技術，將其應用於專案中，解決複雜的技術挑戰。
+* 分析專案計畫可行性，並與各部門討論如何執行分工。
+* 規劃程式架構使用技術。
+* 進行專案測試、修改及性能優化。
+* 研發軟體新技術與新工具。
 
-[Blog 技術文章和開源貢獻](/)
-
-* 在 Blog 上分享了多篇技術文章，其中一個在 GitHub 上已經獲得了 20 個 Stars，反映專業知識和能力受到了認可。
-* 我的文章主要涵蓋了遊戲開發、AR/VR技術、Unity最佳實踐等主題。這些文章不僅有助於我自己的學習，還有助於社區中其他開發者的成長。
-* 我喜歡與其他開發者分享知識，並積極參與開源項目，以推動技術的發展。
-
-## Projects
+## 專案經歷
 
 *2019/01 – 2023/07*
-: [QC Cube](/portfolios/jtqc_qccube)
+: [QC Cube](/portfolios/jtqc/qccube)
 
-根據課程大綱制定內容，隨時更新課程大綱，支援離線使用、多語系。Unity Lua 製作內容，並且使用 AssetBundle 打包輸出。  
-
-*2021/11 – 2023/07*
-: [雲林好 Young](/portfolios/jtqc_yunlinyoung)
-
-利用 AR Foundation 圖形辨識和多款遊戲，包括 AR 模型互動、MR 平面辨識遊戲、實境解謎等，並提供一體化的遊戲體驗。
-
-*2022/08 – 2022/09*
-: [寶馬曳引機 VR](/portfolios/jtqc_tractor)
-
-Unity 和 Meta Quest 開發曳引機駕駛模擬，包括外觀詳細觀察和實際駕駛模擬，並添加任務元素。
-
-*2022/06 – 2022/12*
-: [變動的大地](/portfolios/jtqc_elegeoscience)
-
-模擬各類岩石和地形變化，支援多平台，包括 PC、Oculus Quest 2 和 XRSpace 平台。
+數以百計的互動式動畫，內容涵蓋國高中自然學科而成。前期負責製作動畫內容，之後接手主程式開發及維護，除了此之外也完成支援多語系、優化下載流程、替換伺服器等。
 
 *2021/03 – 2021/05*
-: [糖的科普知識](/portfolios/jtqc_sugarfactory)
+: [糖的科普知識](/portfolios/jtqc/sugarfactory)
 
-利用 Kinect 實現製糖過程的操作方式，透過遊戲教育，學習製糖原理和綠能循環。
+Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。因計畫安排的時程緊奏，同時還須配合硬體廠商特殊畫面比例，確保多人同時遊玩的順暢性。
 
-[**其他作品**](../projects)
+*2021/11 – 2023/07*
+: [雲林好 Young](/portfolios/jtqc/yunlinyoung) 
+
+品德題目搭配多種類型遊戲，類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。使用 AR Foundation、UniTask、Odin 等，因為有 7 款不同類型的遊戲內容，考慮到維護方便性因此特別著重在架構統整上。
+
+*2022/06 – 2022/12*
+: [變動的大地](/portfolios/jtqc/elegeoscience) 
+
+模擬各類岩石和河流地形變化，支援平台有 Windows、Meta Quest 和 XRSpace，並且將其整合為一個專案製作，統一各個平台操作方式，並注意各個平台性能差異問題。
+
+*2022/08 – 2022/09*
+: [寶馬曳引機 VR](/portfolios/jtqc/tractorvr) 
+
+模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。使用 Meta Quest 製作而成，配合中農博展覽時期，僅花一個月製作時間，且要完成模擬手排車駕駛、克服駕駛過程 3D 暈眩等問題。
+
+## Other
+
+* [Wenrong Blog](/)
+
+    ⽂章涵蓋了遊戲開發、AR/VR 技術、開發問題與解決等主題，這些⽂章不僅有助於⾃⼰的學習和記錄，也助於其他開發者參考。
+
+* [Unity Addressable 實作](https://github.com/Wenrong274/Unity-Addressable)
+
+    實作 Unity Addressable 的專案。詳細介紹下載、讀取及釋放的方式。
+
+* [Unity 粒子路徑工具](https://github.com/Wenrong274/ParticleBezierPath)
+
+    讓粒子跟隨路徑移動，使用 Job System 控制粒子位移優化效能。
+
+* [Unity 日期工具](https://github.com/Wenrong274/Unity-Calendar)
+
+    橫列式日期設定年月日，使用上清楚明瞭且方便跟快速。
+
+* [Unity 資料夾管理](https://github.com/Wenrong274/FolderManager)
+
+    視覺化管理使用路徑工具，可以隨時設定路徑節點跟顯示絕對路徑。
 
 ## Skills
 
-Technical Skills
-: Unity, Visual Studio, XCode, Android Studio
+Tech Stack
+: Android Studio, C#, Git, Lua, Unity, Visual Studio, XCode
 
-Tools And Software
-: C#, Lua, Git, AR Foundation, Vuforia, UniTask, Unity Addressables, DOTween,  Inno Setup, WiX Toolset
-
-## Contact
-
-📧 <hybrid0930@gmail.com>
-
-📄 [CV](../resume_wenrong.pdf)
+Unity Tools
+: Addressables, AR Foundation, Cardboard, DOTween, Meta Quest, UniTask, Vuforia, Odin
 
 ---
