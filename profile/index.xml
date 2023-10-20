@@ -14,6 +14,32 @@
       
       <guid>https://wenrongdev.com/profile/about/</guid>
       <description>五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。 擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。</description>
+      <content:encoded><![CDATA[<p>五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。</p>
+<p>擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。</p>
+<p>希望能參與更多元專案開發，學習到更不同面向的開發或研究經驗。</p>
+<h2 id="聯絡方式">聯絡方式</h2>
+<p>📧 <a href="mailto:hybrid0930@gmail.com">hybrid0930@gmail.com</a></p>
+<p>📄 <a href="/profile/cv_wenrong.pdf">CV</a></p>
+<h2 id="工作經歷">工作經歷</h2>
+<dl>
+<dt><em>2015/11 – 2023/07</em></dt>
+<dd><a href="https://jt-qc.com/">錦田雲端科技</a></dd>
+</dl>
+<ul>
+<li>分析專案計畫可行性，並與各部門討論如何執行分工。</li>
+<li>規劃程式架構使用技術。</li>
+<li>進行專案測試、修改及性能優化。</li>
+<li>研發軟體新技術與新工具。</li>
+</ul>
+<h2 id="skills">Skills</h2>
+<dl>
+<dt>Tech Stack</dt>
+<dd>Android Studio, C#, Git, Lua, Unity, Visual Studio, XCode</dd>
+<dt>Unity Tools</dt>
+<dd>Addressables, AR Foundation, Cardboard, DOTween, Meta Quest, UniTask, Vuforia, Odin</dd>
+</dl>
+<hr>
+]]></content:encoded>
     </item>
     
   </channel>

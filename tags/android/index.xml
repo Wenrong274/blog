@@ -14,6 +14,27 @@
       
       <guid>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</guid>
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>輸出 Apk 遇到的錯誤</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Fix Installed Build Tools revision 3X.0.0 is corrupted.
+</code></pre></div><p><img loading="lazy" src="https://imgur.com/CziTHbS.jpg" alt="img_1"  />
+</p>
+<h2 id="修改方式">修改方式</h2>
+<h3 id="修改-d8bat">修改 d8.bat</h3>
+<p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0</code></p>
+<p><img loading="lazy" src="https://imgur.com/YwqG9ek.jpg" alt="simg_1"  />
+</p>
+<p>將 <code>d8.bat</code> 改為 <code>dx.bat</code>。</p>
+<h3 id="修改-d8jar">修改 d8.jar</h3>
+<p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0\lib</code></p>
+<p><img loading="lazy" src="https://imgur.com/sLwOhQx.jpg" alt="simg_2"  />
+</p>
+<p>將 <code>d8.jar</code> 改為 <code>dx.jar</code>。</p>
+<p>就完成修改。</p>
+<h2 id="參考連結">參考連結</h2>
+<p><a href="https://stackoverflow.com/a/68430992">Android Studio error &ldquo;Installed Build Tools revision 31.0.0 is corrupted&rdquo;</a></p>
+<hr>
+]]></content:encoded>
     </item>
     
     <item>
@@ -23,6 +44,15 @@
       
       <guid>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</guid>
       <description>沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。</p>
+<p>測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。</p>
+<p>後來發現主因是<code>省電模式（Doze mode）</code>導致 APP 無法接受任何推波內容。</p>
+<h2 id="參考連結">參考連結</h2>
+<p><a href="https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn">https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn</a></p>
+<p><a href="https://blog.csdn.net/pkorochi/article/details/87186659">https://blog.csdn.net/pkorochi/article/details/87186659</a></p>
+<hr>
+]]></content:encoded>
     </item>
     
     <item>
@@ -32,6 +62,25 @@
       
       <guid>https://wenrongdev.com/posts/android-p-http-error/</guid>
       <description>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
+<p>Error Log：<code>Cleartext HTTP traffic to 45.xx.xxx.xx not permitted</code></p>
+<h2 id="solution">Solution</h2>
+<p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 加入 <code>android:usesCleartextTraffic=&quot;true&quot;</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml">    <span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+    <span style="color:#f92672">&lt;manifest</span> <span style="color:#960050;background-color:#1e0010">...</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span> <span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;application</span>
+            <span style="color:#960050;background-color:#1e0010">...</span>
+            <span style="color:#a6e22e">android:usesCleartextTraffic=</span><span style="color:#e6db74">&#34;true&#34;</span>
+            <span style="color:#960050;background-color:#1e0010">...</span><span style="color:#f92672">&gt;</span>
+            ...
+        <span style="color:#f92672">&lt;/application&gt;</span>
+    <span style="color:#f92672">&lt;/manifest&gt;</span>
+</code></pre></div><h2 id="參考連結">參考連結</h2>
+<p><a href="https://michaelyb.top/2018/08/Android-HTTP/">Android中HTTP网络请求相关问题</a></p>
+<hr>
+]]></content:encoded>
     </item>
     
     <item>
@@ -41,6 +90,53 @@
       
       <guid>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
       <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
+<h3 id="demo-script">Demo Script</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
+}
+
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Launch(<span style="color:#66d9ef">string</span> bundleId, <span style="color:#66d9ef">string</span> storelink)
+{
+    <span style="color:#66d9ef">bool</span> fail = <span style="color:#66d9ef">false</span>;
+    AndroidJavaClass up = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>);
+    AndroidJavaObject ca = up.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
+    AndroidJavaObject packageManager = ca.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getPackageManager&#34;</span>);
+
+    AndroidJavaObject launchIntent = <span style="color:#66d9ef">null</span>;
+    <span style="color:#66d9ef">try</span>
+    {
+        launchIntent = packageManager.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getLaunchIntentForPackage&#34;</span>, bundleId);
+    }
+    <span style="color:#66d9ef">catch</span> (Exception e)
+    {
+        fail = <span style="color:#66d9ef">true</span>;
+    }
+
+    <span style="color:#66d9ef">if</span> (fail || launchIntent == <span style="color:#66d9ef">null</span>)
+        Application.OpenURL(storelink);
+    <span style="color:#66d9ef">else</span>
+    {
+        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementA&#34;</span>, LaunchData.elementA);
+        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementB&#34;</span>, LaunchData.elementB);
+        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementC&#34;</span>, LaunchData.elementC);
+        ca.Call(<span style="color:#e6db74">&#34;startActivity&#34;</span>, launchIntent);
+    }
+    up.Dispose();
+    ca.Dispose();
+    packageManager.Dispose();
+    launchIntent.Dispose();
+}
+</code></pre></div><h2 id="property">Property</h2>
+<p>PropertyInfo 是用來接受資訊的 class，這邊可以自行修改。</p>
+<hr>
+<p><a href="https://wenrongdev.com/get-android-intent-data-for-unity/">Get Android intent Data for Unity</a></p>
+]]></content:encoded>
     </item>
     
   </channel>

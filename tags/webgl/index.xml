@@ -14,6 +14,35 @@
       
       <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。</p>
+<p><code>IndexedDB</code> 是有容量大小限制，所以需要注意存儲的檔案大小。</p>
+<h2 id="about-indexeddb">About IndexedDB</h2>
+<p><a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a></p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png" alt="img_1"  />
+</p>
+<h2 id="githubhttpsgithubcomwenrong274dataaccesswebgl"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
+<h2 id="introduction">Introduction</h2>
+<ul>
+<li>
+<p>File Path</p>
+<p><code>string.Format(&quot;{0}/{1}.dat&quot;, Application.persistentDataPath, FileName);</code></p>
+</li>
+<li>
+<p>Save Method</p>
+<p>DataAccess.Save(fileName, bytes);</p>
+</li>
+<li>
+<p>Load Method</p>
+<p>byte[] bytes = DataAccess.Load(fileName);</p>
+</li>
+<li>
+<p>Example Scene</p>
+<p><code>root\Assets\WebGL\Example\Scenes\Example</code></p>
+</li>
+</ul>
+<hr>
+]]></content:encoded>
     </item>
     
   </channel>

@@ -14,6 +14,47 @@
       
       <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
       <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</p>
+<h3 id="已知限制條件">已知限制條件</h3>
+<ol>
+<li>程式必須以 Administrator 執行</li>
+<li>一般使用者可以執行</li>
+<li>不可完全關閉 Windows UAC</li>
+</ol>
+<h3 id="解決方式">解決方式</h3>
+<p>根據<a href="%22http://www.taode.idv.tw/WordPress?p=639%22">不變更UAC安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
+<ol>
+<li>Win+R 輸入 regedit 執行</li>
+<li>根據此路徑尋找 <code>HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers</code></li>
+<li>右鍵新增字串值，名稱為程式（exe）路徑、資料為<code>~ RunAsInvoker</code></li>
+</ol>
+<h3 id="c-解決方式">C# 解決方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RegEditWhiteList</span>
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> keyName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> root = <span style="color:#e6db74">@&#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34;</span>;
+    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> keyValue = <span style="color:#e6db74">&#34;~ RunAsInvoker&#34;</span>;
+
+    <span style="color:#66d9ef">public</span> RegEditWhiteList(<span style="color:#66d9ef">string</span> keyName)
+    {
+        <span style="color:#66d9ef">this</span>.keyName = keyName;
+    }
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> SendRegedit()
+    {
+        RegistryKey key = Registry.CurrentUser.OpenSubKey(root, <span style="color:#66d9ef">true</span>);
+        key.SetValue(keyName, keyValue,RegistryValueKind.String);
+        key.Close();
+    }
+}
+</code></pre></div><h4 id="githubhttpsgithubcomwenrong274uacwhitelist"><a href="%22https://github.com/Wenrong274/UACWhitelist%22">GitHub</a></h4>
+<h3 id="使用方式">使用方式</h3>
+<p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
+<h3 id="參考資料">參考資料</h3>
+<p><a href="%22http://www.taode.idv.tw/WordPress?p=639%22">不變更UAC安全性，但執行程式時又不擾民的設定方式</a></p>
+<hr>
+]]></content:encoded>
     </item>
     
   </channel>

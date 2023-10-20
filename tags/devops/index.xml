@@ -14,6 +14,49 @@
       
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>此為使用 Jenkins 輸出 Unity 專案注意事項。</p>
+<h2 id="setting">Setting</h2>
+<p>須注意 Unity 有無安裝輸出目標平台（Android、iOS、WebGL&hellip;）。</p>
+<p>並且要設定 Jenkins 環境（AndroidSDK、JDK、Unity Editor）。</p>
+<h3 id="jenkins-android-sdk">Jenkins Android SDK</h3>
+<p>需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。</p>
+<p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Configure System -&gt; Global properties</code>。</p>
+<p>設定如下圖：</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG" alt="img_1"  />
+</p>
+<p><code>Name</code>：<code>ANDROID_HOME</code></p>
+<p><code>Value</code>：AndroidSDK 路徑。</p>
+<h3 id="jenkins-jdk">Jenkins JDK</h3>
+<p>JDK 版本請選 <code>Java SE 8</code>，因為 Unity 只支援 Java SE 8。</p>
+<p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Global Tool Configuration -&gt; JDK</code>。</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG" alt="img_2"  />
+</p>
+<h3 id="jenkins-unity3d-plugin">Jenkins Unity3d Plugin</h3>
+<p>需要至 Plugin Manager 安裝 Unity3d Plugin。</p>
+<p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Plugin Manager -&gt; Available</code></p>
+<p>安裝完成後，需要設定 Unity Editor 路徑。</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG" alt="img_3"  />
+</p>
+<p><code>Name</code>：unity version</p>
+<p><code>Installation directory</code>：unity installed path</p>
+<h3 id="jenkins-item">Jenkins item</h3>
+<p>基本設置可參考 <a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a> 介紹。</p>
+<p>最主要是設定 <code>Editor command line arguments</code>。</p>
+<p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
+<p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
+<p>在 Editor command line arguments 輸入</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
+</code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
+<p><code>-android</code> 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。</p>
+<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG" alt="img_4"  />
+</p>
+<h2 id="github-repogithub"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
+<h2 id="reference">reference</h2>
+<p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a></p>
+<p><a href="https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/">Jenkins for Unity with DigitalOcean</a></p>
+<hr>
+]]></content:encoded>
     </item>
     
   </channel>
