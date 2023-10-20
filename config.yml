@@ -43,7 +43,8 @@ params:
     ShowPostNavLinks: true
     ShowBreadCrumbs: true
     ShowCodeCopyButtons: true
-
+    ShowFullTextinRSS: true 
+    
     disableSpecial1stPost: false
     disableScrollToTop: false
     comments: true
@@ -95,7 +96,8 @@ params:
           url: "https://www.linkedin.com/in/wen-rong-huang-032b69187/"
         - name: email
           url: "mailto:hybrid0930@gmail.com"
-
+        - name: rss # Shows an RSS feed icon on your site`
+          url: "index.xml" # Your RSS feed url path
     analytics:
         google:
             SiteVerificationTag: "XYZabc"
