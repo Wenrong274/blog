@@ -4,7 +4,7 @@
 <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
 <meta name=robots content="index, follow">
 <title>Whitelist for Windows UAC | Wenrong's Note</title>
-<meta name=keywords content="C#,WebGL">
+<meta name=keywords content="C#">
 <meta name=description content="為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。">
 <meta name=author content>
 <link rel=canonical href=https://wenrongdev.com/posts/whitelist-for-windows-uac/>
@@ -36,7 +36,7 @@
 <meta name=twitter:title content="Whitelist for Windows UAC">
 <meta name=twitter:description content="為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。">
 <script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wenrongdev.com/posts/"},{"@type":"ListItem","position":2,"name":"Whitelist for Windows UAC","item":"https://wenrongdev.com/posts/whitelist-for-windows-uac/"}]}</script>
-<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Whitelist for Windows UAC","name":"Whitelist for Windows UAC","description":"為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。","keywords":["C#","WebGL"],"articleBody":"前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。\n已知限制條件  程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC  解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。\n Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker  C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @\"Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\"; private readonly string keyValue = \"~ RunAsInvoker\"; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry.CurrentUser.OpenSubKey(root, true); key.SetValue(keyName, keyValue,RegistryValueKind.String); key.Close(); } } GitHub 使用方式 因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。\n參考資料 不變更UAC安全性，但執行程式時又不擾民的設定方式\n ","wordCount":"388","inLanguage":"en","datePublished":"2019-11-04T00:00:00+08:00","dateModified":"2019-11-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/whitelist-for-windows-uac/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"Whitelist for Windows UAC","name":"Whitelist for Windows UAC","description":"為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。","keywords":["C#"],"articleBody":"前言 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。\n已知限制條件  程式必須以 Administrator 執行 一般使用者可以執行 不可完全關閉 Windows UAC  解決方式 根據不變更UAC安全性，但執行程式時又不擾民的設定方式，可以在 Windows Regedit 新增白名單。\n Win+R 輸入 regedit 執行 根據此路徑尋找 HKEY_CURRENT_USERS\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers 右鍵新增字串值，名稱為程式（exe）路徑、資料為~ RunAsInvoker  C# 解決方式 public class RegEditWhiteList { public string keyName { get; set; } private readonly string root = @\"Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers\"; private readonly string keyValue = \"~ RunAsInvoker\"; public RegEditWhiteList(string keyName) { this.keyName = keyName; } public void SendRegedit() { RegistryKey key = Registry.CurrentUser.OpenSubKey(root, true); key.SetValue(keyName, keyValue,RegistryValueKind.String); key.Close(); } } GitHub 使用方式 因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。\n參考資料 不變更UAC安全性，但執行程式時又不擾民的設定方式\n ","wordCount":"388","inLanguage":"en","datePublished":"2019-11-04T00:00:00+08:00","dateModified":"2019-11-04T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://wenrongdev.com/posts/whitelist-for-windows-uac/"},"publisher":{"@type":"Organization","name":"Wenrong's Note","logo":{"@type":"ImageObject","url":"https://wenrongdev.com/favicon.ico"}}}</script>
 </head>
 <body id=top>
 <script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add('dark'):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove('dark'):window.matchMedia('(prefers-color-scheme: dark)').matches&&document.body.classList.add('dark')</script>
@@ -99,22 +99,20 @@ Whitelist for Windows UAC
 </summary>
 <div class=inner><ul>
 <li>
-<a href=#%e5%89%8d%e8%a8%80 aria-label=前言>前言</a><ul>
+<a href=#%e5%89%8d%e8%a8%80 aria-label=前言>前言</a></li>
 <li>
 <a href=#%e5%b7%b2%e7%9f%a5%e9%99%90%e5%88%b6%e6%a2%9d%e4%bb%b6 aria-label=已知限制條件>已知限制條件</a></li>
 <li>
 <a href=#%e8%a7%a3%e6%b1%ba%e6%96%b9%e5%bc%8f aria-label=解決方式>解決方式</a></li>
 <li>
-<a href=#c-%e8%a7%a3%e6%b1%ba%e6%96%b9%e5%bc%8f aria-label="C# 解決方式">C# 解決方式</a><ul>
+<a href=#c-%e8%a7%a3%e6%b1%ba%e6%96%b9%e5%bc%8f aria-label="C# 解決方式">C# 解決方式</a></li>
 <li>
-<a href=#githubhttpsgithubcomwenrong274uacwhitelist aria-label=GitHub><a href=%22https://github.com/Wenrong274/UACWhitelist%22>GitHub</a></a></li></ul>
+<a href=#githubrepo aria-label=GitHub><a href=https://github.com/Wenrong274/UACWhitelist>GitHub</a></a><ul>
+<li>
+<a href=#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f aria-label=使用方式>使用方式</a></li></ul>
 </li>
-<li>
-<a href=#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f aria-label=使用方式>使用方式</a></li>
 <li>
 <a href=#%e5%8f%83%e8%80%83%e8%b3%87%e6%96%99 aria-label=參考資料>參考資料</a>
-</li>
-</ul>
 </li>
 </ul>
 </div>
@@ -122,20 +120,20 @@ Whitelist for Windows UAC
 </div>
 <div class=post-content><h2 id=前言>前言<a hidden class=anchor aria-hidden=true href=#前言>#</a></h2>
 <p>因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</p>
-<h3 id=已知限制條件>已知限制條件<a hidden class=anchor aria-hidden=true href=#已知限制條件>#</a></h3>
+<h2 id=已知限制條件>已知限制條件<a hidden class=anchor aria-hidden=true href=#已知限制條件>#</a></h2>
 <ol>
 <li>程式必須以 Administrator 執行</li>
 <li>一般使用者可以執行</li>
 <li>不可完全關閉 Windows UAC</li>
 </ol>
-<h3 id=解決方式>解決方式<a hidden class=anchor aria-hidden=true href=#解決方式>#</a></h3>
-<p>根據<a href="%22http://www.taode.idv.tw/WordPress?p=639%22">不變更UAC安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
+<h2 id=解決方式>解決方式<a hidden class=anchor aria-hidden=true href=#解決方式>#</a></h2>
+<p>根據<a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
 <ol>
 <li>Win+R 輸入 regedit 執行</li>
 <li>根據此路徑尋找 <code>HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers</code></li>
 <li>右鍵新增字串值，名稱為程式（exe）路徑、資料為<code>~ RunAsInvoker</code></li>
 </ol>
-<h3 id=c-解決方式>C# 解決方式<a hidden class=anchor aria-hidden=true href=#c-解決方式>#</a></h3>
+<h2 id=c-解決方式>C# 解決方式<a hidden class=anchor aria-hidden=true href=#c-解決方式>#</a></h2>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-C# data-lang=C#><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RegEditWhiteList</span>
 {
     <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>string</span> keyName { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
@@ -154,11 +152,11 @@ Whitelist for Windows UAC
         key.Close();
     }
 }
-</code></pre></div><h4 id=githubhttpsgithubcomwenrong274uacwhitelist><a href=%22https://github.com/Wenrong274/UACWhitelist%22>GitHub</a><a hidden class=anchor aria-hidden=true href=#githubhttpsgithubcomwenrong274uacwhitelist>#</a></h4>
+</code></pre></div><h2 id=githubrepo><a href=https://github.com/Wenrong274/UACWhitelist>GitHub</a><a hidden class=anchor aria-hidden=true href=#githubrepo>#</a></h2>
 <h3 id=使用方式>使用方式<a hidden class=anchor aria-hidden=true href=#使用方式>#</a></h3>
 <p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
-<h3 id=參考資料>參考資料<a hidden class=anchor aria-hidden=true href=#參考資料>#</a></h3>
-<p><a href="%22http://www.taode.idv.tw/WordPress?p=639%22">不變更UAC安全性，但執行程式時又不擾民的設定方式</a></p>
+<h2 id=參考資料>參考資料<a hidden class=anchor aria-hidden=true href=#參考資料>#</a></h2>
+<p><a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a></p>
 <hr>
 </div>
 <footer class=post-footer>
