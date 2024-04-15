@@ -4,47 +4,45 @@
     <title>Unity on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity2021 Video Player Crush</title>
       <link>https://wenrongdev.com/posts/unity2021-videoplayercrush/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity2021-videoplayercrush/</guid>
       <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
 <p>官方論壇討論此問題<a href="https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/">文章</a>。</p>
 <h2 id="錯誤-log">錯誤 log</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Stack trace:
-Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
-Error AndroidRuntime Cause: null pointer dereference
-Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002
-Error AndroidRuntime r4 0848fed2 r5 e5f9b138 r6 ea0e93e0 r7 00000000
-Error AndroidRuntime r8 b5c5bfa8 r9 00000000 r10 b5c5bfe8 r11 00000002
-Error AndroidRuntime ip e9e63e58 sp b5c5bf00 lr e9df8263 pc e9d823fa
-Error AndroidRuntime
-Error AndroidRuntime backtrace:
-Error AndroidRuntime #00 pc 000773fa /system/lib/libandroid_runtime.so (BuildId: cb59abe29c72e464af331ce6551ec035)
-Error AndroidRuntime #01 pc 00000136 [anon:.bss]
-Error AndroidRuntime
-Error AndroidRuntime at libandroid_runtime.0x773fa(Native Method)
-Error AndroidRuntime at [anon:.0x136(Native Method)
-</code></pre></div><h2 id="解決方式">解決方式</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
+</span></span><span style="display:flex;"><span>Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
+</span></span><span style="display:flex;"><span>Error AndroidRuntime Cause: null pointer dereference
+</span></span><span style="display:flex;"><span>Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002
+</span></span><span style="display:flex;"><span>Error AndroidRuntime r4 0848fed2 r5 e5f9b138 r6 ea0e93e0 r7 00000000
+</span></span><span style="display:flex;"><span>Error AndroidRuntime r8 b5c5bfa8 r9 00000000 r10 b5c5bfe8 r11 00000002
+</span></span><span style="display:flex;"><span>Error AndroidRuntime ip e9e63e58 sp b5c5bf00 lr e9df8263 pc e9d823fa
+</span></span><span style="display:flex;"><span>Error AndroidRuntime
+</span></span><span style="display:flex;"><span>Error AndroidRuntime backtrace:
+</span></span><span style="display:flex;"><span>Error AndroidRuntime #00 pc 000773fa /system/lib/libandroid_runtime.so (BuildId: cb59abe29c72e464af331ce6551ec035)
+</span></span><span style="display:flex;"><span>Error AndroidRuntime #01 pc 00000136 [anon:.bss]
+</span></span><span style="display:flex;"><span>Error AndroidRuntime
+</span></span><span style="display:flex;"><span>Error AndroidRuntime at libandroid_runtime.0x773fa(Native Method)
+</span></span><span style="display:flex;"><span>Error AndroidRuntime at [anon:.0x136(Native Method)
+</span></span></code></pre></div><h2 id="解決方式">解決方式</h2>
 <p>官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。</p>
 <p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。</p>
 <p>不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 <a href="https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android">Issue Tracker</a>。</p>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity ParticleBezierPath</title>
       <link>https://wenrongdev.com/posts/particlebezierpath/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/particlebezierpath/</guid>
       <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -61,12 +59,10 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Oculus Sample</title>
       <link>https://wenrongdev.com/posts/oculussample/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/oculussample/</guid>
       <description>簡易的 Oculus 功能介紹專案</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -77,12 +73,10 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Deep Link -2</title>
       <link>https://wenrongdev.com/posts/unitydeeplink_2/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unitydeeplink_2/</guid>
       <description>介紹 Unity Deep Link 呼叫方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -93,29 +87,29 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <ul>
 <li>url 呼叫方式</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;intent-filter&gt;</span>
-    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;http&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;https&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:host=</span><span style="color:#e6db74">&#34;wenrongdev.com&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:pathPrefix=</span><span style="color:#e6db74">&#34;/unitydeeplink_2&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/intent-filter&gt;</span>
-</code></pre></div><p><code>host</code>：網址</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;http&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;https&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:host=</span><span style="color:#e6db74">&#34;wenrongdev.com&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:pathPrefix=</span><span style="color:#e6db74">&#34;/unitydeeplink_2&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/intent-filter&gt;</span>
+</span></span></code></pre></div><p><code>host</code>：網址</p>
 <p><code>pathPrefix</code>：節點</p>
 <p>可以利用這種方式，app 超連結開啟或者網頁輸入 <code>https://wenrongdev.com/posts/unitydeeplink_2/</code> 時就會自動對應到 App。</p>
 <ul>
 <li>自訂 id</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;intent-filter&gt;</span>
-    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;app&#34;</span> <span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:host=</span><span style="color:#e6db74">&#34;wenrongdev&#34;</span> <span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/intent-filter&gt;</span>
-</code></pre></div><p>可以利用這種方式，app 超連結開啟或者網頁輸入 <code>app://wenrongdev</code> 時就會自動對應到 App。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:scheme=</span><span style="color:#e6db74">&#34;app&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;data</span> <span style="color:#a6e22e">android:host=</span><span style="color:#e6db74">&#34;wenrongdev&#34;</span> <span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/intent-filter&gt;</span>
+</span></span></code></pre></div><p>可以利用這種方式，app 超連結開啟或者網頁輸入 <code>app://wenrongdev</code> 時就會自動對應到 App。</p>
 <h2 id="ios">iOS</h2>
 <p>Unity 設定 link id 的方式在 <a href="https://docs.unity3d.com/Manual/deep-linking-ios.html">Deep linking on iOS</a> 有介紹如何設定，而 Xcode 也能設定，不過建議是在 Unity 中設定非必要不建議額外自己在手動設置，主要是怕輸出時忘記導致功能失效。</p>
 <p>Xcode 詳細設定可以參考這邊 <a href="https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97">IOS Deep linking: URL Scheme vs Universal Links</a></p>
@@ -130,12 +124,10 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Deep Link -1</title>
       <link>https://wenrongdev.com/posts/unitydeeplink_1/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unitydeeplink_1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -158,30 +150,30 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <p>官方也有文件解釋 Deep link 的基礎設定。</p>
 <h2 id="script-start">Script Start</h2>
 <p>需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 <code>Application.absoluteURL</code> 才能讀取道 deep link 的資料。<code>Application.deepLinkActivated</code> 部分則是 app 的 deep link feedback。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
-    {
-        Application.deepLinkActivated += OnDeepLinkActivated;
-        <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(Application.absoluteURL))
-            OnDeepLinkActivated(Application.absoluteURL);
-    }
-</code></pre></div><h2 id="script-url-arg">Script Url Arg</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Application.deepLinkActivated += OnDeepLinkActivated;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(Application.absoluteURL))
+</span></span><span style="display:flex;"><span>            OnDeepLinkActivated(Application.absoluteURL);
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="script-url-arg">Script Url Arg</h2>
 <p>拆解 Deep link 夾帶的參數，格式大概與 web 的 url get 類似，可以用這種方式去解析，夾帶的參數。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
-    {
-        <span style="color:#66d9ef">string</span>[] urlArg = url.Split(<span style="color:#e6db74">&#39;?&#39;</span>);
-        <span style="color:#66d9ef">string</span>[] args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[<span style="color:#ae81ff">0</span>];
-        <span style="color:#66d9ef">if</span> (urlArg.Length &gt; <span style="color:#ae81ff">1</span>)
-        {
-            <span style="color:#66d9ef">char</span>[] charSeparators = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[] { <span style="color:#e6db74">&#39;&amp;&#39;</span> };
-            args = urlArg[<span style="color:#ae81ff">1</span>].Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
-        }
-
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; args.Length; i++)
-        {
-            Debug.Log(args[i]);
-        }
-    }
-</code></pre></div><h2 id="其他">其他</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] urlArg = url.Split(<span style="color:#e6db74">&#39;?&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (urlArg.Length &gt; <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">char</span>[] charSeparators = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">char</span>[] { <span style="color:#e6db74">&#39;&amp;&#39;</span> };
+</span></span><span style="display:flex;"><span>            args = urlArg[<span style="color:#ae81ff">1</span>].Split(charSeparators, StringSplitOptions.RemoveEmptyEntries);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; args.Length; i++)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Debug.Log(args[i]);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h2 id="其他">其他</h2>
 <ul>
 <li><a href="https://github.com/WenRongDev/Unity-DeepLink">Github</a></li>
 <li><a href="https://wenrongdev.com/posts/unitydeeplink_2/">Unity Deep Link -2</a></li>
@@ -189,24 +181,22 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Text Breaking Space</title>
       <link>https://wenrongdev.com/posts/unitytextbreakingspace/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unitytextbreakingspace/</guid>
       <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
 <h2 id="code">Code</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> ReplaceSpace(<span style="color:#66d9ef">string</span> context)
-{
-    <span style="color:#66d9ef">return</span> context.Replace(<span style="color:#e6db74">&#34; &#34;</span>, no_breaking_space);
-}
-</code></pre></div><p>可以這樣替代全部的 Space。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> ReplaceSpace(<span style="color:#66d9ef">string</span> context)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> context.Replace(<span style="color:#e6db74">&#34; &#34;</span>, no_breaking_space);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>可以這樣替代全部的 Space。</p>
 <h2 id="範例">範例</h2>
 <ul>
 <li>使用前</li>
@@ -221,150 +211,146 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
       <link>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</guid>
       <description>自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
 <h2 id="xr-setting">XR Setting</h2>
 <p>可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
-{
-    XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
-    EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
-    XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget);
-
-    <span style="color:#66d9ef">if</span> (active)
-        XRPackageMetadataStore.AssignLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
-    <span style="color:#66d9ef">else</span>
-        XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
-}
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/l0ovOpl.png" alt="img_1"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
+</span></span><span style="display:flex;"><span>    XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (active)
+</span></span><span style="display:flex;"><span>        XRPackageMetadataStore.AssignLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/l0ovOpl.png" alt="img_1"  />
 </p>
 <h2 id="build">Build</h2>
 <p>利用這段自動輸出，options 可以設定 <code>BuildOptions.None</code>、<code>BuildOptions.AutoRunPlayer</code>，一般的 Build 和 Build and Run。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
-{
-    Console.Clear();
-    BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
-    BuildReport Report = BuildPipeline.BuildPlayer(playerOptions);
-    EditorUtility.RevealInFinder(Path);
-    Debug.Log(<span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;{0} Build completed with a result of &#39;{1}&#39; &#34;</span>, Application.platform, Report.summary.result.ToString()));
-}
-
-<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> BuildPlayerOptions GetBuildPlayer(<span style="color:#66d9ef">string</span> path, BuildTarget Target, BuildOptions options)
-{
-    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> BuildPlayerOptions()
-    {
-        scenes = EnabledScenePaths,
-        locationPathName = path,
-        target = Target,
-        options = options
-    };
-}
-</code></pre></div><h2 id="完整-script">完整 Script</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
-{
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> AppName =&gt; PlayerSettings.productName;
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> Version =&gt; Application.version.Replace(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>);
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> BuildFolder
-    {
-        <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> Directory.GetParent(Application.dataPath).FullName.Replace(<span style="color:#e6db74">&#39;\\&#39;</span>, <span style="color:#e6db74">&#39;/&#39;</span>) + <span style="color:#e6db74">&#34;/Build&#34;</span>; }
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span>[] EnabledScenePaths =&gt; EditorBuildSettings.scenes
-        .Where((scene) =&gt; scene.enabled)
-        .Select((scene) =&gt; scene.path)
-        .ToArray();
-<span style="color:#a6e22e">
-</span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build/Oculus&#34;)]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Build_Oculus()
-    {
-        <span style="color:#66d9ef">string</span> path = Path.Combine(BuildFolder, <span style="color:#e6db74">&#34;Oculus&#34;</span>, <span style="color:#e6db74">$&#34;Oculus_{AppName}_Ver{Version}.apk&#34;</span>);
-        BuildReleaseOculus(path, BuildOptions.None, <span style="color:#66d9ef">true</span>);
-    }
-<span style="color:#a6e22e">
-</span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build And Run/Oculus&#34;)]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildAndRun_Oculus()
-    {
-        <span style="color:#66d9ef">string</span> path = Path.Combine(BuildFolder, <span style="color:#e6db74">&#34;Oculus&#34;</span>, <span style="color:#e6db74">$&#34;Oculus_{AppName}_Ver{Version}.apk&#34;</span>);
-        BuildReleaseOculus(path, BuildOptions.AutoRunPlayer, <span style="color:#66d9ef">true</span>);
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildReleaseOculus(<span style="color:#66d9ef">string</span> path, BuildOptions buildOptions, <span style="color:#66d9ef">bool</span> AddXR)
-    {
-        SetOculusXRLoader(BuildTargetGroup.Android, AddXR);
-        BuildRelease(path, BuildTarget.Android, buildOptions);
-    }
-<span style="color:#a6e22e">
-</span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build/Windows&#34;)]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Build_Windows()
-    {
-        BuildReleaseWindows(BuildOptions.None);
-    }
-<span style="color:#a6e22e">
-</span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build And Run/Windows&#34;)]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildAndRun_Windows()
-    {
-        BuildReleaseWindows(BuildOptions.AutoRunPlayer);
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildReleaseWindows(BuildOptions buildOptions)
-    {
-        <span style="color:#66d9ef">string</span> folder = Path.Combine(BuildFolder, <span style="color:#e6db74">$&#34;{BuildTarget.StandaloneWindows}&#34;</span>, <span style="color:#e6db74">$&#34;Windows_{AppName}_Ver{Version}&#34;</span>);
-        <span style="color:#66d9ef">string</span> path = Path.Combine(folder, <span style="color:#e6db74">$&#34;{AppName}.exe&#34;</span>);
-        SetOculusXRLoader(BuildTargetGroup.Standalone, <span style="color:#66d9ef">false</span>);
-        BuildRelease(path, BuildTarget.StandaloneWindows, buildOptions);
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
-    {
-        XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
-        EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
-        XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget);
-
-        <span style="color:#66d9ef">if</span> (active)
-            XRPackageMetadataStore.AssignLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
-        <span style="color:#66d9ef">else</span>
-            XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
-    {
-        Console.Clear();
-        BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
-        BuildReport Report = BuildPipeline.BuildPlayer(playerOptions);
-        EditorUtility.RevealInFinder(Path);
-        Debug.Log(<span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;{0} Build completed with a result of &#39;{1}&#39; &#34;</span>, Application.platform, Report.summary.result.ToString()));
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> BuildPlayerOptions GetBuildPlayer(<span style="color:#66d9ef">string</span> path, BuildTarget Target, BuildOptions options)
-    {
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> BuildPlayerOptions()
-        {
-            scenes = EnabledScenePaths,
-            locationPathName = path,
-            target = Target,
-            options = options
-        };
-    }
-}
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Console.Clear();
+</span></span><span style="display:flex;"><span>    BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
+</span></span><span style="display:flex;"><span>    BuildReport Report = BuildPipeline.BuildPlayer(playerOptions);
+</span></span><span style="display:flex;"><span>    EditorUtility.RevealInFinder(Path);
+</span></span><span style="display:flex;"><span>    Debug.Log(<span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;{0} Build completed with a result of &#39;{1}&#39; &#34;</span>, Application.platform, Report.summary.result.ToString()));
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> BuildPlayerOptions GetBuildPlayer(<span style="color:#66d9ef">string</span> path, BuildTarget Target, BuildOptions options)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> BuildPlayerOptions()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        scenes = EnabledScenePaths,
+</span></span><span style="display:flex;"><span>        locationPathName = path,
+</span></span><span style="display:flex;"><span>        target = Target,
+</span></span><span style="display:flex;"><span>        options = options
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="完整-script">完整 Script</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> AppName =&gt; PlayerSettings.productName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> Version =&gt; Application.version.Replace(<span style="color:#e6db74">&#34;.&#34;</span>, <span style="color:#e6db74">&#34;&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> BuildFolder
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> Directory.GetParent(Application.dataPath).FullName.Replace(<span style="color:#e6db74">&#39;\\&#39;</span>, <span style="color:#e6db74">&#39;/&#39;</span>) + <span style="color:#e6db74">&#34;/Build&#34;</span>; }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span>[] EnabledScenePaths =&gt; EditorBuildSettings.scenes
+</span></span><span style="display:flex;"><span>        .Where((scene) =&gt; scene.enabled)
+</span></span><span style="display:flex;"><span>        .Select((scene) =&gt; scene.path)
+</span></span><span style="display:flex;"><span>        .ToArray();
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build/Oculus&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Build_Oculus()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> path = Path.Combine(BuildFolder, <span style="color:#e6db74">&#34;Oculus&#34;</span>, <span style="color:#e6db74">$&#34;Oculus_{AppName}_Ver{Version}.apk&#34;</span>);
+</span></span><span style="display:flex;"><span>        BuildReleaseOculus(path, BuildOptions.None, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build And Run/Oculus&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildAndRun_Oculus()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> path = Path.Combine(BuildFolder, <span style="color:#e6db74">&#34;Oculus&#34;</span>, <span style="color:#e6db74">$&#34;Oculus_{AppName}_Ver{Version}.apk&#34;</span>);
+</span></span><span style="display:flex;"><span>        BuildReleaseOculus(path, BuildOptions.AutoRunPlayer, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildReleaseOculus(<span style="color:#66d9ef">string</span> path, BuildOptions buildOptions, <span style="color:#66d9ef">bool</span> AddXR)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        SetOculusXRLoader(BuildTargetGroup.Android, AddXR);
+</span></span><span style="display:flex;"><span>        BuildRelease(path, BuildTarget.Android, buildOptions);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build/Windows&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Build_Windows()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        BuildReleaseWindows(BuildOptions.None);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [MenuItem(&#34;Builds/Build And Run/Windows&#34;)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildAndRun_Windows()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        BuildReleaseWindows(BuildOptions.AutoRunPlayer);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildReleaseWindows(BuildOptions buildOptions)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> folder = Path.Combine(BuildFolder, <span style="color:#e6db74">$&#34;{BuildTarget.StandaloneWindows}&#34;</span>, <span style="color:#e6db74">$&#34;Windows_{AppName}_Ver{Version}&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> path = Path.Combine(folder, <span style="color:#e6db74">$&#34;{AppName}.exe&#34;</span>);
+</span></span><span style="display:flex;"><span>        SetOculusXRLoader(BuildTargetGroup.Standalone, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>        BuildRelease(path, BuildTarget.StandaloneWindows, buildOptions);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>        EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
+</span></span><span style="display:flex;"><span>        XRGeneralSettings settings = buildTargetSettings.SettingsForBuildTarget(buildTarget);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (active)
+</span></span><span style="display:flex;"><span>            XRPackageMetadataStore.AssignLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.Clear();
+</span></span><span style="display:flex;"><span>        BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
+</span></span><span style="display:flex;"><span>        BuildReport Report = BuildPipeline.BuildPlayer(playerOptions);
+</span></span><span style="display:flex;"><span>        EditorUtility.RevealInFinder(Path);
+</span></span><span style="display:flex;"><span>        Debug.Log(<span style="color:#66d9ef">string</span>.Format(<span style="color:#e6db74">&#34;{0} Build completed with a result of &#39;{1}&#39; &#34;</span>, Application.platform, Report.summary.result.ToString()));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> BuildPlayerOptions GetBuildPlayer(<span style="color:#66d9ef">string</span> path, BuildTarget Target, BuildOptions options)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> BuildPlayerOptions()
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            scenes = EnabledScenePaths,
+</span></span><span style="display:flex;"><span>            locationPathName = path,
+</span></span><span style="display:flex;"><span>            target = Target,
+</span></span><span style="display:flex;"><span>            options = options
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Project Structure</title>
       <link>https://wenrongdev.com/posts/unit-unity-projectstructure/</link>
       <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unit-unity-projectstructure/</guid>
       <description>自動建立簡易專案資料夾結構</description>
       <content:encoded><![CDATA[<h2 id="unity-project-structure">Unity Project Structure</h2>
@@ -376,47 +362,45 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 <p><img loading="lazy" src="https://imgur.com/iBAEGNO.png" alt="img_1"  />
 </p>
 <h3 id="資料夾結構">資料夾結構</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">|- Assets
-    |- Project Name /// 自己設定
-        |- 00_Art
-        |   |- 00_Profabs
-        |   |   |- Models
-        |   |   |- UI
-        |   |- 01_Shaders
-        |   |   |- UI_Shaders
-        |   |- 02_Timeline
-        |   |- 03_Models
-        |   |   |- Example_Model
-        |   |   |   |- 3D
-        |   |   |   |- Animation
-        |   |   |   |- Textures
-        |   |   |- Example_Effect
-        |   |       |- Textures
-        |   |- 04_Scenes
-        |   |- 05_UI
-        |   |   |- Textures
-        |   |   |- Effect
-        |   |       |- Textures
-        |   |       |- Animation
-        |   |       |- Material
-        |   |- 07_Audio
-        |   |- 08_Video
-        |- 01_Program
-           |- 00_Scenes
-           |- 01_Scripts
-           |- 02_Tests
-           |- 03_Prefabs
-           |- 05_UI
-</code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-ProjectStructure">Github</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>|- Assets
+</span></span><span style="display:flex;"><span>    |- Project Name /// 自己設定
+</span></span><span style="display:flex;"><span>        |- 00_Art
+</span></span><span style="display:flex;"><span>        |   |- 00_Profabs
+</span></span><span style="display:flex;"><span>        |   |   |- Models
+</span></span><span style="display:flex;"><span>        |   |   |- UI
+</span></span><span style="display:flex;"><span>        |   |- 01_Shaders
+</span></span><span style="display:flex;"><span>        |   |   |- UI_Shaders
+</span></span><span style="display:flex;"><span>        |   |- 02_Timeline
+</span></span><span style="display:flex;"><span>        |   |- 03_Models
+</span></span><span style="display:flex;"><span>        |   |   |- Example_Model
+</span></span><span style="display:flex;"><span>        |   |   |   |- 3D
+</span></span><span style="display:flex;"><span>        |   |   |   |- Animation
+</span></span><span style="display:flex;"><span>        |   |   |   |- Textures
+</span></span><span style="display:flex;"><span>        |   |   |- Example_Effect
+</span></span><span style="display:flex;"><span>        |   |       |- Textures
+</span></span><span style="display:flex;"><span>        |   |- 04_Scenes
+</span></span><span style="display:flex;"><span>        |   |- 05_UI
+</span></span><span style="display:flex;"><span>        |   |   |- Textures
+</span></span><span style="display:flex;"><span>        |   |   |- Effect
+</span></span><span style="display:flex;"><span>        |   |       |- Textures
+</span></span><span style="display:flex;"><span>        |   |       |- Animation
+</span></span><span style="display:flex;"><span>        |   |       |- Material
+</span></span><span style="display:flex;"><span>        |   |- 07_Audio
+</span></span><span style="display:flex;"><span>        |   |- 08_Video
+</span></span><span style="display:flex;"><span>        |- 01_Program
+</span></span><span style="display:flex;"><span>           |- 00_Scenes
+</span></span><span style="display:flex;"><span>           |- 01_Scripts
+</span></span><span style="display:flex;"><span>           |- 02_Tests
+</span></span><span style="display:flex;"><span>           |- 03_Prefabs
+</span></span><span style="display:flex;"><span>           |- 05_UI
+</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-ProjectStructure">Github</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Open Shader For VSCode</title>
       <link>https://wenrongdev.com/posts/openshaderforvscode/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/openshaderforvscode/</guid>
       <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -432,63 +416,61 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 </p>
 <h2 id="vscode-cli-args">VSCode CLI Args</h2>
 <p>根據 Unity 開啟 VSCode Args，可以使用 <code>Process</code> 填寫對應路徑就可以了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
-</code></pre></div><h3 id="script">Script</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
+</span></span></code></pre></div><h3 id="script">Script</h3>
 <p>詳細的方法可以參考 <a href="https://blog.csdn.net/weixin_44293055/article/details/120340635">Sublime Text &amp; Unity Shader</a>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
-{
-<span style="color:#a6e22e">    [UnityEditor.Callbacks.OnOpenAsset(0)]</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> CallbackShader(<span style="color:#66d9ef">int</span> instanceID, <span style="color:#66d9ef">int</span> line)
-    {
-        <span style="color:#66d9ef">string</span> projectPath = Directory.GetParent(Application.dataPath).ToString();
-        <span style="color:#66d9ef">string</span> strFilePath = AssetDatabase.GetAssetPath(EditorUtility.InstanceIDToObject(instanceID));
-        <span style="color:#66d9ef">string</span> fileName = projectPath + <span style="color:#e6db74">&#34;/&#34;</span> + strFilePath;
-        <span style="color:#66d9ef">if</span> (fileName.EndsWith(<span style="color:#e6db74">&#34;.shader&#34;</span>))
-        {
-            <span style="color:#66d9ef">var</span> envUser = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User);
-            <span style="color:#66d9ef">var</span> envPaths = envUser[<span style="color:#e6db74">&#34;Path&#34;</span>].ToString().Split(<span style="color:#e6db74">&#34;;&#34;</span>);
-            <span style="color:#66d9ef">string</span> vscodePath = <span style="color:#66d9ef">string</span>.Empty;
-            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; envPaths.Length; i++)
-            {
-                <span style="color:#66d9ef">var</span> path = Path.Combine(envPaths[i], <span style="color:#e6db74">&#34;code&#34;</span>);
-                <span style="color:#66d9ef">if</span> (File.Exists(path))
-                {
-                    vscodePath = path;
-                    <span style="color:#66d9ef">break</span>;
-                }
-            }
-            <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(vscodePath))
-            {
-                Process process = <span style="color:#66d9ef">new</span> Process();
-                ProcessStartInfo startInfo = <span style="color:#66d9ef">new</span> ProcessStartInfo();
-                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
-                startInfo.FileName = vscodePath;
-                <span style="color:#75715e">///vscode args &#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
-</span><span style="color:#75715e"></span>                startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
-                process.StartInfo = startInfo;
-                process.Start();
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
-            }
-            <span style="color:#66d9ef">else</span>
-            {
-                UnityEngine.Debug.Log(<span style="color:#e6db74">&#34;Not Found Enviroment Variable &#39;VSCode_Path&#39;.&#34;</span>);
-                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-            }
-        }
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
-    }
-}
-</code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [UnityEditor.Callbacks.OnOpenAsset(0)]</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> CallbackShader(<span style="color:#66d9ef">int</span> instanceID, <span style="color:#66d9ef">int</span> line)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> projectPath = Directory.GetParent(Application.dataPath).ToString();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> strFilePath = AssetDatabase.GetAssetPath(EditorUtility.InstanceIDToObject(instanceID));
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> fileName = projectPath + <span style="color:#e6db74">&#34;/&#34;</span> + strFilePath;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (fileName.EndsWith(<span style="color:#e6db74">&#34;.shader&#34;</span>))
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> envUser = Environment.GetEnvironmentVariables(EnvironmentVariableTarget.User);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> envPaths = envUser[<span style="color:#e6db74">&#34;Path&#34;</span>].ToString().Split(<span style="color:#e6db74">&#34;;&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">string</span> vscodePath = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; envPaths.Length; i++)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">var</span> path = Path.Combine(envPaths[i], <span style="color:#e6db74">&#34;code&#34;</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (File.Exists(path))
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vscodePath = path;
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(vscodePath))
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                Process process = <span style="color:#66d9ef">new</span> Process();
+</span></span><span style="display:flex;"><span>                ProcessStartInfo startInfo = <span style="color:#66d9ef">new</span> ProcessStartInfo();
+</span></span><span style="display:flex;"><span>                startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+</span></span><span style="display:flex;"><span>                startInfo.FileName = vscodePath;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">///vscode args &#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)</span>
+</span></span><span style="display:flex;"><span>                startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
+</span></span><span style="display:flex;"><span>                process.StartInfo = startInfo;
+</span></span><span style="display:flex;"><span>                process.Start();
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                UnityEngine.Debug.Log(<span style="color:#e6db74">&#34;Not Found Enviroment Variable &#39;VSCode_Path&#39;.&#34;</span>);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Addressable Load Assets</title>
       <link>https://wenrongdev.com/posts/unity-addressable_load_assets/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-addressable_load_assets/</guid>
       <description>介紹 Unity Addressable 讀取、生成、釋放方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -499,54 +481,52 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 </p>
 <p>可以利用 Event Viewer 在 Editor Runtime 時，隨時監控記憶體使用情況。就可以很明顯的發現，那些東西是忘記釋放掉的，或者不需要釋放的。</p>
 <h2 id="load-asset">Load Asset</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
-{
-    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result);
-}
-
-IEnumerator InstantiateAssets(<span style="color:#66d9ef">string</span> label)
-{
-    AsyncOperationHandle&lt;IList&lt;GameObject&gt;&gt; <span style="color:#66d9ef">async</span> = Addressables.LoadAssetsAsync&lt;GameObject&gt;(label, <span style="color:#66d9ef">null</span>);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; <span style="color:#66d9ef">async</span>.Result.Count; i++)
-        GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result[i]);
-}
-
-IEnumerator InstantiateAsset(AssetReference asset)
-{
-    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result);
-}
-</code></pre></div><p>可以利用這三種方式讀取 Asset，並且把物件生成出來，當然我還是最推薦使用 AssetReference，除非有什麼特殊需求要使用字串，不然我不會換成其他方式。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IEnumerator InstantiateAssets(<span style="color:#66d9ef">string</span> label)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    AsyncOperationHandle&lt;IList&lt;GameObject&gt;&gt; <span style="color:#66d9ef">async</span> = Addressables.LoadAssetsAsync&lt;GameObject&gt;(label, <span style="color:#66d9ef">null</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; <span style="color:#66d9ef">async</span>.Result.Count; i++)
+</span></span><span style="display:flex;"><span>        GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result[i]);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IEnumerator InstantiateAsset(AssetReference asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    GameObject go = Instantiate(<span style="color:#66d9ef">async</span>.Result);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>可以利用這三種方式讀取 Asset，並且把物件生成出來，當然我還是最推薦使用 AssetReference，除非有什麼特殊需求要使用字串，不然我不會換成其他方式。</p>
 <h2 id="release-asset">Release Asset</h2>
 <p>釋放掉 Asset 也記得要把物件<code>刪除</code>，不然場上會遺留破圖的物件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
-{
-    Addressables.Release(<span style="color:#66d9ef">async</span>);
-}
-
-<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(T asset)
-{
-    Addressables.Release(asset);
-}
-
-<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AssetReference asset)
-{
-    asset.ReleaseAsset();
-}
-</code></pre></div><p>可以利用生成的物件或者 Load asset 的 Async 釋放，假如是使用 AssetReference Load Asset，也可以使用這個方式釋放。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(T asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Addressables.Release(asset);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AssetReference asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    asset.ReleaseAsset();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>可以利用生成的物件或者 Load asset 的 Async 釋放，假如是使用 AssetReference Load Asset，也可以使用這個方式釋放。</p>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Addressable Download Assets</title>
       <link>https://wenrongdev.com/posts/unity-addressable_download_assets/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-addressable_download_assets/</guid>
       <description>介紹 Unity Addressable 多個下載方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -554,73 +534,71 @@ IEnumerator InstantiateAsset(AssetReference asset)
 <p>目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。</p>
 <h2 id="addressablesloadassetasync">Addressables.LoadAssetAsync</h2>
 <p>官方範例提供的下載方式 <a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html">Addressables.LoadAsset(s)Async</a>，雖然這個是要把 Asset 讀取出來，其實他也有下載功能</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
-</code></pre></div><p>我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
+</span></span></code></pre></div><p>我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。</p>
 <h2 id="update-addressable-name-addressable-label">Update Addressable Name/ Addressable Label</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
-{
-    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
-    Addressables.Release(downloadAsync);
-}
-</code></pre></div><p>這個是下載 <code>Addressable Name</code> 或 <code>Label</code>的方法，可以利用 Label 下載多個不同 Group 的 Asset。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
+</span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>這個是下載 <code>Addressable Name</code> 或 <code>Label</code>的方法，可以利用 Label 下載多個不同 Group 的 Asset。</p>
 <p><img loading="lazy" src="https://imgur.com/aPKLTt3.jpg" alt="img-1"  />
 </p>
 <p><code>Addressable Name</code>、<code>Label</code> 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Addressable Name、Label 是必須要<code>重新輸出</code> App 才會更新。</p>
 <p><img loading="lazy" src="https://imgur.com/2j7oGN0.jpg" alt="img-2"  />
 </p>
 <h2 id="update-asset-reference">Update Asset Reference</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator UpdateAsset(AssetReference asset)
-{
-    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
-    Addressables.Release(downloadAsync);
-}
-</code></pre></div><p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@0.4/api/UnityEngine.AddressableAssets.AssetReference.html">AssetReference</a> 的用法是我最推薦的下載方式，可以很明顯的知道更新物件，不會因為打錯文字導致更新失敗，而且也可以利用這個方式組合物件，讓更新的內容比較簡單方式處理。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
+</span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><a href="https://docs.unity3d.com/Packages/com.unity.addressables@0.4/api/UnityEngine.AddressableAssets.AssetReference.html">AssetReference</a> 的用法是我最推薦的下載方式，可以很明顯的知道更新物件，不會因為打錯文字導致更新失敗，而且也可以利用這個方式組合物件，讓更新的內容比較簡單方式處理。</p>
 <p>例如用一個物件或場景夾帶了多個不同的需要更新的物件，缺點就是這包 pack 輸出會過大，可能需要把每個物件獨立分成多個 AssetReference，利用系統特性夾帶物件變小。不過要是不喜歡這種方式可以看 <a href="#update-multiple-asset-references">Update Multiple Asset References</a>。</p>
 <p>不過 AssetReference 最方便還是使用它來生成、釋放、等等，才是最好用的方式。</p>
 <h2 id="update-multiple-asset-references">Update Multiple Asset References</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
-{
-    <span style="color:#66d9ef">var</span> assetKeys = assets.Cast&lt;AssetReference&gt;();
-    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(assetKeys, Addressables.MergeMode.Union);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
-    Addressables.Release(downloadAsync);
-}
-</code></pre></div><p>多個 AssetReference 更新的方式，然後可以一起更新。可以完成一個簡單的多個物件更新，不用利用 Label、整合包、等方式更新。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> assetKeys = assets.Cast&lt;AssetReference&gt;();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(assetKeys, Addressables.MergeMode.Union);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
+</span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>多個 AssetReference 更新的方式，然後可以一起更新。可以完成一個簡單的多個物件更新，不用利用 Label、整合包、等方式更新。</p>
 <h2 id="取得下載容量大小方法">取得下載容量大小方法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
-{
-    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(asset);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">async</span>.Status == AsyncOperationStatus.Succeeded)
-    {
-        <span style="color:#66d9ef">float</span> size = Mathf.Round((<span style="color:#66d9ef">float</span>)<span style="color:#66d9ef">async</span>.Result / <span style="color:#ae81ff">1024</span> / <span style="color:#ae81ff">1024</span> * <span style="color:#ae81ff">1000</span>) / <span style="color:#ae81ff">1000</span>;
-        Debug.Log(<span style="color:#e6db74">$&#34;Total {size} MB&#34;</span>);
-    }
-    Addressables.Release(<span style="color:#66d9ef">async</span>);
-}
-</code></pre></div><h2 id="更新進度條寫法">更新進度條寫法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">IEnumerator UpdateAsset(AssetReference asset)
-{
-    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
-    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
-    {
-        <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
-        Debug.Log(<span style="color:#e6db74">$&#34;{asset}: {downloadAsync.PercentComplete * 100} %&#34;</span>);
-        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
-    }
-    Addressables.Release(downloadAsync);
-}
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(asset);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">async</span>.Status == AsyncOperationStatus.Succeeded)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> size = Mathf.Round((<span style="color:#66d9ef">float</span>)<span style="color:#66d9ef">async</span>.Result / <span style="color:#ae81ff">1024</span> / <span style="color:#ae81ff">1024</span> * <span style="color:#ae81ff">1000</span>) / <span style="color:#ae81ff">1000</span>;
+</span></span><span style="display:flex;"><span>        Debug.Log(<span style="color:#e6db74">$&#34;Total {size} MB&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="更新進度條寫法">更新進度條寫法</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
+</span></span><span style="display:flex;"><span>        Debug.Log(<span style="color:#e6db74">$&#34;{asset}: {downloadAsync.PercentComplete * 100} %&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity MathQuiz</title>
       <link>https://wenrongdev.com/posts/unity-mathquiz/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -631,12 +609,10 @@ IEnumerator InstantiateAsset(AssetReference asset)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Calendar</title>
       <link>https://wenrongdev.com/posts/unity-calendar/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-calendar/</guid>
       <description>Unity 實做日曆功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -646,27 +622,25 @@ IEnumerator InstantiateAsset(AssetReference asset)
 <p>預設日期為<code>當天日期</code>。</p>
 <p>可以直接使用 <code>UnityCalendar.GetDate()</code> 取得使用者設定日期，假如有錯誤會回報錯誤。</p>
 <p><code>testGetDate.cs</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
-{
-    DateTime dt = unityCalendar.GetDate();
-    text.text = dt.ToString(<span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span>);
-}
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_Clear()
-{
-    text.text = <span style="color:#66d9ef">string</span>.Empty;
-    unityCalendar.Init();
-}
-</code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Calendar">Github</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    DateTime dt = unityCalendar.GetDate();
+</span></span><span style="display:flex;"><span>    text.text = dt.ToString(<span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_Clear()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    text.text = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    unityCalendar.Init();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Calendar">Github</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Addressable</title>
       <link>https://wenrongdev.com/posts/unity-addressable/</link>
       <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-addressable/</guid>
       <description>主要是實作 Addressable hotfix 的寫法。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -679,12 +653,12 @@ IEnumerator InstantiateAsset(AssetReference asset)
 <h3 id="initialization">Initialization</h3>
 <p>Initial Addressable System 是<code>必要</code>的假如不初始化會造成一些使用上的問題。</p>
 <p>在 Start 上可直接初始化 Addressable System</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator Start()
-{
-    <span style="color:#66d9ef">var</span> InitAddressablesAsync = Addressables.InitializeAsync();
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> InitAddressablesAsync;
-}
-</code></pre></div><h3 id="update-catalog">Update Catalog</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Start()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> InitAddressablesAsync = Addressables.InitializeAsync();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> InitAddressablesAsync;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="update-catalog">Update Catalog</h3>
 <p>Catalog 是所有檔案的紀錄檔(log)，不更新 Catalog 也是能下載 Asset，可是會造成無法 hotfix，所以需要再下載前更一次 Catalog。</p>
 <h4 id="catalog-path">Catalog Path</h4>
 <p>依 Window 為例，Catalog 更新後會放自動放置在</p>
@@ -713,22 +687,22 @@ IEnumerator InstantiateAsset(AssetReference asset)
 </table>
 <p><img loading="lazy" src="https://imgur.com/QAbjzCM.jpg" alt="asset_1"  />
 </p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator UpdateCatalogCoro()
-{
-    List&lt;<span style="color:#66d9ef">string</span>&gt; catalogsToUpdate = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
-    <span style="color:#66d9ef">var</span> checkCatalogHandle = Addressables.CheckForCatalogUpdates(<span style="color:#66d9ef">false</span>);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> checkCatalogHandle;
-
-    <span style="color:#66d9ef">if</span> (checkCatalogHandle.Status == AsyncOperationStatus.Succeeded)
-        catalogsToUpdate = checkCatalogHandle.Result;
-
-    <span style="color:#66d9ef">if</span> (catalogsToUpdate.Count &gt; <span style="color:#ae81ff">0</span>)
-    {
-        <span style="color:#66d9ef">var</span> updateCatalogHandle = Addressables.UpdateCatalogs(catalogsToUpdate, <span style="color:#66d9ef">false</span>);
-        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> updateCatalogHandle;
-    }
-}
-</code></pre></div><h3 id="update-asset">Update Asset</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateCatalogCoro()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    List&lt;<span style="color:#66d9ef">string</span>&gt; catalogsToUpdate = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> checkCatalogHandle = Addressables.CheckForCatalogUpdates(<span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> checkCatalogHandle;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (checkCatalogHandle.Status == AsyncOperationStatus.Succeeded)
+</span></span><span style="display:flex;"><span>        catalogsToUpdate = checkCatalogHandle.Result;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (catalogsToUpdate.Count &gt; <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> updateCatalogHandle = Addressables.UpdateCatalogs(catalogsToUpdate, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> updateCatalogHandle;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="update-asset">Update Asset</h3>
 <p>下載好的 Asset，在測試時不清除是會造成無法測試下載流程，可是可以手動清除下載 Asset。</p>
 <h4 id="asset-path">Asset Path</h4>
 <p>依 Window 為例，下載好的 Asset 更新後會放自動放置在</p>
@@ -759,99 +733,97 @@ IEnumerator InstantiateAsset(AssetReference asset)
 </p>
 <h4 id="update-all-asset">Update All Asset</h4>
 <p>這個方式是使用 AA 系統紀錄 Catalog 取得出來的位置（Locator），在使用 <code>GetDownloadSizeAsync</code> 來確認檔案有無更新，來達成更新所有檔案。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator UpdateAllGroupsCoro()
-{
-    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> loc <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
-    {
-        <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> key <span style="color:#66d9ef">in</span> loc.Keys)
-        {
-            <span style="color:#66d9ef">var</span> sizeAsync = Addressables.GetDownloadSizeAsync(key);
-            <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> sizeAsync;
-            <span style="color:#66d9ef">long</span> totalDownloadSize = sizeAsync.Result;
-
-            <span style="color:#66d9ef">if</span> (sizeAsync.Result &gt; <span style="color:#ae81ff">0</span>)
-            {
-                <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(key);
-                <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
-                {
-                    <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
-                    Debug.Log(<span style="color:#e6db74">$&#34;{key} = percent {(int)(totalDownloadSize * percent)}/{totalDownloadSize}&#34;</span>);
-                    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
-                }
-                Addressables.Release(downloadAsync);
-            }
-            Addressables.Release(sizeAsync);
-        }
-    }
-}
-</code></pre></div><h4 id="update-label-asset">Update label Asset</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateAllGroupsCoro()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> loc <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> key <span style="color:#66d9ef">in</span> loc.Keys)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> sizeAsync = Addressables.GetDownloadSizeAsync(key);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> sizeAsync;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">long</span> totalDownloadSize = sizeAsync.Result;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (sizeAsync.Result &gt; <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(key);
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
+</span></span><span style="display:flex;"><span>                    Debug.Log(<span style="color:#e6db74">$&#34;{key} = percent {(int)(totalDownloadSize * percent)}/{totalDownloadSize}&#34;</span>);
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            Addressables.Release(sizeAsync);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="update-label-asset">Update label Asset</h4>
 <p>這個方式是使用 Label 下載特定資源。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
-{
-    <span style="color:#66d9ef">long</span> updateLabelSize = <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(label);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">async</span>.Status == AsyncOperationStatus.Succeeded)
-        updateLabelSize = <span style="color:#66d9ef">async</span>.Result;
-    Addressables.Release(<span style="color:#66d9ef">async</span>);
-    <span style="color:#66d9ef">if</span> (updateLabelSize == <span style="color:#ae81ff">0</span>)
-    {
-        Debug.Log(<span style="color:#e6db74">$&#34;{label} last version&#34;</span>);
-        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">break</span>;
-    }
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> DownloadLabelAsset(label);
-}
-
-IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
-{
-    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(label, <span style="color:#66d9ef">false</span>);
-
-    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
-    {
-        <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
-        Debug.Log(<span style="color:#e6db74">$&#34;{label}: {downloadAsync.PercentComplete * 100} %&#34;</span>);
-        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
-    }
-    Addressables.Release(downloadAsync);
-
-    Debug.Log(<span style="color:#e6db74">$&#34;{label} UpdateAssets finish&#34;</span>);
-}
-</code></pre></div><h3 id="clear-asset">Clear Asset</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> updateLabelSize = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(label);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">async</span>.Status == AsyncOperationStatus.Succeeded)
+</span></span><span style="display:flex;"><span>        updateLabelSize = <span style="color:#66d9ef">async</span>.Result;
+</span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (updateLabelSize == <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Debug.Log(<span style="color:#e6db74">$&#34;{label} last version&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">break</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> DownloadLabelAsset(label);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(label, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">float</span> percent = downloadAsync.PercentComplete;
+</span></span><span style="display:flex;"><span>        Debug.Log(<span style="color:#e6db74">$&#34;{label}: {downloadAsync.PercentComplete * 100} %&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> WaitForEndOfFrame();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Debug.Log(<span style="color:#e6db74">$&#34;{label} UpdateAssets finish&#34;</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="clear-asset">Clear Asset</h3>
 <p>刪除 <a href="#asset-path">Asset Path</a> 路徑下載的檔案。</p>
 <h4 id="clear-all-asset">Clear All Asset</h4>
 <p><code>Caching.ClearCache()</code> 是能夠完整的清除下載的所有檔案，但是不能單獨使用，還要搭配 <code>Addressables.ClearDependencyCacheAsync</code> 才能清除 Catalog 紀錄的下載資訊。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator ClearAllAssetCoro()
-{
-    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locats <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
-    {
-        <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.ClearDependencyCacheAsync(locats.Keys, <span style="color:#66d9ef">false</span>);
-        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-        Addressables.Release(<span style="color:#66d9ef">async</span>);
-    }
-    Caching.ClearCache();
-}
-</code></pre></div><h4 id="clear-label-asset">Clear Label Asset</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
-{
-    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.LoadResourceLocationsAsync(label);
-    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
-    <span style="color:#66d9ef">var</span> locats = <span style="color:#66d9ef">async</span>.Result;
-    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locat <span style="color:#66d9ef">in</span> locats)
-        Addressables.ClearDependencyCacheAsync(locat.PrimaryKey);
-}
-</code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAllAssetCoro()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locats <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.ClearDependencyCacheAsync(locats.Keys, <span style="color:#66d9ef">false</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>        Addressables.Release(<span style="color:#66d9ef">async</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    Caching.ClearCache();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h4 id="clear-label-asset">Clear Label Asset</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.LoadResourceLocationsAsync(label);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> locats = <span style="color:#66d9ef">async</span>.Result;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locat <span style="color:#66d9ef">in</span> locats)
+</span></span><span style="display:flex;"><span>        Addressables.ClearDependencyCacheAsync(locat.PrimaryKey);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
 <h2 id="小結">小結</h2>
 <p>write something cool&hellip;</p>
 <h2 id="參考連結">參考連結</h2>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity ParticlePath</title>
       <link>https://wenrongdev.com/posts/unity-particlepath/</link>
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-particlepath/</guid>
       <description>Unity 實作粒子路徑系統。</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="https://i.imgur.com/tNmcGdz.gif" alt="demogif"  />
@@ -860,182 +832,178 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Dimmer</title>
       <link>https://wenrongdev.com/posts/unity-dimmer/</link>
       <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-dimmer/</guid>
       <description>Unity 調整 Android、iOS 系統亮度功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 調整 Android、iOS 系統亮度功能。</p>
 <h2 id="使用方式">使用方式</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
-</code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Dimmer">Github</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Dimmer">Github</a></h2>
 <h2 id="參考連結">參考連結</h2>
 <p><a href="https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85">Unity から iOS&amp;Android の画面輝度を MAX にする方法</a></p>
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Add Text Spacing for Unity</title>
       <link>https://wenrongdev.com/posts/add-text-spacing-for-unity/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/add-text-spacing-for-unity/</guid>
       <description>在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 <code>UnityEngine.UI.Text</code> 增加 TextSpacing，且調整 TextSpacing 的 <code>Spacing</code> 調整文字間格。</p>
 <h2 id="scripts">Scripts</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> System.Collections.Generic;
-<span style="color:#66d9ef">using</span> UnityEngine;
-<span style="color:#66d9ef">using</span> UnityEngine.UI;
-<span style="color:#a6e22e">
-</span><span style="color:#a6e22e">[AddComponentMenu(&#34;UI/Effects/TextSpacing&#34;)]</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextSpacing</span> : BaseMeshEffect
-{
-    <span style="color:#75715e">#region Struct
-</span><span style="color:#75715e"></span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> HorizontalAligmentType
-    {
-        Left,
-        Center,
-        Right
-    }
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Line</span>
-    {
-        <span style="color:#75715e">// 起點索引
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> StartVertexIndex { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">_</span>startVertexIndex; } }
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#ae81ff">_</span>startVertexIndex = <span style="color:#ae81ff">0</span>;
-
-        <span style="color:#75715e">// 終點索引
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> EndVertexIndex { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">_</span>endVertexIndex; } }
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#ae81ff">_</span>endVertexIndex = <span style="color:#ae81ff">0</span>;
-
-        <span style="color:#75715e">// 該行佔的點數目
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> VertexCount { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">_</span>vertexCount; } }
-        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> <span style="color:#ae81ff">_</span>vertexCount = <span style="color:#ae81ff">0</span>;
-
-        <span style="color:#66d9ef">public</span> Line(<span style="color:#66d9ef">int</span> startVertexIndex, <span style="color:#66d9ef">int</span> length)
-        {
-            <span style="color:#ae81ff">_</span>startVertexIndex = startVertexIndex;
-            <span style="color:#ae81ff">_</span>endVertexIndex = length * <span style="color:#ae81ff">6</span> - <span style="color:#ae81ff">1</span> + startVertexIndex;
-            <span style="color:#ae81ff">_</span>vertexCount = length * <span style="color:#ae81ff">6</span>;
-        }
-    }
-
-    <span style="color:#75715e">#endregion
-</span><span style="color:#75715e"></span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">float</span> Spacing = <span style="color:#ae81ff">1f</span>;
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> ModifyMesh(VertexHelper vh)
-    {
-        <span style="color:#66d9ef">if</span> (!IsActive() || vh.currentVertCount == <span style="color:#ae81ff">0</span>)
-        {
-            <span style="color:#66d9ef">return</span>;
-        }
-
-        <span style="color:#66d9ef">var</span> text = GetComponent&lt;Text&gt;();
-
-        <span style="color:#66d9ef">if</span> (text == <span style="color:#66d9ef">null</span>)
-        {
-            Debug.LogError(<span style="color:#e6db74">&#34;Missing Text component&#34;</span>);
-            <span style="color:#66d9ef">return</span>;
-        }
-
-        <span style="color:#75715e">// 水平對齊方式
-</span><span style="color:#75715e"></span>        HorizontalAligmentType alignment;
-        <span style="color:#66d9ef">if</span> (text.alignment == TextAnchor.LowerLeft || text.alignment == TextAnchor.MiddleLeft || text.alignment == TextAnchor.UpperLeft)
-        {
-            alignment = HorizontalAligmentType.Left;
-        }
-        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (text.alignment == TextAnchor.LowerCenter || text.alignment == TextAnchor.MiddleCenter || text.alignment == TextAnchor.UpperCenter)
-        {
-            alignment = HorizontalAligmentType.Center;
-        }
-        <span style="color:#66d9ef">else</span>
-        {
-            alignment = HorizontalAligmentType.Right;
-        }
-
-        <span style="color:#66d9ef">var</span> vertexs = <span style="color:#66d9ef">new</span> List&lt;UIVertex&gt;();
-        vh.GetUIVertexStream(vertexs);
-        <span style="color:#75715e">// var indexCount = vh.currentIndexCount;
-</span><span style="color:#75715e"></span>
-        <span style="color:#66d9ef">var</span> lineTexts = text.text.Split(<span style="color:#e6db74">&#39;\n&#39;</span>);
-
-        <span style="color:#66d9ef">var</span> lines = <span style="color:#66d9ef">new</span> Line[lineTexts.Length];
-
-        <span style="color:#75715e">// 根據lines數組中各個元素的長度計算每一行中第一個點的索引，每個字、字母、空母均佔6個點
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> i = <span style="color:#ae81ff">0</span>; i &lt; lines.Length; i++)
-        {
-            <span style="color:#75715e">// 除最後一行外，vertexs對於前面幾行都有回車符佔了6個點
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (i == <span style="color:#ae81ff">0</span>)
-            {
-                lines[i] = <span style="color:#66d9ef">new</span> Line(<span style="color:#ae81ff">0</span>, lineTexts[i].Length + <span style="color:#ae81ff">1</span>);
-            }
-            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (i &gt; <span style="color:#ae81ff">0</span> &amp;&amp; i &lt; lines.Length - <span style="color:#ae81ff">1</span>)
-            {
-                lines[i] = <span style="color:#66d9ef">new</span> Line(lines[i - <span style="color:#ae81ff">1</span>].EndVertexIndex + <span style="color:#ae81ff">1</span>, lineTexts[i].Length + <span style="color:#ae81ff">1</span>);
-            }
-            <span style="color:#66d9ef">else</span>
-            {
-                lines[i] = <span style="color:#66d9ef">new</span> Line(lines[i - <span style="color:#ae81ff">1</span>].EndVertexIndex + <span style="color:#ae81ff">1</span>, lineTexts[i].Length);
-            }
-        }
-
-        UIVertex vt;
-
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> i = <span style="color:#ae81ff">0</span>; i &lt; lines.Length; i++)
-        {
-            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> j = lines[i].StartVertexIndex; j &lt;= lines[i].EndVertexIndex; j++)
-            {
-                <span style="color:#66d9ef">if</span> (j &lt; <span style="color:#ae81ff">0</span> || j &gt;= vertexs.Count)
-                {
-                    <span style="color:#66d9ef">continue</span>;
-                }
-
-                vt = vertexs[j];
-
-                <span style="color:#66d9ef">var</span> charCount = lines[i].EndVertexIndex - lines[i].StartVertexIndex;
-                <span style="color:#66d9ef">if</span> (i == lines.Length - <span style="color:#ae81ff">1</span>)
-                {
-                    charCount += <span style="color:#ae81ff">6</span>;
-                }
-
-                <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Left)
-                {
-                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * ((j - lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
-                }
-                <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Right)
-                {
-                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * (-(charCount - j + lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span> + <span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
-                }
-                <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Center)
-                {
-                    <span style="color:#66d9ef">var</span> offset = (charCount / <span style="color:#ae81ff">6</span>) % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span> ? <span style="color:#ae81ff">0.5f</span> : <span style="color:#ae81ff">0f</span>;
-                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * ((j - lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span> - charCount / <span style="color:#ae81ff">12</span> + offset), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
-                }
-
-                vertexs[j] = vt;
-                <span style="color:#75715e">// 以下注意點與索引的對應關係
-</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (j % <span style="color:#ae81ff">6</span> &lt;= <span style="color:#ae81ff">2</span>)
-                {
-                    vh.SetUIVertex(vt, (j / <span style="color:#ae81ff">6</span>) * <span style="color:#ae81ff">4</span> + j % <span style="color:#ae81ff">6</span>);
-                }
-
-                <span style="color:#66d9ef">if</span> (j % <span style="color:#ae81ff">6</span> == <span style="color:#ae81ff">4</span>)
-                {
-                    vh.SetUIVertex(vt, (j / <span style="color:#ae81ff">6</span>) * <span style="color:#ae81ff">4</span> + j % <span style="color:#ae81ff">6</span> - <span style="color:#ae81ff">1</span>);
-                }
-            }
-        }
-    }
-}
-</code></pre></div><h2 id="問題">問題</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine.UI;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">[AddComponentMenu(&#34;UI/Effects/TextSpacing&#34;)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TextSpacing</span> : BaseMeshEffect
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#region</span> Struct
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">enum</span> HorizontalAligmentType
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Left,
+</span></span><span style="display:flex;"><span>        Center,
+</span></span><span style="display:flex;"><span>        Right
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Line</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 起點索引</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> StartVertexIndex { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> _startVertexIndex; } }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> _startVertexIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 終點索引</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> EndVertexIndex { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> _endVertexIndex; } }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> _endVertexIndex = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 該行佔的點數目</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> VertexCount { <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> _vertexCount; } }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">int</span> _vertexCount = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> Line(<span style="color:#66d9ef">int</span> startVertexIndex, <span style="color:#66d9ef">int</span> length)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            _startVertexIndex = startVertexIndex;
+</span></span><span style="display:flex;"><span>            _endVertexIndex = length * <span style="color:#ae81ff">6</span> - <span style="color:#ae81ff">1</span> + startVertexIndex;
+</span></span><span style="display:flex;"><span>            _vertexCount = length * <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#endregion</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">float</span> Spacing = <span style="color:#ae81ff">1f</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> ModifyMesh(VertexHelper vh)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!IsActive() || vh.currentVertCount == <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> text = GetComponent&lt;Text&gt;();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (text == <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Debug.LogError(<span style="color:#e6db74">&#34;Missing Text component&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 水平對齊方式</span>
+</span></span><span style="display:flex;"><span>        HorizontalAligmentType alignment;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (text.alignment == TextAnchor.LowerLeft || text.alignment == TextAnchor.MiddleLeft || text.alignment == TextAnchor.UpperLeft)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            alignment = HorizontalAligmentType.Left;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (text.alignment == TextAnchor.LowerCenter || text.alignment == TextAnchor.MiddleCenter || text.alignment == TextAnchor.UpperCenter)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            alignment = HorizontalAligmentType.Center;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            alignment = HorizontalAligmentType.Right;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> vertexs = <span style="color:#66d9ef">new</span> List&lt;UIVertex&gt;();
+</span></span><span style="display:flex;"><span>        vh.GetUIVertexStream(vertexs);
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// var indexCount = vh.currentIndexCount;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> lineTexts = text.text.Split(<span style="color:#e6db74">&#39;\n&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> lines = <span style="color:#66d9ef">new</span> Line[lineTexts.Length];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 根據lines數組中各個元素的長度計算每一行中第一個點的索引，每個字、字母、空母均佔6個點</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> i = <span style="color:#ae81ff">0</span>; i &lt; lines.Length; i++)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 除最後一行外，vertexs對於前面幾行都有回車符佔了6個點</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (i == <span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                lines[i] = <span style="color:#66d9ef">new</span> Line(<span style="color:#ae81ff">0</span>, lineTexts[i].Length + <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (i &gt; <span style="color:#ae81ff">0</span> &amp;&amp; i &lt; lines.Length - <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                lines[i] = <span style="color:#66d9ef">new</span> Line(lines[i - <span style="color:#ae81ff">1</span>].EndVertexIndex + <span style="color:#ae81ff">1</span>, lineTexts[i].Length + <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                lines[i] = <span style="color:#66d9ef">new</span> Line(lines[i - <span style="color:#ae81ff">1</span>].EndVertexIndex + <span style="color:#ae81ff">1</span>, lineTexts[i].Length);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        UIVertex vt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> i = <span style="color:#ae81ff">0</span>; i &lt; lines.Length; i++)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> j = lines[i].StartVertexIndex; j &lt;= lines[i].EndVertexIndex; j++)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (j &lt; <span style="color:#ae81ff">0</span> || j &gt;= vertexs.Count)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                vt = vertexs[j];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">var</span> charCount = lines[i].EndVertexIndex - lines[i].StartVertexIndex;
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (i == lines.Length - <span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    charCount += <span style="color:#ae81ff">6</span>;
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Left)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * ((j - lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Right)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * (-(charCount - j + lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span> + <span style="color:#ae81ff">1</span>), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (alignment == HorizontalAligmentType.Center)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#66d9ef">var</span> offset = (charCount / <span style="color:#ae81ff">6</span>) % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span> ? <span style="color:#ae81ff">0.5f</span> : <span style="color:#ae81ff">0f</span>;
+</span></span><span style="display:flex;"><span>                    vt.position += <span style="color:#66d9ef">new</span> Vector3(Spacing * ((j - lines[i].StartVertexIndex) / <span style="color:#ae81ff">6</span> - charCount / <span style="color:#ae81ff">12</span> + offset), <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                vertexs[j] = vt;
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// 以下注意點與索引的對應關係</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (j % <span style="color:#ae81ff">6</span> &lt;= <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vh.SetUIVertex(vt, (j / <span style="color:#ae81ff">6</span>) * <span style="color:#ae81ff">4</span> + j % <span style="color:#ae81ff">6</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">if</span> (j % <span style="color:#ae81ff">6</span> == <span style="color:#ae81ff">4</span>)
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    vh.SetUIVertex(vt, (j / <span style="color:#ae81ff">6</span>) * <span style="color:#ae81ff">4</span> + j % <span style="color:#ae81ff">6</span> - <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="問題">問題</h2>
 <p>無法自由換行</p>
 <h2 id="參考連結">參考連結</h2>
 <p><a href="https://blog.csdn.net/qq_38721111/article/details/102592001">UGUI 中 Text 的字间距</a></p>
@@ -1043,12 +1011,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Mobile Joystick</title>
       <link>https://wenrongdev.com/posts/mobile-joystick/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/mobile-joystick/</guid>
       <description>主要是用來測試 Unity 虛擬搖桿功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1060,12 +1026,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Folder Manager</title>
       <link>https://wenrongdev.com/posts/folder-manager/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/folder-manager/</guid>
       <description>Unity 視覺化管理使用路徑。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1083,12 +1047,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Data Access WebGL</title>
       <link>https://wenrongdev.com/posts/data-access-webgl/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1121,12 +1083,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity Jenkins Build</title>
       <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1161,8 +1121,8 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
 <p>在 Editor command line arguments 輸入</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
-</code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
+</span></span></code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
 <p><code>-android</code> 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。</p>
 <p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG" alt="img_4"  />
 </p>
@@ -1173,12 +1133,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Hyperlinks in Unity Text</title>
       <link>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</guid>
       <description>Unity uGUI Text support insert link and image。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1193,174 +1151,168 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Launch From Within a Unity App Another Unity App Android</title>
       <link>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
       <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
-}
-
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Launch(<span style="color:#66d9ef">string</span> bundleId, <span style="color:#66d9ef">string</span> storelink)
-{
-    <span style="color:#66d9ef">bool</span> fail = <span style="color:#66d9ef">false</span>;
-    AndroidJavaClass up = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>);
-    AndroidJavaObject ca = up.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
-    AndroidJavaObject packageManager = ca.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getPackageManager&#34;</span>);
-
-    AndroidJavaObject launchIntent = <span style="color:#66d9ef">null</span>;
-    <span style="color:#66d9ef">try</span>
-    {
-        launchIntent = packageManager.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getLaunchIntentForPackage&#34;</span>, bundleId);
-    }
-    <span style="color:#66d9ef">catch</span> (Exception e)
-    {
-        fail = <span style="color:#66d9ef">true</span>;
-    }
-
-    <span style="color:#66d9ef">if</span> (fail || launchIntent == <span style="color:#66d9ef">null</span>)
-        Application.OpenURL(storelink);
-    <span style="color:#66d9ef">else</span>
-    {
-        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementA&#34;</span>, LaunchData.elementA);
-        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementB&#34;</span>, LaunchData.elementB);
-        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementC&#34;</span>, LaunchData.elementC);
-        ca.Call(<span style="color:#e6db74">&#34;startActivity&#34;</span>, launchIntent);
-    }
-    up.Dispose();
-    ca.Dispose();
-    packageManager.Dispose();
-    launchIntent.Dispose();
-}
-</code></pre></div><h2 id="property">Property</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Launch(<span style="color:#66d9ef">string</span> bundleId, <span style="color:#66d9ef">string</span> storelink)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> fail = <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>    AndroidJavaClass up = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>);
+</span></span><span style="display:flex;"><span>    AndroidJavaObject ca = up.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
+</span></span><span style="display:flex;"><span>    AndroidJavaObject packageManager = ca.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getPackageManager&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    AndroidJavaObject launchIntent = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        launchIntent = packageManager.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getLaunchIntentForPackage&#34;</span>, bundleId);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> (Exception e)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        fail = <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (fail || launchIntent == <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        Application.OpenURL(storelink);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementA&#34;</span>, LaunchData.elementA);
+</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementB&#34;</span>, LaunchData.elementB);
+</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementC&#34;</span>, LaunchData.elementC);
+</span></span><span style="display:flex;"><span>        ca.Call(<span style="color:#e6db74">&#34;startActivity&#34;</span>, launchIntent);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    up.Dispose();
+</span></span><span style="display:flex;"><span>    ca.Dispose();
+</span></span><span style="display:flex;"><span>    packageManager.Dispose();
+</span></span><span style="display:flex;"><span>    launchIntent.Dispose();
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="property">Property</h2>
 <p>PropertyInfo 是用來接受資訊的 class，這邊可以自行修改。</p>
 <hr>
 <p><a href="https://wenrongdev.com/get-android-intent-data-for-unity/">Get Android intent Data for Unity</a></p>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Get Android Intent Data for Unity</title>
       <link>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</guid>
       <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 &lt;code&gt;Unity&lt;/code&gt; 接收。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。</p>
 <p>而 B App 是使用 <code>Unity</code> 接收。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
-}
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExternalCall</span> : MonoBehaviour
-{
-    PropertyInfo info = <span style="color:#66d9ef">new</span> PropertyInfo();
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
-    {
-<span style="color:#75715e">#if (!UNITY_EDITOR &amp;&amp; UNITY_ANDROID)
-</span><span style="color:#75715e"></span>        CreatePushClass(<span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>));
-<span style="color:#75715e">#endif
-</span><span style="color:#75715e"></span>    }
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> CreatePushClass(AndroidJavaClass UnityPlayer)
-    {
-<span style="color:#75715e">#if UNITY_ANDROID
-</span><span style="color:#75715e"></span>        AndroidJavaObject currentActivity = UnityPlayer.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
-        AndroidJavaObject intent = currentActivity.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getIntent&#34;</span>);
-        <span style="color:#66d9ef">bool</span> elementA_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementA&#34;</span>);
-        <span style="color:#66d9ef">bool</span> elementB_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementB&#34;</span>);
-        <span style="color:#66d9ef">bool</span> elementC_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementC&#34;</span>);
-        AndroidJavaObject extras = GetExtras(intent);
-
-        <span style="color:#66d9ef">if</span> (extras != <span style="color:#66d9ef">null</span>)
-        {
-            <span style="color:#66d9ef">if</span> (elementA_hasExtra)
-                info.elementA = GetProperty(extras, <span style="color:#e6db74">&#34;elementA&#34;</span>);
-            <span style="color:#66d9ef">if</span> (elementB_hasExtra)
-                info.elementB = GetProperty(extras, <span style="color:#e6db74">&#34;elementB&#34;</span>);
-            <span style="color:#66d9ef">if</span> (elementC_hasExtra)
-                info.elementC = GetProperty(extras, <span style="color:#e6db74">&#34;elementC&#34;</span>);
-        }
-<span style="color:#75715e">#endif
-</span><span style="color:#75715e"></span>    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> IsBool(AndroidJavaObject intent, <span style="color:#66d9ef">string</span> method)
-    {
-        <span style="color:#66d9ef">bool</span> b = <span style="color:#66d9ef">false</span>;
-
-        <span style="color:#66d9ef">try</span>
-        {
-            b = intent.Call&lt;<span style="color:#66d9ef">bool</span>&gt;(<span style="color:#e6db74">&#34;hasExtra&#34;</span>, method);
-        }
-        <span style="color:#66d9ef">catch</span> (Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-
-        <span style="color:#66d9ef">return</span> b;
-    }
-
-    <span style="color:#66d9ef">private</span> AndroidJavaObject GetExtras(AndroidJavaObject intent)
-    {
-        AndroidJavaObject extras = <span style="color:#66d9ef">null</span>;
-
-        <span style="color:#66d9ef">try</span>
-        {
-            extras = intent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getExtras&#34;</span>);
-        }
-        <span style="color:#66d9ef">catch</span> (Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-
-        <span style="color:#66d9ef">return</span> extras;
-    }
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> GetProperty(AndroidJavaObject extras, <span style="color:#66d9ef">string</span> name)
-    {
-        <span style="color:#66d9ef">string</span> s = <span style="color:#66d9ef">string</span>.Empty;
-
-        <span style="color:#66d9ef">try</span>
-        {
-            s = extras.Call&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;getString&#34;</span>, name);
-        }
-        <span style="color:#66d9ef">catch</span> (Exception e)
-        {
-            Debug.Log(e.Message);
-        }
-
-        <span style="color:#66d9ef">return</span> s;
-    }
-}
-</code></pre></div><h3 id="property">Property</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExternalCall</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    PropertyInfo info = <span style="color:#66d9ef">new</span> PropertyInfo();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if</span> (!UNITY_EDITOR &amp;&amp; UNITY_ANDROID)
+</span></span><span style="display:flex;"><span>        CreatePushClass(<span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>));
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> CreatePushClass(AndroidJavaClass UnityPlayer)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if</span> UNITY_ANDROID
+</span></span><span style="display:flex;"><span>        AndroidJavaObject currentActivity = UnityPlayer.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
+</span></span><span style="display:flex;"><span>        AndroidJavaObject intent = currentActivity.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getIntent&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> elementA_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementA&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> elementB_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementB&#34;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> elementC_hasExtra = IsBool(intent, <span style="color:#e6db74">&#34;elementC&#34;</span>);
+</span></span><span style="display:flex;"><span>        AndroidJavaObject extras = GetExtras(intent);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (extras != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (elementA_hasExtra)
+</span></span><span style="display:flex;"><span>                info.elementA = GetProperty(extras, <span style="color:#e6db74">&#34;elementA&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (elementB_hasExtra)
+</span></span><span style="display:flex;"><span>                info.elementB = GetProperty(extras, <span style="color:#e6db74">&#34;elementB&#34;</span>);
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (elementC_hasExtra)
+</span></span><span style="display:flex;"><span>                info.elementC = GetProperty(extras, <span style="color:#e6db74">&#34;elementC&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">bool</span> IsBool(AndroidJavaObject intent, <span style="color:#66d9ef">string</span> method)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">bool</span> b = <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            b = intent.Call&lt;<span style="color:#66d9ef">bool</span>&gt;(<span style="color:#e6db74">&#34;hasExtra&#34;</span>, method);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (Exception e)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Debug.Log(e.Message);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> b;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> AndroidJavaObject GetExtras(AndroidJavaObject intent)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        AndroidJavaObject extras = <span style="color:#66d9ef">null</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            extras = intent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getExtras&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (Exception e)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Debug.Log(e.Message);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> extras;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> GetProperty(AndroidJavaObject extras, <span style="color:#66d9ef">string</span> name)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> s = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">try</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            s = extras.Call&lt;<span style="color:#66d9ef">string</span>&gt;(<span style="color:#e6db74">&#34;getString&#34;</span>, name);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">catch</span> (Exception e)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Debug.Log(e.Message);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> s;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="property">Property</h3>
 <p><code>PropertyInfo</code> 是用來接受資訊的 <code>class</code>，這邊可以自行修改。</p>
 <hr>
 <p><a href="https://wenrongdev.com/launch-from-within-a-unity-app-another-unity-appandroid/">Launch from within a Unity app another Unity app(Android)</a></p>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
       <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1369,10 +1321,10 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <li>Vuforia 8.5.9</li>
 </ul>
 <h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ld: library not found for -liPhone-lib
-
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
 </p>
 <h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
 <p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
@@ -1380,8 +1332,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <p><img loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg" alt="img_2"  />
 </p>
 <h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
 </p>
 <h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
 <p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
@@ -1402,8 +1354,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 </li>
 </ul>
 <h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ERROR ITMS-90534
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
 </p>
 <h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
 <p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
@@ -1413,85 +1365,81 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity 5.3 Native System Language</title>
       <link>https://wenrongdev.com/posts/unity-5.3-native-system-language/</link>
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-5.3-native-system-language/</guid>
       <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
 <h3 id="windows-platform">Windows Platform</h3>
 <p>利用 <a href="https://docs.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid">GetSystemDefaultLCID</a> 取得本機端語系，再利用 <a href="https://docs.microsoft.com/zh-tw/dotnet/api/system.globalization.cultureinfo.getcultureinfo?view=netframework-3.5">CultureInfo.GetCultureInfo</a> 轉化為本機端語系文化。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
-</code></pre></div><p><a href="http://answers.unity.com/answers/1323282/view.html">參考文章</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
+</span></span></code></pre></div><p><a href="http://answers.unity.com/answers/1323282/view.html">參考文章</a></p>
 <h3 id="android-platform">Android Platform</h3>
 <p>直接呼叫原生系統 API 取得。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
- {
-     <span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">&#34;&#34;</span>;
-     <span style="color:#66d9ef">using</span> (AndroidJavaClass cls = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;java.util.Locale&#34;</span>))
-     {
-         <span style="color:#66d9ef">if</span> (cls != <span style="color:#66d9ef">null</span>)
-         {
-             <span style="color:#66d9ef">using</span> (AndroidJavaObject locale = cls.CallStatic(<span style="color:#e6db74">&#34;getDefault&#34;</span>))
-             {
-                 <span style="color:#66d9ef">if</span> (locale != <span style="color:#66d9ef">null</span>)
-                 {
-                     result = locale.Call(<span style="color:#e6db74">&#34;getLanguage&#34;</span>) + <span style="color:#e6db74">&#34;_&#34;</span> + locale.Call(<span style="color:#e6db74">&#34;getDefault&#34;</span>);
-                     Debug.Log(<span style="color:#e6db74">&#34;Android lang: &#34;</span> + result);
-                 }
-                 <span style="color:#66d9ef">else</span>
-                 {
-                     Debug.Log(<span style="color:#e6db74">&#34;locale null&#34;</span>);
-                 }
-             }
-         }
-         <span style="color:#66d9ef">else</span>
-         {
-             Debug.Log(<span style="color:#e6db74">&#34;cls null&#34;</span>);
-         }
-     }
-     <span style="color:#66d9ef">return</span> result;
- }
-</code></pre></div><p><a href="https://forum.unity.com/threads/application-systemlanguage.211171/#post-1423369">參考文章</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">using</span> (AndroidJavaClass cls = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;java.util.Locale&#34;</span>))
+</span></span><span style="display:flex;"><span>     {
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> (cls != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>         {
+</span></span><span style="display:flex;"><span>             <span style="color:#66d9ef">using</span> (AndroidJavaObject locale = cls.CallStatic(<span style="color:#e6db74">&#34;getDefault&#34;</span>))
+</span></span><span style="display:flex;"><span>             {
+</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">if</span> (locale != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>                 {
+</span></span><span style="display:flex;"><span>                     result = locale.Call(<span style="color:#e6db74">&#34;getLanguage&#34;</span>) + <span style="color:#e6db74">&#34;_&#34;</span> + locale.Call(<span style="color:#e6db74">&#34;getDefault&#34;</span>);
+</span></span><span style="display:flex;"><span>                     Debug.Log(<span style="color:#e6db74">&#34;Android lang: &#34;</span> + result);
+</span></span><span style="display:flex;"><span>                 }
+</span></span><span style="display:flex;"><span>                 <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                 {
+</span></span><span style="display:flex;"><span>                     Debug.Log(<span style="color:#e6db74">&#34;locale null&#34;</span>);
+</span></span><span style="display:flex;"><span>                 }
+</span></span><span style="display:flex;"><span>             }
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>         {
+</span></span><span style="display:flex;"><span>             Debug.Log(<span style="color:#e6db74">&#34;cls null&#34;</span>);
+</span></span><span style="display:flex;"><span>         }
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> result;
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><p><a href="https://forum.unity.com/threads/application-systemlanguage.211171/#post-1423369">參考文章</a></p>
 <h3 id="ios-platfrom">iOS Platfrom</h3>
 <p>製作一個 .mm 文件，內容如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-objc" data-lang="objc"> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
- {
-   <span style="color:#66d9ef">if</span>(string <span style="color:#f92672">==</span> NULL){
-     <span style="color:#66d9ef">return</span> NULL;
-   }
-   <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> newString <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)malloc(strlen(string) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
-   strcpy(newString, string);
-   <span style="color:#66d9ef">return</span> newString;
- }
- <span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span>
- {
-   <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> CurIOSLang ()
-   {
-     NSArray <span style="color:#f92672">*</span>languages <span style="color:#f92672">=</span> [NSLocale preferredLanguages];
-     NSString <span style="color:#f92672">*</span>CurrentLanguage <span style="color:#f92672">=</span> [languages objectAtIndex:<span style="color:#ae81ff">0</span>];
-     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cStringCopy</span>([CurrentLanguage UTF8String]);
-   }
- }
-</code></pre></div><p>在 C# 寫出 CurIOSLang 的接口</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
-<span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">string</span> CurIOSLang();
-</code></pre></div><p>這樣就可以在 Unity 直接呼叫 CurIOSLan 取得 iOS 語系了。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span>(string <span style="color:#f92672">==</span> NULL){
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> newString <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)malloc(strlen(string) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>   strcpy(newString, string);
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> newString;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">extern</span> <span style="color:#e6db74">&#34;C&#34;</span>
+</span></span><span style="display:flex;"><span> {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> CurIOSLang ()
+</span></span><span style="display:flex;"><span>   {
+</span></span><span style="display:flex;"><span>     NSArray <span style="color:#f92672">*</span>languages <span style="color:#f92672">=</span> [NSLocale preferredLanguages];
+</span></span><span style="display:flex;"><span>     NSString <span style="color:#f92672">*</span>CurrentLanguage <span style="color:#f92672">=</span> [languages objectAtIndex:<span style="color:#ae81ff">0</span>];
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cStringCopy</span>([CurrentLanguage UTF8String]);
+</span></span><span style="display:flex;"><span>   }
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><p>在 C# 寫出 CurIOSLang 的接口</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">string</span> CurIOSLang();
+</span></span></code></pre></div><p>這樣就可以在 Unity 直接呼叫 CurIOSLan 取得 iOS 語系了。</p>
 <p><a href="https://blog.csdn.net/teng_ontheway/article/details/50277169">參考文章</a></p>
 <hr>
 <h3 id="github-repohttpsgithubcomwenrong274nativesystemlanguage"><a href="https://github.com/Wenrong274/NativeSystemLanguage">Github repo</a></h3>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity WebGL Template</title>
       <link>https://wenrongdev.com/posts/unity-webgl-template/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-webgl-template/</guid>
       <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1522,12 +1470,10 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Unity WebGL RectMask2D Does Not Work</title>
       <link>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
       <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -1536,25 +1482,24 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
 <h3 id="使用方式">使用方式</h3>
 <p>直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。</p>
 <h3 id="script">Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
-{
-<span style="color:#75715e">#if PlatformWebGL
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
-    {
-        <span style="color:#66d9ef">var</span> items = GetComponentsInChildren&lt;MaskableGraphic&gt;(<span style="color:#66d9ef">true</span>);
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; items.Length; i++)
-        {
-            Material m = items[i].materialForRendering;
-            <span style="color:#66d9ef">if</span> (m != <span style="color:#66d9ef">null</span>)
-                m.EnableKeyword(<span style="color:#e6db74">&#34;UNITY_UI_CLIP_RECT&#34;</span>);
-        }
-    }
-<span style="color:#75715e">#endif
-</span><span style="color:#75715e"></span>}
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if</span> PlatformWebGL
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> items = GetComponentsInChildren&lt;MaskableGraphic&gt;(<span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">0</span>; i &lt; items.Length; i++)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Material m = items[i].materialForRendering;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (m != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>                m.EnableKeyword(<span style="color:#e6db74">&#34;UNITY_UI_CLIP_RECT&#34;</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
 <p><a href="https://forum.unity.com/threads/rectmask2d-does-not-work-when-canvas-render-mode-is-sceen-space-camera-or-world-space-2017-2-0f3.499966/#post-4484971">參考文章</a></p>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

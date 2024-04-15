@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>tool on Wenrong&#39;s Note</title>
+    <title>Tool on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/tool/</link>
-    <description>Recent content in tool on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tool on Wenrong&#39;s Note</description>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wix Examples</title>
       <link>https://wenrongdev.com/posts/wixexamples/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/wixexamples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
@@ -19,14 +19,14 @@
 <h3 id="輸出-wix-文件方法">輸出 Wix 文件方法</h3>
 <p>先到 <a href="https://github.com/wixtoolset/wix3/releases">WiX Toolset Release</a> 安裝需要的工具。</p>
 <p>需要開啟 <a href="https://zh.wikipedia.org/zh-tw/cmd.exe">CMD</a> 且必須要用<code>工作管理員權限</code>打開，之後 cd 到 WiX Toolset 的安裝資料夾。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">C:\Program Files (x86)\WiX Toolset v3.11\bin
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/ovuJCka.png" alt="img_1"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>C:\Program Files (x86)\WiX Toolset v3.11\bin
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/ovuJCka.png" alt="img_1"  />
 </p>
 <h4 id="heatexe">heat.exe</h4>
 <p>可以掃描目錄中的所有文件和子目錄，並生成 WiX 文件中所需的 Component、Directory、File 和其他元素的定義。</p>
 <p>使用下面的參數可以拿到 <code>myKeyIn.wxs</code>。需要把 [MyDemo] 替換成正確的路徑，可以參考我的 <code>Product.wxs</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
-</code></pre></div><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
+</span></span></code></pre></div><table>
 <thead>
 <tr>
 <th style="text-align:left">參數名稱</th>
@@ -54,44 +54,44 @@
 <p><a href="https://raw.githubusercontent.com/Wenrong274/WixExamples/master/WixInstaller/WixToolset/Product.wxs">Product.wxs</a></p>
 <h3 id="桌面捷徑">桌面捷徑</h3>
 <p>需要注意一些細項設定，如 Guid、執行檔名稱、路徑等。</p>
-<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Directory Id=&quot;DesktopFolder&quot; Name=&quot;Desktop&quot; &gt;
-    &lt;Component Id=&quot;DesktopFolderShortcut&quot; Guid=&quot;{94D38478-869E-4CA8-BEA6-7905A7135DB8}&quot;&gt;
-        &lt;Shortcut Id=&quot;DesktopShortcut&quot; Directory=&quot;DesktopFolder&quot; Name=&quot;Wix-Hello Unity&quot; Target=&quot;[INSTALLFOLDER]Wix-Hello Unity.exe&quot; WorkingDirectory=&quot;INSTALLFOLDER&quot; Icon=&quot;WixToolsetIcon&quot;&gt;
+<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Directory Id=&#34;DesktopFolder&#34; Name=&#34;Desktop&#34; &gt;
+    &lt;Component Id=&#34;DesktopFolderShortcut&#34; Guid=&#34;{94D38478-869E-4CA8-BEA6-7905A7135DB8}&#34;&gt;
+        &lt;Shortcut Id=&#34;DesktopShortcut&#34; Directory=&#34;DesktopFolder&#34; Name=&#34;Wix-Hello Unity&#34; Target=&#34;[INSTALLFOLDER]Wix-Hello Unity.exe&#34; WorkingDirectory=&#34;INSTALLFOLDER&#34; Icon=&#34;WixToolsetIcon&#34;&gt;
         &lt;/Shortcut&gt;
-        &lt;RegistryValue Root=&quot;HKCU&quot; Key=&quot;Software\WenRongStudio\Wix-Hello Unity&quot; Name=&quot;installed&quot; Type=&quot;integer&quot; Value=&quot;1&quot; KeyPath=&quot;yes&quot;/&gt;
+        &lt;RegistryValue Root=&#34;HKCU&#34; Key=&#34;Software\WenRongStudio\Wix-Hello Unity&#34; Name=&#34;installed&#34; Type=&#34;integer&#34; Value=&#34;1&#34; KeyPath=&#34;yes&#34;/&gt;
     &lt;/Component&gt;
 &lt;/Directory&gt;
 </code></pre><h4 id="資料夾權限">資料夾權限</h4>
 <p>避免安裝在系統槽時，無法變動檔案，所以必須把資料夾權限打開。</p>
 <p>需要注意一些細項設定，如 Guid 等。</p>
-<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Component Id=&quot;InstallationDirectory&quot; Guid='{0D92D4B6-CACE-4556-8CBD-C8C385B22D28}' &gt;
-    &lt;CreateFolder Directory=&quot;INSTALLFOLDER&quot;&gt;
-        &lt;Permission User=&quot;SYSTEM&quot; GenericAll=&quot;yes&quot;/&gt;
-        &lt;Permission User=&quot;EveryOne&quot; GenericAll=&quot;yes&quot; GenericRead=&quot;yes&quot; Read=&quot;yes&quot; ReadAttributes=&quot;yes&quot;  GenericExecute=&quot;yes&quot; TakeOwnership =&quot;yes&quot;  GenericWrite =&quot;yes&quot;    WriteAttributes=&quot;yes&quot; ReadPermission =&quot;yes&quot;   ChangePermission=&quot;yes&quot; /&gt;
-        &lt;Permission User=&quot;Users&quot; Domain=&quot;[LOCAL_MACHINE_NAME]&quot; GenericAll=&quot;yes&quot; GenericRead=&quot;yes&quot; Read=&quot;yes&quot; ReadAttributes=&quot;yes&quot;  GenericExecute=&quot;yes&quot; TakeOwnership =&quot;yes&quot;  GenericWrite =&quot;yes&quot;    WriteAttributes=&quot;yes&quot; ReadPermission =&quot;yes&quot;   ChangePermission=&quot;yes&quot;/&gt;
+<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Component Id=&#34;InstallationDirectory&#34; Guid=&#39;{0D92D4B6-CACE-4556-8CBD-C8C385B22D28}&#39; &gt;
+    &lt;CreateFolder Directory=&#34;INSTALLFOLDER&#34;&gt;
+        &lt;Permission User=&#34;SYSTEM&#34; GenericAll=&#34;yes&#34;/&gt;
+        &lt;Permission User=&#34;EveryOne&#34; GenericAll=&#34;yes&#34; GenericRead=&#34;yes&#34; Read=&#34;yes&#34; ReadAttributes=&#34;yes&#34;  GenericExecute=&#34;yes&#34; TakeOwnership =&#34;yes&#34;  GenericWrite =&#34;yes&#34;    WriteAttributes=&#34;yes&#34; ReadPermission =&#34;yes&#34;   ChangePermission=&#34;yes&#34; /&gt;
+        &lt;Permission User=&#34;Users&#34; Domain=&#34;[LOCAL_MACHINE_NAME]&#34; GenericAll=&#34;yes&#34; GenericRead=&#34;yes&#34; Read=&#34;yes&#34; ReadAttributes=&#34;yes&#34;  GenericExecute=&#34;yes&#34; TakeOwnership =&#34;yes&#34;  GenericWrite =&#34;yes&#34;    WriteAttributes=&#34;yes&#34; ReadPermission =&#34;yes&#34;   ChangePermission=&#34;yes&#34;/&gt;
     &lt;/CreateFolder&gt;
 &lt;/Component&gt;
 </code></pre><h4 id="建立-windows-menu-資料">建立 Windows Menu 資料</h4>
 <p>可以 Windows Menu 啟動檔案跟卸載執行檔。</p>
 <p>需要注意一些細項設定，如 Guid、執行檔名稱、路徑等。</p>
-<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Directory Id=&quot;ProgramMenuFolder&quot;&gt;
-    &lt;Directory Id=&quot;ApplicationProgramsFolder&quot; Name=&quot;Wix-Hello Unity&quot;&gt;
-        &lt;Component Id=&quot;ApplicationShortcut&quot; Guid=&quot;{9724BE7E-7132-4978-B806-4B0D1B3DE350}&quot;&gt;
-            &lt;Shortcut Id=&quot;ApplicationStartMenuShortcut&quot;
-                    Name=&quot;Wix-Hello Unity&quot;
-                    Description=&quot;Wix-Hello Unity&quot;
-                    Target=&quot;[INSTALLFOLDER]\Wix-Hello Unity.exe&quot;
-                    WorkingDirectory=&quot;APPLICATIONROOTDIRECTORY&quot;
-                    Icon=&quot;WixToolsetIcon&quot;/&gt;
-            &lt;Shortcut Id=&quot;UninstallProduct&quot;
-                    Name=&quot;Uninstall&quot;
-                    Description=&quot;Uninstalls Wix-Hello Unity&quot;
-                    Target=&quot;[System64Folder]msiexec.exe&quot;
-                    Arguments=&quot;/x [ProductCode]&quot; /&gt;
-            &lt;RemoveFolder Id=&quot;ProgramMenuSubfolder&quot; On=&quot;uninstall&quot;/&gt;
-            &lt;RemoveFolder Id=&quot;ApplicationProgramsFolder&quot; On=&quot;uninstall&quot;/&gt;
+<pre tabindex="0"><code class="language-wxc" data-lang="wxc">&lt;Directory Id=&#34;ProgramMenuFolder&#34;&gt;
+    &lt;Directory Id=&#34;ApplicationProgramsFolder&#34; Name=&#34;Wix-Hello Unity&#34;&gt;
+        &lt;Component Id=&#34;ApplicationShortcut&#34; Guid=&#34;{9724BE7E-7132-4978-B806-4B0D1B3DE350}&#34;&gt;
+            &lt;Shortcut Id=&#34;ApplicationStartMenuShortcut&#34;
+                    Name=&#34;Wix-Hello Unity&#34;
+                    Description=&#34;Wix-Hello Unity&#34;
+                    Target=&#34;[INSTALLFOLDER]\Wix-Hello Unity.exe&#34;
+                    WorkingDirectory=&#34;APPLICATIONROOTDIRECTORY&#34;
+                    Icon=&#34;WixToolsetIcon&#34;/&gt;
+            &lt;Shortcut Id=&#34;UninstallProduct&#34;
+                    Name=&#34;Uninstall&#34;
+                    Description=&#34;Uninstalls Wix-Hello Unity&#34;
+                    Target=&#34;[System64Folder]msiexec.exe&#34;
+                    Arguments=&#34;/x [ProductCode]&#34; /&gt;
+            &lt;RemoveFolder Id=&#34;ProgramMenuSubfolder&#34; On=&#34;uninstall&#34;/&gt;
+            &lt;RemoveFolder Id=&#34;ApplicationProgramsFolder&#34; On=&#34;uninstall&#34;/&gt;
 
-            &lt;RegistryValue Root=&quot;HKCU&quot; Key=&quot;Software\WenRongStudio\Wix-Hello Unity&quot; Name=&quot;installed&quot; Type=&quot;integer&quot; Value=&quot;1&quot; KeyPath=&quot;yes&quot;/&gt;
+            &lt;RegistryValue Root=&#34;HKCU&#34; Key=&#34;Software\WenRongStudio\Wix-Hello Unity&#34; Name=&#34;installed&#34; Type=&#34;integer&#34; Value=&#34;1&#34; KeyPath=&#34;yes&#34;/&gt;
         &lt;/Component&gt;
     &lt;/Directory&gt;
 &lt;/Directory&gt;
@@ -105,12 +105,10 @@
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Example Inno Setup</title>
       <link>https://wenrongdev.com/posts/example-inno-setup/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
       <description>簡易使用 Inno Setup 打包教學。</description>
       <content:encoded><![CDATA[<h2 id="install">Install</h2>
@@ -124,14 +122,14 @@
 <h2 id="使用方式">使用方式</h2>
 <p>可以參考以下腳本，也可以自己寫，不知道寫法可以參考<a href="http://www.jrsoftware.org/ishelp/">官方文件</a>。</p>
 <pre tabindex="0"><code class="language-Pascal" data-lang="Pascal">
-#define MyAppGUID &quot;{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}&quot;
-#define MyAppName &quot;Examle&quot;
-#define MyAppFolder &quot;ExampleFolder&quot;
-#define MyAppSetupExeName &quot;Examle&quot;
+#define MyAppGUID &#34;{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}&#34;
+#define MyAppName &#34;Examle&#34;
+#define MyAppFolder &#34;ExampleFolder&#34;
+#define MyAppSetupExeName &#34;Examle&#34;
 
-#define MyAppExeName &quot;Examle.exe&quot;
-#define MyAppURL &quot;https://wenrongdev.com/&quot;
-#define MyAppPublisher &quot;wen rong studio&quot;
+#define MyAppExeName &#34;Examle.exe&#34;
+#define MyAppURL &#34;https://wenrongdev.com/&#34;
+#define MyAppPublisher &#34;wen rong studio&#34;
 
 [Setup]
 AppId={#MyAppGUID}
@@ -148,7 +146,7 @@ DisableProgramGroupPage=yes
 DefaultGroupName={#MyAppName}
 UninstallDisplayIcon={app}ForwardSlash{#MyAppExeName}
 SolidCompression = no
-OutputDir = &quot;Setup&quot;
+OutputDir = &#34;Setup&#34;
 OutputBaseFilename = {#MyAppSetupExeName}
 ShowLanguageDialog=yes
 
@@ -159,10 +157,10 @@ DiskSliceSize=1566000000
 ///
 
 [Languages]
-Name: EN; MessagesFile: &quot;compiler:Default.isl&quot;
-Name: CT; MessagesFile: &quot;compiler:Languages\Unofficial\ChineseTraditional.isl&quot;
-Name: CS; MessagesFile: &quot;compiler:Languages\Unofficial\ChineseSimplified.isl&quot;
-Name: JP; MessagesFile: &quot;compiler:Languages\Japanese.isl&quot;
+Name: EN; MessagesFile: &#34;compiler:Default.isl&#34;
+Name: CT; MessagesFile: &#34;compiler:Languages\Unofficial\ChineseTraditional.isl&#34;
+Name: CS; MessagesFile: &#34;compiler:Languages\Unofficial\ChineseSimplified.isl&#34;
+Name: JP; MessagesFile: &#34;compiler:Languages\Japanese.isl&#34;
 
 [CustomMessages]
 MyAppName = {#MyAppName}
@@ -172,13 +170,13 @@ MyAppVerName = {#MyAppName} %1
 BeveledLabel = {#MyAppURL}
 
 [Dirs]
-Name: &quot;{app}&quot;; Permissions: everyone-full
+Name: &#34;{app}&#34;; Permissions: everyone-full
 
 [Files]
-Source: &quot;{#MyAppFolder}\*&quot;; DestDir: &quot;{app}\{#MyAppFolder}&quot;; Flags: ignoreversion recursesubdirs
+Source: &#34;{#MyAppFolder}\*&#34;; DestDir: &#34;{app}\{#MyAppFolder}&#34;; Flags: ignoreversion recursesubdirs
 
 [Icons]
-Name: &quot;{userdesktop}\{cm:MyAppName}&quot;; Filename: &quot;{app}\{#MyAppFolder}\{#MyAppExeName}&quot;;
+Name: &#34;{userdesktop}\{cm:MyAppName}&#34;; Filename: &#34;{app}\{#MyAppFolder}\{#MyAppExeName}&#34;;
 
 [Code]
 function GetNumber(var temp: String): Integer;
@@ -191,11 +189,11 @@ begin
     Result := -1;
     Exit;
   end;
-    pos1 := Pos('.', temp);
+    pos1 := Pos(&#39;.&#39;, temp);
     if (pos1 = 0) then
     begin
       Result := StrToInt(temp);
-    temp := '';
+    temp := &#39;&#39;;
     end
     else
     begin
@@ -247,19 +245,19 @@ var
   vCurID      :String;
   vCurAppName :String;
 begin
-  vCurID:= '{#SetupSetting(&quot;AppId&quot;)}';
-  vCurAppName:= '{#SetupSetting(&quot;AppName&quot;)}';
+  vCurID:= &#39;{#SetupSetting(&#34;AppId&#34;)}&#39;;
+  vCurAppName:= &#39;{#SetupSetting(&#34;AppName&#34;)}&#39;;
   vCurID:= Copy(vCurID, 2, Length(vCurID) - 1);
 
   if RegKeyExists(HKEY_LOCAL_MACHINE,
-    'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\' + vCurID + '_is1') then
+    &#39;SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\&#39; + vCurID + &#39;_is1&#39;) then
   begin
     RegQueryStringValue(HKEY_LOCAL_MACHINE,
-      'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\' + vCurID + '_is1',
-      'DisplayVersion', oldVersion);
-    if (CompareVersion(oldVersion, '{#SetupSetting(&quot;AppVersion&quot;)}') &lt; 0) then
+      &#39;SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\&#39; + vCurID + &#39;_is1&#39;,
+      &#39;DisplayVersion&#39;, oldVersion);
+    if (CompareVersion(oldVersion, &#39;{#SetupSetting(&#34;AppVersion&#34;)}&#39;) &lt; 0) then
     begin
-      if MsgBox('Version ' + oldVersion + ' of ' + vCurAppName + ' is already installed. Continue to use this old version?',
+      if MsgBox(&#39;Version &#39; + oldVersion + &#39; of &#39; + vCurAppName + &#39; is already installed. Continue to use this old version?&#39;,
         mbConfirmation, MB_YESNO) = IDYES then
       begin
         Result := False;
@@ -267,15 +265,15 @@ begin
       else
       begin
           RegQueryStringValue(HKEY_LOCAL_MACHINE,
-            'SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\' + vCurID + '_is1',
-            'UninstallString', uninstaller);
-          ShellExec('runas', uninstaller, '/SILENT', '', SW_HIDE, ewWaitUntilTerminated, ErrorCode);
+            &#39;SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\&#39; + vCurID + &#39;_is1&#39;,
+            &#39;UninstallString&#39;, uninstaller);
+          ShellExec(&#39;runas&#39;, uninstaller, &#39;/SILENT&#39;, &#39;&#39;, SW_HIDE, ewWaitUntilTerminated, ErrorCode);
           Result := True;
       end;
     end
     else
     begin
-      MsgBox('Version ' + oldVersion + ' of ' + vCurAppName + ' is already installed. This installer will exit.',
+      MsgBox(&#39;Version &#39; + oldVersion + &#39; of &#39; + vCurAppName + &#39; is already installed. This installer will exit.&#39;,
         mbInformation, MB_OK);
       Result := False;
     end;
@@ -285,7 +283,6 @@ begin
     Result := True;
   end;
 end;
-
 </code></pre><h2 id="修改方式">修改方式</h2>
 <p>假如是使用複製舊有的 <code>.iss 檔</code>，只需要修改幾個需要注意的文字即可。</p>
 <p>正常的資料夾結構</p>
@@ -314,13 +311,13 @@ end;
 <p><img loading="lazy" src="https://imgur.com/AXDhz5x.jpg" alt="img_2"  />
 </p>
 <h3 id="修改-iss">修改 .iss</h3>
-<pre tabindex="0"><code class="language-Pascal" data-lang="Pascal">#define MyAppGUID &quot;GUID&quot;
-#define MyAppName &quot;Examle&quot;
-#define MyAppFolder &quot;ExampleFolder&quot;
-#define MyAppSetupExeName &quot;Examle&quot;
-#define MyAppExeName &quot;Examle.exe&quot;
-#define MyAppURL &quot;https://wenrongdev.com/&quot;
-#define MyAppPublisher &quot;wen rong studio&quot;
+<pre tabindex="0"><code class="language-Pascal" data-lang="Pascal">#define MyAppGUID &#34;GUID&#34;
+#define MyAppName &#34;Examle&#34;
+#define MyAppFolder &#34;ExampleFolder&#34;
+#define MyAppSetupExeName &#34;Examle&#34;
+#define MyAppExeName &#34;Examle.exe&#34;
+#define MyAppURL &#34;https://wenrongdev.com/&#34;
+#define MyAppPublisher &#34;wen rong studio&#34;
 </code></pre><h3 id="需修改地方">需修改地方</h3>
 <table>
 <thead>
@@ -355,6 +352,5 @@ end;
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

@@ -14,8 +14,23 @@
     <loc>https://wenrongdev.com/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wenrongdev.com/posts/proxy-design-pattern/</loc>
+    <loc>https://wenrongdev.com/posts/designpattern-proxy/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-template/</loc>
+    <lastmod>2024-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-state/</loc>
+    <lastmod>2024-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-composite/</loc>
+    <lastmod>2024-04-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-iterator/</loc>
+    <lastmod>2024-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-facade/</loc>
+    <lastmod>2024-03-12T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/tags/tool/</loc>
     <lastmod>2023-10-20T00:00:00+00:00</lastmod>
@@ -164,7 +179,7 @@
     <loc>https://wenrongdev.com/posts/example-inno-setup/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wenrongdev.com/tags/c#/</loc>
+    <loc>https://wenrongdev.com/tags/c</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/whitelist-for-windows-uac/</loc>

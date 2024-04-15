@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>iOS on Wenrong&#39;s Note</title>
+    <title>IOS on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/ios/</link>
-    <description>Recent content in iOS on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in IOS on Wenrong&#39;s Note</description>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
       <link>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</guid>
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">Command PhaseScriptExecution failed with a nonzero exit code
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/AvL0uqn.png" alt="img"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Command PhaseScriptExecution failed with a nonzero exit code
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/AvL0uqn.png" alt="img"  />
 </p>
 <h2 id="解決方式">解決方式</h2>
 <p>因為專案有使用 Cardboard，且 Unity 是使用 2022，才會出現此問題，之前使用 2021 輸出上架都沒問題。</p>
@@ -32,12 +32,10 @@
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Install IPA With OTA</title>
       <link>https://wenrongdev.com/posts/install-ipa-with-ota/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
       <description>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -62,9 +60,9 @@
 </li>
 </ol>
 <h4 id="create-manifestplist">Create manifest.plist</h4>
-<pre tabindex="0"><code class="language-plist" data-lang="plist">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-&lt;!DOCTYPE plist PUBLIC &quot;-//Apple//DTD PLIST 1.0//EN&quot; &quot;http://www.apple.com/DTDs/PropertyList-1.0.dtd&quot;&gt;
-&lt;plist version=&quot;1.0&quot;&gt;
+<pre tabindex="0"><code class="language-plist" data-lang="plist">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;
+&lt;!DOCTYPE plist PUBLIC &#34;-//Apple//DTD PLIST 1.0//EN&#34; &#34;http://www.apple.com/DTDs/PropertyList-1.0.dtd&#34;&gt;
+&lt;plist version=&#34;1.0&#34;&gt;
 &lt;dict&gt;
     &lt;key&gt;items&lt;/key&gt;
     &lt;array&gt;
@@ -95,17 +93,17 @@
 &lt;/plist&gt;
 </code></pre><p>修改好 <code>public link</code>、<code>app info</code> 就完成 <code>.plist</code>。</p>
 <h4 id="create-indexhtml">Create index.html</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span>&gt;
-&lt;<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">title</span>&gt;App install&lt;/<span style="color:#f92672">title</span>&gt;
-&lt;/<span style="color:#f92672">head</span>&gt;
-&lt;<span style="color:#f92672">body</span>&gt;
-    &lt;<span style="color:#f92672">h2</span>&gt;builds&lt;/<span style="color:#f92672">h2</span>&gt;
-&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;itms-services://?action=download-manifest&amp;url=http://YOUR_SERVER_URL/manifest.plist&#34;</span>&gt; App&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><p>把 <code>url=http://YOUR_SERVER_URL/manifest.plist</code> 替換成 <code>Website manifest.plist</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;App install&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">h2</span>&gt;builds&lt;/<span style="color:#f92672">h2</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;itms-services://?action=download-manifest&amp;url=http://YOUR_SERVER_URL/manifest.plist&#34;</span>&gt; App&lt;/<span style="color:#f92672">a</span>&gt;&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><p>把 <code>url=http://YOUR_SERVER_URL/manifest.plist</code> 替換成 <code>Website manifest.plist</code>。</p>
 <h3 id="hosting-using-github">Hosting using Github</h3>
 <ol>
 <li>Create a new repository（<a href="https://gitbook.tw/chapters/github/using-github-pages.html">教學文章</a>）</li>
@@ -120,6 +118,5 @@
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

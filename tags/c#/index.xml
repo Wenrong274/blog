@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>C# on Wenrong&#39;s Note</title>
-    <link>https://wenrongdev.com/tags/c#/</link>
+    <link>https://wenrongdev.com/tags/c</link>
     <description>Recent content in C# on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/c" rel="self" type="application/rss+xml" />
     <item>
       <title>Whitelist for Windows UAC</title>
       <link>https://wenrongdev.com/posts/whitelist-for-windows-uac/</link>
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
       <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -30,25 +30,25 @@
 <li>右鍵新增字串值，名稱為程式（exe）路徑、資料為<code>~ RunAsInvoker</code></li>
 </ol>
 <h2 id="c-解決方式">C# 解決方式</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RegEditWhiteList</span>
-{
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> keyName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> root = <span style="color:#e6db74">@&#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34;</span>;
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> keyValue = <span style="color:#e6db74">&#34;~ RunAsInvoker&#34;</span>;
-
-    <span style="color:#66d9ef">public</span> RegEditWhiteList(<span style="color:#66d9ef">string</span> keyName)
-    {
-        <span style="color:#66d9ef">this</span>.keyName = keyName;
-    }
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> SendRegedit()
-    {
-        RegistryKey key = Registry.CurrentUser.OpenSubKey(root, <span style="color:#66d9ef">true</span>);
-        key.SetValue(keyName, keyValue,RegistryValueKind.String);
-        key.Close();
-    }
-}
-</code></pre></div><h2 id="githubrepo"><a href="https://github.com/Wenrong274/UACWhitelist">GitHub</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RegEditWhiteList</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> keyName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> root = <span style="color:#e6db74">@&#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> keyValue = <span style="color:#e6db74">&#34;~ RunAsInvoker&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> RegEditWhiteList(<span style="color:#66d9ef">string</span> keyName)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.keyName = keyName;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> SendRegedit()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        RegistryKey key = Registry.CurrentUser.OpenSubKey(root, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>        key.SetValue(keyName, keyValue,RegistryValueKind.String);
+</span></span><span style="display:flex;"><span>        key.Close();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="githubrepo"><a href="https://github.com/Wenrong274/UACWhitelist">GitHub</a></h2>
 <h3 id="使用方式">使用方式</h3>
 <p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
 <h2 id="參考資料">參考資料</h2>
@@ -56,6 +56,5 @@
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

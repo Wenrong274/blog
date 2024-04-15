@@ -4,14 +4,14 @@
     <title>Vuforia on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/vuforia/</link>
     <description>Recent content in Vuforia on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
       <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -20,10 +20,10 @@
 <li>Vuforia 8.5.9</li>
 </ul>
 <h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ld: library not found for -liPhone-lib
-
-clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
 </p>
 <h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
 <p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
@@ -31,8 +31,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <p><img loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg" alt="img_2"  />
 </p>
 <h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
 </p>
 <h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
 <p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
@@ -53,8 +53,8 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 </li>
 </ul>
 <h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">ERROR ITMS-90534
-</code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
+</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
 </p>
 <h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
 <p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
@@ -64,6 +64,5 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

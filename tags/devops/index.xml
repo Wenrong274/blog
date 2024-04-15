@@ -4,14 +4,14 @@
     <title>DevOps on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/devops/</link>
     <description>Recent content in DevOps on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Jenkins Build</title>
       <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -46,8 +46,8 @@
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
 <p>在 Editor command line arguments 輸入</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
-</code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
+</span></span></code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
 <p><code>-android</code> 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。</p>
 <p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG" alt="img_4"  />
 </p>
@@ -58,6 +58,5 @@
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

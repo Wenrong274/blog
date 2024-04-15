@@ -4,14 +4,14 @@
     <title>Blog on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/blog/</link>
     <description>Recent content in Blog on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog 心得（3）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-3/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/reflection-blog-3/</guid>
       <description>使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -31,78 +31,78 @@
 <h3 id="configyml">config.yml</h3>
 <h4 id="search-post">Search Post</h4>
 <p>先在 config menu main 新增一個 Search 頁面</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">menu:
-    main:
-        - identifier: archives
-          name: Archives
-          url: /archives/
-          weight: 5
-        - identifier: tags
-          name: Tags
-          url: /tags/
-          weight: 10
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 20
-</code></pre></div><p>且在最底下此內容。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
-</code></pre></div><p>最後在專案的 <code>content</code> 底下新增 <code>search.md</code>，即可完成功能。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-markdown" data-lang="markdown">---
-title: &#34;Search&#34; # in any language you want
-layout: &#34;search&#34; # is necessary
-# url: &#34;/archive&#34;
-# description: &#34;Description for Search&#34;
-summary: &#34;search&#34;
-placeholder: &#34;placeholder text in search input box&#34;
----
-</code></pre></div><h4 id="comments">Comments</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>menu:
+</span></span><span style="display:flex;"><span>    main:
+</span></span><span style="display:flex;"><span>        - identifier: archives
+</span></span><span style="display:flex;"><span>          name: Archives
+</span></span><span style="display:flex;"><span>          url: /archives/
+</span></span><span style="display:flex;"><span>          weight: 5
+</span></span><span style="display:flex;"><span>        - identifier: tags
+</span></span><span style="display:flex;"><span>          name: Tags
+</span></span><span style="display:flex;"><span>          url: /tags/
+</span></span><span style="display:flex;"><span>          weight: 10
+</span></span><span style="display:flex;"><span>        - identifier: search
+</span></span><span style="display:flex;"><span>          name: Search
+</span></span><span style="display:flex;"><span>          url: /search/
+</span></span><span style="display:flex;"><span>          weight: 20
+</span></span></code></pre></div><p>且在最底下此內容。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>outputs:
+</span></span><span style="display:flex;"><span>    home:
+</span></span><span style="display:flex;"><span>        - HTML
+</span></span><span style="display:flex;"><span>        - RSS
+</span></span><span style="display:flex;"><span>        - JSON # is necessary
+</span></span></code></pre></div><p>最後在專案的 <code>content</code> 底下新增 <code>search.md</code>，即可完成功能。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Search&#34; # in any language you want
+</span></span><span style="display:flex;"><span>layout: &#34;search&#34; # is necessary
+</span></span><span style="display:flex;"><span># url: &#34;/archive&#34;
+</span></span><span style="display:flex;"><span># description: &#34;Description for Search&#34;
+</span></span><span style="display:flex;"><span>summary: &#34;search&#34;
+</span></span><span style="display:flex;"><span>placeholder: &#34;placeholder text in search input box&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><h4 id="comments">Comments</h4>
 <p>此功能是參考 <a href="https://ithelp.ithome.com.tw/articles/10248312">Day 20. Hugo Comments System</a> 文章製作出來的。</p>
 <h2 id="github-action">Github Action</h2>
 <p>有使用 Custom domain 的話，且 workflows 沒有設定 domain 的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
 <h3 id="github-pages-workflowyml">GitHub Pages workflow.yml</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
-
-<span style="color:#f92672">on</span>:
-  <span style="color:#f92672">push</span>:
-    <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">main</span> <span style="color:#75715e"># Set a branch to deploy</span>
-  <span style="color:#f92672">pull_request</span>:
-
-<span style="color:#f92672">jobs</span>:
-  <span style="color:#f92672">deploy</span>:
-    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-20.04</span>
-    <span style="color:#f92672">concurrency</span>:
-      <span style="color:#f92672">group</span>: <span style="color:#ae81ff">${{ github.workflow }}-${{ github.ref }}</span>
-    <span style="color:#f92672">steps</span>:
-      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
-          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
-        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.91.2&#34;</span>
-          <span style="color:#75715e"># extended: true</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
-        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
-
-      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
-        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
-        <span style="color:#f92672">if</span>: <span style="color:#ae81ff">${{ github.ref == &#39;refs/heads/main&#39; }}</span>
-        <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.HUGO_DEPLOY_TOKEN  }}</span>
-          <span style="color:#f92672">PUBLISH_BRANCH</span>: <span style="color:#ae81ff">gh-pages</span> <span style="color:#75715e"># 推送到 gh-pages 分支</span>
-          <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span>
-          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
-          <span style="color:#f92672">cname</span>: <span style="color:#ae81ff">wenrongdev.com</span>
-</code></pre></div><p>只需要新增或替換掉 <code>cname</code> 後面為 domain 即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">branches</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">main</span> <span style="color:#75715e"># Set a branch to deploy</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">pull_request</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">jobs</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">deploy</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">runs-on</span>: <span style="color:#ae81ff">ubuntu-20.04</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">concurrency</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">group</span>: <span style="color:#ae81ff">${{ github.workflow }}-${{ github.ref }}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">steps</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.91.2&#34;</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e"># extended: true</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">run</span>: <span style="color:#ae81ff">hugo --minify</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Deploy</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-gh-pages@v3</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">if</span>: <span style="color:#ae81ff">${{ github.ref == &#39;refs/heads/main&#39; }}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">with</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">github_token</span>: <span style="color:#ae81ff">${{ secrets.HUGO_DEPLOY_TOKEN  }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">PUBLISH_BRANCH</span>: <span style="color:#ae81ff">gh-pages</span> <span style="color:#75715e"># 推送到 gh-pages 分支</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">commit_message</span>: <span style="color:#ae81ff">${{ github.event.head_commit.message }}</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">publish_dir</span>: <span style="color:#ae81ff">./public</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">cname</span>: <span style="color:#ae81ff">wenrongdev.com</span>
+</span></span></code></pre></div><p>只需要新增或替換掉 <code>cname</code> 後面為 domain 即可。</p>
 <h2 id="結論">結論</h2>
 <p>Hugo 或 PaperMod 我都處於摸索階段。</p>
 <p>這次架起來的感覺各方面都不錯，不管是讀取 Blog 速度、支援 Markdown、架設 Github 上且保留原始檔，到目前為止沒有明顯的缺點。</p>
@@ -112,12 +112,10 @@ placeholder: &#34;placeholder text in search input box&#34;
 <!-- raw HTML omitted -->
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Blog 心得（2）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-2/</link>
       <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/reflection-blog-2/</guid>
       <description>Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
@@ -150,12 +148,10 @@ placeholder: &#34;placeholder text in search input box&#34;
 <hr>
 ]]></content:encoded>
     </item>
-    
     <item>
       <title>Blog 心得（1）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-1/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      
       <guid>https://wenrongdev.com/posts/reflection-blog-1/</guid>
       <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。</description>
       <content:encoded><![CDATA[<p>其實我的 Blog 是寫給自己看的。因為我時常忘記怎麼解決問題、怎麼製作功能、忘記是做了什麼蠢事。因此產生這個 Blog 用來記錄我的跌跌撞撞的過程。</p>
@@ -219,6 +215,5 @@ placeholder: &#34;placeholder text in search input box&#34;
 <hr>
 ]]></content:encoded>
     </item>
-    
   </channel>
 </rss>

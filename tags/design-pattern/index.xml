@@ -4,26 +4,187 @@
     <title>Design Pattern on Wenrong&#39;s Note</title>
     <link>https://wenrongdev.com/tags/design-pattern/</link>
     <description>Recent content in Design Pattern on Wenrong&#39;s Note</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://wenrongdev.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>心得 代理人模式</title>
-      <link>https://wenrongdev.com/posts/proxy-design-pattern/</link>
+      <link>https://wenrongdev.com/posts/designpattern-proxy/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      
-      <guid>https://wenrongdev.com/posts/proxy-design-pattern/</guid>
+      <guid>https://wenrongdev.com/posts/designpattern-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>write something cool&hellip;</p>
-<h2 id="主要內容">主要內容</h2>
-<p>write something cool&hellip;</p>
-<h2 id="小結">小結</h2>
-<p>write something cool&hellip;</p>
-<h2 id="參考連結">參考連結</h2>
+<p>主要是用來解決大部與後端同步資料的方法，在實作方面代理人模式是最常見的解決方案。</p>
+<h2 id="討論">討論</h2>
+<h3 id="q1-代理人模式實作方向問題">Q1 代理人模式實作方向問題</h3>
+<p><code>多人連線後與後端資料同步</code></p>
+<p>不過確實在實作主題選擇有限，尤其遠端代理需要與後端同步資料，在目前公司遊戲的架構是不需要這樣做的。</p>
+<h3 id="q2-需要與後端同步記憶體資料嗎">Q2 需要與後端同步記憶體資料嗎？</h3>
+<p>不一定，<a href="https://docs.oracle.com/javase/tutorial/rmi/">Java RMI</a>]、<a href="https://learn.microsoft.com/zh-tw/dotnet/framework/wcf/?redirectedfrom=MSDN">C# WCF</a>、<a href="https://developer.android.com/develop/background-work/services/aidl?hl=zh-tw">Android AIDL</a> 可以做到同步記憶體資料。</p>
 <hr>
 ]]></content:encoded>
     </item>
-    
+    <item>
+      <title>心得 模板模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-template/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-template/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
+<p>模板模式的<code>骨架</code>可搭配泛型使用，可是不能說使用泛型就是模板模式，主要還是要符合<code>骨架</code>、有不同的<code>方法</code>或<code>流程</code>，這幾個要點來區分。</p>
+<h2 id="掛勾">掛勾</h2>
+<p>掛勾的部分，主要利用掛勾來實現方法職責，讓模板模式彈性更多一些。在模板模式中掛勾主要是用來判斷流程走向。</p>
+<h2 id="模板模式-vs-策略模式">模板模式 vs 策略模式</h2>
+<p>策略模式主要是針對行為來制定，而模板模式使用相同的<code>骨架</code>，實作不同的內容、流程。</p>
+<p>差異會在有沒有相同<code>骨架</code>、<code>流程</code>，在這部分則不是策略模式的重點。</p>
+<p>策略模式主軸是利用抽換不同的介面達到功能效果。</p>
+<h2 id="好萊塢守則-vs-依賴反轉">好萊塢守則 vs 依賴反轉</h2>
+<ul>
+<li>好萊塢守則</li>
+</ul>
+<p>只是思想，即「不要打電話給我們，我們會打給你」。相較於高階模組、低階模組，就沒有強制規定要不要符合，所以才是一種思想而不是一個設計概念。</p>
+<ul>
+<li>依賴反轉原則</li>
+</ul>
+<ol>
+<li>
+<p>高階模組不應該依賴於低階模組，兩者都應該依賴於抽象介面。</p>
+</li>
+<li>
+<p>抽象介面不應該依賴於具體實現。而具體實現則應該依賴於抽象介面。</p>
+</li>
+</ol>
+<p>依賴反轉原則確實符合好萊塢守則的概念。</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>心得 狀態模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-state/</link>
+      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-state/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的狀態模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>狀態模式主要用來解決多個 <code>if else</code> 判斷，並且不會因為多了一個 <code>if</code>，導致很多方法都要重新寫判斷。</p>
+<h2 id="討論">討論</h2>
+<p>我提出的問題是狀態模式是由狀態(State) 來控制前往哪個 State，為什麼不是狀態機(Context)來去控制 State 流程。</p>
+<ul>
+<li>State 控制 State 切換</li>
+</ul>
+<p>優點：控制流程可以簡化 if else 的判斷，因為在 State 會少很多判斷。</p>
+<p>缺點：也因為在 State 裡面判斷，在 Context 是無法知道什麼時候切換 State。</p>
+<ul>
+<li>Context 控制 State 切換</li>
+</ul>
+<p>優點：可以明確的知道切換時機，並且也知道切換的 State。</p>
+<p>缺點：在 Context 切換 State 會有較多的 <code>if else</code> 判斷。</p>
+<h2 id="結論">結論</h2>
+<p>結論策略模式(Strategy Pattern)與狀態模式的差異，有同事提出是 <code>State 控制 State 切換</code>。假如由 Context 控制 State 切換，就跟策略模式類似。</p>
+<p>我後來想想也有點道理，Context 控制 State 切換並沒有解決多個 <code>if else</code> 判斷，且與策略模式類似。</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>心得 組合模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-composite/</link>
+      <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-composite/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的組合模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>組合模式是需要 Leaf（子節點）的嗎？</p>
+<p>這是我提出來的問題，因為我覺得 Composite，同時也繼承了 Component，這樣跟 Leaf 也有繼承 Component 差不多。</p>
+<p>後來我覺得也許拆開是為了職責問題，Composite、Leaf 實現功能可能不一樣。</p>
+<p>我後來也參考了別人的<a href="https://andyludeveloper.medium.com/design-pattern-%E7%B5%84%E5%90%88%E6%A8%A1%E5%BC%8F-composite-pattern-ca0d5e0309dc">定義</a>，其中 Composite、Leaf 的定義有明確職責。</p>
+<blockquote>
+<ul>
+<li>Component: 是一個抽象類別，組合模式中的物件都繼承此類別。其中， inflate() 是每一個物件都要實作的功能。 add(Component) 以及 remove(Component) 都是提供給 Composite 類別組合 Leaf 使用的。</li>
+<li>Leaf : 是一個具象類別 (Concrete class)，實作 Component 所定義的 inflate()方法，為一個最小單位的物件，在這裏不能包含其他 Leaf 。</li>
+<li>Composite ：同樣也是一個具象類別 (Concrete class)，除了實作 Component 定義的 inflate() 方法。將多個 Leaf 紀錄在一個列表 components 裡利用 add(Component) 以及 remove(Component) 來對列表做處理。</li>
+</ul>
+</blockquote>
+<h2 id="結論">結論</h2>
+<p>讀完這章節後，在我的個人是沒想到自己能使用的環境，可能使用環境是偏像資料搜尋、物件搜尋等。</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>心得 迭代器模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-iterator/</link>
+      <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-iterator/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的迭代器模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="ienumeratorienumerable-使用-forforeach-的差別">IEnumerator、IEnumerable 使用 for、foreach 的差別</h2>
+<p>Q：實作發現 IEnumerable 能使用 foreach、不能使用 for，IEnumerator 能使用 for、不能使用 foreach，這是為什麼。</p>
+<p>A：IEnumerator 是無法使用 for，foreach 就是跑迭代器。需要有 index 的概念建議使用 for。</p>
+<p>Aforeach 裡面的 List 陣列有改變的話，會出現錯誤。</p>
+<h2 id="c-迭代器延遲執行">C# 迭代器延遲執行</h2>
+<p>A：使用 LinQ 時需要注意到延遲執行的部分。</p>
+<h2 id="是否能夠使用迭代器製作-c-list">是否能夠使用迭代器製作 C# List</h2>
+<p>A：可以，可是想自己寫 <code>yield return</code> 是無法的這是 C# 內建的。</p>
+<h2 id="c-底層都有繼承-ienumerable-那是否不需要迭代器模式了">C# 底層都有繼承 IEnumerable 那是否不需要迭代器模式了？</h2>
+<p>A：實作不太可能，因為會為了做而做，除非是這個類別很特別才需要。</p>
+<h2 id="unity-使用-forforeach-的效能使用-foreach-會比較耗效能嗎">Unity 使用 for、foreach 的效能，使用 foreach 會比較耗效能嗎？</h2>
+<p>A：這是 Unity 舊版 bug。一般用法還好除非是在 Update 使用 foreach 才會有明顯的差異。</p>
+<p>A：因為 Unity C# 與 MS C# 不太一樣，在使用 Unity 物件時不要使用 <code>?.</code> 的方式。</p>
+<p><a href="https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-">Null 條件運算子 ?. 和 ?[]</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>A?.B();
+</span></span></code></pre></div><h2 id="更理解迭代器運作方式">更理解迭代器運作方式</h2>
+<p>可以先理解 LinQ 運作方式，就可以知道內部迭代跟外部的差異。</p>
+<p>再來可以理解 C# IEnumerator、IEnumerable，要搭配 for、foreach，並且搭配 yield return，就可以理解 yield return 在迭代器的概念。</p>
+<p>最後實作 Unity 協成(Coroutine)，寫一個方法 to IEnumerator 並且使用 StarCoroutine，並且不使用 UnityEngine。</p>
+<h2 id="ienumerable-在方法上使用是什麼情況會使用到">IEnumerable 在方法上使用是什麼情況會使用到？</h2>
+<p>A：延遲執行，可以在需要使用的時候再呼叫就可。</p>
+<p>Q：假如不懂的話是不是會是一個坑？</p>
+<p>A：非同步執行或感受非同步執行時使用。希望執行這行程式的時候，不要卡死在這邊，延遲執行可以等資料匯入後再執行。不懂的人使用確實會是一個坑。</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>心得 表象模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-facade/</link>
+      <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-facade/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的表象模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>當本身有所有使用到類別，就不必使用表象模式。也就是表象模式是需要有各種次系統組裝而成的模式，而不是覺得這邊很複雜就用表象模式。</p>
+<p>表象模式所有的次系統，必須要傳遞進來的物件，自己不能夠封裝類別。</p>
+<p>表象模式不建議使用抽象(interface、abstract)，除非真的知道功能需求。</p>
+<p>表象模式傳遞進來的次系統，不一定需要是介面，也可以傳遞實體物件。</p>
+<h2 id="觀念">觀念</h2>
+<h3 id="封裝成方法跟使用表象模式的差異">封裝成方法跟使用表象模式的差異</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">特性</th>
+<th style="text-align:left">表象模式</th>
+<th style="text-align:left">封裝成方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">目的</td>
+<td style="text-align:left">簡化介面</td>
+<td style="text-align:left">提高模組化和可重用性</td>
+</tr>
+<tr>
+<td style="text-align:left">應用範圍</td>
+<td style="text-align:left">複雜的系統</td>
+<td style="text-align:left">任何程式碼</td>
+</tr>
+<tr>
+<td style="text-align:left">實現方式</td>
+<td style="text-align:left">使用介面類別來封裝系統</td>
+<td style="text-align:left">使用方法來封裝邏輯</td>
+</tr>
+</tbody>
+</table>
+<p>表象模式和封裝成方法都是有用的設計模式。表象模式可以用於簡化複雜系統的介面，而封裝成方法可以用於提高程式碼的模組化和可重用性。兩者可以結合使用以獲得更好的效果。</p>
+<h2 id="迪米特守則">迪米特守則</h2>
+<p>要注意迪米特守則，使用過度會讓 code 過多，理解難度增加，不必須要為了符合守則而寫出奇怪的設計。</p>
+<hr>
+]]></content:encoded>
+    </item>
   </channel>
 </rss>
