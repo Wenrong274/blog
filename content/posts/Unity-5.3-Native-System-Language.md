@@ -1,6 +1,6 @@
 ---
 title: "Unity 5.3 Native System Language"
-date: 2019-10-04T00:00:00+08:00
+date: 2019-10-04
 summary: "使用 Unity 取得 Windows、Android、iOS 原生語系。"
 keywords: ["Unity"]
 draft: false
@@ -54,7 +54,7 @@ private static string CurrentAndroidLanguage()
      }
      return result;
  }
- ```
+```
 
 [參考文章](https://forum.unity.com/threads/application-systemlanguage.211171/#post-1423369)
 
@@ -94,6 +94,6 @@ private static extern string CurIOSLang();
 
 [參考文章](https://blog.csdn.net/teng_ontheway/article/details/50277169)
 
-______________________________________________________________________
+---
 
 ### [Github repo](https://github.com/Wenrong274/NativeSystemLanguage)

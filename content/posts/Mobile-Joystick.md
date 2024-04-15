@@ -1,8 +1,8 @@
 ---
 title: "Mobile Joystick"
-date: 2020-03-30T02:17:14+08:00
+date: 2020-03-30
 summary: "主要是用來測試 Unity 虛擬搖桿功能。"
-keywords: ["Unity","Joystick"]
+keywords: ["Unity", "Joystick"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -18,12 +18,10 @@ tags: ["Unity"]
 
 ## [Github]
 
-____________________________________________________________
+---
 
-[Github]:https://github.com/Wenrong274/MobileJoystick
+[Github]: https://github.com/Wenrong274/MobileJoystick
+[tutorial]: https://www.youtube.com/watch?v=8-X3BmvtXT0
+[Joystick Pack]: https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631
 
-[tutorial]:https://www.youtube.com/watch?v=8-X3BmvtXT0
-
-[Joystick Pack]:https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631
-
-______________________________________________________________________
+---

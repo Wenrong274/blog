@@ -1,6 +1,6 @@
 ---
 title: "Xcode Command PhaseScriptExecution Failed"
-date: 2023-03-08T02:00:38+08:00
+date: 2023-03-08
 description: "write something"
 keywords: ["iOS"]
 draft: false
@@ -28,13 +28,13 @@ Command PhaseScriptExecution failed with a nonzero exit code
 
 有測試過的方法，可是對我這次情況沒有效果。
 
-* 升級或安裝 Pod。[參考][url_1]
-* 修改 build phases 開啟 For install builds only。[參考][url_2]
-* 修改 Workspace Setting 的 Build System，在 Xcode 14 無法修改。[參考][url_3]
+- 升級或安裝 Pod。[參考][url_1]
+- 修改 build phases 開啟 For install builds only。[參考][url_2]
+- 修改 Workspace Setting 的 Build System，在 Xcode 14 無法修改。[參考][url_3]
 
-______________________________________________________________________
+---
 
-[img]:https://i.imgur.com/AvL0uqn.png
-[url_1]:https://forum.unity.com/threads/error-on-build.561706/#post-5585278
-[url_2]:https://stackoverflow.com/questions/73760753/xcode-14-0-command-phasescriptexecution-failed-with-a-nonzero-exit-code
-[url_3]:https://blog.csdn.net/qq_40697071/article/details/99055070
+[img]: https://i.imgur.com/AvL0uqn.png
+[url_1]: https://forum.unity.com/threads/error-on-build.561706/#post-5585278
+[url_2]: https://stackoverflow.com/questions/73760753/xcode-14-0-command-phasescriptexecution-failed-with-a-nonzero-exit-code
+[url_3]: https://blog.csdn.net/qq_40697071/article/details/99055070

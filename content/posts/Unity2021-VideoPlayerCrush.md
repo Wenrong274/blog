@@ -1,6 +1,6 @@
 ---
 title: "Unity2021 Video Player Crush"
-date: 2023-02-01T00:14:21+08:00
+date: 2023-02-01
 description: "在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。"
 keywords: ["Unity"]
 draft: false
@@ -41,7 +41,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 
 不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 [Issue Tracker][issuetracker]。
 
-______________________________________________________________________
+---
 
-[post]:https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/
-[issuetracker]:https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android
+[post]: https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/
+[issuetracker]: https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android

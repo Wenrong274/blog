@@ -1,8 +1,8 @@
 ---
 title: "Unity Calendar"
-date: 2021-06-17T02:32:14+08:00
+date: 2021-06-17
 summary: "Unity 實做日曆功能。"
-keywords: ["Unity","Calendar"]
+keywords: ["Unity", "Calendar"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -36,6 +36,7 @@ public void OnClick_Clear()
 
 ## [Github]
 
-______________________________________________________________________
-[gif]:https://i.imgur.com/Pe4nXry.gif
-[Github]:https://github.com/Wenrong274/Unity-Calendar
+---
+
+[gif]: https://i.imgur.com/Pe4nXry.gif
+[Github]: https://github.com/Wenrong274/Unity-Calendar

@@ -1,8 +1,8 @@
 ---
 title: "Get Android Intent Data for Unity"
-date: 2019-12-26T00:00:00+08:00
+date: 2019-12-26
 summary: "主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。"
-keywords: ["Unity","Android"]
+keywords: ["Unity", "Android"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -111,6 +111,6 @@ public class ExternalCall : MonoBehaviour
 
 `PropertyInfo` 是用來接受資訊的 `class`，這邊可以自行修改。
 
-____________________________________________________________
+---
 
 [Launch from within a Unity app another Unity app(Android)](https://wenrongdev.com/launch-from-within-a-unity-app-another-unity-appandroid/)

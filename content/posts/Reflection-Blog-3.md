@@ -1,6 +1,6 @@
 ---
 title: "Blog 心得（3）"
-date: 2022-02-28T01:14:39+08:00
+date: 2022-02-28
 description: "使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。"
 keywords: ["Hugo", "PaperMod", "Blog"]
 draft: false
@@ -16,10 +16,10 @@ tags: ["Blog"]
 
 關於安裝的部分可以參考這些文章
 
-* [Quick Start][hugo_0]
-* [GitHub 部署 Hugo 靜態網站][hugo_1]
-* [使用 Hugo 建立靜態網站，並部署在 Github Page][hugo_2]
-* [Hugo 貼身打造個人部落格 系列][hugo_3]
+- [Quick Start][hugo_0]
+- [GitHub 部署 Hugo 靜態網站][hugo_1]
+- [使用 Hugo 建立靜態網站，並部署在 Github Page][hugo_2]
+- [Hugo 貼身打造個人部落格 系列][hugo_3]
 
 與文章不同的地方主題我是選擇 [PaperMod][theme]，由於需要設定 **config.yml**，建議先參考 [PaperMod-Installation][theme-instal]。
 
@@ -64,7 +64,7 @@ outputs:
 
 最後在專案的 `content` 底下新增 `search.md`，即可完成功能。（[參考文件][theme-searchpage]）
 
-``` markdown
+```markdown
 ---
 title: "Search" # in any language you want
 layout: "search" # is necessary
@@ -81,7 +81,7 @@ placeholder: "placeholder text in search input box"
 
 ## Github Action
 
-有使用 Custom domain 的話，且 workflows 沒有設定 domain的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。
+有使用 Custom domain 的話，且 workflows 沒有設定 domain 的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。
 
 ### GitHub Pages workflow.yml
 
@@ -91,7 +91,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main # Set a branch to deploy
   pull_request:
 
 jobs:
@@ -102,13 +102,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: '0.91.2'
+          hugo-version: "0.91.2"
           # extended: true
 
       - name: Build
@@ -135,19 +135,21 @@ Hugo 或 PaperMod 我都處於摸索階段。
 
 目前最大問題就是 `SEO`，這是我完全沒有接觸過的。問題在於 Google 搜尋不到我的 Blog，所以這是之後要研究的部分。
 
-______________________________________________________________________
+---
 
 <!-- Hugo 連結 -->
-[hugo_0]:https://gohugo.io/getting-started/quick-start/
-[hugo_1]:https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40
-[hugo_2]:https://jimmylin212.github.io/post/0001_create_hugo_and_deploy_on-github_page/
-[hugo_3]:https://ithelp.ithome.com.tw/users/20106430/ironman/3613
+
+[hugo_0]: https://gohugo.io/getting-started/quick-start/
+[hugo_1]: https://medium.com/@chswei/%E5%9C%A8-github-%E9%83%A8%E7%BD%B2-hugo-%E9%9D%9C%E6%85%8B%E7%B6%B2%E7%AB%99-9c40682dfe40
+[hugo_2]: https://jimmylin212.github.io/post/0001_create_hugo_and_deploy_on-github_page/
+[hugo_3]: https://ithelp.ithome.com.tw/users/20106430/ironman/3613
 
 <!-- theme 連結 -->
-[theme]:https://github.com/adityatelange/hugo-PaperMod
-[theme-instal]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
-[theme-issues]:https://github.com/adityatelange/hugo-PaperMod/issues
-[theme-faqs]:https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs
-[theme-config]:https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml
-[theme-searchpage]:https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
-[theme-comments]:https://ithelp.ithome.com.tw/articles/10248312
+
+[theme]: https://github.com/adityatelange/hugo-PaperMod
+[theme-instal]: https://github.com/adityatelange/hugo-PaperMod/wiki/Installation
+[theme-issues]: https://github.com/adityatelange/hugo-PaperMod/issues
+[theme-faqs]: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs
+[theme-config]: https://github.com/adityatelange/hugo-PaperMod/wiki/Installation#sample-configyml
+[theme-searchpage]: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+[theme-comments]: https://ithelp.ithome.com.tw/articles/10248312

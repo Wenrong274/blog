@@ -1,16 +1,17 @@
 ---
 title: "IOS Build Note for Unity 2019 Vuforia"
-date: 2019-10-17T00:00:00+08:00
+date: 2019-10-17
 summary: "Vuforia iOS Build and Run Error。"
-keywords: ["Unity","Vuforia","iOS"]
+keywords: ["Unity", "Vuforia", "iOS"]
 draft: false
 showtoc: true
-tags: ["Unity","Vuforia"]
+tags: ["Unity", "Vuforia"]
 ---
+
 ## 前言
 
-* Unity 2019.2.11f1
-* Vuforia 8.5.9
+- Unity 2019.2.11f1
+- Vuforia 8.5.9
 
 ### iOS Build and Run Error
 
@@ -42,21 +43,21 @@ ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link wi
 
 根據 [Vuforia Engine Release Notes](https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html) 在 `v8.1.7`之後不支援 `32-bit`，並且最低支援 `iOS 11`，因此需要把專案版本最低版本設定為 iOS。
 
-* 設定 iOS architectures
+- 設定 iOS architectures
 
-    Build Setting -> Architectures -> Architectures
+  Build Setting -> Architectures -> Architectures
 
-    Architectures 改為 `Standard architectures`
+  Architectures 改為 `Standard architectures`
 
-    ![img_5](https://i.imgur.com/1fcwuH9.jpg)
+  ![img_5](https://i.imgur.com/1fcwuH9.jpg)
 
-* 設定 iOS 版本
+- 設定 iOS 版本
 
-    Build Setting -> Deployment -> iOS Deployment Target
+  Build Setting -> Deployment -> iOS Deployment Target
 
-    iOS Deployment Target 改為 `iOS 11.0`
+  iOS Deployment Target 改為 `iOS 11.0`
 
-    ![img_4](https://i.imgur.com/rPGArpU.jpg)
+  ![img_4](https://i.imgur.com/rPGArpU.jpg)
 
 ## iOS Distribution Error
 
@@ -76,4 +77,4 @@ ERROR ITMS-90534
 
 [Can't submit apps to AppStore: ERROR ITMS-90534: "Invalid Toolchain](https://stackoverflow.com/a/58747930)
 
-______________________________________________________________________
+---

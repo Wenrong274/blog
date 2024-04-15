@@ -1,6 +1,6 @@
 ---
 title: "Unity Deep Link -2"
-date: 2022-12-13T00:20:11+08:00
+date: 2022-12-13
 description: "介紹 Unity Deep Link 呼叫方式"
 keywords: ["Unity"]
 draft: false
@@ -12,13 +12,13 @@ tags: ["Unity"]
 
 deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。
 
-也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store上面讓使用者直接下載該 app。
+也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store 上面讓使用者直接下載該 app。
 
 ## Android
 
 需要在 `AndroidManifest` 上寫上 link id，可以根據 [Create Deep Links to App Content][dl_android] 參考詳細的設置方式。
 
-* url 呼叫方式
+- url 呼叫方式
 
 ```xml
 <intent-filter>
@@ -38,7 +38,7 @@ deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址�
 
 可以利用這種方式，app 超連結開啟或者網頁輸入 `https://wenrongdev.com/posts/unitydeeplink_2/` 時就會自動對應到 App。
 
-* 自訂 id
+- 自訂 id
 
 ```xml
 <intent-filter>
@@ -64,14 +64,14 @@ Xcode 詳細設定可以參考這邊 [IOS Deep linking: URL Scheme vs Universal 
 
 ## 其他
 
-* [Github][repo]
-* [Unity Deep Link -1][blog-1]
+- [Github][repo]
+- [Unity Deep Link -1][blog-1]
 
-______________________________________________________________________
+---
 
-[unitydl_ios]:https://docs.unity3d.com/Manual/deep-linking-ios.html
-[dl_android]:https://developer.android.com/training/app-links/deep-linking
-[dl_ios]:https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97
-[img_1]:https://imgur.com/WIvC4gC.png
-[blog-1]:https://wenrongdev.com/posts/unitydeeplink_1/
-[repo]:https://github.com/WenRongDev/Unity-DeepLink
+[unitydl_ios]: https://docs.unity3d.com/Manual/deep-linking-ios.html
+[dl_android]: https://developer.android.com/training/app-links/deep-linking
+[dl_ios]: https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97
+[img_1]: https://imgur.com/WIvC4gC.png
+[blog-1]: https://wenrongdev.com/posts/unitydeeplink_1/
+[repo]: https://github.com/WenRongDev/Unity-DeepLink

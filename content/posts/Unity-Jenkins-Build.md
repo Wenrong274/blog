@@ -1,11 +1,11 @@
 ---
 title: "Unity Jenkins Build"
-date: 2020-02-25T02:05:19+08:00
+date: 2020-02-25
 summary: "此為使用 Jenkins 輸出 Unity 專案注意事項。"
-keywords: ["Unity","DevOps","Jenkins"]
+keywords: ["Unity", "DevOps", "Jenkins"]
 draft: false
 showtoc: true
-tags: ["Unity","DevOps"]
+tags: ["Unity", "DevOps"]
 ---
 
 ## 前言
@@ -32,7 +32,6 @@ Jenkins 頁面路徑為 `Manage Jenkins -> Configure System -> Global properties
 
 `Value`：AndroidSDK 路徑。
 
-
 ### Jenkins JDK
 
 JDK 版本請選 `Java SE 8`，因為 Unity 只支援 Java SE 8。
@@ -57,7 +56,7 @@ Jenkins 頁面路徑為 `Manage Jenkins -> Plugin Manager -> Available`
 
 ### Jenkins item
 
-基本設置可參考 [使用jenkins建置unity3d專案][ref_1] 介紹。
+基本設置可參考 [使用 jenkins 建置 unity3d 專案][ref_1] 介紹。
 
 最主要是設定 `Editor command line arguments`。
 
@@ -67,7 +66,7 @@ Jenkins 頁面路徑為 `Manage Jenkins -> Plugin Manager -> Available`
 
 在 Editor command line arguments 輸入
 
-``` text
+```text
 -projectPath "$WORKSPACE/" -executeMethod JenkinsBuild.BuildPlatforms -buildPath "$WORKSPACE\Builds" -android -batchmode -nographics -quit
 ```
 
@@ -81,16 +80,16 @@ Jenkins 頁面路徑為 `Manage Jenkins -> Plugin Manager -> Available`
 
 ## reference
 
-[使用jenkins建置unity3d專案][ref_1]
+[使用 jenkins 建置 unity3d 專案][ref_1]
 
 [Jenkins for Unity with DigitalOcean][ref_2]
 
-______________________________________________________________________
+---
 
-[img_1]:https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG
-[img_2]:https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG
-[img_3]:https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG
-[img_4]:https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG
-[github]:https://github.com/Wenrong274/UnityJenkinsBuild
-[ref_1]:http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html
-[ref_2]:https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/
+[img_1]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG
+[img_2]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG
+[img_3]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG
+[img_4]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG
+[github]: https://github.com/Wenrong274/UnityJenkinsBuild
+[ref_1]: http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html
+[ref_2]: https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/

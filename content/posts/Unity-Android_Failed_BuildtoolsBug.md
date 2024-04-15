@@ -1,6 +1,6 @@
 ---
 title: "Android Build Failed Build tools 3X.0.0 Bug"
-date: 2022-03-07T00:40:34+08:00
+date: 2022-03-07
 description: "Fix Installed Build Tools revision 3X.0.0 is corrupted."
 keywords: [Android]
 draft: false
@@ -42,8 +42,9 @@ Fix Installed Build Tools revision 3X.0.0 is corrupted.
 
 [Android Studio error "Installed Build Tools revision 31.0.0 is corrupted"][url_1]
 
-______________________________________________________________________
-[img_1]:https://imgur.com/CziTHbS.jpg
-[simg_1]:https://imgur.com/YwqG9ek.jpg
-[simg_2]:https://imgur.com/sLwOhQx.jpg
-[url_1]:https://stackoverflow.com/a/68430992
+---
+
+[img_1]: https://imgur.com/CziTHbS.jpg
+[simg_1]: https://imgur.com/YwqG9ek.jpg
+[simg_2]: https://imgur.com/sLwOhQx.jpg
+[url_1]: https://stackoverflow.com/a/68430992

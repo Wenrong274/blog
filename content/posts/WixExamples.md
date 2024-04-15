@@ -1,15 +1,16 @@
 ---
 title: "Wix Examples"
-date: 2023-10-20T15:47:17+08:00
+date: 2023-10-20
 description: "主要是用來打包程式輸出成 .msi 檔"
 keywords: [".msi", "wix"]
 draft: false
 showtoc: true
 tags: ["tool"]
 ---
+
 主要是用來打包程式輸出成 `.msi` 檔（[Windows Installer][wiki]）。
 
-建議先看完 「[30天 | C# WixToolset + WPF 帥到不行的安裝包 系列][30d]」，能夠把 80% 以上的問題解決。
+建議先看完 「[30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列][30d]」，能夠把 80% 以上的問題解決。
 
 ### 輸出 Wix 文件方法
 
@@ -31,7 +32,7 @@ C:\Program Files (x86)\WiX Toolset v3.11\bin
 
 ```text
 heat.exe dir "[PUT_YOUR_PATH]" -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var "[MyDemo]" -out "[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs"
-````
+```
 
 | 參數名稱               | 解釋                   |
 | :--------------------- | :--------------------- |
@@ -49,7 +50,7 @@ heat.exe dir "[PUT_YOUR_PATH]" -dr INSTALLFOLDER -cg ProductComponents -gg -gl -
 
 需要注意一些細項設定，如 Guid、執行檔名稱、路徑等。
 
-``` wxc
+```wxc
 <Directory Id="DesktopFolder" Name="Desktop" >
     <Component Id="DesktopFolderShortcut" Guid="{94D38478-869E-4CA8-BEA6-7905A7135DB8}">
         <Shortcut Id="DesktopShortcut" Directory="DesktopFolder" Name="Wix-Hello Unity" Target="[INSTALLFOLDER]Wix-Hello Unity.exe" WorkingDirectory="INSTALLFOLDER" Icon="WixToolsetIcon">
@@ -111,7 +112,7 @@ heat.exe dir "[PUT_YOUR_PATH]" -dr INSTALLFOLDER -cg ProductComponents -gg -gl -
 
 [用 WiX 制作安装包：创建一个简单的 msi 安装包][wixblog]
 
-[30天 | C# WixToolset + WPF 帥到不行的安裝包 系列][30d]
+[30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列][30d]
 
 [Create an Uninstall Shortcut][wix1]
 
@@ -119,17 +120,17 @@ heat.exe dir "[PUT_YOUR_PATH]" -dr INSTALLFOLDER -cg ProductComponents -gg -gl -
 
 [Removing files when uninstalling WiX][Cleanup]
 
-________________________________________________________________________________
+---
 
-[30d]:https://ithelp.ithome.com.tw/users/20139206/ironman/3901
-[wix1]:https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_uninstall_shortcut/
-[wix2]:https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_start_menu_shortcut/
-[Cleanup]:https://stackoverflow.com/a/17513551
-[wix3]:https://github.com/wixtoolset/wix3/releases
-[wixblog]:https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world
-[cmd]:https://zh.wikipedia.org/zh-tw/cmd.exe
-[wiki]:https://zh.wikipedia.org/zh-tw/Windows_Installer
-[img_1]:https://i.imgur.com/ovuJCka.png
-[img_2]:https://i.imgur.com/SbjBwmv.png
-[Productwxs]:https://raw.githubusercontent.com/Wenrong274/WixExamples/master/WixInstaller/WixToolset/Product.wxs
-[github]:https://github.com/Wenrong274/WixExamples
+[30d]: https://ithelp.ithome.com.tw/users/20139206/ironman/3901
+[wix1]: https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_uninstall_shortcut/
+[wix2]: https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_start_menu_shortcut/
+[Cleanup]: https://stackoverflow.com/a/17513551
+[wix3]: https://github.com/wixtoolset/wix3/releases
+[wixblog]: https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world
+[cmd]: https://zh.wikipedia.org/zh-tw/cmd.exe
+[wiki]: https://zh.wikipedia.org/zh-tw/Windows_Installer
+[img_1]: https://i.imgur.com/ovuJCka.png
+[img_2]: https://i.imgur.com/SbjBwmv.png
+[Productwxs]: https://raw.githubusercontent.com/Wenrong274/WixExamples/master/WixInstaller/WixToolset/Product.wxs
+[github]: https://github.com/Wenrong274/WixExamples

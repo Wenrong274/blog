@@ -1,8 +1,8 @@
 ---
 title: "Unity WebGL RectMask2D Does Not Work"
-date: 2019-08-29T00:00:00+08:00
+date: 2019-08-29
 summary: "用於 WebGL RectMask2D 失去作用的簡易修正。"
-keywords: ["Unity","WebGL"]
+keywords: ["Unity", "WebGL"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -38,6 +38,6 @@ public class FixRectMask2dWebGL : MonoBehaviour
 }
 ```
 
-______________________________________________________________________
+---
 
 [參考文章](https://forum.unity.com/threads/rectmask2d-does-not-work-when-canvas-render-mode-is-sceen-space-camera-or-world-space-2017-2-0f3.499966/#post-4484971)

@@ -1,8 +1,8 @@
 ---
 title: "Unity Project Structure"
-date: 2022-10-05T01:53:56+08:00
+date: 2022-10-05
 description: "自動建立簡易專案資料夾結構"
-keywords: [Unity,Project Structure]
+keywords: [Unity, Project Structure]
 draft: ture
 showtoc: true
 tags: [Unity]
@@ -24,7 +24,7 @@ tags: [Unity]
 
 ### 資料夾結構
 
-``` text
+```text
 |- Assets
     |- Project Name /// 自己設定
         |- 00_Art
@@ -55,14 +55,13 @@ tags: [Unity]
            |- 01_Scripts
            |- 02_Tests
            |- 03_Prefabs
-           |- 05_UI 
+           |- 05_UI
 ```
 
 ## [Github][github]
 
-____________________________________________________________
+---
 
-[img_1]:https://imgur.com/iBAEGNO.png
-[ref]:https://github.com/dkoprowski/UnityProjectTreeGenerator
-
-[github]:https://github.com/Wenrong274/Unity-ProjectStructure
+[img_1]: https://imgur.com/iBAEGNO.png
+[ref]: https://github.com/dkoprowski/UnityProjectTreeGenerator
+[github]: https://github.com/Wenrong274/Unity-ProjectStructure

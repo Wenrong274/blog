@@ -1,6 +1,6 @@
 ---
 title: "Hyperlinks in Unity Text"
-date: 2020-02-24T00:00:00+08:00
+date: 2020-02-24
 summary: "Unity uGUI Text support insert link and image。"
 keywords: ["Unity"]
 draft: false
@@ -24,4 +24,4 @@ tags: ["Unity"]
 
 ## [GitHub repo](https://github.com/Wenrong274/HyperlinksText)
 
-______________________________________________________________________
+---

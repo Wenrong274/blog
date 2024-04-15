@@ -1,6 +1,6 @@
 ---
 title: "Android P HTTP Error"
-date: 2020-01-09T00:00:00+08:00
+date: 2020-01-09
 summary: "在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。"
 keywords: ["Android"]
 draft: false
@@ -33,6 +33,6 @@ Error Log：`Cleartext HTTP traffic to 45.xx.xxx.xx not permitted`
 
 ## 參考連結
 
-[Android中HTTP网络请求相关问题](https://michaelyb.top/2018/08/Android-HTTP/)
+[Android 中 HTTP 网络请求相关问题](https://michaelyb.top/2018/08/Android-HTTP/)
 
-______________________________________________________________________
+---

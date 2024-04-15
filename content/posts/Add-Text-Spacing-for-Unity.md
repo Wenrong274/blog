@@ -1,6 +1,6 @@
 ---
 title: "Add Text Spacing for Unity"
-date: 2020-04-08T02:11:48+08:00
+date: 2020-04-08
 summary: "在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。"
 keywords: ["Unity"]
 draft: false
@@ -14,7 +14,7 @@ tags: ["Unity"]
 
 ## Scripts
 
-``` csharp
+```csharp
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -169,11 +169,11 @@ public class TextSpacing : BaseMeshEffect
 
 ## 參考連結
 
-[UGUI中Text的字间距][url_1]
+[UGUI 中 Text 的字间距][url_1]
 
-[UGUI中随意调整Text中的字体间距][url_1]
+[UGUI 中随意调整 Text 中的字体间距][url_1]
 
-______________________________________________________________________
+---
 
-[url_1]:https://blog.csdn.net/qq_38721111/article/details/102592001
-[url_2]:https://blog.csdn.net/feiyuezouni/article/details/85216983
+[url_1]: https://blog.csdn.net/qq_38721111/article/details/102592001
+[url_2]: https://blog.csdn.net/feiyuezouni/article/details/85216983

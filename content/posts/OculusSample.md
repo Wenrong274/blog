@@ -1,8 +1,8 @@
 ---
 title: "Oculus Sample"
-date: 2023-01-02T01:14:40+08:00
+date: 2023-01-02
 description: "簡易的 Oculus 功能介紹專案"
-keywords: ["Unity","Oculus","VR"]
+keywords: ["Unity", "Oculus", "VR"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -18,8 +18,7 @@ tags: ["Unity"]
 
 需要參考官方文件 [Get Started with Oculus in Unity]，也可以觀看該[專案配置][repo]。
 
-____________________________________________________________
+---
 
-[Get Started with Oculus in Unity]:https://developer.oculus.com/documentation/unity/unity-gs-overview/
-
-[repo]:https://github.com/Wenrong274/OculusSample
+[Get Started with Oculus in Unity]: https://developer.oculus.com/documentation/unity/unity-gs-overview/
+[repo]: https://github.com/Wenrong274/OculusSample

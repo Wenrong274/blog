@@ -1,6 +1,6 @@
 ---
 title: "Blog 心得（2）"
-date: 2022-02-21T01:14:39+08:00
+date: 2022-02-21
 description: "Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。"
 keywords: ["Hugo", "Medium", "Wordpress", "CoderBridge", "Blog"]
 draft: false
@@ -43,9 +43,9 @@ tags: ["Blog"]
 
 Wordpress、Medium、CoderBridge 我覺得各有優缺點，假如自己從一開始就決定要找免費的，我會選擇使用 CoderBridge，不過也因為搬來搬去才知道自己需要哪些功能，最後使用 Hugo 也只是因為我自己覺得很潮而已。
 
-______________________________________________________________________
+---
 
-[siteground]:https://www.siteground.com/
-[Medium]:https://medium.com/
-[CoderBridge]:https://zh-tw.coderbridge.com/
-[m_1]:https://hulitw.medium.com/tech-blog-coderbridge-to-the-rescue-2ba5b52d8bcd
+[siteground]: https://www.siteground.com/
+[Medium]: https://medium.com/
+[CoderBridge]: https://zh-tw.coderbridge.com/
+[m_1]: https://hulitw.medium.com/tech-blog-coderbridge-to-the-rescue-2ba5b52d8bcd

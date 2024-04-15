@@ -1,12 +1,13 @@
 ---
 title: "Unity Addressable Download Assets"
-date: 2022-03-14T16:38:48+08:00
+date: 2022-03-14
 description: "介紹 Unity Addressable 多個下載方式"
 keywords: [Unity, Addressable, hotfix]
 draft: false
 showtoc: true
 tags: [Unity]
 ---
+
 ## 前言
 
 在前一篇 [Unity Addressable][blog-1] 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。
@@ -105,13 +106,11 @@ IEnumerator UpdateAsset(AssetReference asset)
 }
 ```
 
-______________________________________________________________________
+---
 
-[blog-1]:../unity-addressable
-
-[ref_1]:https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/DownloadDependenciesAsync.html
-[ref_LoadingAddressableAssets]:https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html
-[ref_AssetReference]:https://docs.unity3d.com/Packages/com.unity.addressables@0.4/api/UnityEngine.AddressableAssets.AssetReference.html
-
-[img-1]:https://imgur.com/aPKLTt3.jpg
-[img-2]:https://imgur.com/2j7oGN0.jpg
+[blog-1]: ../unity-addressable
+[ref_1]: https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/DownloadDependenciesAsync.html
+[ref_LoadingAddressableAssets]: https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html
+[ref_AssetReference]: https://docs.unity3d.com/Packages/com.unity.addressables@0.4/api/UnityEngine.AddressableAssets.AssetReference.html
+[img-1]: https://imgur.com/aPKLTt3.jpg
+[img-2]: https://imgur.com/2j7oGN0.jpg

@@ -1,6 +1,6 @@
 ---
 title: "Unity Open Shader For VSCode"
-date: 2022-08-09T00:21:50+08:00
+date: 2022-08-09
 description: "自動對應 Shader 檔案使用 VSCode 開啟"
 keywords: [Unity, Shader, Shaderlab, VSCode]
 draft: false
@@ -26,7 +26,6 @@ tags: [Unity]
 
 ![env_2]
 
-
 ## VSCode CLI Args
 
 根據 Unity 開啟 VSCode Args，可以使用 `Process` 填寫對應路徑就可以了。
@@ -35,7 +34,7 @@ tags: [Unity]
 "$(ProjectPath)" -g "$(File)":$(Line):$(Column)
 ```
 
-``` C#
+```C#
 startInfo.Arguments = $"{projectPath} -g {fileName}";
 ```
 
@@ -43,7 +42,7 @@ startInfo.Arguments = $"{projectPath} -g {fileName}";
 
 詳細的方法可以參考 [Sublime Text & Unity Shader][ref_1]。
 
-``` C#
+```C#
 public class OpenShaderForVSCodeEditor
 {
     [UnityEditor.Callbacks.OnOpenAsset(0)]
@@ -91,12 +90,10 @@ public class OpenShaderForVSCodeEditor
 
 ## [GitHub][github]
 
-_________________________________________________________________________
+---
 
-[shaderlab_vscode]:https://marketplace.visualstudio.com/items?itemName=amlovey.shaderlabvscodefree
-
-[ref_1]:https://blog.csdn.net/weixin_44293055/article/details/120340635
-
-[env_1]:https://imgur.com/MZN9Wgs.jpg
-[env_2]:https://imgur.com/ME4qXZs.jpg
-[github]:https://github.com/Wenrong274/OpenShaderForVSCode
+[shaderlab_vscode]: https://marketplace.visualstudio.com/items?itemName=amlovey.shaderlabvscodefree
+[ref_1]: https://blog.csdn.net/weixin_44293055/article/details/120340635
+[env_1]: https://imgur.com/MZN9Wgs.jpg
+[env_2]: https://imgur.com/ME4qXZs.jpg
+[github]: https://github.com/Wenrong274/OpenShaderForVSCode

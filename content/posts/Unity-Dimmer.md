@@ -1,8 +1,8 @@
 ---
 title: "Unity Dimmer"
-date: 2020-10-21T02:26:00+08:00
+date: 2020-10-21
 summary: "Unity 調整 Android、iOS 系統亮度功能。"
-keywords: ["Unity","iOS"]
+keywords: ["Unity", "iOS"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -22,8 +22,9 @@ Dimmer.SetBrightness.DoAction(value);
 
 ## 參考連結
 
-[UnityからiOS&Androidの画面輝度をMAXにする方法][ref_1]
+[Unity から iOS&Android の画面輝度を MAX にする方法][ref_1]
 
-______________________________________________________________________
-[Github]:https://github.com/Wenrong274/Unity-Dimmer
-[ref_1]:https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85
+---
+
+[Github]: https://github.com/Wenrong274/Unity-Dimmer
+[ref_1]: https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85

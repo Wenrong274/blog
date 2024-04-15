@@ -1,6 +1,6 @@
 ---
 title: "Unity Deep Link -1"
-date: 2022-12-07T01:19:09+08:00
+date: 2022-12-07
 description: "介紹 Unity Deep Link 使用方式"
 keywords: ["Unity"]
 draft: false
@@ -14,11 +14,11 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
 
 ## 詳細資料
 
-* [Unity Deep Link][unitydl]
+- [Unity Deep Link][unitydl]
 
-* [Android Deep Link][dl_android]
+- [Android Deep Link][dl_android]
 
-* [iOS Deep Link][dl_ios]
+- [iOS Deep Link][dl_ios]
 
 建議是一定要把 [Unity Deep Link][unitydl] 看完，才會知道怎麼設定，其餘兩邊則是原生地設定方式，可以參考。
 
@@ -65,14 +65,14 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
 
 ## 其他
 
-* [Github][repo]
-* [Unity Deep Link -2][blog-2]
+- [Github][repo]
+- [Unity Deep Link -2][blog-2]
 
-______________________________________________________________________
+---
 
-[unitydl]:https://docs.unity3d.com/Manual/deep-linking.html
-[wenrongIntent]:https://wenrongdev.com/posts/get-android-intent-data-for-unity/
-[dl_android]:https://developer.android.com/training/app-links/deep-linking
-[dl_ios]:https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content
-[blog-2]:https://wenrongdev.com/posts/unitydeeplink_2/
-[repo]:https://github.com/WenRongDev/Unity-DeepLink
+[unitydl]: https://docs.unity3d.com/Manual/deep-linking.html
+[wenrongIntent]: https://wenrongdev.com/posts/get-android-intent-data-for-unity/
+[dl_android]: https://developer.android.com/training/app-links/deep-linking
+[dl_ios]: https://developer.apple.com/documentation/xcode/allowing-apps-and-websites-to-link-to-your-content
+[blog-2]: https://wenrongdev.com/posts/unitydeeplink_2/
+[repo]: https://github.com/WenRongDev/Unity-DeepLink

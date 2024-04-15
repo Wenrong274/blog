@@ -1,8 +1,8 @@
 ---
 title: "FCM Notifications Not Received on Android"
-date: 2020-01-16T01:53:04+08:00
+date: 2020-01-16
 summary: "沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。"
-keywords: ["Android","notification"]
+keywords: ["Android", "notification"]
 draft: false
 showtoc: true
 tags: ["Android"]
@@ -18,8 +18,8 @@ tags: ["Android"]
 
 ## 參考連結
 
-[https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh\_cn](https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn) 
+[https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn](https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn)
 
 [https://blog.csdn.net/pkorochi/article/details/87186659](https://blog.csdn.net/pkorochi/article/details/87186659)
 
-______________________________________________________________________
+---

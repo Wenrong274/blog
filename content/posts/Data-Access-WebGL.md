@@ -1,11 +1,11 @@
 ---
 title: "Data Access WebGL"
-date: 2020-02-27T01:58:17+08:00
+date: 2020-02-27
 summary: "Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。"
-keywords: ["Unity","WebGL"]
+keywords: ["Unity", "WebGL"]
 draft: false
 showtoc: true
-tags: ["Unity","WebGL"]
+tags: ["Unity", "WebGL"]
 ---
 
 ## 前言
@@ -24,23 +24,23 @@ Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。
 
 ## Introduction
 
-* File Path
+- File Path
 
-    `string.Format("{0}/{1}.dat", Application.persistentDataPath, FileName);`
+  `string.Format("{0}/{1}.dat", Application.persistentDataPath, FileName);`
 
-* Save Method
+- Save Method
 
-    DataAccess.Save(fileName, bytes);
+  DataAccess.Save(fileName, bytes);
 
-* Load Method
+- Load Method
 
-    byte[] bytes = DataAccess.Load(fileName);
+  byte[] bytes = DataAccess.Load(fileName);
 
-* Example Scene
+- Example Scene
 
-    `root\Assets\WebGL\Example\Scenes\Example`
+  `root\Assets\WebGL\Example\Scenes\Example`
 
-______________________________________________________________________
+---
 
 [img_1]: https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png
-[Working with quota on mobile browsers]:https://www.html5rocks.com/en/tutorials/offline/quota-research/
+[Working with quota on mobile browsers]: https://www.html5rocks.com/en/tutorials/offline/quota-research/

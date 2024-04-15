@@ -1,6 +1,6 @@
 ---
 title: "Blog 心得（1）"
-date: 2022-02-14T01:14:39+08:00
+date: 2022-02-14
 description: "從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。"
 keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
 draft: fales
@@ -56,16 +56,16 @@ tags: ["Blog"]
 當時使用 NameCheap 時也有被盜刷過，記得要綁定 2FA、密碼不要重複。
 ![img_1]
 
-______________________________________________________________________
+---
 
-[book_tenlong]:https://www.tenlong.com.tw/products/9787115429476
-[Blogger]:https://www.blogger.com/
-[Blogger_1]:http://teddy-chen-tw.blogspot.com/
-[tedsieblog]:https://tedsieblog.wordpress.com/
-[wordpress_1]:https://jessielab.com/wordpress%E6%95%99%E5%AD%B8-setting-up-a-website/
-[siteground]:https://www.siteground.com/
-[namecheap]:https://www.namecheap.com/
-[medium]:https://medium.com/
-[nextpost]:../Reflection-Blog-2
-[CoderBridge]:https://zh-tw.coderbridge.com/
-[img_1]:https://imgur.com/pJBH4Q6.jpg
+[book_tenlong]: https://www.tenlong.com.tw/products/9787115429476
+[Blogger]: https://www.blogger.com/
+[Blogger_1]: http://teddy-chen-tw.blogspot.com/
+[tedsieblog]: https://tedsieblog.wordpress.com/
+[wordpress_1]: https://jessielab.com/wordpress%E6%95%99%E5%AD%B8-setting-up-a-website/
+[siteground]: https://www.siteground.com/
+[namecheap]: https://www.namecheap.com/
+[medium]: https://medium.com/
+[nextpost]: ../Reflection-Blog-2
+[CoderBridge]: https://zh-tw.coderbridge.com/
+[img_1]: https://imgur.com/pJBH4Q6.jpg

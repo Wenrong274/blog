@@ -1,8 +1,8 @@
 ---
 title: "Unity Addressable"
-date: 2021-05-27T02:29:03+08:00
+date: 2021-05-27
 summary: "主要是實作 Addressable hotfix 的寫法。"
-keywords: ["Unity","Addressable"]
+keywords: ["Unity", "Addressable"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -12,7 +12,7 @@ tags: ["Unity"]
 
 主要是實作 Addressable hotfix 的寫法。
 
-基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 [Unity筆記 Addressable Asset System][tutorial_1]。
+基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 [Unity 筆記 Addressable Asset System][tutorial_1]。
 
 詳細解說可以參考
 
@@ -195,27 +195,19 @@ IEnumerator ClearAssetCoro(string label)
 
 ## [Github][github]
 
-
 ## 小結
 
 write something cool...
 
 ## 參考連結
 
-______________________________________________________________________
+---
 
-[github]:https://github.com/Wenrong274/Unity-Addressable
-
-[tutorial_1]:https://medium.com/@nai.hsue/unity%E7%AD%86%E8%A8%98-addressable-asset-system-dbebf981143b
-
-[tutorial_2_1]:https://blog.csdn.net/qq_14903317/article/details/108509938
-
-[tutorial_2_2]:https://blog.csdn.net/qq_14903317/article/details/108529590
-
-[tutorial_2_3]:https://blog.csdn.net/qq_14903317/article/details/108582372
-
-[tutorial_3]:https://arclee0117.wordpress.com/2020/09/10/unity-addressable-%E7%8D%A8%E7%AB%8B%E8%B3%87%E6%BA%90%E5%8C%85/
-
-[asset_1]:https://imgur.com/QAbjzCM.jpg
-
-[asset_2]:https://imgur.com/Av0faq4.jpg
+[github]: https://github.com/Wenrong274/Unity-Addressable
+[tutorial_1]: https://medium.com/@nai.hsue/unity%E7%AD%86%E8%A8%98-addressable-asset-system-dbebf981143b
+[tutorial_2_1]: https://blog.csdn.net/qq_14903317/article/details/108509938
+[tutorial_2_2]: https://blog.csdn.net/qq_14903317/article/details/108529590
+[tutorial_2_3]: https://blog.csdn.net/qq_14903317/article/details/108582372
+[tutorial_3]: https://arclee0117.wordpress.com/2020/09/10/unity-addressable-%E7%8D%A8%E7%AB%8B%E8%B3%87%E6%BA%90%E5%8C%85/
+[asset_1]: https://imgur.com/QAbjzCM.jpg
+[asset_2]: https://imgur.com/Av0faq4.jpg

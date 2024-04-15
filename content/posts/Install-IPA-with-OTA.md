@@ -1,12 +1,13 @@
 ---
 title: "Install IPA With OTA"
-date: 2019-10-10T00:00:00+08:00
+date: 2019-10-10
 summary: "由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。"
-keywords: ["iOS","OTA","iPA"]
+keywords: ["iOS", "OTA", "iPA"]
 draft: false
 showtoc: true
 tags: ["iOS"]
 ---
+
 ## 前言
 
 由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。
@@ -99,10 +100,10 @@ tags: ["iOS"]
 
 [iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？](https://medium.com/@lefty./itunes-12-7-%E7%A7%BB%E9%99%A4%E4%BA%86-apps-%E7%9A%84%E9%81%B8%E9%A0%85-%E6%88%91%E8%A9%B2%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%9D-ipa-%E6%AA%94%E6%A1%88%E5%88%B0-ios-%E8%A3%9D%E7%BD%AE-2cad1d35d017)
 
-[從網路上下載ipa檔並且安裝在iPhone or iPad(Download and install an ipa from url on iOS)](https://www.dropbox.com)
+[從網路上下載 ipa 檔並且安裝在 iPhone or iPad(Download and install an ipa from url on iOS)](https://www.dropbox.com)
 
 [Error when distributing an IPA over the air with dropbox - iOS 7.1](https://stackoverflow.com/questions/22658987/error-when-distributing-an-ipa-over-the-air-with-dropbox-ios-7-1/25302392#25302392)
 
 [使用 GitHub 免費製作個人網站](https://gitbook.tw/chapters/github/using-github-pages.html)
 
-______________________________________________________________________________________________________________
+---

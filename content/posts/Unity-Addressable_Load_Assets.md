@@ -1,6 +1,6 @@
 ---
 title: "Unity Addressable Load Assets"
-date: 2022-05-04T00:27:52+08:00
+date: 2022-05-04
 description: "介紹 Unity Addressable 讀取、生成、釋放方式"
 keywords: [Unity, Addressable, hotfix]
 draft: false
@@ -71,8 +71,7 @@ private void ReleaseAsset(AssetReference asset)
 
 可以利用生成的物件或者 Load asset 的 Async 釋放，假如是使用 AssetReference Load Asset，也可以使用這個方式釋放。
 
-______________________________________________________________________
+---
 
-[url_1]:https://docs.unity3d.com/Packages/com.unity.addressables@1.3/manual/MemoryManagement.html
-
-[img-1]:https://imgur.com/ohiBIeL.jpg
+[url_1]: https://docs.unity3d.com/Packages/com.unity.addressables@1.3/manual/MemoryManagement.html
+[img-1]: https://imgur.com/ohiBIeL.jpg

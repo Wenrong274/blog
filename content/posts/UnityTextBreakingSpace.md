@@ -1,6 +1,6 @@
 ---
 title: "Unity Text Breaking Space"
-date: 2022-12-03T00:42:48+08:00
+date: 2022-12-03
 description: "Unity Text 中英混雜字串，導致 Space 字串跳行問題"
 keywords: ["Unity"]
 draft: false
@@ -27,15 +27,15 @@ public static string ReplaceSpace(string context)
 
 ## 範例
 
-* 使用前
+- 使用前
 
 ![img_1]
 
-* 使用後
+- 使用後
 
 ![img_2]
 
-_______________________________________________________________
+---
 
-[img_1]:https://imgur.com/4dSyVJL.jpg
-[img_2]:https://imgur.com/GhMA0mV.jpg
+[img_1]: https://imgur.com/4dSyVJL.jpg
+[img_2]: https://imgur.com/GhMA0mV.jpg

@@ -1,12 +1,13 @@
 ---
 title: "Example Inno Setup"
-date: 2019-12-19T00:00:00+08:00
+date: 2019-12-19
 summary: "簡易使用 Inno Setup 打包教學。"
-keywords: ["Inno Setup","script-driven installation"]
+keywords: ["Inno Setup", "script-driven installation"]
 draft: false
 showtoc: true
 tags: ["tool"]
 ---
+
 ## Install
 
 去官網下載 [Inno Setup][1]，請下載 **Stable Release** 版本。
@@ -20,7 +21,7 @@ tags: ["tool"]
 
 可以參考以下腳本，也可以自己寫，不知道寫法可以參考[官方文件][3]。
 
-``` Pascal
+```Pascal
 
 #define MyAppGUID "{{D0D7EBDD-2493-4086-A306-AB012D2AFA93}"
 #define MyAppName "Examle"
@@ -68,7 +69,7 @@ MyAppVerName = {#MyAppName} %1
 
 [Messages]
 BeveledLabel = {#MyAppURL}
-  
+
 [Dirs]
 Name: "{app}"; Permissions: everyone-full
 
@@ -192,17 +193,17 @@ end;
 
 正常的資料夾結構
 
-| Folder      | Description             |
-| :---------- | :---------------------- |
-| ExampleFolder      | 打包前的資料夾          |
-| Setup       | Inno Setup 輸出的資料夾 |
-| .iss        | Inno Setup Script       |
+| Folder        | Description             |
+| :------------ | :---------------------- |
+| ExampleFolder | 打包前的資料夾          |
+| Setup         | Inno Setup 輸出的資料夾 |
+| .iss          | Inno Setup Script       |
 
 ![img_2]
 
 ### 修改 .iss
 
-``` Pascal
+```Pascal
 #define MyAppGUID "GUID"
 #define MyAppName "Examle"
 #define MyAppFolder "ExampleFolder"
@@ -217,7 +218,7 @@ end;
 | Arg               | Description                                        |
 | :---------------- | :------------------------------------------------- |
 | MyAppGUID         | 安裝系統 GUID，產生方式為 `Tools/Generated GUID`。 |
-| MyAppName         | 桌面路徑名稱  。                                   |
+| MyAppName         | 桌面路徑名稱 。                                    |
 | MyAppFolder       | 安裝目錄名稱。                                     |
 | MyAppSetupExeName | Inno Setup 輸出安裝檔名稱 。                       |
 
@@ -227,11 +228,11 @@ end;
 
 ## [Github](https://github.com/Wenrong274/ExampleInnoSetup)
 
-________________________________________________________________________________
+---
 
-[1]:http://www.jrsoftware.org/isinfo.php
-[2]:https://github.com/jrsoftware/issrc
-[3]:http://www.jrsoftware.org/ishelp/
+[1]: http://www.jrsoftware.org/isinfo.php
+[2]: https://github.com/jrsoftware/issrc
+[3]: http://www.jrsoftware.org/ishelp/
 [img_1]: https://imgur.com/3gD0X18.jpg
 [img_2]: https://imgur.com/AXDhz5x.jpg
 [img_3]: https://imgur.com/d05PwU1.jpg

@@ -1,12 +1,13 @@
 ---
 title: "Whitelist for Windows UAC"
-date: 2019-11-04T00:00:00+08:00
+date: 2019-11-04
 summary: "為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。"
 keywords: ["C#"]
 draft: false
 showtoc: true
 tags: ["C#"]
 ---
+
 ## 前言
 
 因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。
@@ -19,7 +20,7 @@ tags: ["C#"]
 
 ## 解決方式
 
-根據[不變更UAC安全性，但執行程式時又不擾民的設定方式][taodeUrl]，可以在 Windows Regedit 新增白名單。
+根據[不變更 UAC 安全性，但執行程式時又不擾民的設定方式][taodeUrl]，可以在 Windows Regedit 新增白名單。
 
 1. Win+R 輸入 regedit 執行
 1. 根據此路徑尋找 `HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers`
@@ -56,9 +57,9 @@ public class RegEditWhiteList
 
 ## 參考資料
 
-[不變更UAC安全性，但執行程式時又不擾民的設定方式][taodeUrl]
+[不變更 UAC 安全性，但執行程式時又不擾民的設定方式][taodeUrl]
 
-______________________________________________________________________
+---
 
-[taodeUrl]:https://www.taode.idv.tw/wordpress/?p=639
-[repo]:https://github.com/Wenrong274/UACWhitelist
+[taodeUrl]: https://www.taode.idv.tw/wordpress/?p=639
+[repo]: https://github.com/Wenrong274/UACWhitelist

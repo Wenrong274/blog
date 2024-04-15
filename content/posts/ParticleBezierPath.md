@@ -1,8 +1,8 @@
 ---
 title: "Unity ParticleBezierPath"
-date: 2023-01-18T01:06:00+08:00
+date: 2023-01-18
 description: "Unity 實作粒子路徑系統。並且使用 Job System 優化效能。"
-keywords: ["Unity","Particle"]
+keywords: ["Unity", "Particle"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -28,8 +28,8 @@ tags: ["Unity"]
 
 ## [GitHub][github]
 
-______________________________________________________________________
+---
 
-[Unity ParticlePath]:https://wenrongdev.com/posts/unity-particlepath/
-[demogif]:https://imgur.com/lfos4S0.gif
-[github]:https://github.com/Wenrong274/ParticleBezierPath
+[Unity ParticlePath]: https://wenrongdev.com/posts/unity-particlepath/
+[demogif]: https://imgur.com/lfos4S0.gif
+[github]: https://github.com/Wenrong274/ParticleBezierPath

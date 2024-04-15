@@ -1,8 +1,8 @@
 ---
 title: "Oculus Auto Set Build Setting && Build"
-date: 2022-12-01T01:02:10+08:00
+date: 2022-12-01
 description: "自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。"
-keywords: ["Unity","Oculus"]
+keywords: ["Unity", "Oculus"]
 draft: false
 showtoc: true
 tags: ["Unity"]
@@ -151,6 +151,6 @@ public class SampleBuildRelease
 }
 ```
 
-______________________________________________________________________
+---
 
-[img_1]:https://i.imgur.com/l0ovOpl.png
+[img_1]: https://i.imgur.com/l0ovOpl.png

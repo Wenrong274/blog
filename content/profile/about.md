@@ -1,14 +1,15 @@
 ---
 title: "About"
-date: 2022-02-03T19:24:34+08:00
+date: 2022-02-03
 hideMeta: true
 disableShare: true
 ShowBreadCrumbs: false
 ShowPostNavLinks: false
-ShowFullTextinRSS: false 
+ShowFullTextinRSS: false
 searchHidden: true
 comments: false
 ---
+
 五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。
 
 擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。
@@ -23,13 +24,13 @@ comments: false
 
 ## 工作經歷
 
-*2015/11 – 2023/07*
+_2015/11 – 2023/07_
 : [錦田雲端科技](https://jt-qc.com/)
 
-* 分析專案計畫可行性，並與各部門討論如何執行分工。
-* 規劃程式架構使用技術。
-* 進行專案測試、修改及性能優化。
-* 研發軟體新技術與新工具。
+- 分析專案計畫可行性，並與各部門討論如何執行分工。
+- 規劃程式架構使用技術。
+- 進行專案測試、修改及性能優化。
+- 研發軟體新技術與新工具。
 
 ## Skills
 
