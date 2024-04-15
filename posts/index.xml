@@ -6,16 +6,34 @@
     <description>Recent content in Posts on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 20 Oct 2023 15:47:17 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>心得 代理人模式</title>
+      <link>https://wenrongdev.com/posts/proxy-design-pattern/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/proxy-design-pattern/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>write something cool&hellip;</p>
+<h2 id="主要內容">主要內容</h2>
+<p>write something cool&hellip;</p>
+<h2 id="小結">小結</h2>
+<p>write something cool&hellip;</p>
+<h2 id="參考連結">參考連結</h2>
+<hr>
+]]></content:encoded>
+    </item>
+    
     <item>
       <title>Wix Examples</title>
       <link>https://wenrongdev.com/posts/wixexamples/</link>
-      <pubDate>Fri, 20 Oct 2023 15:47:17 +0800</pubDate>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/wixexamples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
-<p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
+<p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
 <h3 id="輸出-wix-文件方法">輸出 Wix 文件方法</h3>
 <p>先到 <a href="https://github.com/wixtoolset/wix3/releases">WiX Toolset Release</a> 安裝需要的工具。</p>
 <p>需要開啟 <a href="https://zh.wikipedia.org/zh-tw/cmd.exe">CMD</a> 且必須要用<code>工作管理員權限</code>打開，之後 cd 到 WiX Toolset 的安裝資料夾。</p>
@@ -98,7 +116,7 @@
 </code></pre><h3 id="githubgithub"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world">用 WiX 制作安装包：创建一个简单的 msi 安装包</a></p>
-<p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
+<p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
 <p><a href="https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_uninstall_shortcut/">Create an Uninstall Shortcut</a></p>
 <p><a href="https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_start_menu_shortcut/">Create a Shortcut on the Start Menu</a></p>
 <p><a href="https://stackoverflow.com/a/17513551">Removing files when uninstalling WiX</a></p>
@@ -109,7 +127,7 @@
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
       <link>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</link>
-      <pubDate>Wed, 08 Mar 2023 02:00:38 +0800</pubDate>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</guid>
       <description>write something</description>
@@ -135,7 +153,7 @@
     <item>
       <title>Unity2021 Video Player Crush</title>
       <link>https://wenrongdev.com/posts/unity2021-videoplayercrush/</link>
-      <pubDate>Wed, 01 Feb 2023 00:14:21 +0800</pubDate>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity2021-videoplayercrush/</guid>
       <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。</description>
@@ -168,7 +186,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity ParticleBezierPath</title>
       <link>https://wenrongdev.com/posts/particlebezierpath/</link>
-      <pubDate>Wed, 18 Jan 2023 01:06:00 +0800</pubDate>
+      <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/particlebezierpath/</guid>
       <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
@@ -190,7 +208,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Oculus Sample</title>
       <link>https://wenrongdev.com/posts/oculussample/</link>
-      <pubDate>Mon, 02 Jan 2023 01:14:40 +0800</pubDate>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/oculussample/</guid>
       <description>簡易的 Oculus 功能介紹專案</description>
@@ -206,13 +224,13 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Deep Link -2</title>
       <link>https://wenrongdev.com/posts/unitydeeplink_2/</link>
-      <pubDate>Tue, 13 Dec 2022 00:20:11 +0800</pubDate>
+      <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unitydeeplink_2/</guid>
       <description>介紹 Unity Deep Link 呼叫方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。</p>
-<p>也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store上面讓使用者直接下載該 app。</p>
+<p>也可以用來呼叫 app 時，假如該裝置沒有安裝可以直接轉移到 app store 上面讓使用者直接下載該 app。</p>
 <h2 id="android">Android</h2>
 <p>需要在 <code>AndroidManifest</code> 上寫上 link id，可以根據 <a href="https://developer.android.com/training/app-links/deep-linking">Create Deep Links to App Content</a> 參考詳細的設置方式。</p>
 <ul>
@@ -259,7 +277,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Deep Link -1</title>
       <link>https://wenrongdev.com/posts/unitydeeplink_1/</link>
-      <pubDate>Wed, 07 Dec 2022 01:19:09 +0800</pubDate>
+      <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unitydeeplink_1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
@@ -318,7 +336,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Text Breaking Space</title>
       <link>https://wenrongdev.com/posts/unitytextbreakingspace/</link>
-      <pubDate>Sat, 03 Dec 2022 00:42:48 +0800</pubDate>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unitytextbreakingspace/</guid>
       <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
@@ -350,7 +368,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
       <link>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</link>
-      <pubDate>Thu, 01 Dec 2022 01:02:10 +0800</pubDate>
+      <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</guid>
       <description>自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。</description>
@@ -488,7 +506,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Project Structure</title>
       <link>https://wenrongdev.com/posts/unit-unity-projectstructure/</link>
-      <pubDate>Wed, 05 Oct 2022 01:53:56 +0800</pubDate>
+      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unit-unity-projectstructure/</guid>
       <description>自動建立簡易專案資料夾結構</description>
@@ -531,7 +549,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
            |- 01_Scripts
            |- 02_Tests
            |- 03_Prefabs
-           |- 05_UI 
+           |- 05_UI
 </code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-ProjectStructure">Github</a></h2>
 <hr>
 ]]></content:encoded>
@@ -540,7 +558,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Open Shader For VSCode</title>
       <link>https://wenrongdev.com/posts/openshaderforvscode/</link>
-      <pubDate>Tue, 09 Aug 2022 00:21:50 +0800</pubDate>
+      <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/openshaderforvscode/</guid>
       <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
@@ -612,7 +630,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
     <item>
       <title>Unity Addressable Load Assets</title>
       <link>https://wenrongdev.com/posts/unity-addressable_load_assets/</link>
-      <pubDate>Wed, 04 May 2022 00:27:52 +0800</pubDate>
+      <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-addressable_load_assets/</guid>
       <description>介紹 Unity Addressable 讀取、生成、釋放方式</description>
@@ -670,7 +688,7 @@ IEnumerator InstantiateAsset(AssetReference asset)
     <item>
       <title>Unity Addressable Download Assets</title>
       <link>https://wenrongdev.com/posts/unity-addressable_download_assets/</link>
-      <pubDate>Mon, 14 Mar 2022 16:38:48 +0800</pubDate>
+      <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-addressable_download_assets/</guid>
       <description>介紹 Unity Addressable 多個下載方式</description>
@@ -744,7 +762,7 @@ IEnumerator InstantiateAsset(AssetReference asset)
     <item>
       <title>Android Build Failed Build tools 3X.0.0 Bug</title>
       <link>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</link>
-      <pubDate>Mon, 07 Mar 2022 00:40:34 +0800</pubDate>
+      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-android_failed_buildtoolsbug/</guid>
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
@@ -774,7 +792,7 @@ IEnumerator InstantiateAsset(AssetReference asset)
     <item>
       <title>Blog 心得（3）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-3/</link>
-      <pubDate>Mon, 28 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-3/</guid>
       <description>使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。</description>
@@ -827,14 +845,14 @@ placeholder: &#34;placeholder text in search input box&#34;
 </code></pre></div><h4 id="comments">Comments</h4>
 <p>此功能是參考 <a href="https://ithelp.ithome.com.tw/articles/10248312">Day 20. Hugo Comments System</a> 文章製作出來的。</p>
 <h2 id="github-action">Github Action</h2>
-<p>有使用 Custom domain 的話，且 workflows 沒有設定 domain的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
+<p>有使用 Custom domain 的話，且 workflows 沒有設定 domain 的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
 <h3 id="github-pages-workflowyml">GitHub Pages workflow.yml</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
 
 <span style="color:#f92672">on</span>:
   <span style="color:#f92672">push</span>:
     <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">main </span> <span style="color:#75715e"># Set a branch to deploy</span>
+      - <span style="color:#ae81ff">main</span> <span style="color:#75715e"># Set a branch to deploy</span>
   <span style="color:#f92672">pull_request</span>:
 
 <span style="color:#f92672">jobs</span>:
@@ -845,13 +863,13 @@ placeholder: &#34;placeholder text in search input box&#34;
     <span style="color:#f92672">steps</span>:
       - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
         <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
-          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
+          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
+          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
 
       - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
         <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
         <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.91.2&#39;</span>
+          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.91.2&#34;</span>
           <span style="color:#75715e"># extended: true</span>
 
       - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
@@ -880,7 +898,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Blog 心得（2）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-2/</link>
-      <pubDate>Mon, 21 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-2/</guid>
       <description>Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。</description>
@@ -918,7 +936,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Blog 心得（1）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-1/</link>
-      <pubDate>Mon, 14 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-1/</guid>
       <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。</description>
@@ -987,7 +1005,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Unity MathQuiz</title>
       <link>https://wenrongdev.com/posts/unity-mathquiz/</link>
-      <pubDate>Mon, 29 Nov 2021 02:34:02 +0800</pubDate>
+      <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
@@ -1003,7 +1021,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Unity Calendar</title>
       <link>https://wenrongdev.com/posts/unity-calendar/</link>
-      <pubDate>Thu, 17 Jun 2021 02:32:14 +0800</pubDate>
+      <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-calendar/</guid>
       <description>Unity 實做日曆功能。</description>
@@ -1033,13 +1051,13 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Unity Addressable</title>
       <link>https://wenrongdev.com/posts/unity-addressable/</link>
-      <pubDate>Thu, 27 May 2021 02:29:03 +0800</pubDate>
+      <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-addressable/</guid>
       <description>主要是實作 Addressable hotfix 的寫法。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是實作 Addressable hotfix 的寫法。</p>
-<p>基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 <a href="https://medium.com/@nai.hsue/unity%E7%AD%86%E8%A8%98-addressable-asset-system-dbebf981143b">Unity筆記 Addressable Asset System</a>。</p>
+<p>基本 Unity-Addressable 安裝及 Remote 設定可以參考這篇 <a href="https://medium.com/@nai.hsue/unity%E7%AD%86%E8%A8%98-addressable-asset-system-dbebf981143b">Unity 筆記 Addressable Asset System</a>。</p>
 <p>詳細解說可以參考</p>
 <p>Unity Addressables 深入浅出<a href="https://blog.csdn.net/qq_14903317/article/details/108509938">(一)</a>、<a href="https://blog.csdn.net/qq_14903317/article/details/108529590">(二)</a>、<a href="https://blog.csdn.net/qq_14903317/article/details/108582372">(三)</a></p>
 <p><a href="https://arclee0117.wordpress.com/2020/09/10/unity-addressable-%E7%8D%A8%E7%AB%8B%E8%B3%87%E6%BA%90%E5%8C%85/">Unity Addressable 獨立資源包</a></p>
@@ -1218,7 +1236,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Unity ParticlePath</title>
       <link>https://wenrongdev.com/posts/unity-particlepath/</link>
-      <pubDate>Sun, 09 May 2021 02:26:00 +0800</pubDate>
+      <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-particlepath/</guid>
       <description>Unity 實作粒子路徑系統。</description>
@@ -1232,7 +1250,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Unity Dimmer</title>
       <link>https://wenrongdev.com/posts/unity-dimmer/</link>
-      <pubDate>Wed, 21 Oct 2020 02:26:00 +0800</pubDate>
+      <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-dimmer/</guid>
       <description>Unity 調整 Android、iOS 系統亮度功能。</description>
@@ -1242,7 +1260,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C#" data-lang="C#">Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
 </code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Dimmer">Github</a></h2>
 <h2 id="參考連結">參考連結</h2>
-<p><a href="https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85">UnityからiOS&amp;Androidの画面輝度をMAXにする方法</a></p>
+<p><a href="https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85">Unity から iOS&amp;Android の画面輝度を MAX にする方法</a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1250,7 +1268,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Add Text Spacing for Unity</title>
       <link>https://wenrongdev.com/posts/add-text-spacing-for-unity/</link>
-      <pubDate>Wed, 08 Apr 2020 02:11:48 +0800</pubDate>
+      <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/add-text-spacing-for-unity/</guid>
       <description>在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。</description>
@@ -1406,8 +1424,8 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 </code></pre></div><h2 id="問題">問題</h2>
 <p>無法自由換行</p>
 <h2 id="參考連結">參考連結</h2>
-<p><a href="https://blog.csdn.net/qq_38721111/article/details/102592001">UGUI中Text的字间距</a></p>
-<p><a href="https://blog.csdn.net/qq_38721111/article/details/102592001">UGUI中随意调整Text中的字体间距</a></p>
+<p><a href="https://blog.csdn.net/qq_38721111/article/details/102592001">UGUI 中 Text 的字间距</a></p>
+<p><a href="https://blog.csdn.net/qq_38721111/article/details/102592001">UGUI 中随意调整 Text 中的字体间距</a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1415,7 +1433,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Mobile Joystick</title>
       <link>https://wenrongdev.com/posts/mobile-joystick/</link>
-      <pubDate>Mon, 30 Mar 2020 02:17:14 +0800</pubDate>
+      <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/mobile-joystick/</guid>
       <description>主要是用來測試 Unity 虛擬搖桿功能。</description>
@@ -1432,7 +1450,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Folder Manager</title>
       <link>https://wenrongdev.com/posts/folder-manager/</link>
-      <pubDate>Sun, 29 Mar 2020 02:11:48 +0800</pubDate>
+      <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/folder-manager/</guid>
       <description>Unity 視覺化管理使用路徑。</description>
@@ -1455,7 +1473,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Data Access WebGL</title>
       <link>https://wenrongdev.com/posts/data-access-webgl/</link>
-      <pubDate>Thu, 27 Feb 2020 01:58:17 +0800</pubDate>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
@@ -1493,7 +1511,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Unity Jenkins Build</title>
       <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
-      <pubDate>Tue, 25 Feb 2020 02:05:19 +0800</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
@@ -1524,7 +1542,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 <p><code>Name</code>：unity version</p>
 <p><code>Installation directory</code>：unity installed path</p>
 <h3 id="jenkins-item">Jenkins item</h3>
-<p>基本設置可參考 <a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a> 介紹。</p>
+<p>基本設置可參考 <a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a> 介紹。</p>
 <p>最主要是設定 <code>Editor command line arguments</code>。</p>
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
@@ -1536,7 +1554,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
 </p>
 <h2 id="github-repogithub"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
 <h2 id="reference">reference</h2>
-<p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a></p>
+<p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a></p>
 <p><a href="https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/">Jenkins for Unity with DigitalOcean</a></p>
 <hr>
 ]]></content:encoded>
@@ -1545,7 +1563,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Hyperlinks in Unity Text</title>
       <link>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</link>
-      <pubDate>Mon, 24 Feb 2020 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</guid>
       <description>Unity uGUI Text support insert link and image。</description>
@@ -1565,7 +1583,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>FCM Notifications Not Received on Android</title>
       <link>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</link>
-      <pubDate>Thu, 16 Jan 2020 01:53:04 +0800</pubDate>
+      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/fcm-notifications-not-received-on-android/</guid>
       <description>沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。</description>
@@ -1583,7 +1601,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Android P HTTP Error</title>
       <link>https://wenrongdev.com/posts/android-p-http-error/</link>
-      <pubDate>Thu, 09 Jan 2020 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/android-p-http-error/</guid>
       <description>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
@@ -1603,7 +1621,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
         <span style="color:#f92672">&lt;/application&gt;</span>
     <span style="color:#f92672">&lt;/manifest&gt;</span>
 </code></pre></div><h2 id="參考連結">參考連結</h2>
-<p><a href="https://michaelyb.top/2018/08/Android-HTTP/">Android中HTTP网络请求相关问题</a></p>
+<p><a href="https://michaelyb.top/2018/08/Android-HTTP/">Android 中 HTTP 网络请求相关问题</a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1611,7 +1629,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Launch From Within a Unity App Another Unity App Android</title>
       <link>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
       <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
@@ -1667,7 +1685,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Get Android Intent Data for Unity</title>
       <link>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</guid>
       <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 &lt;code&gt;Unity&lt;/code&gt; 接收。</description>
@@ -1773,7 +1791,7 @@ IEnumerator DownloadLabelAsset(<span style="color:#66d9ef">string</span> label)
     <item>
       <title>Example Inno Setup</title>
       <link>https://wenrongdev.com/posts/example-inno-setup/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
       <description>簡易使用 Inno Setup 打包教學。</description>
@@ -1834,7 +1852,7 @@ MyAppVerName = {#MyAppName} %1
 
 [Messages]
 BeveledLabel = {#MyAppURL}
-  
+
 [Dirs]
 Name: &quot;{app}&quot;; Permissions: everyone-full
 
@@ -2000,7 +2018,7 @@ end;
 </tr>
 <tr>
 <td style="text-align:left">MyAppName</td>
-<td style="text-align:left">桌面路徑名稱  。</td>
+<td style="text-align:left">桌面路徑名稱 。</td>
 </tr>
 <tr>
 <td style="text-align:left">MyAppFolder</td>
@@ -2023,7 +2041,7 @@ end;
     <item>
       <title>Whitelist for Windows UAC</title>
       <link>https://wenrongdev.com/posts/whitelist-for-windows-uac/</link>
-      <pubDate>Mon, 04 Nov 2019 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
       <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
@@ -2036,7 +2054,7 @@ end;
 <li>不可完全關閉 Windows UAC</li>
 </ol>
 <h2 id="解決方式">解決方式</h2>
-<p>根據<a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
+<p>根據<a href="https://www.taode.idv.tw/wordpress/?p=639">不變更 UAC 安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
 <ol>
 <li>Win+R 輸入 regedit 執行</li>
 <li>根據此路徑尋找 <code>HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers</code></li>
@@ -2065,7 +2083,7 @@ end;
 <h3 id="使用方式">使用方式</h3>
 <p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
 <h2 id="參考資料">參考資料</h2>
-<p><a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a></p>
+<p><a href="https://www.taode.idv.tw/wordpress/?p=639">不變更 UAC 安全性，但執行程式時又不擾民的設定方式</a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2073,7 +2091,7 @@ end;
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
       <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
-      <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
@@ -2131,7 +2149,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
     <item>
       <title>Install IPA With OTA</title>
       <link>https://wenrongdev.com/posts/install-ipa-with-ota/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
       <description>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</description>
@@ -2209,7 +2227,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
 <p>得到 Github Website <code>index.html</code>就可以安裝 <code>.ipa</code></p>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://medium.com/@lefty./itunes-12-7-%E7%A7%BB%E9%99%A4%E4%BA%86-apps-%E7%9A%84%E9%81%B8%E9%A0%85-%E6%88%91%E8%A9%B2%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%9D-ipa-%E6%AA%94%E6%A1%88%E5%88%B0-ios-%E8%A3%9D%E7%BD%AE-2cad1d35d017">iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？</a></p>
-<p><a href="https://www.dropbox.com">從網路上下載ipa檔並且安裝在iPhone or iPad(Download and install an ipa from url on iOS)</a></p>
+<p><a href="https://www.dropbox.com">從網路上下載 ipa 檔並且安裝在 iPhone or iPad(Download and install an ipa from url on iOS)</a></p>
 <p><a href="https://stackoverflow.com/questions/22658987/error-when-distributing-an-ipa-over-the-air-with-dropbox-ios-7-1/25302392#25302392">Error when distributing an IPA over the air with dropbox - iOS 7.1</a></p>
 <p><a href="https://gitbook.tw/chapters/github/using-github-pages.html">使用 GitHub 免費製作個人網站</a></p>
 <hr>
@@ -2219,7 +2237,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
     <item>
       <title>Unity 5.3 Native System Language</title>
       <link>https://wenrongdev.com/posts/unity-5.3-native-system-language/</link>
-      <pubDate>Fri, 04 Oct 2019 00:00:00 +0800</pubDate>
+      <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-5.3-native-system-language/</guid>
       <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
@@ -2292,7 +2310,7 @@ clang: error: linker command failed with exit code 1 (use -v to see invocation)
     <item>
       <title>Unity WebGL Template</title>
       <link>https://wenrongdev.com/posts/unity-webgl-template/</link>
-      <pubDate>Thu, 05 Sep 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-webgl-template/</guid>
       <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
@@ -2328,7 +2346,7 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
     <item>
       <title>Unity WebGL RectMask2D Does Not Work</title>
       <link>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
-      <pubDate>Thu, 29 Aug 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
       <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>

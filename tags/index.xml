@@ -6,11 +6,21 @@
     <description>Recent content in Tags on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 20 Oct 2023 15:47:17 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Design Pattern</title>
+      <link>https://wenrongdev.com/tags/design-pattern/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenrongdev.com/tags/design-pattern/</guid>
+      <description></description>
+      <content:encoded><![CDATA[]]></content:encoded>
+    </item>
+    
     <item>
       <title>tool</title>
       <link>https://wenrongdev.com/tags/tool/</link>
-      <pubDate>Fri, 20 Oct 2023 15:47:17 +0800</pubDate>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/tool/</guid>
       <description></description>
@@ -20,7 +30,7 @@
     <item>
       <title>iOS</title>
       <link>https://wenrongdev.com/tags/ios/</link>
-      <pubDate>Wed, 08 Mar 2023 02:00:38 +0800</pubDate>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/ios/</guid>
       <description></description>
@@ -30,7 +40,7 @@
     <item>
       <title>Unity</title>
       <link>https://wenrongdev.com/tags/unity/</link>
-      <pubDate>Wed, 01 Feb 2023 00:14:21 +0800</pubDate>
+      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/unity/</guid>
       <description></description>
@@ -40,7 +50,7 @@
     <item>
       <title>Android</title>
       <link>https://wenrongdev.com/tags/android/</link>
-      <pubDate>Mon, 07 Mar 2022 00:40:34 +0800</pubDate>
+      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/android/</guid>
       <description></description>
@@ -50,7 +60,7 @@
     <item>
       <title>Blog</title>
       <link>https://wenrongdev.com/tags/blog/</link>
-      <pubDate>Mon, 28 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/blog/</guid>
       <description></description>
@@ -60,7 +70,7 @@
     <item>
       <title>WebGL</title>
       <link>https://wenrongdev.com/tags/webgl/</link>
-      <pubDate>Thu, 27 Feb 2020 01:58:17 +0800</pubDate>
+      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/webgl/</guid>
       <description></description>
@@ -70,7 +80,7 @@
     <item>
       <title>DevOps</title>
       <link>https://wenrongdev.com/tags/devops/</link>
-      <pubDate>Tue, 25 Feb 2020 02:05:19 +0800</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/devops/</guid>
       <description></description>
@@ -80,7 +90,7 @@
     <item>
       <title>C#</title>
       <link>https://wenrongdev.com/tags/c#/</link>
-      <pubDate>Mon, 04 Nov 2019 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/c#/</guid>
       <description></description>
@@ -90,7 +100,7 @@
     <item>
       <title>Vuforia</title>
       <link>https://wenrongdev.com/tags/vuforia/</link>
-      <pubDate>Thu, 17 Oct 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/tags/vuforia/</guid>
       <description></description>

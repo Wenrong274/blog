@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Design Pattern on Wenrong&#39;s Note</title>
+    <link>https://wenrongdev.com/tags/design-pattern/</link>
+    <description>Recent content in Design Pattern on Wenrong&#39;s Note</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>心得 代理人模式</title>
+      <link>https://wenrongdev.com/posts/proxy-design-pattern/</link>
+      <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>https://wenrongdev.com/posts/proxy-design-pattern/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>write something cool&hellip;</p>
+<h2 id="主要內容">主要內容</h2>
+<p>write something cool&hellip;</p>
+<h2 id="小結">小結</h2>
+<p>write something cool&hellip;</p>
+<h2 id="參考連結">參考連結</h2>
+<hr>
+]]></content:encoded>
+    </item>
+    
+  </channel>
+</rss>

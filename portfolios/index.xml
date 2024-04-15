@@ -6,11 +6,11 @@
     <description>Recent content in Portfolios on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Sun, 15 Oct 2023 23:15:50 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/portfolios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/portfolios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QC Cube</title>
       <link>https://wenrongdev.com/portfolios/jtqc/qccube/</link>
-      <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/jtqc/qccube/</guid>
       <description>介紹 集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。 使用 sLua 製作主選單架構、互動式動畫。 課程內容可以</description>
@@ -43,7 +43,7 @@
     <item>
       <title>寶馬曳引機 VR</title>
       <link>https://wenrongdev.com/portfolios/jtqc/tractorvr/</link>
-      <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/jtqc/tractorvr/</guid>
       <description>介紹 模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。 使用 Unity 搭配 Meta Quest 製作而成。 模擬駕駛手排車 連結 新聞介紹</description>
@@ -67,7 +67,7 @@
     <item>
       <title>糖的科普知識</title>
       <link>https://wenrongdev.com/portfolios/jtqc/sugarfactory/</link>
-      <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/jtqc/sugarfactory/</guid>
       <description>介紹 Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。 使用 Unity 搭配 Kinect SDK 製作而成。 支援多人遊玩。 連結 介紹網址</description>
@@ -91,7 +91,7 @@
     <item>
       <title>變動的大地</title>
       <link>https://wenrongdev.com/portfolios/jtqc/elegeoscience/</link>
-      <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/jtqc/elegeoscience/</guid>
       <description>介紹 使用 VR 裝置了解台灣各類岩⽯和地形變化，每關關卡有任務目標跟題目作答來加深學習記憶，任務目標有判斷拿起岩石碰撞判斷硬度、呼叫海嘯使海岸侵蝕</description>
@@ -114,7 +114,7 @@
     <item>
       <title>雲林好 Young</title>
       <link>https://wenrongdev.com/portfolios/jtqc/yunlinyoung/</link>
-      <pubDate>Sun, 15 Oct 2023 23:15:50 +0800</pubDate>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/jtqc/yunlinyoung/</guid>
       <description>介紹 以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨</description>
@@ -142,25 +142,25 @@
     <item>
       <title>Projects</title>
       <link>https://wenrongdev.com/portfolios/projectlist/</link>
-      <pubDate>Tue, 25 Jul 2023 01:55:27 +0800</pubDate>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/portfolios/projectlist/</guid>
-      <description>2023 2023/05 - 2023/07 AIR英語未來城 AppleStore GoolgPlay Youtube 2022 2022/01 - 2022/11 滅蚊大作戰 AppleStore GoolgPlay 介紹網站 2022/08 - 2022/09 寶馬曳引機 VR Youtube 2022/06 - 2022/12 變動的大地 Youtube 介紹網站 2022/06 - 2022/11 密室逃脫AR : 生化危機 AppleStore GoolgPlay Youtube</description>
+      <description>2023 2023/05 - 2023/07 AIR 英語未來城 AppleStore GoolgPlay Youtube 2022 2022/01 - 2022/11 滅蚊大作戰 AppleStore GoolgPlay 介紹網站 2022/08 - 2022/09 寶馬曳引機 VR Youtube 2022/06 - 2022/12 變動的大地 Youtube 介紹網站 2022/06 - 2022/11 密室逃脫 AR : 生化危機 AppleStore GoolgPlay Youtube 介紹網</description>
       <content:encoded><![CDATA[<h2 id="2023">2023</h2>
 <dl>
 <dt>2023/05 - 2023/07</dt>
-<dd>AIR英語未來城　<a href="https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity">GoolgPlay</a>　<a href="https://youtu.be/__rgNu0EP08">Youtube</a></dd>
+<dd>AIR 英語未來城　<a href="https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity">GoolgPlay</a>　<a href="https://youtu.be/__rgNu0EP08">Youtube</a></dd>
 </dl>
 <h2 id="2022">2022</h2>
 <dl>
 <dt>2022/01 - 2022/11</dt>
 <dd>滅蚊大作戰　<a href="https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito">GoolgPlay</a>　<a href="https://jt-qc.com/product-pages?p_id=34">介紹網站</a></dd>
 <dt>2022/08 - 2022/09</dt>
-<dd>寶馬曳引機 VR　<a href="https://www.youtube.com/watch?v=JwodlwHqAhU">Youtube</a></dd>
+<dd>寶馬曳引機 VR 　<a href="https://www.youtube.com/watch?v=JwodlwHqAhU">Youtube</a></dd>
 <dt>2022/06 - 2022/12</dt>
 <dd>變動的大地　<a href="https://www.youtube.com/watch?v=pWr71RNmNHE">Youtube</a>　<a href="https://moevrar.tku.edu.tw/material_detail.cshtml?id=145">介紹網站</a></dd>
 <dt>2022/06 - 2022/11</dt>
-<dd>密室逃脫AR : 生化危機　<a href="https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis">GoolgPlay</a>　<a href="">Youtube</a>　<a href="https://jt-qc.com/product-pages?p_id=35">介紹網站</a></dd>
+<dd>密室逃脫 AR : 生化危機　<a href="https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis">GoolgPlay</a>　<a href="">Youtube</a>　<a href="https://jt-qc.com/product-pages?p_id=35">介紹網站</a></dd>
 <dt>2022/11 - 2022/12</dt>
 <dd>阿拉丁教學平台入口　<a href="https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII">GoolgPlay</a></dd>
 <dt>2022/11 - 2023/02</dt>
@@ -177,7 +177,7 @@
 <dt>2021/05 - 2021/08</dt>
 <dd>年長者失智預防 環遊世界</dd>
 <dt>2021/09 - 2023/07</dt>
-<dd>雲林好 Young　<a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap">GoolgPlay</a>　<a href="https://youtu.be/e3VVoea3EBg">Youtube</a></dd>
+<dd>雲林好 Young 　<a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap">GoolgPlay</a>　<a href="https://youtu.be/e3VVoea3EBg">Youtube</a></dd>
 <dt>2021/08 - 2021/11</dt>
 <dd>FunPark 玩童書　<a href="https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.Company.FunPark">GoolgPlay</a></dd>
 </dl>
@@ -188,7 +188,7 @@
 <dt>2020/05 - 2023/07</dt>
 <dd>Fingerprints 教學系統　<a href="https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.FingerPrints">GoolgPlay</a></dd>
 <dt>2020/08 - 2020/10</dt>
-<dd>鈎GO釣手　<a href="https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish">GoolgPlay</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
+<dd>鈎 GO 釣手　<a href="https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish">GoolgPlay</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
 <dt>2020/11 - 2021/05</dt>
 <dd>細胞分裂、減數分裂與生物的遺傳　<a href="https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance">GoolgPlay</a></dd>
 </dl>
@@ -203,29 +203,29 @@
 <dt>2019/11 - 2020/12</dt>
 <dd>越語致用　<a href="https://youtu.be/crGavyM_Cjs">Youtube</a></dd>
 <dt>2019/10 - 2019/11</dt>
-<dd>震銲AR　<a href="https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=59">介紹網站</a></dd>
+<dd>震銲 AR 　<a href="https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=59">介紹網站</a></dd>
 <dt>2019/12 - 2022/12</dt>
-<dd>英語村_VR　<a href="https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp">GoolgPlay</a></dd>
+<dd>英語村_VR 　<a href="https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp">GoolgPlay</a></dd>
 </dl>
 <h2 id="2018">2018</h2>
 <dl>
 <dt>2018/05 - 2023/07</dt>
-<dd>QC Cube　<a href="https://apps.apple.com/tw/app/qc-cube/id1480811031">AppleStore</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
+<dd>QC Cube 　<a href="https://apps.apple.com/tw/app/qc-cube/id1480811031">AppleStore</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
 <dt>2018/05 - 2018/12</dt>
 <dd>風華再現千里眼　<a href="https://play.google.com/store/apps/details?id=com.ouorange.Fenghua">GoolgPlay</a></dd>
 <dt>2018/06 - 2023/02</dt>
-<dd>新尋寶記_AR　<a href="https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=27">介紹網站</a></dd>
+<dd>新尋寶記_AR 　<a href="https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=27">介紹網站</a></dd>
 <dt>2018/08 - 2023/04</dt>
-<dd>新悠遊記_360VR　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=28">介紹網站</a></dd>
+<dd>新悠遊記_360VR 　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=28">介紹網站</a></dd>
 </dl>
 <h2 id="2017">2017</h2>
 <dl>
 <dt>2017/03 - 2020/02</dt>
 <dd>康軒動課本　<a href="https://youtu.be/rr3BgsDc4BA">Youtube</a>　<a href="https://jt-qc.com/works-pages?w_id=30">介紹網站</a></dd>
 <dt>2017/05 - 2018/11</dt>
-<dd>VR妙視界：大地的撼動　<a href="https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.VR0003">GoolgPlay</a></dd>
+<dd>VR 妙視界：大地的撼動　<a href="https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.VR0003">GoolgPlay</a></dd>
 <dt>2017/05 - 2018/06</dt>
-<dd>VR妙視界：微太空之旅　<a href="https://www.facebook.com/JTQCDE/posts/379486789313837/?paipv=0&amp;eav=AfbMwPAYhGyCDqtOaD1t8b09DUPMKcgX17RyYcqf9cLKpjW0SmB3t__QNrWEfmnna_8&amp;_rdr">介紹網站</a></dd>
+<dd>VR 妙視界：微太空之旅　<a href="https://www.facebook.com/JTQCDE/posts/379486789313837/?paipv=0&amp;eav=AfbMwPAYhGyCDqtOaD1t8b09DUPMKcgX17RyYcqf9cLKpjW0SmB3t__QNrWEfmnna_8&amp;_rdr">介紹網站</a></dd>
 </dl>
 <h2 id="2016">2016</h2>
 <dl>

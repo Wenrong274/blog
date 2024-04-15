@@ -6,11 +6,11 @@
     <description>Recent content in C# on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 04 Nov 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/c#/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Whitelist for Windows UAC</title>
       <link>https://wenrongdev.com/posts/whitelist-for-windows-uac/</link>
-      <pubDate>Mon, 04 Nov 2019 00:00:00 +0800</pubDate>
+      <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
       <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
@@ -23,7 +23,7 @@
 <li>不可完全關閉 Windows UAC</li>
 </ol>
 <h2 id="解決方式">解決方式</h2>
-<p>根據<a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
+<p>根據<a href="https://www.taode.idv.tw/wordpress/?p=639">不變更 UAC 安全性，但執行程式時又不擾民的設定方式</a>，可以在 Windows Regedit 新增白名單。</p>
 <ol>
 <li>Win+R 輸入 regedit 執行</li>
 <li>根據此路徑尋找 <code>HKEY_CURRENT_USERS\Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers</code></li>
@@ -52,7 +52,7 @@
 <h3 id="使用方式">使用方式</h3>
 <p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
 <h2 id="參考資料">參考資料</h2>
-<p><a href="https://www.taode.idv.tw/wordpress/?p=639">不變更UAC安全性，但執行程式時又不擾民的設定方式</a></p>
+<p><a href="https://www.taode.idv.tw/wordpress/?p=639">不變更 UAC 安全性，但執行程式時又不擾民的設定方式</a></p>
 <hr>
 ]]></content:encoded>
     </item>

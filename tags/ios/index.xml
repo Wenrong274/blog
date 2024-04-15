@@ -6,11 +6,11 @@
     <description>Recent content in iOS on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 08 Mar 2023 02:00:38 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
       <link>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</link>
-      <pubDate>Wed, 08 Mar 2023 02:00:38 +0800</pubDate>
+      <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</guid>
       <description>write something</description>
@@ -36,7 +36,7 @@
     <item>
       <title>Install IPA With OTA</title>
       <link>https://wenrongdev.com/posts/install-ipa-with-ota/</link>
-      <pubDate>Thu, 10 Oct 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
       <description>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</description>
@@ -114,7 +114,7 @@
 <p>得到 Github Website <code>index.html</code>就可以安裝 <code>.ipa</code></p>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://medium.com/@lefty./itunes-12-7-%E7%A7%BB%E9%99%A4%E4%BA%86-apps-%E7%9A%84%E9%81%B8%E9%A0%85-%E6%88%91%E8%A9%B2%E5%A6%82%E4%BD%95%E5%AE%89%E8%A3%9D-ipa-%E6%AA%94%E6%A1%88%E5%88%B0-ios-%E8%A3%9D%E7%BD%AE-2cad1d35d017">iTunes 12.7 移除了 Apps 的選項，我該如何安裝 .ipa 檔案到 iOS 裝置？</a></p>
-<p><a href="https://www.dropbox.com">從網路上下載ipa檔並且安裝在iPhone or iPad(Download and install an ipa from url on iOS)</a></p>
+<p><a href="https://www.dropbox.com">從網路上下載 ipa 檔並且安裝在 iPhone or iPad(Download and install an ipa from url on iOS)</a></p>
 <p><a href="https://stackoverflow.com/questions/22658987/error-when-distributing-an-ipa-over-the-air-with-dropbox-ios-7-1/25302392#25302392">Error when distributing an IPA over the air with dropbox - iOS 7.1</a></p>
 <p><a href="https://gitbook.tw/chapters/github/using-github-pages.html">使用 GitHub 免費製作個人網站</a></p>
 <hr>

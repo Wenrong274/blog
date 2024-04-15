@@ -6,16 +6,16 @@
     <description>Recent content in tool on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Fri, 20 Oct 2023 15:47:17 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wix Examples</title>
       <link>https://wenrongdev.com/posts/wixexamples/</link>
-      <pubDate>Fri, 20 Oct 2023 15:47:17 +0800</pubDate>
+      <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/wixexamples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
-<p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
+<p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
 <h3 id="輸出-wix-文件方法">輸出 Wix 文件方法</h3>
 <p>先到 <a href="https://github.com/wixtoolset/wix3/releases">WiX Toolset Release</a> 安裝需要的工具。</p>
 <p>需要開啟 <a href="https://zh.wikipedia.org/zh-tw/cmd.exe">CMD</a> 且必須要用<code>工作管理員權限</code>打開，之後 cd 到 WiX Toolset 的安裝資料夾。</p>
@@ -98,7 +98,7 @@
 </code></pre><h3 id="githubgithub"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world">用 WiX 制作安装包：创建一个简单的 msi 安装包</a></p>
-<p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
+<p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
 <p><a href="https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_uninstall_shortcut/">Create an Uninstall Shortcut</a></p>
 <p><a href="https://wixtoolset.org/docs/v3/howtos/files_and_registry/create_start_menu_shortcut/">Create a Shortcut on the Start Menu</a></p>
 <p><a href="https://stackoverflow.com/a/17513551">Removing files when uninstalling WiX</a></p>
@@ -109,7 +109,7 @@
     <item>
       <title>Example Inno Setup</title>
       <link>https://wenrongdev.com/posts/example-inno-setup/</link>
-      <pubDate>Thu, 19 Dec 2019 00:00:00 +0800</pubDate>
+      <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
       <description>簡易使用 Inno Setup 打包教學。</description>
@@ -170,7 +170,7 @@ MyAppVerName = {#MyAppName} %1
 
 [Messages]
 BeveledLabel = {#MyAppURL}
-  
+
 [Dirs]
 Name: &quot;{app}&quot;; Permissions: everyone-full
 
@@ -336,7 +336,7 @@ end;
 </tr>
 <tr>
 <td style="text-align:left">MyAppName</td>
-<td style="text-align:left">桌面路徑名稱  。</td>
+<td style="text-align:left">桌面路徑名稱 。</td>
 </tr>
 <tr>
 <td style="text-align:left">MyAppFolder</td>

@@ -6,11 +6,11 @@
     <description>Recent content in DevOps on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 25 Feb 2020 02:05:19 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Jenkins Build</title>
       <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
-      <pubDate>Tue, 25 Feb 2020 02:05:19 +0800</pubDate>
+      <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
@@ -41,7 +41,7 @@
 <p><code>Name</code>：unity version</p>
 <p><code>Installation directory</code>：unity installed path</p>
 <h3 id="jenkins-item">Jenkins item</h3>
-<p>基本設置可參考 <a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a> 介紹。</p>
+<p>基本設置可參考 <a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a> 介紹。</p>
 <p>最主要是設定 <code>Editor command line arguments</code>。</p>
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
@@ -53,7 +53,7 @@
 </p>
 <h2 id="github-repogithub"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
 <h2 id="reference">reference</h2>
-<p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用jenkins建置unity3d專案</a></p>
+<p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a></p>
 <p><a href="https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/">Jenkins for Unity with DigitalOcean</a></p>
 <hr>
 ]]></content:encoded>

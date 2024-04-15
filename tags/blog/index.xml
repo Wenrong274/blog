@@ -6,11 +6,11 @@
     <description>Recent content in Blog on Wenrong&#39;s Note</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 28 Feb 2022 01:14:39 +0800</lastBuildDate><atom:link href="https://wenrongdev.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrongdev.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog 心得（3）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-3/</link>
-      <pubDate>Mon, 28 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-3/</guid>
       <description>使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。</description>
@@ -63,14 +63,14 @@ placeholder: &#34;placeholder text in search input box&#34;
 </code></pre></div><h4 id="comments">Comments</h4>
 <p>此功能是參考 <a href="https://ithelp.ithome.com.tw/articles/10248312">Day 20. Hugo Comments System</a> 文章製作出來的。</p>
 <h2 id="github-action">Github Action</h2>
-<p>有使用 Custom domain 的話，且 workflows 沒有設定 domain的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
+<p>有使用 Custom domain 的話，且 workflows 沒有設定 domain 的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
 <h3 id="github-pages-workflowyml">GitHub Pages workflow.yml</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yml" data-lang="yml"><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
 
 <span style="color:#f92672">on</span>:
   <span style="color:#f92672">push</span>:
     <span style="color:#f92672">branches</span>:
-      - <span style="color:#ae81ff">main </span> <span style="color:#75715e"># Set a branch to deploy</span>
+      - <span style="color:#ae81ff">main</span> <span style="color:#75715e"># Set a branch to deploy</span>
   <span style="color:#f92672">pull_request</span>:
 
 <span style="color:#f92672">jobs</span>:
@@ -81,13 +81,13 @@ placeholder: &#34;placeholder text in search input box&#34;
     <span style="color:#f92672">steps</span>:
       - <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">actions/checkout@v2</span>
         <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span>  <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
-          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
+          <span style="color:#f92672">submodules</span>: <span style="color:#66d9ef">true</span> <span style="color:#75715e"># Fetch Hugo themes (true OR recursive)</span>
+          <span style="color:#f92672">fetch-depth</span>: <span style="color:#ae81ff">0</span> <span style="color:#75715e"># Fetch all history for .GitInfo and .Lastmod</span>
 
       - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Setup Hugo</span>
         <span style="color:#f92672">uses</span>: <span style="color:#ae81ff">peaceiris/actions-hugo@v2</span>
         <span style="color:#f92672">with</span>:
-          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#39;0.91.2&#39;</span>
+          <span style="color:#f92672">hugo-version</span>: <span style="color:#e6db74">&#34;0.91.2&#34;</span>
           <span style="color:#75715e"># extended: true</span>
 
       - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">Build</span>
@@ -116,7 +116,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Blog 心得（2）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-2/</link>
-      <pubDate>Mon, 21 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-2/</guid>
       <description>Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。</description>
@@ -154,7 +154,7 @@ placeholder: &#34;placeholder text in search input box&#34;
     <item>
       <title>Blog 心得（1）</title>
       <link>https://wenrongdev.com/posts/reflection-blog-1/</link>
-      <pubDate>Mon, 14 Feb 2022 01:14:39 +0800</pubDate>
+      <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
       
       <guid>https://wenrongdev.com/posts/reflection-blog-1/</guid>
       <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。</description>
