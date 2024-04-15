@@ -1,6 +1,6 @@
 ---
 title: "心得 模板模式"
-date: 2024-04-10
+date: 2024-03-18
 description: "主要是針對深入淺出設計模式書籍，提到的模板模式的心得。"
 keywords: ["Design Pattern", "Composite Pattern"]
 draft: false
