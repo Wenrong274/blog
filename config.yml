@@ -9,7 +9,6 @@ enableEmoji: true # 允许使用 Emoji 表情，建议 true
 enableRobotsTXT: true
 hasCJKLanguage: true
 
-
 buildDrafts: false
 buildFuture: false
 buildExpired: false
@@ -18,141 +17,139 @@ googleAnalytics: G-GRV3BQC1BQ
 disqusShortname: wenrongdev
 
 minify:
-    disableXML: true
-   # minifyOutput: true
+  disableXML: true
+  # minifyOutput: true
 
 taxonomies:
   tag: "tags"
   series: "series"
 
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  title: Wenrong's Note
+  description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
+  keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
+  # author: ["Me", "You"] # multiple authors
+  #images: ["<link or path of image for opengraph, twitter-cards>"]
+
+  defaultTheme: auto # dark, light
+  disableThemeToggle: false
+  ShowShareButtons: true
+  ShowReadingTime: true
+  # disableSpecial1stPost: true
+  displayFullLangName: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowFullTextinRSS: true
+
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: true
+  hidemeta: false
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+
+  assets:
+    # disableHLJS: true # to disable highlight.js
+    # disableFingerprinting: true
+    favicon: "/favicon.ico"
+    favicon16x16: "/favicon-16x16.png"
+    favicon32x32: "/favicon-32x32.png"
+    apple_touch_icon: "/apple-touch-icon.png"
+    safari_pinned_tab: "/safari-pinned-tab.svg"
+
+  label:
+    text: "Wenrong's Note"
+    # icon: logo.png
+    # iconHeight: 28
+
+  # profile-mode
+  profileMode:
+    enabled: false # needs to be explicitly set
     title: Wenrong's Note
-    description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
-    keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
-    # author: ["Me", "You"] # multiple authors
-    #images: ["<link or path of image for opengraph, twitter-cards>"]
-    
-    defaultTheme: auto # dark, light
-    disableThemeToggle: false
-    DateFormat: "2006-01-02"
-    ShowShareButtons: true
-    ShowReadingTime: true
-    # disableSpecial1stPost: true
-    displayFullLangName: true
-    ShowPostNavLinks: true
-    ShowBreadCrumbs: true
-    ShowCodeCopyButtons: true
-    ShowFullTextinRSS: true 
-    
-    disableSpecial1stPost: false
-    disableScrollToTop: false
-    comments: true
-    hidemeta: false
-    hideSummary: false
-    showtoc: false
-    tocopen: false
+    subtitle: "This is subtitle"
+    imageUrl: "<img location>"
+    imageWidth: 120
+    imageHeight: 120
+    imageTitle: my image
+    buttons:
+      - name: Posts
+        url: posts
+      - name: Tags
+        url: tags
 
-    assets:
-        # disableHLJS: true # to disable highlight.js
-        # disableFingerprinting: true
-        favicon: "/favicon.ico"
-        favicon16x16:  "/favicon-16x16.png"
-        favicon32x32:  "/favicon-32x32.png"
-        apple_touch_icon:  "/apple-touch-icon.png"
-        safari_pinned_tab:  "/safari-pinned-tab.svg"
+  # home-info mode
+  homeInfoParams:
+    Title: "Hi 歡迎來到焦油坑"
+    Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
 
-    label:
-        text: "Wenrong's Note"
-       # icon: logo.png
-       # iconHeight: 28
+  socialIcons:
+    - name: cv
+      url: "/profile/cv_wenrong.pdf"
+    - name: github
+      url: "https://github.com/Wenrong274"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/wen-rong-huang-032b69187/"
+    - name: email
+      url: "mailto:hybrid0930@gmail.com"
+    - name: rss # Shows an RSS feed icon on your site`
+      url: "index.xml" # Your RSS feed url path
+  analytics:
+    google:
+      SiteVerificationTag: "XYZabc"
+    bing:
+      SiteVerificationTag: "XYZabc"
+    yandex:
+      SiteVerificationTag: "XYZabc"
 
-    # profile-mode
-    profileMode:
-        enabled: false # needs to be explicitly set
-        title: Wenrong's Note
-        subtitle: "This is subtitle"
-        imageUrl: "<img location>"
-        imageWidth: 120
-        imageHeight: 120
-        imageTitle: my image
-        buttons:
-            - name: Posts
-              url: posts
-            - name: Tags
-              url: tags
+  cover:
+    hidden: true # hide everywhere but not in structured data
+    hiddenInList: true # hide on list pages and home
+    hiddenInSingle: true # hide on single page
 
-    # home-info mode
-    homeInfoParams:
-        Title: "Hi 歡迎來到焦油坑"
-        Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
+  editPost:
+    URL: "https://github.com/Wenrong274/blog/tree/main/content"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
 
-    socialIcons:
-        - name: cv
-          url: "/profile/cv_wenrong.pdf"
-        - name: github
-          url: "https://github.com/Wenrong274"
-        - name: linkedin
-          url: "https://www.linkedin.com/in/wen-rong-huang-032b69187/"
-        - name: email
-          url: "mailto:hybrid0930@gmail.com"
-        - name: rss # Shows an RSS feed icon on your site`
-          url: "index.xml" # Your RSS feed url path
-    analytics:
-        google:
-            SiteVerificationTag: "XYZabc"
-        bing:
-            SiteVerificationTag: "XYZabc"
-        yandex:
-            SiteVerificationTag: "XYZabc"
-
-    cover:
-        hidden: true # hide everywhere but not in structured data
-        hiddenInList: true # hide on list pages and home
-        hiddenInSingle: true # hide on single page
-
-    editPost:
-        URL: "https://github.com/Wenrong274/blog/tree/main/content"
-        Text: "Suggest Changes" # edit text
-        appendFilePath: true # to append file path to Edit link
-
-    # for search
-    # https://fusejs.io/api/options.html
-    fuseOpts:
-        isCaseSensitive: false
-        shouldSort: true
-        location: 0
-        distance: 1000
-        threshold: 0.4
-        minMatchCharLength: 0
-        keys: ["title", "permalink", "summary", "content"]
+  # for search
+  # https://fusejs.io/api/options.html
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
 menu:
-    main:
-        - identifier: search
-          name: Search
-          url: /search/
-          weight: 1
-        - identifier: home
-          name: Home
-          url: /
-          weight: 2
-        - identifier: posts
-          name: Posts
-          url: posts
-          weight: 3
-        - identifier: tags
-          name: Tags
-          url: tags
-          weight: 15
-        - identifier: archives
-          name: Archives
-          url: archives/
-          weight: 20
-        - identifier: about
-          name: About
-          url: profile/about/
-          weight: 50
-
+  main:
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 1
+    - identifier: home
+      name: Home
+      url: /
+      weight: 2
+    - identifier: posts
+      name: Posts
+      url: posts
+      weight: 3
+    - identifier: tags
+      name: Tags
+      url: tags
+      weight: 15
+    - identifier: archives
+      name: Archives
+      url: archives/
+      weight: 20
+    - identifier: about
+      name: About
+      url: profile/about/
+      weight: 50
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
 # pygmentsUseClasses: true
@@ -165,7 +162,7 @@ menu:
 #         style: monokai
 
 outputs:
-    home:
-        - HTML
-        - RSS
-        - JSON # is necessary
+  home:
+    - HTML
+    - RSS
+    - JSON # is necessary
