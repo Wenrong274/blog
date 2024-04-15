@@ -26,41 +26,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>心得 模板模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-template/</link>
-      <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-template/</guid>
-      <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
-<p>模板模式的<code>骨架</code>可搭配泛型使用，可是不能說使用泛型就是模板模式，主要還是要符合<code>骨架</code>、有不同的<code>方法</code>或<code>流程</code>，這幾個要點來區分。</p>
-<h2 id="掛勾">掛勾</h2>
-<p>掛勾的部分，主要利用掛勾來實現方法職責，讓模板模式彈性更多一些。在模板模式中掛勾主要是用來判斷流程走向。</p>
-<h2 id="模板模式-vs-策略模式">模板模式 vs 策略模式</h2>
-<p>策略模式主要是針對行為來制定，而模板模式使用相同的<code>骨架</code>，實作不同的內容、流程。</p>
-<p>差異會在有沒有相同<code>骨架</code>、<code>流程</code>，在這部分則不是策略模式的重點。</p>
-<p>策略模式主軸是利用抽換不同的介面達到功能效果。</p>
-<h2 id="好萊塢守則-vs-依賴反轉">好萊塢守則 vs 依賴反轉</h2>
-<ul>
-<li>好萊塢守則</li>
-</ul>
-<p>只是思想，即「不要打電話給我們，我們會打給你」。相較於高階模組、低階模組，就沒有強制規定要不要符合，所以才是一種思想而不是一個設計概念。</p>
-<ul>
-<li>依賴反轉原則</li>
-</ul>
-<ol>
-<li>
-<p>高階模組不應該依賴於低階模組，兩者都應該依賴於抽象介面。</p>
-</li>
-<li>
-<p>抽象介面不應該依賴於具體實現。而具體實現則應該依賴於抽象介面。</p>
-</li>
-</ol>
-<p>依賴反轉原則確實符合好萊塢守則的概念。</p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
       <title>心得 狀態模式</title>
       <link>https://wenrongdev.com/posts/designpattern-state/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
@@ -138,6 +103,41 @@
 <p>A：延遲執行，可以在需要使用的時候再呼叫就可。</p>
 <p>Q：假如不懂的話是不是會是一個坑？</p>
 <p>A：非同步執行或感受非同步執行時使用。希望執行這行程式的時候，不要卡死在這邊，延遲執行可以等資料匯入後再執行。不懂的人使用確實會是一個坑。</p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>心得 模板模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-template/</link>
+      <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-template/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
+<p>模板模式的<code>骨架</code>可搭配泛型使用，可是不能說使用泛型就是模板模式，主要還是要符合<code>骨架</code>、有不同的<code>方法</code>或<code>流程</code>，這幾個要點來區分。</p>
+<h2 id="掛勾">掛勾</h2>
+<p>掛勾的部分，主要利用掛勾來實現方法職責，讓模板模式彈性更多一些。在模板模式中掛勾主要是用來判斷流程走向。</p>
+<h2 id="模板模式-vs-策略模式">模板模式 vs 策略模式</h2>
+<p>策略模式主要是針對行為來制定，而模板模式使用相同的<code>骨架</code>，實作不同的內容、流程。</p>
+<p>差異會在有沒有相同<code>骨架</code>、<code>流程</code>，在這部分則不是策略模式的重點。</p>
+<p>策略模式主軸是利用抽換不同的介面達到功能效果。</p>
+<h2 id="好萊塢守則-vs-依賴反轉">好萊塢守則 vs 依賴反轉</h2>
+<ul>
+<li>好萊塢守則</li>
+</ul>
+<p>只是思想，即「不要打電話給我們，我們會打給你」。相較於高階模組、低階模組，就沒有強制規定要不要符合，所以才是一種思想而不是一個設計概念。</p>
+<ul>
+<li>依賴反轉原則</li>
+</ul>
+<ol>
+<li>
+<p>高階模組不應該依賴於低階模組，兩者都應該依賴於抽象介面。</p>
+</li>
+<li>
+<p>抽象介面不應該依賴於具體實現。而具體實現則應該依賴於抽象介面。</p>
+</li>
+</ol>
+<p>依賴反轉原則確實符合好萊塢守則的概念。</p>
 <hr>
 ]]></content:encoded>
     </item>

@@ -17,9 +17,6 @@
     <loc>https://wenrongdev.com/posts/designpattern-proxy/</loc>
     <lastmod>2024-04-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wenrongdev.com/posts/designpattern-template/</loc>
-    <lastmod>2024-04-10T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://wenrongdev.com/posts/designpattern-state/</loc>
     <lastmod>2024-04-10T00:00:00+00:00</lastmod>
   </url><url>
@@ -28,6 +25,9 @@
   </url><url>
     <loc>https://wenrongdev.com/posts/designpattern-iterator/</loc>
     <lastmod>2024-03-26T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/designpattern-template/</loc>
+    <lastmod>2024-03-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/designpattern-facade/</loc>
     <lastmod>2024-03-12T00:00:00+00:00</lastmod>
