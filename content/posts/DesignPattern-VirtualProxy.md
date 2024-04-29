@@ -22,7 +22,7 @@ tags: ["Design Pattern"]
 
 ## WeatherProxy
 
-使用 weather is null 判斷是否成功取得資料，並且 weatherDataTask == null || weatherDataTask.Status != TaskStatus.Running` 來防止重複取得資料。
+使用 weather is null 判斷是否成功取得資料，並且 `weatherDataTask == null || weatherDataTask.Status != TaskStatus.Running` 來防止重複取得資料。
 
 ```C#
     public string GetWeather(string area)
@@ -33,7 +33,7 @@ tags: ["Design Pattern"]
         }
         else
         {
-            if (weatherDataTask == null||weatherDataTask)
+            if (weatherDataTask == null|| weatherDataTask.Status != TaskStatus.Running)
             {
                 weatherDataTask = Task.Run(FetchWeatherData);
             }
@@ -66,7 +66,7 @@ public class WeatherProxy : IWeather
         }
         else
         {
-            if (weatherDataTask == null)
+            if (weatherDataTask == null|| weatherDataTask.Status != TaskStatus.Running)
             {
                 weatherDataTask = Task.Run(FetchWeatherData);
             }
