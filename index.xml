@@ -6,8 +6,91 @@
     <description>Recent content on Wenrong&#39;s Note</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Mon, 15 Apr 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2024 00:39:46 +0800</lastBuildDate>
     <atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>心得 虛擬代理模式</title>
+      <link>https://wenrongdev.com/posts/designpattern-virtualproxy/</link>
+      <pubDate>Tue, 30 Apr 2024 00:39:46 +0800</pubDate>
+      <guid>https://wenrongdev.com/posts/designpattern-virtualproxy/</guid>
+      <description>主要是針對深入淺出設計模式書籍，提到的代理模式的心得。</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>這篇主要是在講虛擬代理人的實作部分。</p>
+<p>實作的主題的方向是讀取<a href="https://opendata.cwa.gov.tw">中央氣象署</a>的氣象資訊。利用中央氣象署的 <a href="https://opendata.cwa.gov.tw/dist/opendata-swagger.html">API</a> 呼叫後，取得氣象資訊，並且在等待回應時實作虛擬代理設計。</p>
+<h2 id="uml--build">UML &amp; Build</h2>
+<p><img loading="lazy" src="https://i.imgur.com/FmnyNhG.png" alt="uml"  />
+</p>
+<p><img loading="lazy" src="https://i.imgur.com/r8KdOgM.png" alt="build"  />
+</p>
+<h2 id="weatherproxy">WeatherProxy</h2>
+<p>使用 weather is null 判斷是否成功取得資料，並且 weatherDataTask == null || weatherDataTask.Status != TaskStatus.Running` 來防止重複取得資料。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> GetWeather(<span style="color:#66d9ef">string</span> area)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (weather != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> weather.GetWeather(area);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (weatherDataTask == <span style="color:#66d9ef">null</span>||weatherDataTask)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                weatherDataTask = Task.Run(FetchWeatherData);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;天氣資料更新中...\n&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>完整程式碼</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherProxy</span> : IWeather
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;summary&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// https://opendata.cwa.gov.tw</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// https://opendata.cwa.gov.tw/dist/opendata-swagger.html</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;/summary&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">string</span> Url = <span style="color:#e6db74">&#34;https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-073&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">string</span> AuthorizationKey = <span style="color:#e6db74">&#34;AuthorizationKey&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">string</span> Format = <span style="color:#e6db74">&#34;JSON&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> IWeather weather;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Task weatherDataTask;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> GetWeather(<span style="color:#66d9ef">string</span> area)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (weather != <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> weather.GetWeather(area);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (weatherDataTask == <span style="color:#66d9ef">null</span>)
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                weatherDataTask = Task.Run(FetchWeatherData);
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;天氣資料更新中...\n&#34;</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">async</span> Task FetchWeatherData()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        weather = <span style="color:#66d9ef">new</span> Weather(<span style="color:#66d9ef">await</span> SendRequest());
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">async</span> Task&lt;Root&gt; SendRequest()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">using</span> var client = <span style="color:#66d9ef">new</span> HttpClient();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> query = HttpUtility.ParseQueryString(<span style="color:#66d9ef">string</span>.Empty);
+</span></span><span style="display:flex;"><span>        query[<span style="color:#e6db74">&#34;Authorization&#34;</span>] = AuthorizationKey;
+</span></span><span style="display:flex;"><span>        query[<span style="color:#e6db74">&#34;format&#34;</span>] = Format;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">var</span> builder = <span style="color:#66d9ef">new</span> UriBuilder(Url);
+</span></span><span style="display:flex;"><span>        builder.Query = query.ToString();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> requestUri = builder.ToString();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span> responseJson = <span style="color:#66d9ef">await</span> client.GetStringAsync(requestUri);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">string</span>.IsNullOrEmpty(responseJson) ? <span style="color:#66d9ef">null</span> : JsonSerializer.Deserialize&lt;Root&gt;(responseJson);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="githubrepo"><a href="https://github.com/Wenrong274/WeatherForecast">GitHub</a></h2>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>心得 代理人模式</title>
       <link>https://wenrongdev.com/posts/designpattern-proxy/</link>
@@ -21,7 +104,7 @@
 <p><code>多人連線後與後端資料同步</code></p>
 <p>不過確實在實作主題選擇有限，尤其遠端代理需要與後端同步資料，在目前公司遊戲的架構是不需要這樣做的。</p>
 <h3 id="q2-需要與後端同步記憶體資料嗎">Q2 需要與後端同步記憶體資料嗎？</h3>
-<p>不一定，<a href="https://docs.oracle.com/javase/tutorial/rmi/">Java RMI</a>]、<a href="https://learn.microsoft.com/zh-tw/dotnet/framework/wcf/?redirectedfrom=MSDN">C# WCF</a>、<a href="https://developer.android.com/develop/background-work/services/aidl?hl=zh-tw">Android AIDL</a> 可以做到同步記憶體資料。</p>
+<p>不一定，<a href="https://docs.oracle.com/javase/tutorial/rmi/">Java RMI</a>、<a href="https://learn.microsoft.com/zh-tw/dotnet/framework/wcf/?redirectedfrom=MSDN">C# WCF</a>、<a href="https://developer.android.com/develop/background-work/services/aidl?hl=zh-tw">Android AIDL</a> 可以做到同步記憶體資料。</p>
 <hr>
 ]]></content:encoded>
     </item>
