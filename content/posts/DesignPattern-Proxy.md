@@ -22,7 +22,7 @@ tags: ["Design Pattern"]
 
 ### Q2 需要與後端同步記憶體資料嗎？
 
-不一定，[Java RMI][RMI]]、[C# WCF][WCF]、[Android AIDL][AIDL] 可以做到同步記憶體資料。
+不一定，[Java RMI][RMI]、[C# WCF][WCF]、[Android AIDL][AIDL] 可以做到同步記憶體資料。
 
 ---
 
