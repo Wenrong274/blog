@@ -2,16 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wenrongdev.com/tags/design-pattern/</loc>
-    <lastmod>2024-04-30T00:39:46+08:00</lastmod>
+    <loc>https://wenrongdev.com/tags/c</loc>
+    <lastmod>2024-06-11T22:38:53+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/posts/csharpvaluetypereferencetype/</loc>
+    <lastmod>2024-06-11T22:38:53+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/</loc>
-    <lastmod>2024-04-30T00:39:46+08:00</lastmod>
+    <lastmod>2024-06-11T22:38:53+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/tags/</loc>
-    <lastmod>2024-04-30T00:39:46+08:00</lastmod>
+    <lastmod>2024-06-11T22:38:53+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/</loc>
+    <lastmod>2024-06-11T22:38:53+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrongdev.com/tags/design-pattern/</loc>
     <lastmod>2024-04-30T00:39:46+08:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/designpattern-virtualproxy/</loc>
@@ -181,9 +187,6 @@
   </url><url>
     <loc>https://wenrongdev.com/posts/example-inno-setup/</loc>
     <lastmod>2019-12-19T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://wenrongdev.com/tags/c</loc>
-    <lastmod>2019-11-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://wenrongdev.com/posts/whitelist-for-windows-uac/</loc>
     <lastmod>2019-11-04T00:00:00+00:00</lastmod>
