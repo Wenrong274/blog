@@ -20,9 +20,10 @@ comments: false
 
 📧 <hybrid0930@gmail.com>
 
-📄 [CV](/profile/cv_wenrong.pdf)
-
 ## 工作經歷
+
+_2023/12 – present_
+: [WANIN](hhttps://www.wanin.tw/)
 
 _2015/11 – 2023/07_
 : [錦田雲端科技](https://jt-qc.com/)
