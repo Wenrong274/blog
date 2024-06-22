@@ -15,7 +15,7 @@
       <guid>https://wenrongdev.com/posts/csharpshallowcopyanddeepcopy/</guid>
       <description>C# 淺複製與深複製</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>之前有講到 <a href=".../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
+<p>之前有講到 <a href="../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
 <h2 id="淺複製">淺複製</h2>
 <p>將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Refetence Type 都是參考到同一 instance。</p>
 <h3 id="淺複製方式">淺複製方式</h3>
@@ -61,7 +61,7 @@
 </span></span></code></pre></div><p>輸出結果</p>
 <p><code>Origin: Sam, 20, 456 Main St, Taiwan</code></p>
 <p><code>Copy: John, 30, 456 Main St, Taiwan</code></p>
-<p><code>Name</code> 是 String，可是沒有跟著改變，可以先看<a href=".../CSharpReferenceTypeString">C# Reference Type String</a>這篇。</p>
+<p><code>Name</code> 是 String，可是沒有跟著改變，可以先看<a href="../CSharpReferenceTypeString">C# Reference Type String</a>這篇。</p>
 <p><code>Age</code> 是 int，也是 Value Type，所以會改變。</p>
 <p><code>Address</code> 是 class 是 Reference Type，因為淺複製的關係導致他們（Origin、Copy）有一起改變</p>
 <h2 id="深複製">深複製</h2>
@@ -112,7 +112,9 @@
 </span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Origin: {origin.Name}, {origin.Age}, {origin.Address.Street}, {origin.Address.City}&#34;</span>);
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// Copy: John, 30, 456 Main St, Taiwan</span>
 </span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.Address.City}&#34;</span>);
-</span></span></code></pre></div><p>與淺複製的差異，深複製的 <code>Address</code> 欄位也會產生新的 instance，在修改 <code>copy.Address</code> 時，不會影響到 <code>origin.Address</code>。</p>
+</span></span></code></pre></div><p><code>Origin: Sam, 20, 123 Main St, Anytown</code></p>
+<p><code>Copy: John, 30, 456 Main St, Taiwan</code></p>
+<p>與淺複製的差異，深複製的 <code>Address</code> 欄位也會產生新的 instance，在修改 <code>copy.Address</code> 時，不會影響到 <code>origin.Address</code>。</p>
 <h2 id="參考連結">參考連結</h2>
 <p><a href="https://dotblogs.com.tw/lazycodestyle/2016/06/18/183737">C# 複製物件的方式比較</a></p>
 <hr>
@@ -178,7 +180,7 @@
       <guid>https://wenrongdev.com/posts/csharpclassandstruct/</guid>
       <description>C# Class 和 Struct 選擇</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>之前有講到 <a href=".../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
+<p>之前有講到 <a href="../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
 <p>從上一篇的文章中可以知道 Class 是 Reference type，而 Struct 是 Value type。</p>
 <h2 id="如何選擇">如何選擇</h2>
 <p>根據<a href="https://learn.microsoft.com/zh-tw/dotnet/standard/design-guidelines/choosing-between-class-and-struct">在類別和結構之間選擇</a></p>
