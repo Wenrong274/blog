@@ -14,7 +14,7 @@ Unity 調整 Android、iOS 系統亮度功能。
 
 ## 使用方式
 
-```C#
+```CSharp
 Dimmer.SetBrightness.DoAction(value);
 ```
 

@@ -16,7 +16,7 @@ tags: ["Unity"]
 
 利用 [GetSystemDefaultLCID](https://docs.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid) 取得本機端語系，再利用 [CultureInfo.GetCultureInfo](https://docs.microsoft.com/zh-tw/dotnet/api/system.globalization.cultureinfo.getcultureinfo?view=netframework-3.5) 轉化為本機端語系文化。
 
-```C#
+```CSharp
 [DllImport("kernel32.dll")]
 ```
 
@@ -26,7 +26,7 @@ tags: ["Unity"]
 
 直接呼叫原生系統 API 取得。
 
-```C#
+```CSharp
 private static string CurrentAndroidLanguage()
  {
      string result = "";
@@ -85,7 +85,7 @@ private static string CurrentAndroidLanguage()
 
 在 C# 寫出 CurIOSLang 的接口
 
-```C#
+```CSharp
 [DllImport("__Internal")]
 private static extern string CurIOSLang();
 ```

@@ -34,7 +34,7 @@ tags: [Unity]
 "$(ProjectPath)" -g "$(File)":$(Line):$(Column)
 ```
 
-```C#
+```CSharp
 startInfo.Arguments = $"{projectPath} -g {fileName}";
 ```
 
@@ -42,7 +42,7 @@ startInfo.Arguments = $"{projectPath} -g {fileName}";
 
 詳細的方法可以參考 [Sublime Text & Unity Shader][ref_1]。
 
-```C#
+```CSharp
 public class OpenShaderForVSCodeEditor
 {
     [UnityEditor.Callbacks.OnOpenAsset(0)]

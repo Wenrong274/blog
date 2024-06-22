@@ -22,7 +22,7 @@ tags: [Unity]
 
 ## Load Asset
 
-```C#
+```CSharp
 IEnumerator InstantiateAsset(string asset)
 {
     AsyncOperationHandle<GameObject> async = asset.LoadAssetAsync<GameObject>();
@@ -52,7 +52,7 @@ IEnumerator InstantiateAsset(AssetReference asset)
 
 釋放掉 Asset 也記得要把物件`刪除`，不然場上會遺留破圖的物件。
 
-```C#
+```CSharp
 private void ReleaseAsset(AsyncOperationHandle<T> async)
 {
     Addressables.Release(async);

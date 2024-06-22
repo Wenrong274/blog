@@ -32,7 +32,7 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
 
 需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 `Application.absoluteURL` 才能讀取道 deep link 的資料。`Application.deepLinkActivated` 部分則是 app 的 deep link feedback。
 
-```C#
+```CSharp
     private void Awake()
     {
         Application.deepLinkActivated += OnDeepLinkActivated;
@@ -45,7 +45,7 @@ DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可
 
 拆解 Deep link 夾帶的參數，格式大概與 web 的 url get 類似，可以用這種方式去解析，夾帶的參數。
 
-```C#
+```CSharp
     private void OnDeepLinkActivated(string url)
     {
         string[] urlArg = url.Split('?');

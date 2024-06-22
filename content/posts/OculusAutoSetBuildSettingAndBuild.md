@@ -16,7 +16,7 @@ tags: ["Unity"]
 
 可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。
 
-```C#
+```CSharp
 private static void SetOculusXRLoader(BuildTargetGroup buildTarget, bool active)
 {
     XRGeneralSettingsPerBuildTarget buildTargetSettings = null;
@@ -36,7 +36,7 @@ private static void SetOculusXRLoader(BuildTargetGroup buildTarget, bool active)
 
 利用這段自動輸出，options 可以設定 `BuildOptions.None`、`BuildOptions.AutoRunPlayer`，一般的 Build 和 Build and Run。
 
-```C#
+```CSharp
 private static void BuildRelease(string Path, BuildTarget Target, BuildOptions options)
 {
     Console.Clear();

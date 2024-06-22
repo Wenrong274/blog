@@ -18,7 +18,7 @@ tags: [Unity]
 
 官方範例提供的下載方式 [Addressables.LoadAsset(s)Async][ref_LoadingAddressableAssets]，雖然這個是要把 Asset 讀取出來，其實他也有下載功能
 
-```C#
+```CSharp
     Addressables.LoadAssetAsync<GameObject>(asset);
 ```
 
@@ -26,7 +26,7 @@ tags: [Unity]
 
 ## Update Addressable Name/ Addressable Label
 
-```C#
+```CSharp
 IEnumerator UpdateAsset(string asset)
 {
     var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false);
@@ -45,7 +45,7 @@ IEnumerator UpdateAsset(string asset)
 
 ## Update Asset Reference
 
-```C#
+```CSharp
 IEnumerator UpdateAsset(AssetReference asset)
 {
     var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false);
@@ -62,7 +62,7 @@ IEnumerator UpdateAsset(AssetReference asset)
 
 ## Update Multiple Asset References
 
-```C#
+```CSharp
 IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 {
     var assetKeys = assets.Cast<AssetReference>();
@@ -76,7 +76,7 @@ IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 
 ## 取得下載容量大小方法
 
-```C#
+```CSharp
 IEnumerator CheckSizeAsync(string asset)
 {
     var async = Addressables.GetDownloadSizeAsync(asset);
@@ -92,7 +92,7 @@ IEnumerator CheckSizeAsync(string asset)
 
 ## 更新進度條寫法
 
-```C#
+```CSharp
 IEnumerator UpdateAsset(AssetReference asset)
 {
     var downloadAsync = Addressables.DownloadDependenciesAsync(asset, false);

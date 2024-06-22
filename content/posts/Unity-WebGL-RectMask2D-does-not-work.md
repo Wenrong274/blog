@@ -20,7 +20,7 @@ tags: ["Unity"]
 
 ### Script
 
-```C#
+```CSharp
 public class FixRectMask2dWebGL : MonoBehaviour
 {
 #if PlatformWebGL

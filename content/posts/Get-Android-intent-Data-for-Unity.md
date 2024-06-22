@@ -16,7 +16,7 @@ tags: ["Unity"]
 
 ### Demo Script
 
-```C#
+```CSharp
 private class PropertyInfo
 {
     public string elementA = string.Empty;

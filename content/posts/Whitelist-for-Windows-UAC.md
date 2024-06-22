@@ -5,7 +5,7 @@ summary: "為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也
 keywords: ["C#"]
 draft: false
 showtoc: true
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 ## 前言
@@ -28,7 +28,7 @@ tags: ["C#"]
 
 ## C# 解決方式
 
-```C#
+```CSharp
 public class RegEditWhiteList
 {
     public string keyName { get; set; }

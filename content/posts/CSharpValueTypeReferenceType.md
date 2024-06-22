@@ -5,7 +5,7 @@ description: "討論 C# Value Type、Reference Type 的差異"
 keywords: ["C#", "Reference Type", "Value Type"]
 draft: false
 showtoc: true
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 ## 前言

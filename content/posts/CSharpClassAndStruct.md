@@ -5,7 +5,7 @@ description: "C# Class 和 Struct 選擇"
 keywords: ["C#", "Class", "Struct", "Reference Type", "Value Type"]
 draft: false
 showtoc: true
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 ## 前言

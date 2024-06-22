@@ -5,7 +5,7 @@ description: "淺談 C# Reference Type String"
 keywords: ["C#", "Reference Type", "Value Type", "String"]
 draft: false
 showtoc: true
-tags: ["C#"]
+tags: ["CSharp"]
 ---
 
 ## 前言
@@ -16,7 +16,7 @@ tags: ["C#"]
 
 Value Type 以 `int` 為舉例
 
-```C#
+```CSharp
 int a = 1;
 int b = a;
 a = 2;
@@ -25,7 +25,7 @@ Console.WriteLine(a == b); // 輸出: false
 
 `b` 並沒有隨著 `a` 改變，看得出 int 是 Value Type。
 
-```C#
+```CSharp
 string str1 = "abc";
 string str2 = str1;
 str1 = "def";
@@ -38,7 +38,7 @@ Console.WriteLine(str1 == str2); // 輸出:  false
 
 使用 `object.ReferenceEquals` 來比較，假如是 Value Type，則會輸出 `false`。
 
-```C#
+```CSharp
 int a = 1;
 int b = 1;
 Console.WriteLine(object.ReferenceEquals(a, b)); // 輸出: false
@@ -46,7 +46,7 @@ Console.WriteLine(object.ReferenceEquals(a, b)); // 輸出: false
 
 `int` 確實是 Value Type，所以會輸出 false。
 
-```C#
+```CSharp
 string str1 = "abc";
 string str2 =  "abc";
 Console.WriteLine(object.ReferenceEquals(str1, str2)); // 輸出: true
@@ -66,7 +66,7 @@ Console.WriteLine(object.ReferenceEquals(str1, str2)); // 輸出: true
 
 - String 對象，若值不等，則其引用地址不等。
 
-```C#
+```CSharp
 string str1 = "abc"; //str1指向記憶體位置 addressA 為 abc
 string str2 = str1; //str2指向記憶體位置 addressA
 str1 = "def"; //str1新指向記憶體位置 addressB 為 def
