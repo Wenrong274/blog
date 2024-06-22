@@ -86,12 +86,8 @@ params:
     Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
 
   socialIcons:
-    - name: cv
-      url: "/profile/cv_wenrong.pdf"
     - name: github
       url: "https://github.com/Wenrong274"
-    - name: linkedin
-      url: "https://www.linkedin.com/in/wen-rong-huang-032b69187/"
     - name: email
       url: "mailto:hybrid0930@gmail.com"
     - name: rss # Shows an RSS feed icon on your site`
