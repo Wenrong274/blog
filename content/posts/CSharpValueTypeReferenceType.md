@@ -2,7 +2,7 @@
 title: "C# Value Type、Reference Type 的差異"
 date: 2024-06-11T22:38:53+08:00
 description: "討論 C# Value Type、Reference Type 的差異"
-keywords: ["Reference Type", "Value Type"]
+keywords: ["C#", "Reference Type", "Value Type"]
 draft: false
 showtoc: true
 tags: ["C#"]
