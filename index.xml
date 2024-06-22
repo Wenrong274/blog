@@ -6,8 +6,61 @@
     <description>Recent content on Wenrong&#39;s Note</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Wed, 12 Jun 2024 22:47:08 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2024 17:40:52 +0800</lastBuildDate>
     <atom:link href="https://wenrongdev.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# Reference Type String</title>
+      <link>https://wenrongdev.com/posts/csharpreferencetypestring/</link>
+      <pubDate>Sat, 22 Jun 2024 17:40:52 +0800</pubDate>
+      <guid>https://wenrongdev.com/posts/csharpreferencetypestring/</guid>
+      <description>淺談 C# Reference Type String</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>之前有提到 <a href=".../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
+<h3 id="比較值">比較值</h3>
+<p>Value Type 以 <code>int</code> 為舉例</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b = a;
+</span></span><span style="display:flex;"><span>a = <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(a == b); <span style="color:#75715e">// 輸出: false</span>
+</span></span></code></pre></div><p><code>b</code> 並沒有隨著 <code>a</code> 改變，看得出 int 是 Value Type。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 = str1;
+</span></span><span style="display:flex;"><span>str1 = <span style="color:#e6db74">&#34;def&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(str1 == str2); <span style="color:#75715e">// 輸出:  false</span>
+</span></span></code></pre></div><p>修改 str1 卻沒有影響到 str2，所以會覺得 string 也是 Value Type(?)。</p>
+<h3 id="比較地址">比較地址</h3>
+<p>使用 <code>object.ReferenceEquals</code> 來比較，假如是 Value Type，則會輸出 <code>false</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b = <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#66d9ef">object</span>.ReferenceEquals(a, b)); <span style="color:#75715e">// 輸出: false</span>
+</span></span></code></pre></div><p><code>int</code> 確實是 Value Type，所以會輸出 false。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 =  <span style="color:#e6db74">&#34;abc&#34;</span>;
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#66d9ef">object</span>.ReferenceEquals(str1, str2)); <span style="color:#75715e">// 輸出: true</span>
+</span></span></code></pre></div><p>比較結果為 true，假如 String 是應該會與 int 的結果一樣會是 false。</p>
+<p>也就是 String 其實是 Reference Type。</p>
+<h2 id="string-為什麼是-reference-type">String 為什麼是 Reference Type</h2>
+<p>這裡面提到兩點</p>
+<ul>
+<li>
+<p>String 對象，若值相同，則其引用地址相同。</p>
+</li>
+<li>
+<p>String 對象，若值不等，則其引用地址不等。</p>
+</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>; <span style="color:#75715e">//str1指向記憶體位置 addressA 為 abc</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 = str1; <span style="color:#75715e">//str2指向記憶體位置 addressA</span>
+</span></span><span style="display:flex;"><span>str1 = <span style="color:#e6db74">&#34;def&#34;</span>; <span style="color:#75715e">//str1新指向記憶體位置 addressB 為 def</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(str1 == str2); <span style="color:#75715e">// 輸出:  false</span>
+</span></span></code></pre></div><h2 id="結論">結論</h2>
+<p>String 特點就是具有不可變性（immutable），一旦 new String 在記憶體(managed heap)上為它分配一塊連續記憶體空間，我們將不能以任何方式對這個 String 進行修改。所有對這個 String 進行各項操作而返回的 String，實際上是另一個重新 new 的 String，其本身並不會產生任何變化。</p>
+<h3 id="string-效能如何">String 效能如何？</h3>
+<p>從上面就可以知道 String 有不可變性，一旦創建了就不能修改值，每次修改 String 都會產生一個新的 String，所以 String 效能比較低。</p>
+<p>所以需要經常性操作 String 可以考慮使用 <a href="https://learn.microsoft.com/zh-tw/dotnet/api/system.text.stringbuilder?view=net-8.0">StringBuilder</a>。</p>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>C# Class 和 Struct 選擇</title>
       <link>https://wenrongdev.com/posts/csharpclassandstruct/</link>
