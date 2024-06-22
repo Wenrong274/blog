@@ -2,7 +2,7 @@
 title: "C# Class 和 Struct 選擇"
 date: 2024-06-12T22:47:08+08:00
 description: "C# Class 和 Struct 選擇"
-keywords: ["C#", "Class", "Struct"]
+keywords: ["C#", "Class", "Struct", "Reference Type", "Value Type"]
 draft: false
 showtoc: true
 tags: ["C#"]
