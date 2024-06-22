@@ -153,6 +153,6 @@ Console.WriteLine($"Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.
 
 ---
 
-[C# Value Type、Reference Type 的差異]: ../CSharpValueTypeReferenceType
-[C# Reference Type String]: ../CSharpReferenceTypeString
+[C# Value Type、Reference Type 的差異]: ../csharpvaluetypereferencetype
+[C# Reference Type String]: ../csharpreferencetypestring
 [C# 複製物件的方式比較]: https://dotblogs.com.tw/lazycodestyle/2016/06/18/183737
