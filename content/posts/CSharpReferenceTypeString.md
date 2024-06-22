@@ -58,7 +58,7 @@ Console.WriteLine(object.ReferenceEquals(str1, str2)); // 輸出: true
 
 ## String 為什麼是 Reference Type
 
-[.NET框架-string是value or reference type?]: https://blog.csdn.net/daigualu/article/details/59096659
+[.NET 框架-string 是 value or reference type?][ref1]
 
 這裡面提到兩點
 
@@ -86,5 +86,5 @@ String 特點就是具有不可變性（immutable），一旦 new String 在記�
 ---
 
 [C# Value Type、Reference Type 的差異]: .../CSharpValueTypeReferenceType
-[.NET框架-string是value or reference type?]: https://blog.csdn.net/daigualu/article/details/59096659
+[ref1]: https://blog.csdn.net/daigualu/article/details/59096659
 [StringBuilder]: https://learn.microsoft.com/zh-tw/dotnet/api/system.text.stringbuilder?view=net-8.0
