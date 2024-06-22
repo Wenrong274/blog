@@ -152,6 +152,7 @@
 </span></span></code></pre></div><p>比較結果為 true，假如 String 是應該會與 int 的結果一樣會是 false。</p>
 <p>也就是 String 其實是 Reference Type。</p>
 <h2 id="string-為什麼是-reference-type">String 為什麼是 Reference Type</h2>
+<p><a href="https://blog.csdn.net/daigualu/article/details/59096659">.NET 框架-string 是 value or reference type?</a></p>
 <p>這裡面提到兩點</p>
 <ul>
 <li>
