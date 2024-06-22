@@ -141,6 +141,10 @@ Console.WriteLine($"Origin: {origin.Name}, {origin.Age}, {origin.Address.Street}
 Console.WriteLine($"Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.Address.City}");
 ```
 
+`Origin: Sam, 20, 123 Main St, Anytown`
+
+`Copy: John, 30, 456 Main St, Taiwan`
+
 與淺複製的差異，深複製的 `Address` 欄位也會產生新的 instance，在修改 `copy.Address` 時，不會影響到 `origin.Address`。
 
 ## 參考連結
@@ -149,6 +153,6 @@ Console.WriteLine($"Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.
 
 ---
 
-[C# Value Type、Reference Type 的差異]: .../CSharpValueTypeReferenceType
-[C# Reference Type String]: .../CSharpReferenceTypeString
+[C# Value Type、Reference Type 的差異]: ../CSharpValueTypeReferenceType
+[C# Reference Type String]: ../CSharpReferenceTypeString
 [C# 複製物件的方式比較]: https://dotblogs.com.tw/lazycodestyle/2016/06/18/183737

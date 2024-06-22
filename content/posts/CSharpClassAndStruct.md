@@ -44,6 +44,6 @@ tags: ["C#"]
 
 ---
 
-[C# Value Type、Reference Type 的差異]: .../CSharpValueTypeReferenceType
+[C# Value Type、Reference Type 的差異]: ../CSharpValueTypeReferenceType
 [一起學 Class and Struct (C#)]: https://hackmd.io/@SuFrank/H1coLlCaq
 [在類別和結構之間選擇]: https://learn.microsoft.com/zh-tw/dotnet/standard/design-guidelines/choosing-between-class-and-struct
