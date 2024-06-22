@@ -6,8 +6,46 @@
     <description>Recent content in Posts on Wenrong&#39;s Note</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Tue, 11 Jun 2024 22:38:53 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Jun 2024 22:47:08 +0800</lastBuildDate>
     <atom:link href="https://wenrongdev.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# Class 和 Struct 選擇</title>
+      <link>https://wenrongdev.com/posts/c</link>
+      <pubDate>Wed, 12 Jun 2024 22:47:08 +0800</pubDate>
+      <guid>https://wenrongdev.com/posts/c</guid>
+      <description>C# Class 和 Struct 選擇</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>之前有講到 <a href=".../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
+<p>從上一篇的文章中可以知道 Class 是 Reference type，而 Struct 是 Value type。</p>
+<h2 id="如何選擇">如何選擇</h2>
+<p>根據<a href="https://learn.microsoft.com/zh-tw/dotnet/standard/design-guidelines/choosing-between-class-and-struct">在類別和結構之間選擇</a></p>
+<blockquote>
+<p>作為經驗規則，架構中大部分的類型應該為類別。 不過，在某些情況下，實值型別的特性會使它更適合使用結構。</p>
+</blockquote>
+<p>可以知道其實大部分時都是使用 Class，但在某些情況下使用 Struct 會比較適合。</p>
+<h3 id="什麼時候使用-struct">什麼時候使用 Struct</h3>
+<p><strong>如果類型的執行個體很小，且通常短期或通常內嵌在其他物件中，請考慮定義結構，而不是類別。</strong></p>
+<p>除非類型具有下列所有特性，否則請「避免」定義結構：</p>
+<ul>
+<li>
+<p>其以邏輯方式表示單一值，類似於基本類型 (int、double 等)。</p>
+</li>
+<li>
+<p>其執行個體大小低於 16 個位元組。</p>
+</li>
+<li>
+<p>類型為不可變，</p>
+</li>
+<li>
+<p>而且不需要經常進行 Box。</p>
+</li>
+</ul>
+<p><strong>在所有其他情況下，您應該將類型定義為類別。</strong></p>
+<h2 id="參考連結">參考連結</h2>
+<p><a href="https://hackmd.io/@SuFrank/H1coLlCaq">一起學 Class and Struct (C#)</a></p>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>C# Value Type、Reference Type 的差異</title>
       <link>https://wenrongdev.com/posts/csharpvaluetypereferencetype/</link>
