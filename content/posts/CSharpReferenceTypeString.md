@@ -52,7 +52,7 @@ string str2 =  "abc";
 Console.WriteLine(object.ReferenceEquals(str1, str2)); // 輸出: true
 ```
 
-比較結果為 true，假如 String 是應該會與 int 的結果一樣會是 false。
+比較結果為 true，假如 String 是 Value Type，應該會與 int 的結果一樣會是 false。
 
 也就是 String 其實是 Reference Type。
 
@@ -73,7 +73,7 @@ str1 = "def"; //str1新指向記憶體位置 addressB 為 def
 Console.WriteLine(str1 == str2); // 輸出:  false
 ```
 
-## 結論
+## String 特點
 
 String 特點就是具有不可變性（immutable），一旦 new String 在記憶體(managed heap)上為它分配一塊連續記憶體空間，我們將不能以任何方式對這個 String 進行修改。所有對這個 String 進行各項操作而返回的 String，實際上是另一個重新 new 的 String，其本身並不會產生任何變化。
 
@@ -82,6 +82,26 @@ String 特點就是具有不可變性（immutable），一旦 new String 在記�
 從上面就可以知道 String 有不可變性，一旦創建了就不能修改值，每次修改 String 都會產生一個新的 String，所以 String 效能比較低。
 
 所以需要經常性操作 String 可以考慮使用 [StringBuilder]。
+
+## 結論
+
+來自 ChatGPT 的解釋
+
+C# String 有以下特性：
+
+- String 有不可變性：一旦創建 string，它的內容就不能被改變。
+
+- 賦值操作的實際行為：當執行 `str = "abc"` 時，實際上是創建了一個新的 string 對象，而不是修改原有的對象。然後，變量 `str` 被重新指向這個新對象。
+
+- 為什麼 str2 不變：當執行 `string str2 = str1` 時，str1 和 str2 確實指向了同一個對象。但是當 str1 被賦予新值時，它指向了一個新對象，而 str2 仍然指向原來的對象。
+
+- 值類型的行為：這種行為看起來很像值類型，但 string 仍然是引用類型。這是因為 string 的不可變性和特殊的內存管理方式。
+
+- 性能和內存管理：這種設計有助於提高性能和簡化內存管理，特別是在字符串被廣泛使用的情況下。
+
+- 字符串池（String Interning）：C#使用字符串池來優化內存使用。相同的字符串字面量會指向內存中的同一位置。
+
+這種行為是 C# 語言設計的一個特點，旨在結合引用類型的靈活性和值類型的一些優勢。它可能看起來有點反直覺，但在實際使用中通常是有益的。
 
 ---
 
