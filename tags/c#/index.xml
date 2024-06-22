@@ -6,8 +6,118 @@
     <description>Recent content in C# on Wenrong&#39;s Note</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 22 Jun 2024 17:40:52 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Jun 2024 19:02:04 +0800</lastBuildDate>
     <atom:link href="https://wenrongdev.com/tags/c" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C# 淺複製與深複製</title>
+      <link>https://wenrongdev.com/posts/csharpshallowcopyanddeepcopy/</link>
+      <pubDate>Sat, 22 Jun 2024 19:02:04 +0800</pubDate>
+      <guid>https://wenrongdev.com/posts/csharpshallowcopyanddeepcopy/</guid>
+      <description>C# 淺複製與深複製</description>
+      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
+<p>之前有講到 <a href=".../CSharpValueTypeReferenceType">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
+<h2 id="淺複製">淺複製</h2>
+<p>將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Refetence Type 都是參考到同一 instance。</p>
+<h3 id="淺複製方式">淺複製方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Street = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> City = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Address Address = <span style="color:#66d9ef">new</span> Address();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Person ShallowCopy()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (Person)<span style="color:#66d9ef">this</span>.MemberwiseClone();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Sam&#34;</span>,
+</span></span><span style="display:flex;"><span>    Age = <span style="color:#ae81ff">20</span>,
+</span></span><span style="display:flex;"><span>    Address = <span style="color:#66d9ef">new</span> Address()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Street = <span style="color:#e6db74">&#34;123 Main St&#34;</span>,
+</span></span><span style="display:flex;"><span>        City = <span style="color:#e6db74">&#34;Anytown&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>Person copy = origin.ShallowCopy();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>copy.Name = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span>copy.Age = <span style="color:#ae81ff">30</span>;
+</span></span><span style="display:flex;"><span>copy.Address.Street = <span style="color:#e6db74">&#34;456 Main St&#34;</span>;
+</span></span><span style="display:flex;"><span>copy.Address.City = <span style="color:#e6db74">&#34;Taiwan&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;Shallow Copy&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Origin: Sam, 20, 456 Main St, Taiwan</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Origin: {origin.Name}, {origin.Age}, {origin.Address.Street}, {origin.Address.City}&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Copy: John, 30, 456 Main St, Taiwan</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.Address.City}&#34;</span>);
+</span></span></code></pre></div><p>輸出結果</p>
+<p><code>Origin: Sam, 20, 456 Main St, Taiwan</code></p>
+<p><code>Copy: John, 30, 456 Main St, Taiwan</code></p>
+<p><code>Name</code> 是 String，可是沒有跟著改變，可以先看<a href=".../CSharpReferenceTypeString">C# Reference Type String</a>這篇。</p>
+<p><code>Age</code> 是 int，也是 Value Type，所以會改變。</p>
+<p><code>Address</code> 是 class 是 Reference Type，因為淺複製的關係導致他們（Origin、Copy）有一起改變</p>
+<h2 id="深複製">深複製</h2>
+<p>ValueType 與<code>淺複製</code>相同，主要差異是<code>深複製</code>的 Reference Type 欄位會產生新的 instance，所以其倆欄位是參考到不同 instance 的。</p>
+<h3 id="深複製方式">深複製方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Street = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> City = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name = <span style="color:#66d9ef">string</span>.Empty;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Age = <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Address Address = <span style="color:#66d9ef">new</span> Address();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Person DeepCopy()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Person clone = (Person)<span style="color:#66d9ef">this</span>.MemberwiseClone();
+</span></span><span style="display:flex;"><span>        clone.Address = <span style="color:#66d9ef">new</span> Address
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            Street = <span style="color:#66d9ef">this</span>.Address.Street,
+</span></span><span style="display:flex;"><span>            City = <span style="color:#66d9ef">this</span>.Address.City
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> clone;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Sam&#34;</span>,
+</span></span><span style="display:flex;"><span>    Age = <span style="color:#ae81ff">20</span>,
+</span></span><span style="display:flex;"><span>    Address = <span style="color:#66d9ef">new</span> Address()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Street = <span style="color:#e6db74">&#34;123 Main St&#34;</span>,
+</span></span><span style="display:flex;"><span>        City = <span style="color:#e6db74">&#34;Anytown&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>Person copy = origin.DeepCopy();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>copy.Name = <span style="color:#e6db74">&#34;John&#34;</span>;
+</span></span><span style="display:flex;"><span>copy.Age = <span style="color:#ae81ff">30</span>;
+</span></span><span style="display:flex;"><span>copy.Address.Street = <span style="color:#e6db74">&#34;456 Main St&#34;</span>;
+</span></span><span style="display:flex;"><span>copy.Address.City = <span style="color:#e6db74">&#34;Taiwan&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">&#34;Shallow Copy&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Origin: Sam, 20, 123 Main St, Anytown</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Origin: {origin.Name}, {origin.Age}, {origin.Address.Street}, {origin.Address.City}&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Copy: John, 30, 456 Main St, Taiwan</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#e6db74">$&#34;Copy: {copy.Name}, {copy.Age}, {copy.Address.Street}, {copy.Address.City}&#34;</span>);
+</span></span></code></pre></div><p>與淺複製的差異，深複製的 <code>Address</code> 欄位也會產生新的 instance，在修改 <code>copy.Address</code> 時，不會影響到 <code>origin.Address</code>。</p>
+<h2 id="參考連結">參考連結</h2>
+<p><a href="https://dotblogs.com.tw/lazycodestyle/2016/06/18/183737">C# 複製物件的方式比較</a></p>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>C# Reference Type String</title>
       <link>https://wenrongdev.com/posts/csharpreferencetypestring/</link>
