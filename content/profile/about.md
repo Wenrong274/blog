@@ -16,7 +16,7 @@ comments: false
 
 ## 聯絡方式
 
-📧 <hybrid0930@gmail.com>
+📧 <me@wenrong-nexus.com>
 
 ## 工作經歷
 

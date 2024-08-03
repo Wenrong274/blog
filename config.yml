@@ -1,6 +1,6 @@
 baseURL: "https://wenrongdev.com/"
 languageCode: zh # en-us
-title: Wenrong's Note
+title: Wenrong Nexus
 paginate: 5
 theme: PaperMod
 
@@ -26,7 +26,7 @@ taxonomies:
 
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  title: Wenrong's Note
+  title: Wenrong Nexus
   description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
   keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
   # author: ["Me", "You"] # multiple authors
@@ -61,14 +61,14 @@ params:
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
-    text: "Wenrong's Note"
+    text: "Wenrong Nexus"
     # icon: logo.png
     # iconHeight: 28
 
   # profile-mode
   profileMode:
     enabled: false # needs to be explicitly set
-    title: Wenrong's Note
+    title: Wenrong Nexus
     subtitle: "This is subtitle"
     imageUrl: "<img location>"
     imageWidth: 120
@@ -82,14 +82,14 @@ params:
 
   # home-info mode
   homeInfoParams:
-    Title: "Hi 歡迎來到焦油坑"
+    Title: "Hi 歡迎"
     Content: 我是 Wenrong 也是一位 Unity 工程師，從 2015 年 11 月開發到現在，常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。
 
   socialIcons:
     - name: github
       url: "https://github.com/Wenrong274"
     - name: email
-      url: "mailto:hybrid0930@gmail.com"
+      url: "mailto:me@wenrong-nexus.com"
     - name: rss # Shows an RSS feed icon on your site`
       url: "index.xml" # Your RSS feed url path
   analytics:
