@@ -10,14 +10,12 @@ git submodule update --init --recursive
 
 ### 測試運行 Hugo
 
-``` terminal
+```terminal
 hugo server -D
 ```
 
 ## Deploying
 
-會上傳之後會自動發布，最後會自動更新至 [wenrongdev.com][url]。
+會上傳之後會自動發布，最後會自動更新。
 
-________________________________________________________________________________
-
-[url]:https://wenrongdev.com/
+---
