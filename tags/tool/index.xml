@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tool on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/tool/</link>
+    <link>https://wenrong-nexus.com/tags/tool/</link>
     <description>Recent content in Tool on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Wix Examples</title>
-      <link>https://wenrongdev.com/posts/wixexamples/</link>
+      <link>https://wenrong-nexus.com/posts/wixexamples/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/wixexamples/</guid>
+      <guid>https://wenrong-nexus.com/posts/wixexamples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
 <p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
@@ -107,9 +107,9 @@
     </item>
     <item>
       <title>Example Inno Setup</title>
-      <link>https://wenrongdev.com/posts/example-inno-setup/</link>
+      <link>https://wenrong-nexus.com/posts/example-inno-setup/</link>
       <pubDate>Thu, 19 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/example-inno-setup/</guid>
+      <guid>https://wenrong-nexus.com/posts/example-inno-setup/</guid>
       <description>簡易使用 Inno Setup 打包教學。</description>
       <content:encoded><![CDATA[<h2 id="install">Install</h2>
 <p>去官網下載 <a href="http://www.jrsoftware.org/isinfo.php">Inno Setup</a>，請下載 <strong>Stable Release</strong> 版本。</p>

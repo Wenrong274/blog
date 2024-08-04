@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>DevOps on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/devops/</link>
+    <link>https://wenrong-nexus.com/tags/devops/</link>
     <description>Recent content in DevOps on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 25 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/devops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity Jenkins Build</title>
-      <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
+      <link>https://wenrong-nexus.com/posts/unity-jenkins-build/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此為使用 Jenkins 輸出 Unity 專案注意事項。</p>

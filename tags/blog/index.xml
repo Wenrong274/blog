@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Blog on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/blog/</link>
+    <link>https://wenrong-nexus.com/tags/blog/</link>
     <description>Recent content in Blog on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Mon, 28 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blog 心得（3）</title>
-      <link>https://wenrongdev.com/posts/reflection-blog-3/</link>
+      <link>https://wenrong-nexus.com/posts/reflection-blog-3/</link>
       <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/reflection-blog-3/</guid>
+      <guid>https://wenrong-nexus.com/posts/reflection-blog-3/</guid>
       <description>使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此篇在講如何使用 Hugo 在 Github 上自架 Blog。</p>
@@ -114,9 +114,9 @@
     </item>
     <item>
       <title>Blog 心得（2）</title>
-      <link>https://wenrongdev.com/posts/reflection-blog-2/</link>
+      <link>https://wenrong-nexus.com/posts/reflection-blog-2/</link>
       <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/reflection-blog-2/</guid>
+      <guid>https://wenrong-nexus.com/posts/reflection-blog-2/</guid>
       <description>Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>由於 <a href="https://www.siteground.com/">SiteGround</a> 費用問題，因此我需要把文章轉移至別的地方。不過也知道自己需要哪些功能。</p>
@@ -150,9 +150,9 @@
     </item>
     <item>
       <title>Blog 心得（1）</title>
-      <link>https://wenrongdev.com/posts/reflection-blog-1/</link>
+      <link>https://wenrong-nexus.com/posts/reflection-blog-1/</link>
       <pubDate>Mon, 14 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/reflection-blog-1/</guid>
+      <guid>https://wenrong-nexus.com/posts/reflection-blog-1/</guid>
       <description>從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。</description>
       <content:encoded><![CDATA[<p>其實我的 Blog 是寫給自己看的。因為我時常忘記怎麼解決問題、怎麼製作功能、忘記是做了什麼蠢事。因此產生這個 Blog 用來記錄我的跌跌撞撞的過程。</p>
 <h2 id="前言">前言</h2>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Unity on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/unity/</link>
+    <link>https://wenrong-nexus.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Unity2021 Video Player Crush</title>
-      <link>https://wenrongdev.com/posts/unity2021-videoplayercrush/</link>
+      <link>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity2021-videoplayercrush/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</guid>
       <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
@@ -41,9 +41,9 @@
     </item>
     <item>
       <title>Unity ParticleBezierPath</title>
-      <link>https://wenrongdev.com/posts/particlebezierpath/</link>
+      <link>https://wenrong-nexus.com/posts/particlebezierpath/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/particlebezierpath/</guid>
+      <guid>https://wenrong-nexus.com/posts/particlebezierpath/</guid>
       <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此篇是優化原本的 <a href="https://wenrongdev.com/posts/unity-particlepath/">Unity ParticlePath</a></p>
@@ -61,9 +61,9 @@
     </item>
     <item>
       <title>Oculus Sample</title>
-      <link>https://wenrongdev.com/posts/oculussample/</link>
+      <link>https://wenrong-nexus.com/posts/oculussample/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/oculussample/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculussample/</guid>
       <description>簡易的 Oculus 功能介紹專案</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這是簡易的 Oculus 功能介紹專案，是我製作 VR 專案以來經常使用到的操作行為，我把這些操作行為歸類起來。</p>
@@ -75,9 +75,9 @@
     </item>
     <item>
       <title>Unity Deep Link -2</title>
-      <link>https://wenrongdev.com/posts/unitydeeplink_2/</link>
+      <link>https://wenrong-nexus.com/posts/unitydeeplink_2/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unitydeeplink_2/</guid>
+      <guid>https://wenrong-nexus.com/posts/unitydeeplink_2/</guid>
       <description>介紹 Unity Deep Link 呼叫方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。</p>
@@ -126,9 +126,9 @@
     </item>
     <item>
       <title>Unity Deep Link -1</title>
-      <link>https://wenrongdev.com/posts/unitydeeplink_1/</link>
+      <link>https://wenrong-nexus.com/posts/unitydeeplink_1/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unitydeeplink_1/</guid>
+      <guid>https://wenrong-nexus.com/posts/unitydeeplink_1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可以利用 <a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">Get Android Intent Data for Unity</a> 這邊文章提到的方式，呼叫 App，不過這只限定 Android，iOS 則還是需要用 Deeplink 的方式呼叫。主要是當時 Unity 版本並不支援 DeepLink，所以只能自己寫原生的，才會有之前的<a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">這篇</a>文章，更重要的是，使用之前的呼叫方式是需要某些權限，但目前 Google 也把這些權限關閉，無法正常上架需要自己寫信去解釋才會願意讓你正常上架。所以建議是棄用這種方法改用 Deeplink。</p>
@@ -183,9 +183,9 @@
     </item>
     <item>
       <title>Unity Text Breaking Space</title>
-      <link>https://wenrongdev.com/posts/unitytextbreakingspace/</link>
+      <link>https://wenrong-nexus.com/posts/unitytextbreakingspace/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unitytextbreakingspace/</guid>
+      <guid>https://wenrong-nexus.com/posts/unitytextbreakingspace/</guid>
       <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
@@ -213,9 +213,9 @@
     </item>
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
-      <link>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</link>
+      <link>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/oculusautosetbuildsettingandbuild/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</guid>
       <description>自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
@@ -349,9 +349,9 @@
     </item>
     <item>
       <title>Unity Project Structure</title>
-      <link>https://wenrongdev.com/posts/unit-unity-projectstructure/</link>
+      <link>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</link>
       <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unit-unity-projectstructure/</guid>
+      <guid>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</guid>
       <description>自動建立簡易專案資料夾結構</description>
       <content:encoded><![CDATA[<h2 id="unity-project-structure">Unity Project Structure</h2>
 <p>主要是建立一個自動建立簡易專案資料夾結構。</p>
@@ -399,9 +399,9 @@
     </item>
     <item>
       <title>Unity Open Shader For VSCode</title>
-      <link>https://wenrongdev.com/posts/openshaderforvscode/</link>
+      <link>https://wenrong-nexus.com/posts/openshaderforvscode/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/openshaderforvscode/</guid>
+      <guid>https://wenrong-nexus.com/posts/openshaderforvscode/</guid>
       <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>針對 Unity Shader 檔案打開時，使用 VSCode 開啟而不是 Visual Studio，假如預設是 VSCode 則無需使用這功能。</p>
@@ -469,9 +469,9 @@
     </item>
     <item>
       <title>Unity Addressable Load Assets</title>
-      <link>https://wenrongdev.com/posts/unity-addressable_load_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-addressable_load_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</guid>
       <description>介紹 Unity Addressable 讀取、生成、釋放方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>介紹我使用 Addressable 的讀取、生成、釋放方式。</p>
@@ -525,9 +525,9 @@
     </item>
     <item>
       <title>Unity Addressable Download Assets</title>
-      <link>https://wenrongdev.com/posts/unity-addressable_download_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-addressable_download_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</guid>
       <description>介紹 Unity Addressable 多個下載方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在前一篇 <a href="../unity-addressable">Unity Addressable</a> 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。</p>
@@ -597,9 +597,9 @@
     </item>
     <item>
       <title>Unity MathQuiz</title>
-      <link>https://wenrongdev.com/posts/unity-mathquiz/</link>
+      <link>https://wenrong-nexus.com/posts/unity-mathquiz/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-mathquiz/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-mathquiz/</guid>
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此專案為 Unity math quiz，是基於 <a href="https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-2-create-a-timed-math-quiz">Tutorial 2: Create a timed math quiz</a> 文件改寫出來的專案。</p>
@@ -611,9 +611,9 @@
     </item>
     <item>
       <title>Unity Calendar</title>
-      <link>https://wenrongdev.com/posts/unity-calendar/</link>
+      <link>https://wenrong-nexus.com/posts/unity-calendar/</link>
       <pubDate>Thu, 17 Jun 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-calendar/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-calendar/</guid>
       <description>Unity 實做日曆功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p><img loading="lazy" src="https://i.imgur.com/Pe4nXry.gif" alt="gif"  />
@@ -639,9 +639,9 @@
     </item>
     <item>
       <title>Unity Addressable</title>
-      <link>https://wenrongdev.com/posts/unity-addressable/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable/</link>
       <pubDate>Thu, 27 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-addressable/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable/</guid>
       <description>主要是實作 Addressable hotfix 的寫法。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是實作 Addressable hotfix 的寫法。</p>
@@ -822,9 +822,9 @@
     </item>
     <item>
       <title>Unity ParticlePath</title>
-      <link>https://wenrongdev.com/posts/unity-particlepath/</link>
+      <link>https://wenrong-nexus.com/posts/unity-particlepath/</link>
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-particlepath/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-particlepath/</guid>
       <description>Unity 實作粒子路徑系統。</description>
       <content:encoded><![CDATA[<p><img loading="lazy" src="https://i.imgur.com/tNmcGdz.gif" alt="demogif"  />
 </p>
@@ -834,9 +834,9 @@
     </item>
     <item>
       <title>Unity Dimmer</title>
-      <link>https://wenrongdev.com/posts/unity-dimmer/</link>
+      <link>https://wenrong-nexus.com/posts/unity-dimmer/</link>
       <pubDate>Wed, 21 Oct 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-dimmer/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-dimmer/</guid>
       <description>Unity 調整 Android、iOS 系統亮度功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 調整 Android、iOS 系統亮度功能。</p>
@@ -850,9 +850,9 @@
     </item>
     <item>
       <title>Add Text Spacing for Unity</title>
-      <link>https://wenrongdev.com/posts/add-text-spacing-for-unity/</link>
+      <link>https://wenrong-nexus.com/posts/add-text-spacing-for-unity/</link>
       <pubDate>Wed, 08 Apr 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/add-text-spacing-for-unity/</guid>
+      <guid>https://wenrong-nexus.com/posts/add-text-spacing-for-unity/</guid>
       <description>在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 <code>UnityEngine.UI.Text</code> 增加 TextSpacing，且調整 TextSpacing 的 <code>Spacing</code> 調整文字間格。</p>
@@ -1013,9 +1013,9 @@
     </item>
     <item>
       <title>Mobile Joystick</title>
-      <link>https://wenrongdev.com/posts/mobile-joystick/</link>
+      <link>https://wenrong-nexus.com/posts/mobile-joystick/</link>
       <pubDate>Mon, 30 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/mobile-joystick/</guid>
+      <guid>https://wenrong-nexus.com/posts/mobile-joystick/</guid>
       <description>主要是用來測試 Unity 虛擬搖桿功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來測試虛擬搖桿功能。</p>
@@ -1028,9 +1028,9 @@
     </item>
     <item>
       <title>Folder Manager</title>
-      <link>https://wenrongdev.com/posts/folder-manager/</link>
+      <link>https://wenrong-nexus.com/posts/folder-manager/</link>
       <pubDate>Sun, 29 Mar 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/folder-manager/</guid>
+      <guid>https://wenrong-nexus.com/posts/folder-manager/</guid>
       <description>Unity 視覺化管理使用路徑。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>視覺化管理使用路徑，不過目前功能還是很粗糙。</p>
@@ -1049,9 +1049,9 @@
     </item>
     <item>
       <title>Data Access WebGL</title>
-      <link>https://wenrongdev.com/posts/data-access-webgl/</link>
+      <link>https://wenrong-nexus.com/posts/data-access-webgl/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/data-access-webgl/</guid>
+      <guid>https://wenrong-nexus.com/posts/data-access-webgl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。</p>
@@ -1085,9 +1085,9 @@
     </item>
     <item>
       <title>Unity Jenkins Build</title>
-      <link>https://wenrongdev.com/posts/unity-jenkins-build/</link>
+      <link>https://wenrong-nexus.com/posts/unity-jenkins-build/</link>
       <pubDate>Tue, 25 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-jenkins-build/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-jenkins-build/</guid>
       <description>此為使用 Jenkins 輸出 Unity 專案注意事項。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此為使用 Jenkins 輸出 Unity 專案注意事項。</p>
@@ -1135,9 +1135,9 @@
     </item>
     <item>
       <title>Hyperlinks in Unity Text</title>
-      <link>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</link>
+      <link>https://wenrong-nexus.com/posts/hyperlinks-in-unity-text/</link>
       <pubDate>Mon, 24 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/hyperlinks-in-unity-text/</guid>
+      <guid>https://wenrong-nexus.com/posts/hyperlinks-in-unity-text/</guid>
       <description>Unity uGUI Text support insert link and image。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>測試 <a href="https://github.com/akof1314/uGUI_LinkImageText">LinkImageText</a> 應用。</p>
@@ -1153,9 +1153,9 @@
     </item>
     <item>
       <title>Launch From Within a Unity App Another Unity App Android</title>
-      <link>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
+      <link>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
       <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
+      <guid>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
       <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
@@ -1207,9 +1207,9 @@
     </item>
     <item>
       <title>Get Android Intent Data for Unity</title>
-      <link>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</link>
+      <link>https://wenrong-nexus.com/posts/get-android-intent-data-for-unity/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/get-android-intent-data-for-unity/</guid>
+      <guid>https://wenrong-nexus.com/posts/get-android-intent-data-for-unity/</guid>
       <description>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 &lt;code&gt;Unity&lt;/code&gt; 接收。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。</p>
@@ -1311,9 +1311,9 @@
     </item>
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <ul>
@@ -1367,9 +1367,9 @@
     </item>
     <item>
       <title>Unity 5.3 Native System Language</title>
-      <link>https://wenrongdev.com/posts/unity-5.3-native-system-language/</link>
+      <link>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</link>
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-5.3-native-system-language/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</guid>
       <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
@@ -1438,9 +1438,9 @@
     </item>
     <item>
       <title>Unity WebGL Template</title>
-      <link>https://wenrongdev.com/posts/unity-webgl-template/</link>
+      <link>https://wenrong-nexus.com/posts/unity-webgl-template/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-webgl-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-webgl-template/</guid>
       <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>執行 WebGL 時都會有 Unity Logo &amp; Loading。目前此專案修改 Unity Logo 的部分。</p>
@@ -1472,9 +1472,9 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
     </item>
     <item>
       <title>Unity WebGL RectMask2D Does Not Work</title>
-      <link>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
+      <link>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
       <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。</p>

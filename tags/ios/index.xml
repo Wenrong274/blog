@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>IOS on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/ios/</link>
+    <link>https://wenrong-nexus.com/tags/ios/</link>
     <description>Recent content in IOS on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
-      <link>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</link>
+      <link>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/xcode_command_phasescriptexecution_failed/</guid>
+      <guid>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</guid>
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
@@ -34,9 +34,9 @@
     </item>
     <item>
       <title>Install IPA With OTA</title>
-      <link>https://wenrongdev.com/posts/install-ipa-with-ota/</link>
+      <link>https://wenrong-nexus.com/posts/install-ipa-with-ota/</link>
       <pubDate>Thu, 10 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/install-ipa-with-ota/</guid>
+      <guid>https://wenrong-nexus.com/posts/install-ipa-with-ota/</guid>
       <description>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。</p>

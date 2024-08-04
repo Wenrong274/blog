@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Design Pattern on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/design-pattern/</link>
+    <link>https://wenrong-nexus.com/tags/design-pattern/</link>
     <description>Recent content in Design Pattern on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Tue, 30 Apr 2024 00:39:46 +0800</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/design-pattern/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>心得 虛擬代理模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-virtualproxy/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</link>
       <pubDate>Tue, 30 Apr 2024 00:39:46 +0800</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-virtualproxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這篇主要是在講虛擬代理人的實作部分。</p>
@@ -93,9 +93,9 @@
     </item>
     <item>
       <title>心得 代理人模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-proxy/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-proxy/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-proxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來解決大部與後端同步資料的方法，在實作方面代理人模式是最常見的解決方案。</p>
@@ -110,9 +110,9 @@
     </item>
     <item>
       <title>心得 狀態模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-state/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-state/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-state/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-state/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的狀態模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>狀態模式主要用來解決多個 <code>if else</code> 判斷，並且不會因為多了一個 <code>if</code>，導致很多方法都要重新寫判斷。</p>
@@ -136,9 +136,9 @@
     </item>
     <item>
       <title>心得 組合模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-composite/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-composite/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-composite/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-composite/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的組合模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>組合模式是需要 Leaf（子節點）的嗎？</p>
@@ -159,9 +159,9 @@
     </item>
     <item>
       <title>心得 迭代器模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-iterator/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-iterator/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-iterator/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-iterator/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的迭代器模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="ienumeratorienumerable-使用-forforeach-的差別">IEnumerator、IEnumerable 使用 for、foreach 的差別</h2>
 <p>Q：實作發現 IEnumerable 能使用 foreach、不能使用 for，IEnumerator 能使用 for、不能使用 foreach，這是為什麼。</p>
@@ -191,9 +191,9 @@
     </item>
     <item>
       <title>心得 模板模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-template/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-template/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-template/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
@@ -226,9 +226,9 @@
     </item>
     <item>
       <title>心得 表象模式</title>
-      <link>https://wenrongdev.com/posts/designpattern-facade/</link>
+      <link>https://wenrong-nexus.com/posts/designpattern-facade/</link>
       <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/designpattern-facade/</guid>
+      <guid>https://wenrong-nexus.com/posts/designpattern-facade/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的表象模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>當本身有所有使用到類別，就不必使用表象模式。也就是表象模式是需要有各種次系統組裝而成的模式，而不是覺得這邊很複雜就用表象模式。</p>

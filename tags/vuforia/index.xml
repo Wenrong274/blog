@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Vuforia on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/vuforia/</link>
+    <link>https://wenrong-nexus.com/tags/vuforia/</link>
     <description>Recent content in Vuforia on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <ul>

@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/</link>
+    <link>https://wenrong-nexus.com/tags/</link>
     <description>Recent content in Tags on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 22 Jun 2024 19:02:04 +0800</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>CSharp</title>
-      <link>https://wenrongdev.com/tags/csharp/</link>
+      <link>https://wenrong-nexus.com/tags/csharp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/csharp/</guid>
+      <guid>https://wenrong-nexus.com/tags/csharp/</guid>
       <description></description>
     </item>
     <item>
       <title>Design Pattern</title>
-      <link>https://wenrongdev.com/tags/design-pattern/</link>
+      <link>https://wenrong-nexus.com/tags/design-pattern/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/design-pattern/</guid>
+      <guid>https://wenrong-nexus.com/tags/design-pattern/</guid>
       <description></description>
     </item>
     <item>
       <title>Tool</title>
-      <link>https://wenrongdev.com/tags/tool/</link>
+      <link>https://wenrong-nexus.com/tags/tool/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/tool/</guid>
+      <guid>https://wenrong-nexus.com/tags/tool/</guid>
       <description></description>
     </item>
     <item>
       <title>IOS</title>
-      <link>https://wenrongdev.com/tags/ios/</link>
+      <link>https://wenrong-nexus.com/tags/ios/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/ios/</guid>
+      <guid>https://wenrong-nexus.com/tags/ios/</guid>
       <description></description>
     </item>
     <item>
       <title>Unity</title>
-      <link>https://wenrongdev.com/tags/unity/</link>
+      <link>https://wenrong-nexus.com/tags/unity/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/unity/</guid>
+      <guid>https://wenrong-nexus.com/tags/unity/</guid>
       <description></description>
     </item>
     <item>
       <title>Android</title>
-      <link>https://wenrongdev.com/tags/android/</link>
+      <link>https://wenrong-nexus.com/tags/android/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/android/</guid>
+      <guid>https://wenrong-nexus.com/tags/android/</guid>
       <description></description>
     </item>
     <item>
       <title>Blog</title>
-      <link>https://wenrongdev.com/tags/blog/</link>
+      <link>https://wenrong-nexus.com/tags/blog/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/blog/</guid>
+      <guid>https://wenrong-nexus.com/tags/blog/</guid>
       <description></description>
     </item>
     <item>
       <title>WebGL</title>
-      <link>https://wenrongdev.com/tags/webgl/</link>
+      <link>https://wenrong-nexus.com/tags/webgl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/webgl/</guid>
+      <guid>https://wenrong-nexus.com/tags/webgl/</guid>
       <description></description>
     </item>
     <item>
       <title>DevOps</title>
-      <link>https://wenrongdev.com/tags/devops/</link>
+      <link>https://wenrong-nexus.com/tags/devops/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/devops/</guid>
+      <guid>https://wenrong-nexus.com/tags/devops/</guid>
       <description></description>
     </item>
     <item>
       <title>Vuforia</title>
-      <link>https://wenrongdev.com/tags/vuforia/</link>
+      <link>https://wenrong-nexus.com/tags/vuforia/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/tags/vuforia/</guid>
+      <guid>https://wenrong-nexus.com/tags/vuforia/</guid>
       <description></description>
     </item>
   </channel>

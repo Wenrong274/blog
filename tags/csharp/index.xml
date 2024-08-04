@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>CSharp on Wenrong Nexus</title>
-    <link>https://wenrongdev.com/tags/csharp/</link>
+    <link>https://wenrong-nexus.com/tags/csharp/</link>
     <description>Recent content in CSharp on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
     <lastBuildDate>Sat, 22 Jun 2024 19:02:04 +0800</lastBuildDate>
-    <atom:link href="https://wenrongdev.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/csharp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>C# 淺複製與深複製</title>
-      <link>https://wenrongdev.com/posts/csharpshallowcopyanddeepcopy/</link>
+      <link>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</link>
       <pubDate>Sat, 22 Jun 2024 19:02:04 +0800</pubDate>
-      <guid>https://wenrongdev.com/posts/csharpshallowcopyanddeepcopy/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</guid>
       <description>C# 淺複製與深複製</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
@@ -122,9 +122,9 @@
     </item>
     <item>
       <title>C# Reference Type String</title>
-      <link>https://wenrongdev.com/posts/csharpreferencetypestring/</link>
+      <link>https://wenrong-nexus.com/posts/csharpreferencetypestring/</link>
       <pubDate>Sat, 22 Jun 2024 17:40:52 +0800</pubDate>
-      <guid>https://wenrongdev.com/posts/csharpreferencetypestring/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharpreferencetypestring/</guid>
       <description>淺談 C# Reference Type String</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有提到 <a href=".../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
@@ -200,9 +200,9 @@
     </item>
     <item>
       <title>C# Class 和 Struct 選擇</title>
-      <link>https://wenrongdev.com/posts/csharpclassandstruct/</link>
+      <link>https://wenrong-nexus.com/posts/csharpclassandstruct/</link>
       <pubDate>Wed, 12 Jun 2024 22:47:08 +0800</pubDate>
-      <guid>https://wenrongdev.com/posts/csharpclassandstruct/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharpclassandstruct/</guid>
       <description>C# Class 和 Struct 選擇</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
@@ -238,9 +238,9 @@
     </item>
     <item>
       <title>C# Value Type、Reference Type 的差異</title>
-      <link>https://wenrongdev.com/posts/csharpvaluetypereferencetype/</link>
+      <link>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</link>
       <pubDate>Tue, 11 Jun 2024 22:38:53 +0800</pubDate>
-      <guid>https://wenrongdev.com/posts/csharpvaluetypereferencetype/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</guid>
       <description>討論 C# Value Type、Reference Type 的差異</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在公司讀書會與同事討論淺複製與深複製的差異和使用時機時，聊到 Reference Type、Value Type 的不同，但是要講淺複製與深複製之前要先講 Reference Type、Value Type 的差異。</p>
@@ -343,9 +343,9 @@
     </item>
     <item>
       <title>Whitelist for Windows UAC</title>
-      <link>https://wenrongdev.com/posts/whitelist-for-windows-uac/</link>
+      <link>https://wenrong-nexus.com/posts/whitelist-for-windows-uac/</link>
       <pubDate>Mon, 04 Nov 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrongdev.com/posts/whitelist-for-windows-uac/</guid>
+      <guid>https://wenrong-nexus.com/posts/whitelist-for-windows-uac/</guid>
       <description>為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>因為某些程式開啟時，會跳出需要系統管理員（Administrator）權限執行程式，也導致了只要是ㄧ般使用者每次開啟時都需要輸入系統管理員密碼來執行。為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。</p>
