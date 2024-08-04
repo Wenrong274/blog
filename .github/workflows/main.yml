@@ -36,4 +36,4 @@ jobs:
           PUBLISH_BRANCH: gh-pages # 推送到 gh-pages 分支
           commit_message: ${{ github.event.head_commit.message }}
           publish_dir: ./public
-          cname: wenrongdev.com
+          cname: wenrong-nexus.com
