@@ -6,8 +6,15 @@
     <description>Recent content in Tags on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 22 Jun 2024 19:02:04 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 17 Aug 2024 23:09:29 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C#</title>
+      <link>https://wenrong-nexus.com/tags/c</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://wenrong-nexus.com/tags/c</guid>
+      <description></description>
+    </item>
     <item>
       <title>CSharp</title>
       <link>https://wenrong-nexus.com/tags/csharp/</link>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>C# on Wenrong Nexus</title>
+    <link>https://wenrong-nexus.com/tags/c</link>
+    <description>Recent content in C# on Wenrong Nexus</description>
+    <generator>Hugo -- 0.124.1</generator>
+    <language>zh</language>
+    <lastBuildDate>Sat, 17 Aug 2024 23:09:29 +0800</lastBuildDate>
+    <atom:link href="https://wenrong-nexus.com/tags/c" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective C# 做法 01-03</title>
+      <link>https://wenrong-nexus.com/posts/effectivecsharpitme01-03/</link>
+      <pubDate>Sat, 17 Aug 2024 23:09:29 +0800</pubDate>
+      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme01-03/</guid>
+      <description>Effective C# 做法 01-03 心得</description>
+      <content:encoded><![CDATA[<h2 id="做法-01">做法 01</h2>
+<p><code>偏好隱含型別的區域變數</code></p>
+<p>參考書籍提到的最後一段</p>
+<blockquote>
+<p>簡單說，除非開者（包括以後的你）必須看到型別宣告才能理解程式，否則就使用 var 宣告區域變數。這個做法的標題是＂偏好＂而不是＂總是＂。我建議明確的宣告所有數值型別（int、float、double 與其他）而不要使用 var 宣告。其他東西就是用 var。多打幾個字 - 明確的宣告型別 - 不會提升行別安全或改善可讀性。如果挑錯宣告型別，你可能會造成編譯器本來能夠避免的低效率。</p>
+</blockquote>
+<h2 id="做法-02">做法 02</h2>
+<p><code>偏好 readonly 而非 const</code></p>
+<blockquote>
+<p>必須在編譯期確定的值必須使用 const：屬性參數、switch case 標籤與 enum 定義，以及少數部會在版本間變化的數值。其餘狀況則傾向以 readonly 常數提升彈性。</p>
+</blockquote>
+<h3 id="1-const-使用建議">1. const 使用建議</h3>
+<ul>
+<li>對於在編譯時就能確定且永不改變的值</li>
+<li>適用於基本數據類型（int、float、bool 等）和字符串</li>
+<li>效能略優於 readonly，因為它是編譯時常量</li>
+</ul>
+<h3 id="2-readonly-使用建議">2. readonly 使用建議</h3>
+<ul>
+<li>對於運行時才能確定值的情況</li>
+<li>可用於任何數據類型，包括引用類型和複雜類型</li>
+<li>允許在構造函數中賦值</li>
+</ul>
+<h3 id="選擇指南">選擇指南</h3>
+<ul>
+<li>如果值在編譯時就能確定，且是基本類型或字符串，優先使用 const。</li>
+<li>如果是引用類型或需要在運行時計算的值，使用 readonly。</li>
+<li>如果需要在不同的構造函數中賦予不同的值，使用 readonly。</li>
+<li>對於靜態成員，如果符合 const 的條件，優先使用 const；否則使用 static readonly。</li>
+</ul>
+<h2 id="做法-03">做法 03</h2>
+<p><code>偏好 is 或 as 運算子而非型別轉換</code></p>
+<p>推薦這樣寫</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = <span style="color:#66d9ef">new</span> MyType();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 不推薦</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> t = (MyType)o;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/// 推薦</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (o <span style="color:#66d9ef">is</span> MyType myType)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    myType.Do();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// do samething ...</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
+]]></content:encoded>
+    </item>
+  </channel>
+</rss>
