@@ -28,7 +28,7 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   title: Wenrong Nexus
   description: "我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。"
-  keywords: [Unity, Game Develop, Blog, Portfolio, PaperMod]
+  keywords: [Unity, Game, Blog, C#, PaperMod, Developer]
   # author: ["Me", "You"] # multiple authors
   #images: ["<link or path of image for opengraph, twitter-cards>"]
 
@@ -61,7 +61,7 @@ params:
     safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
-    text: "Wenrong Nexus"
+    text: "Nexus"
     # icon: logo.png
     # iconHeight: 28
 
@@ -94,11 +94,11 @@ params:
       url: "index.xml" # Your RSS feed url path
   analytics:
     google:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-GRV3BQC1BQ"
     bing:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-GRV3BQC1BQ"
     yandex:
-      SiteVerificationTag: "XYZabc"
+      SiteVerificationTag: "G-GRV3BQC1BQ"
 
   cover:
     hidden: true # hide everywhere but not in structured data
