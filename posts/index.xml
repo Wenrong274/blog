@@ -6,8 +6,94 @@
     <description>Recent content in Posts on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Thu, 22 Aug 2024 21:28:59 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2024 00:19:53 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective C# 做法 07-10</title>
+      <link>https://wenrong-nexus.com/posts/effectivecsharpitme07-10/</link>
+      <pubDate>Wed, 28 Aug 2024 00:19:53 +0800</pubDate>
+      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme07-10/</guid>
+      <description>Effective C# 做法  07-10 心得</description>
+      <content:encoded><![CDATA[<h2 id="做法-07">做法 07</h2>
+<p><code>以 delegate 表示 callback</code></p>
+<p>可以利用 delegate 回傳 bool 當判斷或者是回傳類別等功能降低城市耦合。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = Enumerable.Range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>).ToList();
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> oddNumbers = numbers.Find(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> test = numbers.TrueForAll(x =&gt; x &lt; <span style="color:#ae81ff">50</span>);
+</span></span><span style="display:flex;"><span>numbers.RemoveAll(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>numbers.ForEach(x =&gt; Console.WriteLine(x));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> LengthyOperation2(Func&lt;<span style="color:#66d9ef">bool</span>&gt; pred)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> bContinue = <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> cl <span style="color:#66d9ef">in</span> container)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        cl.DoLengthyOperation();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">foreach</span> (Func&lt;<span style="color:#66d9ef">bool</span>&gt; pr <span style="color:#66d9ef">in</span> pred.GetInvocationList())
+</span></span><span style="display:flex;"><span>                bContinue &amp;= pr();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!bContinue) <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="做法-08">做法 08</h2>
+<p>`對事件叫用使用空條件運算子</p>
+<p>推薦這樣寫</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    counter++;
+</span></span><span style="display:flex;"><span>    Updated?.Invoke(<span style="color:#66d9ef">this</span>, counter);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="做法-09">做法 09</h2>
+<p><code>減少 boxing 與 unboxing</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">25</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = i; <span style="color:#75715e">/// box</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(o.ToString()); <span style="color:#75715e">/// 25</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> fp = <span style="color:#ae81ff">5</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> fo = fp;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> ip = (<span style="color:#66d9ef">int</span>)fo; <span style="color:#75715e">/// unbox</span>
+</span></span><span style="display:flex;"><span>Console.WriteLine(ip.ToString()); <span style="color:#75715e">/// 5</span>
+</span></span></code></pre></div><blockquote>
+<p>實值類型可變轉換成 System.Object 或任何界面參考。這些轉換隱含的發生，使得尋找它們變得更為複雜。
+boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug。以多型方式處理實值類型也有效能成本。</p>
+</blockquote>
+<p>參考類型轉換為 System.Object 或介面時的行為確實不同：</p>
+<ol>
+<li>參考類型轉換:
+<ul>
+<li>參考類型本來就是從 System.Object 繼承的，所以轉換為 System.Object 或實現的介面時不需要 boxing。</li>
+<li>這種轉換只是改變了引用的類型，不會創建新的對象或複製數據。</li>
+</ul>
+</li>
+<li>效能影響:
+<ul>
+<li>參考類型轉換為 System.Object 或介面基本上沒有額外的效能成本。</li>
+<li>不會發生像實值類型那樣的額外記憶體分配或數據複製。</li>
+</ul>
+</li>
+<li>多態性:
+<ul>
+<li>參考類型本來就支持多態，不需要額外的轉換步驟。</li>
+</ul>
+</li>
+<li>潛在問題:
+<ul>
+<li>雖然參考類型不會遇到 boxing/unboxing 的問題，但可能會遇到其他問題，如意外的類型轉換或空引用。</li>
+</ul>
+</li>
+</ol>
+<h2 id="做法-10">做法 10</h2>
+<p><code>只對基底類別更新使用 new 修飾詞</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> MagicMethon() { }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><blockquote>
+<p>new 修飾詞必須小心使用。如果你不假思索的套用它，你會在你的物件中產生模糊的方法呼叫。這是發生在升級你的基底類別導致與你的類別衝突的特殊情況。就算在這種情況下，使用前還是要仔細思考。更重要的是，其他情況不要使用它。</p>
+</blockquote>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>Effective C# 做法 04-06</title>
       <link>https://wenrong-nexus.com/posts/effectivecsharpitme04-06/</link>
