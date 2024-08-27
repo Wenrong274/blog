@@ -87,7 +87,7 @@ Console.WriteLine(ip.ToString()); /// 5
 ```Csharp
 public class MyClass
 {
-    public new void MagicMethon() { }
+    public new void MagicMethod() { }
 }
 ```
 
