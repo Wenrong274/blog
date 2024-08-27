@@ -37,7 +37,7 @@ public void LengthyOperation2(Func<bool> pred)
 
 ## 做法 08
 
-`對事件叫用使用空條件運算子
+`對事件叫用使用空條件運算子`
 
 推薦這樣寫
 
