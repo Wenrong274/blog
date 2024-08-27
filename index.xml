@@ -86,7 +86,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p><code>只對基底類別更新使用 new 修飾詞</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> MagicMethon() { }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> MagicMethod() { }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><blockquote>
 <p>new 修飾詞必須小心使用。如果你不假思索的套用它，你會在你的物件中產生模糊的方法呼叫。這是發生在升級你的基底類別導致與你的類別衝突的特殊情況。就算在這種情況下，使用前還是要仔細思考。更重要的是，其他情況不要使用它。</p>
