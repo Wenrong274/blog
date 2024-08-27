@@ -36,7 +36,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="做法-08">做法 08</h2>
-<p>`對事件叫用使用空條件運算子</p>
+<p><code>對事件叫用使用空條件運算子</code></p>
 <p>推薦這樣寫</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
 </span></span><span style="display:flex;"><span>{
