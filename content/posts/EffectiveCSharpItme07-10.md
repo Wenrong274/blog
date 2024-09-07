@@ -1,7 +1,7 @@
 ---
 title: "Effective C# 做法 07-10"
 date: 2024-08-28T00:19:53+08:00
-description: "Effective C# 做法  07-10 心得"
+description: "Effective C# 做法 07-10 心得"
 keywords: ["Effective C#", "C#"]
 draft: false
 showtoc: true
