@@ -6,8 +6,66 @@
     <description>Recent content on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 07 Sep 2024 13:54:06 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 14 Sep 2024 23:57:56 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective C# 做法 14-15</title>
+      <link>https://wenrong-nexus.com/posts/effectivecsharpitme14-15/</link>
+      <pubDate>Sat, 14 Sep 2024 23:57:56 +0800</pubDate>
+      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme14-15/</guid>
+      <description>Effective C# 做法 14-15 心得</description>
+      <content:encoded><![CDATA[<h2 id="做法-14">做法 14</h2>
+<p><code>減少重複的初始化邏輯</code></p>
+<h3 id="1-建構子初始化程序讓一個建構子呼叫其他的建構子">1. 建構子初始化程序讓一個建構子呼叫其他的建構子。</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List&lt;<span style="color:#66d9ef">string</span>&gt; coll;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> name;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> MyClass() : <span style="color:#66d9ef">this</span>(<span style="color:#ae81ff">0</span>, <span style="color:#66d9ef">string</span>.Empty) { }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> MyClass(<span style="color:#66d9ef">int</span> count, <span style="color:#66d9ef">string</span> name)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        coll = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;(count);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.name = name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="2-選擇預設參數與">2. 選擇預設參數與</h3>
+<p>選擇預設參數與使用多個建構子多載之間需要權衡考量，建議是不超過 3 個，超過時可以考慮使用一個類別當初始化類別使用。一般來說應該偏好預設值而非多載建構子。</p>
+<h3 id="3-繼承類別不能修改父類別中宣告為-readonly-的欄位">3. 繼承類別不能修改父類別中宣告為 readonly 的欄位。</h3>
+<p>readonly 欄位只能在宣告時或在定義該欄位的類別建構子中賦值。</p>
+<h2 id="做法-15">做法 15</h2>
+<p><code>避免建構不必要的物件</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// 劣</span>
+</span></span><span style="display:flex;"><span>    using(Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>)){
+</span></span><span style="display:flex;"><span>        e.Graphics.DrawString(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>, myFont, Brushes.Black, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>推薦方式</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    e.Graphics.DrawString(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>, myFont, Brushes.Black, <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">10</span>);
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="1-區域變數的選擇">1. 區域變數的選擇</h3>
+<p>在區域變數是參考型別（實值類型就沒關係），且會在經常被呼叫的程序中使用時將它提升至成員變數。</p>
+<h3 id="2-string-不可變的原因">2. string 不可變的原因</h3>
+<ol>
+<li>安全性：敏感資訊不會因此被修改。</li>
+<li>執行緒安全：不可變性是天然的執行緒安全。</li>
+<li>hash 一致：字典的 key 相同內容、相同的位址。</li>
+<li>字串池：.NET 優化</li>
+<li>性能優化：編譯器和運行可優化字串。</li>
+<li>API 設計簡化</li>
+</ol>
+<h3 id="3建構不可變的可變-builder-類別">3.建構不可變的可變 builder 類別</h3>
+<p>可以參考設計模式中的建造者模式。</p>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>Effective C# 做法 11-13</title>
       <link>https://wenrong-nexus.com/posts/effectivecsharpitme11-13/</link>
