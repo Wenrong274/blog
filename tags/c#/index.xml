@@ -15,7 +15,7 @@
       <guid>https://wenrong-nexus.com/posts/effectivecsharpitme18-19/</guid>
       <description>Effective C# 做法 18-19 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-18">做法 18</h2>
-<p>`使用泛型 &amp; 定義最少與足夠的約束</p>
+<p><code>使用泛型 &amp; 定義最少與足夠的約束</code></p>
 <h3 id="使用泛型">使用泛型</h3>
 <ul>
 <li>
