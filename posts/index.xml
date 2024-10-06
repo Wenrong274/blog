@@ -6,8 +6,213 @@
     <description>Recent content in Posts on Wenrong Nexus</description>
     <generator>Hugo -- 0.124.1</generator>
     <language>zh</language>
-    <lastBuildDate>Sat, 28 Sep 2024 01:48:09 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 07 Oct 2024 00:57:47 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Effective C# 做法 20-21</title>
+      <link>https://wenrong-nexus.com/posts/effectivecsharpitme20-21/</link>
+      <pubDate>Mon, 07 Oct 2024 00:57:47 +0800</pubDate>
+      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme20-21/</guid>
+      <description>Effective C# 做法 20-21 心得</description>
+      <content:encoded><![CDATA[<h2 id="做法-20">做法 20</h2>
+<p><code>以 IComparable&lt;T&gt; 與 IComparer&lt;T&gt; 實作排序關係</code></p>
+<h3 id="實作">實作</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Customer</span> : IComparable&lt;Customer&gt;, IComparable
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> name;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> revenue;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Customer(<span style="color:#66d9ef">string</span> name)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.name = name;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> CompareTo(Customer other)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> name.CompareTo(other.name);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> IComparable.CompareTo(<span style="color:#66d9ef">object?</span> obj)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (obj <span style="color:#66d9ef">is</span> Customer other)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>.CompareTo(other);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentException(<span style="color:#e6db74">&#34;Argument must be a Customer&#34;</span>, nameof(obj));
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> &lt;(Customer left, Customer right) =&gt; left.CompareTo(right) &lt; <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> &lt;=(Customer left, Customer right) =&gt; left.CompareTo(right) &lt;= <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> &gt;(Customer left, Customer right) =&gt; left.CompareTo(right) &gt; <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> <span style="color:#66d9ef">operator</span> &gt;=(Customer left, Customer right) =&gt; left.CompareTo(right) &gt;= <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Lazy&lt;RevenueComparer&gt; revComp = <span style="color:#66d9ef">new</span> Lazy&lt;RevenueComparer&gt;(() =&gt; <span style="color:#66d9ef">new</span>());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> IComparer&lt;Customer&gt; RevenueCompare =&gt; revComp.Value;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Comparison&lt;Customer&gt; CompareByRevenue =&gt; (left, right) =&gt; left.revenue.CompareTo(right.revenue);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RevenueComparer</span> : IComparer&lt;Customer&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">int</span> Compare(Customer left, Customer right)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> left.revenue.CompareTo(right.revenue);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="使用方式">使用方式</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 創建一些 Customer 實例</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> customers = <span style="color:#66d9ef">new</span> List&lt;Customer&gt;
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;Alice&#34;</span>,<span style="color:#ae81ff">1000</span>) ,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;Bob&#34;</span>,<span style="color:#ae81ff">1500</span>) ,
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;Charlie&#34;</span>,<span style="color:#ae81ff">1200</span>),
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;David&#34;</span>,<span style="color:#ae81ff">800</span>)
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. 使用默認比較（按名稱）</span>
+</span></span><span style="display:flex;"><span>    customers.Sort();
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;Sorted by name:&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice: 1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bob: 1500</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charlie: 1200</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// David: 800</span>
+</span></span><span style="display:flex;"><span>    PrintCustomers(customers);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2. 使用運算符比較</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> alice = <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;Alice&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> bob = <span style="color:#66d9ef">new</span> Customer(<span style="color:#e6db74">&#34;Bob&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice &lt; Bob: True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice &lt;= Bob: True</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice &gt; Bob: False</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice &gt;= Bob: False</span>
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Alice &lt; Bob: {alice &lt; bob}&#34;</span>);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Alice &lt;= Bob: {alice &lt;= bob}&#34;</span>);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Alice &gt; Bob: {alice &gt; bob}&#34;</span>);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">$&#34;Alice &gt;= Bob: {alice &gt;= bob}&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. 使用 RevenueCompare</span>
+</span></span><span style="display:flex;"><span>    customers.Sort(Customer.RevenueCompare);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;\nSorted by revenue (using RevenueCompare):&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// David: 800</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice: 1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charlie: 1200</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bob: 1500</span>
+</span></span><span style="display:flex;"><span>    PrintCustomers(customers);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 4. 使用 CompareByRevenue</span>
+</span></span><span style="display:flex;"><span>    customers.Sort(Customer.CompareByRevenue);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;\nSorted by revenue (using CompareByRevenue):&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// David: 800</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice: 1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charlie: 1200</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bob: 1500</span>
+</span></span><span style="display:flex;"><span>    PrintCustomers(customers);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 5. 使用 LINQ 排序</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> sortedByName = customers.OrderBy(c =&gt; c);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;\nSorted by name (using LINQ):&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// lice: 1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bob: 1500</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charlie: 1200</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// David: 800</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    PrintCustomers(sortedByName);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> sortedByRevenue = customers.OrderBy(c =&gt; c, Customer.RevenueCompare);
+</span></span><span style="display:flex;"><span>    Console.WriteLine(<span style="color:#e6db74">&#34;\nSorted by revenue (using LINQ and RevenueCompare):&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// David: 800</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Alice: 1000</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Charlie: 1200</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Bob: 1500</span>
+</span></span><span style="display:flex;"><span>    PrintCustomers(sortedByRevenue);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> PrintCustomers(IEnumerable&lt;Customer&gt; customers)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> customer <span style="color:#66d9ef">in</span> customers)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">$&#34;{customer.ToString()}&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="做法-21">做法 21</h2>
+<p><code>建構支援 Disposable 型別參數的泛型類別</code></p>
+<blockquote>
+<p>如果你建構的泛型類別的型別參數描述的任何型別實例，你必須考慮到這些型別可能有實作 IDisposable。你必須防衛性的撰寫程式並確保這些物件離開範圍後不會洩漏資源。</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEngine</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> DoWork();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Engine</span> : IEngine
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> DoWork()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        Console.WriteLine(<span style="color:#e6db74">&#34;Hello World!&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EngineDriver1</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IEngine, <span style="color:#66d9ef">new</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> GetThingsDone()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        T engine = <span style="color:#66d9ef">new</span> T();
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">using</span> (engine <span style="color:#66d9ef">as</span> IDisposable)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            engine.DoWork();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// using (var x = new EngineDriver2&lt;Engine&gt;())</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// {</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//     x.GetThingsDone();</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// }</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EngineDriver2</span>&lt;T&gt; : IDisposable <span style="color:#66d9ef">where</span> T : IEngine, <span style="color:#66d9ef">new</span>()
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Lazy&lt;T&gt; engine = <span style="color:#66d9ef">new</span> Lazy&lt;T&gt;(() =&gt; <span style="color:#66d9ef">new</span> T());
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> GetThingsDone()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">using</span> (engine.Value <span style="color:#66d9ef">as</span> IDisposable)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            engine.Value.DoWork();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Dispose()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (engine.IsValueCreated)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">var</span> resource = engine.Value <span style="color:#66d9ef">as</span> IDisposable;
+</span></span><span style="display:flex;"><span>            resource?.Dispose();
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">EngineDriver3</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IEngine
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> T engine;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> EngineDriver3(T engine)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span>.engine = engine;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> GetThingsDone()
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        engine.DoWork();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="若-t-沒有實作-idisposable-則此區域變數的值為-null">若 T 沒有實作 IDisposable ，則此區域變數的值為 null。</h3>
+<p>如果 T（在這個例子中是 Engine）沒有實作 IDisposable 接口，那麼 engine as IDisposable 的結果就會是 null。
+這個 null 值並不會導致異常或錯誤。 using 語句被設計為可以安全地處理 null 值。當 disposable 為 null 時， using 語句簡單地不執行任何釋放資源的操作。
+這就是為什麼即使 Engine 類沒有實作 IDisposable，代碼仍然可以正常運行。 using 語句在這種情況下實際上不會做任何特殊的事情，代碼會繼續執行 engine.DoWork()。</p>
+<hr>
+]]></content:encoded>
+    </item>
     <item>
       <title>Effective C# 做法 18-19</title>
       <link>https://wenrong-nexus.com/posts/effectivecsharpitme18-19/</link>
