@@ -20,7 +20,10 @@ comments: false
 
 ## 工作經歷
 
-_2023/12 – present_
+_2025/07 – present_
+: [網銀國際](https://www.wanin.tw/)．_組長_
+
+_2023/12 – 2025/07_
 : [網銀國際](https://www.wanin.tw/)．_高級工程師_
 
 _2015/11 – 2023/07_
