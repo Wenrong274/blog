@@ -5,7 +5,7 @@
     <link>https://wenrong-nexus.com/portfolios/</link>
     <description>Recent content in Portfolios on Wenrong Nexus</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-Hant</language>
     <lastBuildDate>Sun, 15 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/portfolios/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -43,34 +43,30 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>寶馬曳引機 VR</title>
-      <link>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</link>
+      <title>雲林好 Young</title>
+      <link>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</guid>
+      <guid>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
 &lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
-&lt;p&gt;模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 Unity 搭配 Meta Quest 製作而成。&lt;/li&gt;
-&lt;li&gt;模擬駕駛手排車&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html&#34;&gt;新聞介紹&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。&lt;/p&gt;</description>
       <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <h2 id="介紹">介紹</h2>
-<p>模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。</p>
+<p>以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。</p>
 <ul>
-<li>使用 Unity 搭配 Meta Quest 製作而成。</li>
-<li>模擬駕駛手排車</li>
+<li>使用 AR Foundation 製作 AR、MR 辨識功能</li>
+<li>題目內容可以隨時更新</li>
+<li>有 7 款不同類型的遊戲</li>
 </ul>
 <h2 id="連結">連結</h2>
-<p><a href="https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html">新聞介紹</a></p>
+<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img alt="googleplay" loading="lazy" src="https://imgur.com/GyhUzK3.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -107,6 +103,38 @@
 ]]></content:encoded>
     </item>
     <item>
+      <title>寶馬曳引機 VR</title>
+      <link>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Unity 搭配 Meta Quest 製作而成。&lt;/li&gt;
+&lt;li&gt;模擬駕駛手排車&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html&#34;&gt;新聞介紹&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h2 id="介紹">介紹</h2>
+<p>模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。</p>
+<ul>
+<li>使用 Unity 搭配 Meta Quest 製作而成。</li>
+<li>模擬駕駛手排車</li>
+</ul>
+<h2 id="連結">連結</h2>
+<p><a href="https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html">新聞介紹</a></p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
       <title>變動的大地</title>
       <link>https://wenrong-nexus.com/portfolios/jtqc/elegeoscience/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
@@ -128,34 +156,6 @@
 </ul>
 <h2 id="連結">連結</h2>
 <p><a href="https://moevrar.tku.edu.tw/material_detail.cshtml?id=145">介紹網址</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>雲林好 Young</title>
-      <link>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</link>
-      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
-&lt;p&gt;以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-<h2 id="介紹">介紹</h2>
-<p>以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。</p>
-<ul>
-<li>使用 AR Foundation 製作 AR、MR 辨識功能</li>
-<li>題目內容可以隨時更新</li>
-<li>有 7 款不同類型的遊戲</li>
-</ul>
-<h2 id="連結">連結</h2>
-<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
-<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img alt="googleplay" loading="lazy" src="https://imgur.com/GyhUzK3.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>

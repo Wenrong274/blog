@@ -5,14 +5,14 @@
     <link>https://wenrong-nexus.com/</link>
     <description>Recent content on Wenrong Nexus</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-Hant</language>
     <lastBuildDate>Sun, 13 Oct 2024 03:11:00 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Effective C# 做法 22-23</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme22-23/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-22-23/</link>
       <pubDate>Sun, 13 Oct 2024 03:11:00 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme22-23/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-22-23/</guid>
       <description>Effective C# 做法 22-23 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-22">做法 22</h2>
 <p><code>支援泛型的共變數與反變數</code></p>
@@ -283,9 +283,9 @@
     </item>
     <item>
       <title>Effective C# 做法 20-21</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme20-21/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-20-21/</link>
       <pubDate>Mon, 07 Oct 2024 00:57:47 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme20-21/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-20-21/</guid>
       <description>Effective C# 做法 20-21 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-20">做法 20</h2>
 <p><code>以 IComparable&lt;T&gt; 與 IComparer&lt;T&gt; 實作排序關係</code></p>
@@ -488,9 +488,9 @@
     </item>
     <item>
       <title>Effective C# 做法 18-19</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme18-19/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-18-19/</link>
       <pubDate>Sat, 28 Sep 2024 01:48:09 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme18-19/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-18-19/</guid>
       <description>Effective C# 做法 18-19 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-18">做法 18</h2>
 <p><code>使用泛型 &amp; 定義最少與足夠的約束</code></p>
@@ -757,9 +757,9 @@
     </item>
     <item>
       <title>Effective C# 做法 16-17</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme16-17/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-16-17/</link>
       <pubDate>Sun, 22 Sep 2024 22:17:41 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme16-17/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-16-17/</guid>
       <description>Effective C# 做法 16-17 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-16">做法 16</h2>
 <p><code>絕不在建構元中呼叫虛擬函式</code></p>
@@ -825,9 +825,9 @@
     </item>
     <item>
       <title>Effective C# 做法 14-15</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme14-15/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-14-15/</link>
       <pubDate>Sat, 14 Sep 2024 23:57:56 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme14-15/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-14-15/</guid>
       <description>Effective C# 做法 14-15 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-14">做法 14</h2>
 <p><code>減少重複的初始化邏輯</code></p>
@@ -883,9 +883,9 @@
     </item>
     <item>
       <title>Effective C# 做法 11-13</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme11-13/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-11-13/</link>
       <pubDate>Sat, 07 Sep 2024 13:54:06 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme11-13/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-11-13/</guid>
       <description>Effective C# 做法 11-13 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-11">做法 11</h2>
 <p><code>認識 .NET 資源管理</code></p>
@@ -954,9 +954,9 @@
     </item>
     <item>
       <title>Effective C# 做法 07-10</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme07-10/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-07-10/</link>
       <pubDate>Wed, 28 Aug 2024 00:19:53 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme07-10/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-07-10/</guid>
       <description>Effective C# 做法 07-10 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-07">做法 07</h2>
 <p><code>以 delegate 表示 callback</code></p>
@@ -1040,9 +1040,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Effective C# 做法 04-06</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme04-06/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-04-06/</link>
       <pubDate>Thu, 22 Aug 2024 21:28:59 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme04-06/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-04-06/</guid>
       <description>Effective C# 做法 04-06 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-04">做法 04</h2>
 <p><code>以內插字串取代 string.Format()</code></p>
@@ -1077,9 +1077,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Effective C# 做法 01-03</title>
-      <link>https://wenrong-nexus.com/posts/effectivecsharpitme01-03/</link>
+      <link>https://wenrong-nexus.com/posts/effective-csharp-item-01-03/</link>
       <pubDate>Sat, 17 Aug 2024 23:09:29 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/effectivecsharpitme01-03/</guid>
+      <guid>https://wenrong-nexus.com/posts/effective-csharp-item-01-03/</guid>
       <description>Effective C# 做法 01-03 心得</description>
       <content:encoded><![CDATA[<h2 id="做法-01">做法 01</h2>
 <p><code>偏好隱含型別的區域變數</code></p>
@@ -1137,7 +1137,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
 <h2 id="淺複製">淺複製</h2>
-<p>將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Refetence Type 都是參考到同一 instance。</p>
+<p>將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Reference Type 都是參考到同一 instance。</p>
 <h3 id="淺複製方式">淺複製方式</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
 </span></span><span style="display:flex;"><span>{
@@ -1850,34 +1850,30 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 ]]></content:encoded>
     </item>
     <item>
-      <title>寶馬曳引機 VR</title>
-      <link>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</link>
+      <title>雲林好 Young</title>
+      <link>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</guid>
+      <guid>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</guid>
       <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
 &lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
-&lt;p&gt;模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;使用 Unity 搭配 Meta Quest 製作而成。&lt;/li&gt;
-&lt;li&gt;模擬駕駛手排車&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html&#34;&gt;新聞介紹&lt;/a&gt;&lt;/p&gt;</description>
+&lt;p&gt;以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。&lt;/p&gt;</description>
       <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
     </div>
 
 <h2 id="介紹">介紹</h2>
-<p>模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。</p>
+<p>以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。</p>
 <ul>
-<li>使用 Unity 搭配 Meta Quest 製作而成。</li>
-<li>模擬駕駛手排車</li>
+<li>使用 AR Foundation 製作 AR、MR 辨識功能</li>
+<li>題目內容可以隨時更新</li>
+<li>有 7 款不同類型的遊戲</li>
 </ul>
 <h2 id="連結">連結</h2>
-<p><a href="https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html">新聞介紹</a></p>
+<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img alt="googleplay" loading="lazy" src="https://imgur.com/GyhUzK3.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1914,6 +1910,38 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 ]]></content:encoded>
     </item>
     <item>
+      <title>寶馬曳引機 VR</title>
+      <link>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</link>
+      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</guid>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Unity 搭配 Meta Quest 製作而成。&lt;/li&gt;
+&lt;li&gt;模擬駕駛手排車&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html&#34;&gt;新聞介紹&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<h2 id="介紹">介紹</h2>
+<p>模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。</p>
+<ul>
+<li>使用 Unity 搭配 Meta Quest 製作而成。</li>
+<li>模擬駕駛手排車</li>
+</ul>
+<h2 id="連結">連結</h2>
+<p><a href="https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html">新聞介紹</a></p>
+<hr>
+]]></content:encoded>
+    </item>
+    <item>
       <title>變動的大地</title>
       <link>https://wenrong-nexus.com/portfolios/jtqc/elegeoscience/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
@@ -1935,34 +1963,6 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </ul>
 <h2 id="連結">連結</h2>
 <p><a href="https://moevrar.tku.edu.tw/material_detail.cshtml?id=145">介紹網址</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>雲林好 Young</title>
-      <link>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</link>
-      <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</guid>
-      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
-    &lt;/div&gt;
-
-&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
-&lt;p&gt;以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
-    </div>
-
-<h2 id="介紹">介紹</h2>
-<p>以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。</p>
-<ul>
-<li>使用 AR Foundation 製作 AR、MR 辨識功能</li>
-<li>題目內容可以隨時更新</li>
-<li>有 7 款不同類型的遊戲</li>
-</ul>
-<h2 id="連結">連結</h2>
-<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
-<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img alt="googleplay" loading="lazy" src="https://imgur.com/GyhUzK3.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2153,9 +2153,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
-      <link>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</link>
+      <link>https://wenrong-nexus.com/posts/xcode-command-phase-script-execution-failed/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</guid>
+      <guid>https://wenrong-nexus.com/posts/xcode-command-phase-script-execution-failed/</guid>
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
@@ -2175,13 +2175,13 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 ]]></content:encoded>
     </item>
     <item>
-      <title>Unity2021 Video Player Crush</title>
-      <link>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</link>
+      <title>Unity2021 Video Player Crash</title>
+      <link>https://wenrong-nexus.com/posts/unity2021-video-player-crash/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</guid>
-      <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。</description>
+      <guid>https://wenrong-nexus.com/posts/unity2021-video-player-crash/</guid>
+      <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crash。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
+<p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crash。</p>
 <p>官方論壇討論此問題<a href="https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/">文章</a>。</p>
 <h2 id="錯誤-log">錯誤 log</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
@@ -2200,7 +2200,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>Error AndroidRuntime at [anon:.0x136(Native Method)
 </span></span></code></pre></div><h2 id="解決方式">解決方式</h2>
 <p>官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。</p>
-<p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。</p>
+<p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crash。</p>
 <p>不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 <a href="https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android">Issue Tracker</a>。</p>
 <hr>
 ]]></content:encoded>
@@ -3527,9 +3527,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/posts/android-p-http-error/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/posts/android-p-http-error/</guid>
-      <description>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
+      <description>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
+<p>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
 <p>Error Log：<code>Cleartext HTTP traffic to 45.xx.xxx.xx not permitted</code></p>
 <h2 id="solution">Solution</h2>
 <p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 加入 <code>android:usesCleartextTraffic=&quot;true&quot;</code>。</p>

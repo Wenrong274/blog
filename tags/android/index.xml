@@ -5,7 +5,7 @@
     <link>https://wenrong-nexus.com/tags/android/</link>
     <description>Recent content in Android on Wenrong Nexus</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-Hant</language>
     <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -54,9 +54,9 @@
       <link>https://wenrong-nexus.com/posts/android-p-http-error/</link>
       <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/posts/android-p-http-error/</guid>
-      <description>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
+      <description>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>在 Android 9.0 中使用 WebReqesut 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
+<p>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
 <p>Error Log：<code>Cleartext HTTP traffic to 45.xx.xxx.xx not permitted</code></p>
 <h2 id="solution">Solution</h2>
 <p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 加入 <code>android:usesCleartextTraffic=&quot;true&quot;</code>。</p>

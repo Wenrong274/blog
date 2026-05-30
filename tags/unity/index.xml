@@ -5,17 +5,17 @@
     <link>https://wenrong-nexus.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong Nexus</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-Hant</language>
     <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Unity2021 Video Player Crush</title>
-      <link>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</link>
+      <title>Unity2021 Video Player Crash</title>
+      <link>https://wenrong-nexus.com/posts/unity2021-video-player-crash/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity2021-videoplayercrush/</guid>
-      <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。</description>
+      <guid>https://wenrong-nexus.com/posts/unity2021-video-player-crash/</guid>
+      <description>在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crash。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
+<p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crash。</p>
 <p>官方論壇討論此問題<a href="https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/">文章</a>。</p>
 <h2 id="錯誤-log">錯誤 log</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
@@ -34,7 +34,7 @@
 </span></span><span style="display:flex;"><span>Error AndroidRuntime at [anon:.0x136(Native Method)
 </span></span></code></pre></div><h2 id="解決方式">解決方式</h2>
 <p>官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。</p>
-<p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。</p>
+<p>我解決的方式 VideoPlayer.Pause()，然後<code>生成</code>一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crash。</p>
 <p>不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 <a href="https://issuetracker.unity3d.com/issues/android-application-crashes-when-changing-the-source-url-of-a-video-player-in-android">Issue Tracker</a>。</p>
 <hr>
 ]]></content:encoded>

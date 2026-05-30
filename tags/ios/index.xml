@@ -5,14 +5,14 @@
     <link>https://wenrong-nexus.com/tags/ios/</link>
     <description>Recent content in IOS on Wenrong Nexus</description>
     <generator>Hugo</generator>
-    <language>zh</language>
+    <language>zh-Hant</language>
     <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xcode Command PhaseScriptExecution Failed</title>
-      <link>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</link>
+      <link>https://wenrong-nexus.com/posts/xcode-command-phase-script-execution-failed/</link>
       <pubDate>Wed, 08 Mar 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/xcode_command_phasescriptexecution_failed/</guid>
+      <guid>https://wenrong-nexus.com/posts/xcode-command-phase-script-execution-failed/</guid>
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
