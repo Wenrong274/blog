@@ -1,0 +1,63 @@
+/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+
+#main-menu {
+    font-size: 1.6rem; /* Make the left side menu text size larger (default: 1.4rem) */
+    
+    li {
+        a {
+            transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        color 0.25s ease, 
+                        background-color 0.25s ease;
+            padding: 10px 16px;
+            border-radius: 10px;
+            width: 100%;
+            display: inline-flex;
+            align-items: center;
+            
+            &:hover {
+                transform: translateX(6px); /* Micro-interaction: slide out slightly on hover */
+                background-color: color-mix(in srgb, var(--accent-color) 10%, transparent);
+                color: var(--accent-color) !important;
+            }
+        }
+        
+        &.current {
+            a {
+                background-color: color-mix(in srgb, var(--accent-color) 8%, transparent) !important; /* Soft highlight for active page */
+                color: var(--accent-color) !important;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+/* Social icons hover animation scale up */
+.menu-social {
+    gap: var(--spacing-md) !important;
+    
+    li a {
+        transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), color 0.25s ease;
+        
+        &:hover {
+            transform: scale(1.25); /* Micro-interaction: pop out slightly on hover */
+            color: var(--accent-color) !important;
+            
+            svg {
+                stroke: var(--accent-color) !important;
+            }
+        }
+    }
+}
+
+/* Avatar hover micro-interaction */
+.sidebar .site-avatar {
+    .avatar {
+        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                    box-shadow 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.06) rotate(2deg); /* Micro-interaction: slight tilt and zoom */
+            box-shadow: var(--shadow-l2);
+        }
+    }
+}
