@@ -1,16 +1,18 @@
 ---
-title: "Unity2021 Video Player Crush"
+title: "Unity2021 Video Player Crash"
 date: 2023-02-01
-description: "在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crush。"
+description: "在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crash。"
 keywords: ["Unity"]
 draft: false
 showtoc: true
 tags: ["Unity"]
+aliases:
+  - /posts/unity2021-videoplayercrush/
 ---
 
 ## 前言
 
-在 Android 11 以上的版本使用 VideoPlayer 呼叫 `Stop();` 時會造成 App Crush。
+在 Android 11 以上的版本使用 VideoPlayer 呼叫 `Stop();` 時會造成 App Crash。
 
 官方論壇討論此問題[文章][post]。
 
@@ -37,7 +39,7 @@ Error AndroidRuntime at [anon:.0x136(Native Method)
 
 官方在論壇回覆是建議回去 2020 版，之後會修復。因為我使用的專案不方便降版。
 
-我解決的方式 VideoPlayer.Pause()，然後`生成`一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crush。
+我解決的方式 VideoPlayer.Pause()，然後`生成`一個新的 VideoPlayer 物件，原本舊的 VideoPlayer 物件不要關閉物件、不要刪除物件，不然都會造成 App Crash。
 
 不過最終解決方式還是需要等官方處理結束，可以看這個 bug 什麼時候解決 [Issue Tracker][issuetracker]。
 

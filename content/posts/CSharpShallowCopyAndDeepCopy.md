@@ -23,7 +23,7 @@ tags: ["CSharp"]
 
 ## 淺複製
 
-將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Refetence Type 都是參考到同一 instance。
+將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Reference Type 都是參考到同一 instance。
 
 ### 淺複製方式
 
