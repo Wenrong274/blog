@@ -1,6 +1,7 @@
 ---
 title: "About"
 date: 2026-05-30
+description: "Wenrong 的個人簡介。五年以上 Unity 遊戲開發經驗，涵蓋 iOS、Android 上架及 AR/VR/MR 開發，目前任職於網銀國際擔任組長。"
 comments: false
 ---
 

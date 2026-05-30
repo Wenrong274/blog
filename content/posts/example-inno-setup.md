@@ -5,7 +5,7 @@ summary: "想把程式打包成安裝檔？本文提供 Inno Setup 完整腳本�
 description: "Inno Setup 打包教學，提供完整的 .iss 腳本範例，包含安裝路徑設定、多語系（繁中/簡中/日文）、桌面圖示建立、版本比較邏輯、分割安裝包設定，以及修改時需注意的 GUID、AppName 等關鍵欄位說明。"
 keywords: ["Inno Setup", "installer", "Windows", "packaging", "setup script", ".iss", "deployment"]
 draft: false
-tags: ["tool"]
+tags: ["Tool"]
 ---
 
 ## Install
@@ -230,9 +230,9 @@ end;
 
 ---
 
-[1]: http://www.jrsoftware.org/isinfo.php
+[1]: https://jrsoftware.org/isinfo.php
 [2]: https://github.com/jrsoftware/issrc
-[3]: http://www.jrsoftware.org/ishelp/
+[3]: https://jrsoftware.org/ishelp/
 [img_1]: https://imgur.com/3gD0X18.jpg
 [img_2]: https://imgur.com/AXDhz5x.jpg
 [img_3]: https://imgur.com/d05PwU1.jpg

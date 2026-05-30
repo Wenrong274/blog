@@ -58,7 +58,7 @@ jobs:
       - name: Lighthouse audit
         run: |
           http-server ./public -p 8080 &
-          sleep 3
+          npx wait-on http://localhost:8080 --timeout 30000
           npx @lhci/cli@0.14.x autorun \
             --collect.url=http://localhost:8080/ \
             --collect.url=http://localhost:8080/posts/ \

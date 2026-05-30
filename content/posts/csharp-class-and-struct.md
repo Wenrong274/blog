@@ -5,7 +5,7 @@ summary: "Class 還是 Struct？這個問題困擾很多開發者。本文整理
 description: "深入探討 C# 中 Class 與 Struct 的選擇時機。依據 Microsoft 官方指引，說明在執行個體大小、可變性、Boxing 頻率等條件下，應優先使用 Struct 還是 Class 的決策準則。"
 keywords: ["C#", "Class", "Struct", "Reference Type", "Value Type", "Boxing", ".NET"]
 draft: false
-tags: ["CSharp"]
+tags: ["C#"]
 aliases:
   - /posts/csharpclassandstruct/
 ---

@@ -6,6 +6,7 @@ paginate: 10
 theme: hugo-theme-stack
 
 enableRobotsTXT: true
+enableGitInfo: true
 hasCJKLanguage: true
 
 buildDrafts: false
@@ -35,7 +36,6 @@ params:
       card: "summary_large_image"
   mainSections: ["posts"]
   rssFullContent: true
-  favicon: "/favicon.ico"
 
   footer:
     since: 2019
@@ -60,6 +60,9 @@ params:
       - type: tag-cloud
         params:
           limit: 10
+      - type: latest-posts
+        params:
+          limit: 5
     page:
       - type: toc
 
@@ -119,3 +122,13 @@ menu:
       params:
         icon: rss
         newTab: true
+
+related:
+  includeNewer: true
+  threshold: 60
+  toLower: false
+  indices:
+    - name: tags
+      weight: 100
+    - name: series
+      weight: 200

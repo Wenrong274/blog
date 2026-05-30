@@ -5,7 +5,7 @@ summary: "每次開程式都要輸入管理員密碼很煩？不能關 UAC 又�
 description: "解決 Windows 程式每次啟動都跳出 UAC 管理員權限請求的問題，在不關閉 Windows UAC 的前提下，透過寫入 Registry（HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers）加入 RunAsInvoker 白名單，附完整 C# RegEditWhiteList 類別實作。"
 keywords: ["C#", "Windows UAC", "Registry", "RunAsInvoker", "Regedit", "administrator", "Windows", ".NET"]
 draft: false
-tags: ["CSharp"]
+tags: ["C#"]
 ---
 
 ## 前言

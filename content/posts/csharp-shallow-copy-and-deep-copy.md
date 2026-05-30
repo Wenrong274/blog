@@ -5,7 +5,7 @@ summary: "複製物件後改了 copy，卻意外動到 origin？這就是淺複�
 description: "C# 淺複製（Shallow Copy）與深複製（Deep Copy）的差異與實作方式。透過 MemberwiseClone 示範淺複製對 Reference Type 的共享問題，以及如何手動實作深複製讓每個物件獨立，附完整程式碼範例。"
 keywords: ["C#", "Shallow Copy", "Deep Copy", "MemberwiseClone", "Reference Type", "Value Type", ".NET"]
 draft: false
-tags: ["CSharp"]
+tags: ["C#"]
 aliases:
   - /posts/csharpshallowcopyanddeepcopy/
 ---

@@ -91,5 +91,5 @@ Jenkins 頁面路徑為 `Manage Jenkins -> Plugin Manager -> Available`
 [img_3]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG
 [img_4]: https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG
 [github]: https://github.com/Wenrong274/UnityJenkinsBuild
-[ref_1]: http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html
+[ref_1]: https://hoseex.blogspot.com/2017/12/jenkinsunity3d.html
 [ref_2]: https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/

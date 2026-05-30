@@ -5,7 +5,7 @@ summary: "int 和 class 為什麼行為差這麼多？本文從記憶體配置�
 description: "深入解析 C# Value Type 與 Reference Type 的五大差異，包含記憶體配置（Stack vs Heap）、陣列效能、Boxing/Unboxing 成本、複製行為與傳遞方式，並列出各自的型別清單，幫助開發者做出正確選擇。"
 keywords: ["C#", "Value Type", "Reference Type", "Stack", "Heap", "Boxing", "Unboxing", ".NET"]
 draft: false
-tags: ["CSharp"]
+tags: ["C#"]
 aliases:
   - /posts/csharpvaluetypereferencetype/
 ---

@@ -5,7 +5,7 @@ summary: "想把程式打包成專業的 .msi 安裝檔？本文提供 WiX Tools
 description: "WiX Toolset 打包 .msi 安裝程式的完整範例教學，涵蓋使用 heat.exe 自動產生 WiX 文件、Product.wxs 完整設定範例、桌面捷徑（Shortcut）建立、Windows 開始功能表（Program Menu）捷徑與解安裝程式、安裝資料夾權限設定（Everyone/Users），以及重要的 GUID 替換說明。"
 keywords: ["WiX Toolset", "MSI", "Windows Installer", "installer", "deployment", "packaging", "heat.exe", "Product.wxs"]
 draft: false
-tags: ["tool"]
+tags: ["Tool"]
 aliases:
   - /posts/wixexamples/
 ---

@@ -5,7 +5,7 @@ summary: "String 看起來像 Value Type，但其實是 Reference Type？本文�
 description: "C# 的 String 雖然是 Reference Type，卻表現得像 Value Type，原因在於其不可變性（immutability）。本文透過程式碼實驗與 ReferenceEquals 比較，解析 String Interning 與記憶體管理機制，以及為何需要使用 StringBuilder。"
 keywords: ["C#", "String", "Reference Type", "immutability", "String Interning", "StringBuilder", ".NET"]
 draft: false
-tags: ["CSharp"]
+tags: ["C#"]
 aliases:
   - /posts/csharpreferencetypestring/
 ---

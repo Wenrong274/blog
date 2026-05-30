@@ -61,7 +61,7 @@ tags: ["Blog"]
 
 [book_tenlong]: https://www.tenlong.com.tw/products/9787115429476
 [Blogger]: https://www.blogger.com/
-[Blogger_1]: http://teddy-chen-tw.blogspot.com/
+[Blogger_1]: https://teddy-chen-tw.blogspot.com/
 [tedsieblog]: https://tedsieblog.wordpress.com/
 [wordpress_1]: https://jessielab.com/wordpress%E6%95%99%E5%AD%B8-setting-up-a-website/
 [siteground]: https://www.siteground.com/
