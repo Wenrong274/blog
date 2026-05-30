@@ -1,5 +1,5 @@
 baseURL: "https://wenrong-nexus.com/"
-languageCode: zh # en-us
+locale: zh # en-us
 title: Wenrong Nexus
 paginate: 5
 theme: PaperMod
@@ -13,8 +13,11 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
-googleAnalytics: G-GRV3BQC1BQ
-disqusShortname: wenrongdev
+services:
+  googleAnalytics:
+    id: G-GRV3BQC1BQ
+  disqus:
+    shortname: wenrongdev
 
 minify:
   disableXML: true
@@ -90,15 +93,15 @@ params:
       url: "https://github.com/Wenrong274"
     - name: email
       url: "mailto:me@wenrong-nexus.com"
-    - name: rss # Shows an RSS feed icon on your site`
+    - name: rss # Shows an RSS feed icon on your site
       url: "index.xml" # Your RSS feed url path
-  analytics:
-    google:
-      SiteVerificationTag: "G-GRV3BQC1BQ"
-    bing:
-      SiteVerificationTag: "G-GRV3BQC1BQ"
-    yandex:
-      SiteVerificationTag: "G-GRV3BQC1BQ"
+  # analytics:
+  #   google:
+  #     SiteVerificationTag: ""
+  #   bing:
+  #     SiteVerificationTag: ""
+  #   yandex:
+  #     SiteVerificationTag: ""
 
   cover:
     hidden: true # hide everywhere but not in structured data

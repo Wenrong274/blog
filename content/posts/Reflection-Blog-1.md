@@ -3,7 +3,7 @@ title: "Blog 心得（1）"
 date: 2022-02-14
 description: "從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。"
 keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
-draft: fales
+draft: false
 showtoc: true
 tags: ["Blog"]
 ---

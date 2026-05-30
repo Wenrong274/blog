@@ -105,6 +105,6 @@ C# String 有以下特性：
 
 ---
 
-[C# Value Type、Reference Type 的差異]: .../csharpvaluetypereferencetype
+[C# Value Type、Reference Type 的差異]: ../csharpvaluetypereferencetype
 [ref1]: https://blog.csdn.net/daigualu/article/details/59096659
 [StringBuilder]: https://learn.microsoft.com/zh-tw/dotnet/api/system.text.stringbuilder?view=net-8.0

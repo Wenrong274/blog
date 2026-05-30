@@ -3,7 +3,7 @@ title: "Unity Project Structure"
 date: 2022-10-05
 description: "自動建立簡易專案資料夾結構"
 keywords: [Unity, Project Structure]
-draft: ture
+draft: true
 showtoc: true
 tags: [Unity]
 ---
