@@ -1,4 +1,5 @@
 {{ with .Params.keywords }}<meta name="keywords" content="{{ delimit . ", " }}">{{ end }}
+{{ if .Params.robotsNoIndex }}<meta name="robots" content="noindex, nofollow">{{ end }}
 {{ partial "head/og-image.html" . }}
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#5856d6">

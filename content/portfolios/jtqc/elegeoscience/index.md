@@ -1,4 +1,5 @@
 ---
+robotsNoIndex: true
 title: "變動的大地"
 date: 2023-10-15
 comments: false

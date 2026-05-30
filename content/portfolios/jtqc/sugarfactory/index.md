@@ -1,4 +1,5 @@
 ---
+robotsNoIndex: true
 title: "糖的科普知識"
 date: 2023-10-15
 comments: false

@@ -1,4 +1,5 @@
 ---
+robotsNoIndex: true
 title: "QC Cube"
 date: 2023-10-15
 comments: false

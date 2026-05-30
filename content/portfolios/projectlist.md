@@ -1,4 +1,5 @@
 ---
+robotsNoIndex: true
 title: "Projects"
 date: 2023-07-25
 comments: false
