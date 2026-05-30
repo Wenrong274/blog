@@ -53,7 +53,7 @@ jobs:
         run: hugo --minify
 
       - name: Install http-server
-        run: npm install -g http-server
+        run: sudo npm install -g http-server
 
       - name: Lighthouse audit
         run: |
