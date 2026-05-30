@@ -5,6 +5,7 @@ summary: "用網址直接呼叫 App！本文介紹 Unity 官方 Deep Link 的正
 description: "介紹 Unity Deep Link 的實作方式，說明為何棄用舊版 Android Intent 呼叫（Google 已限制相關權限），改用 Unity 內建 Deep Link（Application.deepLinkActivated 與 Application.absoluteURL）的方法，並示範在 Awake 中初始化及解析 URL Query 參數的完整 C# 程式碼。"
 keywords: ["Unity", "Deep Link", "Android", "iOS", "URL scheme", "Application.absoluteURL", "deepLinkActivated"]
 draft: false
+series: ["Unity Deep Link"]
 tags: ["Unity"]
 aliases:
   - /posts/unitydeeplink_1/

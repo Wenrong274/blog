@@ -13,3 +13,6 @@ node_modules
 # macOS
 .DS_Store
 assets/jsconfig.json
+package.json
+package-lock.json
+node_modules/

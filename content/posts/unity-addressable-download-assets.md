@@ -5,6 +5,7 @@ summary: "Unity Addressable 要怎麼下載 Asset？本文整理四種下載方�
 description: "深入介紹 Unity Addressable 的多種 Asset 下載方式，包含 DownloadDependenciesAsync 搭配 Addressable Name/Label 下載、AssetReference 單一下載、多個 AssetReference 同時下載，以及取得下載容量大小和顯示下載進度的實作方法。"
 keywords: ["Unity", "Addressable", "hotfix", "asset bundle", "DownloadDependenciesAsync", "AssetReference", "remote assets"]
 draft: false
+series: ["Unity Addressable"]
 tags: ["Unity"]
 aliases:
   - /posts/unity-addressable_download_assets/

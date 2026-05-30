@@ -5,6 +5,7 @@ summary: "想用 Addressable 做遊戲熱更新？本文從 Initialization、Upd
 description: "Unity Addressable Asset System 熱更新（Hotfix）完整實作教學，涵蓋系統初始化（InitializeAsync）、Catalog 更新、特定 Label 更新、全量 Asset 更新，以及清除 Cache 的方法，附完整 C# Coroutine 程式碼與 Windows 路徑說明。"
 keywords: ["Unity", "Addressable", "hotfix", "asset bundle", "Catalog", "remote assets", "cache", "IEnumerator"]
 draft: false
+series: ["Unity Addressable"]
 tags: ["Unity"]
 ---
 

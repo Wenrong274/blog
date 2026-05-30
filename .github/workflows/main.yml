@@ -35,6 +35,14 @@ jobs:
           submodules: true # Fetch Hugo themes (true OR recursive)
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
+      - name: Cache Hugo resources
+        uses: actions/cache@v4
+        with:
+          path: resources/
+          key: ${{ runner.os }}-hugo-resources-${{ hashFiles('assets/**', 'content/**') }}
+          restore-keys: |
+            ${{ runner.os }}-hugo-resources-
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
@@ -43,6 +51,20 @@ jobs:
 
       - name: Build
         run: hugo --minify
+
+      - name: Install http-server
+        run: npm install -g http-server
+
+      - name: Lighthouse audit
+        run: |
+          http-server ./public -p 8080 &
+          sleep 3
+          npx @lhci/cli@0.14.x autorun \
+            --collect.url=http://localhost:8080/ \
+            --collect.url=http://localhost:8080/posts/ \
+            --upload.target=temporary-public-storage \
+            --collect.settings.chromeFlags="--no-sandbox"
+        continue-on-error: true
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

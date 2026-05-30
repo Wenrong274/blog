@@ -5,6 +5,7 @@ summary: "Hugo + PaperMod + GitHub Actions 怎麼部署？本文整理搜尋功�
 description: "Hugo 靜態網站搭配 PaperMod 主題的架設與部署心得，涵蓋：config.yml 搜尋頁面設定（JSON output）、GitHub Actions 自動部署工作流程、Custom Domain 不被清除的 cname 設定，以及 Disqus/giscus 留言系統的整合方式。"
 keywords: ["Hugo", "PaperMod", "GitHub Pages", "GitHub Actions", "static site", "config.yml", "deployment", "SEO"]
 draft: false
+series: ["Blog 心得"]
 tags: ["Blog"]
 ---
 

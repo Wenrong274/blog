@@ -5,6 +5,7 @@ summary: "Deep Link 要怎麼從外部呼叫 App？本文示範 Android AndroidM
 description: "Unity Deep Link 呼叫設定教學（第二篇），說明如何在 Android AndroidManifest.xml 設定 intent-filter（支援 HTTP/HTTPS URL 與自訂 scheme），以及在 Unity iOS 設定 Deep Link ID（對應 Xcode Universal Links），讓瀏覽器或其他 App 能直接喚起指定 App。"
 keywords: ["Unity", "Deep Link", "Android", "iOS", "AndroidManifest", "URL scheme", "Universal Links", "intent-filter"]
 draft: false
+series: ["Unity Deep Link"]
 tags: ["Unity"]
 aliases:
   - /posts/unitydeeplink_2/

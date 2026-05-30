@@ -5,6 +5,7 @@ summary: "為什麼泛型要避免 new()、struct、class 約束？執行期型�
 description: "Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。"
 keywords: ["Effective C#", "C#", "Generics", "type constraints", "JIT", "IEnumerable", "runtime type checking", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme18-19/

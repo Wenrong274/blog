@@ -5,6 +5,7 @@ summary: "var 要怎麼用才正確？const 和 readonly 差在哪？型別轉�
 description: "Effective C# 做法 01-03 讀書心得，涵蓋：偏好使用 var 隱含型別宣告的時機、const 與 readonly 的選擇準則（編譯期 vs 執行期常數），以及使用 is/as 運算子進行安全型別轉換的最佳實踐。"
 keywords: ["Effective C#", "C#", "var", "const", "readonly", "type casting", "is operator", "as operator", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme01-03/

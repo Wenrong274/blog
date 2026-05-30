@@ -5,6 +5,7 @@ summary: "Medium 貼程式碼超不方便、CoderBridge 沒有備份檔，最後
 description: "個人部落格架設心路歷程分享（第二篇）。比較 Medium、CoderBridge、Hugo 三個平台的優缺點，分析技術文章撰寫需求（程式碼片段、Markdown 支援、備份、免費伺服器），說明最終選擇 Hugo 架設在 GitHub Pages 的決策過程。"
 keywords: ["Hugo", "Medium", "CoderBridge", "Blog", "GitHub Pages", "Markdown", "static site generator"]
 draft: false
+series: ["Blog 心得"]
 tags: ["Blog"]
 ---
 

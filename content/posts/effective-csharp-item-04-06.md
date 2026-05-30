@@ -5,6 +5,7 @@ summary: "字串插值為什麼比 string.Format 好？FormattableString 解決�
 description: "Effective C# 做法 04-06 讀書心得，涵蓋：以字串插值（interpolated string）取代 string.Format、使用 FormattableString 處理文化特定字串格式差異、透過 nameof 運算子避免字串型別 API 的潛在問題。"
 keywords: ["Effective C#", "C#", "string interpolation", "FormattableString", "nameof", "string.Format", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme04-06/

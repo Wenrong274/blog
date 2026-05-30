@@ -5,6 +5,7 @@ summary: "建構子寫重複了？物件在 OnPaint 裡反覆 new 很浪費？�
 description: "Effective C# 做法 14-15 讀書心得，涵蓋：使用建構子初始化程序（constructor chaining）減少重複邏輯、預設參數與多載建構子的取捨、readonly 欄位繼承限制，以及避免在高頻呼叫路徑中建構不必要物件的最佳實踐。"
 keywords: ["Effective C#", "C#", "constructor chaining", "readonly", "object allocation", "performance", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme14-15/

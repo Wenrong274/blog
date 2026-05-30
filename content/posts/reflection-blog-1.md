@@ -5,6 +5,7 @@ summary: "從 Blogger、Wordpress 到 Medium，折騰了好幾個平台才找到
 description: "個人部落格架設心路歷程分享（第一篇）。記錄從 Blogger、Wordpress（SiteGround）、Medium 到 Hugo 的平台選擇過程，包含三年 Wordpress 費用明細（SiteGround + NameCheap）、二年費用暴漲的親身經歷，以及為何最終選擇 Hugo 自架的原因。"
 keywords: ["Hugo", "Wordpress", "Medium", "SiteGround", "Blog", "static site", "self-hosted blog"]
 draft: false
+series: ["Blog 心得"]
 tags: ["Blog"]
 ---
 

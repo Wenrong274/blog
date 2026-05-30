@@ -5,6 +5,7 @@ summary: "泛型的 out 關鍵字和方法參數的 out 是同一個東西嗎？
 description: "Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。"
 keywords: ["Effective C#", "C#", "Covariance", "Contravariance", "Generics", "delegate", "IEnumerable", "LINQ", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme22-23/

@@ -5,6 +5,7 @@ summary: "Addressable Asset 要怎麼讀取、生成、釋放？本文整理三�
 description: "介紹 Unity Addressable 的 Asset 讀取、生成與釋放的完整流程，包含使用字串、Label 和 AssetReference 三種 LoadAssetAsync 方式，以及 Addressables.Release 正確釋放 Asset 避免破圖，並說明如何使用 Event Viewer 監控 Editor 執行時的記憶體使用情況。"
 keywords: ["Unity", "Addressable", "LoadAssetAsync", "AssetReference", "Release", "Event Viewer", "memory management", "hotfix"]
 draft: false
+series: ["Unity Addressable"]
 tags: ["Unity"]
 aliases:
   - /posts/unity-addressable_load_assets/

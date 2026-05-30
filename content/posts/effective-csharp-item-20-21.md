@@ -5,6 +5,7 @@ summary: "IComparable 和 IComparer 傻傻分不清楚？泛型類別含有 IDis
 description: "Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable<T> 實作預設排序、以 IComparer<T> 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy<T> 應用。"
 keywords: ["Effective C#", "C#", "IComparable", "IComparer", "IDisposable", "Generics", "Lazy", "sorting", ".NET"]
 draft: false
+series: ["Effective C#"]
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme20-21/
