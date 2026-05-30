@@ -1130,9 +1130,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# 淺複製與深複製</title>
-      <link>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-shallow-copy-and-deep-copy/</link>
       <pubDate>Sat, 22 Jun 2024 19:02:04 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-shallow-copy-and-deep-copy/</guid>
       <description>C# 淺複製與深複製</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
@@ -1242,9 +1242,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Reference Type String</title>
-      <link>https://wenrong-nexus.com/posts/csharpreferencetypestring/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-reference-type-string/</link>
       <pubDate>Sat, 22 Jun 2024 17:40:52 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpreferencetypestring/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-reference-type-string/</guid>
       <description>淺談 C# Reference Type String</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有提到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
@@ -1320,9 +1320,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Class 和 Struct 選擇</title>
-      <link>https://wenrong-nexus.com/posts/csharpclassandstruct/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-class-and-struct/</link>
       <pubDate>Wed, 12 Jun 2024 22:47:08 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpclassandstruct/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-class-and-struct/</guid>
       <description>C# Class 和 Struct 選擇</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
@@ -1358,9 +1358,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Value Type、Reference Type 的差異</title>
-      <link>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-value-type-reference-type/</link>
       <pubDate>Tue, 11 Jun 2024 22:38:53 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-value-type-reference-type/</guid>
       <description>討論 C# Value Type、Reference Type 的差異</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在公司讀書會與同事討論淺複製與深複製的差異和使用時機時，聊到 Reference Type、Value Type 的不同，但是要講淺複製與深複製之前要先講 Reference Type、Value Type 的差異。</p>
@@ -1463,9 +1463,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 虛擬代理模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-virtual-proxy/</link>
       <pubDate>Tue, 30 Apr 2024 00:39:46 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-virtual-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這篇主要是在講虛擬代理人的實作部分。</p>
@@ -1544,9 +1544,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 代理人模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-proxy/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-proxy/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-proxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來解決大部與後端同步資料的方法，在實作方面代理人模式是最常見的解決方案。</p>
@@ -1561,9 +1561,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 狀態模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-state/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-state/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-state/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-state/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的狀態模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>狀態模式主要用來解決多個 <code>if else</code> 判斷，並且不會因為多了一個 <code>if</code>，導致很多方法都要重新寫判斷。</p>
@@ -1587,9 +1587,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 組合模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-composite/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-composite/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-composite/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-composite/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的組合模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>組合模式是需要 Leaf（子節點）的嗎？</p>
@@ -1610,9 +1610,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 迭代器模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-iterator/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-iterator/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-iterator/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-iterator/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的迭代器模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="ienumeratorienumerable-使用-forforeach-的差別">IEnumerator、IEnumerable 使用 for、foreach 的差別</h2>
 <p>Q：實作發現 IEnumerable 能使用 foreach、不能使用 for，IEnumerator 能使用 for、不能使用 foreach，這是為什麼。</p>
@@ -1642,9 +1642,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 模板模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-template/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-template/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-template/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
@@ -1677,9 +1677,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 表象模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-facade/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-facade/</link>
       <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-facade/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-facade/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的表象模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>當本身有所有使用到類別，就不必使用表象模式。也就是表象模式是需要有各種次系統組裝而成的模式，而不是覺得這邊很複雜就用表象模式。</p>
@@ -1722,9 +1722,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Wix Examples</title>
-      <link>https://wenrong-nexus.com/posts/wixexamples/</link>
+      <link>https://wenrong-nexus.com/posts/wix-examples/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/wixexamples/</guid>
+      <guid>https://wenrong-nexus.com/posts/wix-examples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
 <p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
@@ -1871,9 +1871,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity ParticleBezierPath</title>
-      <link>https://wenrong-nexus.com/posts/particlebezierpath/</link>
+      <link>https://wenrong-nexus.com/posts/particle-bezier-path/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/particlebezierpath/</guid>
+      <guid>https://wenrong-nexus.com/posts/particle-bezier-path/</guid>
       <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此篇是優化原本的 <a href="https://wenrongdev.com/posts/unity-particlepath/">Unity ParticlePath</a></p>
@@ -1890,9 +1890,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Oculus Sample</title>
-      <link>https://wenrong-nexus.com/posts/oculussample/</link>
+      <link>https://wenrong-nexus.com/posts/oculus-sample/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/oculussample/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculus-sample/</guid>
       <description>簡易的 Oculus 功能介紹專案</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這是簡易的 Oculus 功能介紹專案，是我製作 VR 專案以來經常使用到的操作行為，我把這些操作行為歸類起來。</p>
@@ -1904,9 +1904,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Deep Link -2</title>
-      <link>https://wenrong-nexus.com/posts/unitydeeplink_2/</link>
+      <link>https://wenrong-nexus.com/posts/unity-deep-link-2/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitydeeplink_2/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-deep-link-2/</guid>
       <description>介紹 Unity Deep Link 呼叫方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。</p>
@@ -1954,9 +1954,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Deep Link -1</title>
-      <link>https://wenrong-nexus.com/posts/unitydeeplink_1/</link>
+      <link>https://wenrong-nexus.com/posts/unity-deep-link-1/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitydeeplink_1/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-deep-link-1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可以利用 <a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">Get Android Intent Data for Unity</a> 這邊文章提到的方式，呼叫 App，不過這只限定 Android，iOS 則還是需要用 Deeplink 的方式呼叫。主要是當時 Unity 版本並不支援 DeepLink，所以只能自己寫原生的，才會有之前的<a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">這篇</a>文章，更重要的是，使用之前的呼叫方式是需要某些權限，但目前 Google 也把這些權限關閉，無法正常上架需要自己寫信去解釋才會願意讓你正常上架。所以建議是棄用這種方法改用 Deeplink。</p>
@@ -2011,9 +2011,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Text Breaking Space</title>
-      <link>https://wenrong-nexus.com/posts/unitytextbreakingspace/</link>
+      <link>https://wenrong-nexus.com/posts/unity-text-breaking-space/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitytextbreakingspace/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-text-breaking-space/</guid>
       <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
@@ -2039,9 +2039,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
-      <link>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</link>
+      <link>https://wenrong-nexus.com/posts/oculus-auto-set-build-setting-and-build/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculus-auto-set-build-setting-and-build/</guid>
       <description>自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
@@ -2174,9 +2174,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Open Shader For VSCode</title>
-      <link>https://wenrong-nexus.com/posts/openshaderforvscode/</link>
+      <link>https://wenrong-nexus.com/posts/open-shader-for-vs-code/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/openshaderforvscode/</guid>
+      <guid>https://wenrong-nexus.com/posts/open-shader-for-vs-code/</guid>
       <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>針對 Unity Shader 檔案打開時，使用 VSCode 開啟而不是 Visual Studio，假如預設是 VSCode 則無需使用這功能。</p>
@@ -2242,9 +2242,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Addressable Load Assets</title>
-      <link>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable-load-assets/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable-load-assets/</guid>
       <description>介紹 Unity Addressable 讀取、生成、釋放方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>介紹我使用 Addressable 的讀取、生成、釋放方式。</p>
@@ -2297,9 +2297,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Addressable Download Assets</title>
-      <link>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable-download-assets/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable-download-assets/</guid>
       <description>介紹 Unity Addressable 多個下載方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在前一篇 <a href="../unity-addressable">Unity Addressable</a> 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。</p>
@@ -2367,9 +2367,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Android Build Failed Build tools 3X.0.0 Bug</title>
-      <link>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</link>
+      <link>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</guid>
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>輸出 Apk 遇到的錯誤</p>
@@ -2596,9 +2596,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity MathQuiz</title>
-      <link>https://wenrong-nexus.com/posts/unity-mathquiz/</link>
+      <link>https://wenrong-nexus.com/posts/unity-math-quiz/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-mathquiz/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-math-quiz/</guid>
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此專案為 Unity math quiz，是基於 <a href="https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-2-create-a-timed-math-quiz">Tutorial 2: Create a timed math quiz</a> 文件改寫出來的專案。</p>
@@ -2817,9 +2817,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity ParticlePath</title>
-      <link>https://wenrong-nexus.com/posts/unity-particlepath/</link>
+      <link>https://wenrong-nexus.com/posts/unity-particle-path/</link>
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-particlepath/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-particle-path/</guid>
       <description>Unity 實作粒子路徑系統。</description>
       <content:encoded><![CDATA[<p><img alt="demogif" loading="lazy" src="https://i.imgur.com/tNmcGdz.gif"></p>
 <h2 id="github"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
@@ -3042,9 +3042,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Data Access WebGL</title>
-      <link>https://wenrong-nexus.com/posts/data-access-webgl/</link>
+      <link>https://wenrong-nexus.com/posts/data-access-web-gl/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/data-access-webgl/</guid>
+      <guid>https://wenrong-nexus.com/posts/data-access-web-gl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。</p>
@@ -3632,9 +3632,9 @@ end;
     </item>
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <link>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <guid>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <ul>
@@ -3768,9 +3768,9 @@ end;
     </item>
     <item>
       <title>Unity 5.3 Native System Language</title>
-      <link>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</link>
+      <link>https://wenrong-nexus.com/posts/unity-5-3-native-system-language/</link>
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-5-3-native-system-language/</guid>
       <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
@@ -3839,9 +3839,9 @@ end;
     </item>
     <item>
       <title>Unity WebGL Template</title>
-      <link>https://wenrong-nexus.com/posts/unity-webgl-template/</link>
+      <link>https://wenrong-nexus.com/posts/unity-web-gl-template/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-webgl-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-web-gl-template/</guid>
       <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>執行 WebGL 時都會有 Unity Logo &amp; Loading。目前此專案修改 Unity Logo 的部分。</p>
@@ -3871,9 +3871,9 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
     </item>
     <item>
       <title>Unity WebGL RectMask2D Does Not Work</title>
-      <link>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
+      <link>https://wenrong-nexus.com/posts/unity-web-gl-rect-mask2-d-does-not-work/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-web-gl-rect-mask2-d-does-not-work/</guid>
       <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。</p>

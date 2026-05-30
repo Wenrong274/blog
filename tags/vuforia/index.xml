@@ -10,9 +10,9 @@
     <atom:link href="https://wenrong-nexus.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <link>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <guid>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <ul>

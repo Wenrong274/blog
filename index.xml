@@ -1130,9 +1130,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# 淺複製與深複製</title>
-      <link>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-shallow-copy-and-deep-copy/</link>
       <pubDate>Sat, 22 Jun 2024 19:02:04 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpshallowcopyanddeepcopy/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-shallow-copy-and-deep-copy/</guid>
       <description>C# 淺複製與深複製</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下淺複製（Shallow Copy）與深複製（Deep Copy）。</p>
@@ -1242,9 +1242,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Reference Type String</title>
-      <link>https://wenrong-nexus.com/posts/csharpreferencetypestring/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-reference-type-string/</link>
       <pubDate>Sat, 22 Jun 2024 17:40:52 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpreferencetypestring/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-reference-type-string/</guid>
       <description>淺談 C# Reference Type String</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有提到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
@@ -1320,9 +1320,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Class 和 Struct 選擇</title>
-      <link>https://wenrong-nexus.com/posts/csharpclassandstruct/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-class-and-struct/</link>
       <pubDate>Wed, 12 Jun 2024 22:47:08 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpclassandstruct/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-class-and-struct/</guid>
       <description>C# Class 和 Struct 選擇</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前有講到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，現在來講一下 Class 和 Struct 選擇。</p>
@@ -1358,9 +1358,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>C# Value Type、Reference Type 的差異</title>
-      <link>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</link>
+      <link>https://wenrong-nexus.com/posts/csharp-value-type-reference-type/</link>
       <pubDate>Tue, 11 Jun 2024 22:38:53 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/csharpvaluetypereferencetype/</guid>
+      <guid>https://wenrong-nexus.com/posts/csharp-value-type-reference-type/</guid>
       <description>討論 C# Value Type、Reference Type 的差異</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在公司讀書會與同事討論淺複製與深複製的差異和使用時機時，聊到 Reference Type、Value Type 的不同，但是要講淺複製與深複製之前要先講 Reference Type、Value Type 的差異。</p>
@@ -1463,9 +1463,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 虛擬代理模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-virtual-proxy/</link>
       <pubDate>Tue, 30 Apr 2024 00:39:46 +0800</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-virtualproxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-virtual-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這篇主要是在講虛擬代理人的實作部分。</p>
@@ -1544,9 +1544,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 代理人模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-proxy/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-proxy/</link>
       <pubDate>Mon, 15 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-proxy/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-proxy/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來解決大部與後端同步資料的方法，在實作方面代理人模式是最常見的解決方案。</p>
@@ -1561,9 +1561,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 狀態模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-state/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-state/</link>
       <pubDate>Wed, 10 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-state/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-state/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的狀態模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>狀態模式主要用來解決多個 <code>if else</code> 判斷，並且不會因為多了一個 <code>if</code>，導致很多方法都要重新寫判斷。</p>
@@ -1587,9 +1587,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 組合模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-composite/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-composite/</link>
       <pubDate>Mon, 01 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-composite/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-composite/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的組合模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>組合模式是需要 Leaf（子節點）的嗎？</p>
@@ -1610,9 +1610,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 迭代器模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-iterator/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-iterator/</link>
       <pubDate>Tue, 26 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-iterator/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-iterator/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的迭代器模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="ienumeratorienumerable-使用-forforeach-的差別">IEnumerator、IEnumerable 使用 for、foreach 的差別</h2>
 <p>Q：實作發現 IEnumerable 能使用 foreach、不能使用 for，IEnumerator 能使用 for、不能使用 foreach，這是為什麼。</p>
@@ -1642,9 +1642,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 模板模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-template/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-template/</link>
       <pubDate>Mon, 18 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-template/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的模板模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>模板模式最基礎的概念就是需要一個<code>骨架</code>(abstract class)，利用不同<code>方法</code>或<code>流程</code>來實作，算是很常見的設計模式之一。</p>
@@ -1677,9 +1677,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>心得 表象模式</title>
-      <link>https://wenrong-nexus.com/posts/designpattern-facade/</link>
+      <link>https://wenrong-nexus.com/posts/design-pattern-facade/</link>
       <pubDate>Tue, 12 Mar 2024 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/designpattern-facade/</guid>
+      <guid>https://wenrong-nexus.com/posts/design-pattern-facade/</guid>
       <description>主要是針對深入淺出設計模式書籍，提到的表象模式的心得。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>當本身有所有使用到類別，就不必使用表象模式。也就是表象模式是需要有各種次系統組裝而成的模式，而不是覺得這邊很複雜就用表象模式。</p>
@@ -1722,9 +1722,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Wix Examples</title>
-      <link>https://wenrong-nexus.com/posts/wixexamples/</link>
+      <link>https://wenrong-nexus.com/posts/wix-examples/</link>
       <pubDate>Fri, 20 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/wixexamples/</guid>
+      <guid>https://wenrong-nexus.com/posts/wix-examples/</guid>
       <description>主要是用來打包程式輸出成 .msi 檔</description>
       <content:encoded><![CDATA[<p>主要是用來打包程式輸出成 <code>.msi</code> 檔（<a href="https://zh.wikipedia.org/zh-tw/Windows_Installer">Windows Installer</a>）。</p>
 <p>建議先看完 「<a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a>」，能夠把 80% 以上的問題解決。</p>
@@ -1974,27 +1974,27 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <description>&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2023/05 - 2023/07&lt;/dt&gt;
-&lt;dd&gt;AIR 英語未來城　&lt;a href=&#34;https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/__rgNu0EP08&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;AIR 英語未來城　&lt;a href=&#34;https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/__rgNu0EP08&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2022&#34;&gt;2022&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2022/01 - 2022/11&lt;/dt&gt;
-&lt;dd&gt;滅蚊大作戰　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=34&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;滅蚊大作戰　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=34&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2022/08 - 2022/09&lt;/dt&gt;
 &lt;dd&gt;寶馬曳引機 VR 　&lt;a href=&#34;https://www.youtube.com/watch?v=JwodlwHqAhU&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2022/06 - 2022/12&lt;/dt&gt;
 &lt;dd&gt;變動的大地　&lt;a href=&#34;https://www.youtube.com/watch?v=pWr71RNmNHE&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://moevrar.tku.edu.tw/material_detail.cshtml?id=145&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2022/06 - 2022/11&lt;/dt&gt;
-&lt;dd&gt;密室逃脫 AR : 生化危機　&lt;a href=&#34;https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=35&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;密室逃脫 AR : 生化危機　&lt;a href=&#34;https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=35&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2022/11 - 2022/12&lt;/dt&gt;
-&lt;dd&gt;阿拉丁教學平台入口　&lt;a href=&#34;https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;阿拉丁教學平台入口　&lt;a href=&#34;https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2022/11 - 2023/02&lt;/dt&gt;
-&lt;dd&gt;新挑戰英語單字王_觸控互動　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%8C%91%E6%88%B0%E8%8B%B1%E8%AA%9E%E5%96%AE%E5%AD%97%E7%8E%8B-%E8%A7%B8%E6%8E%A7%E4%BA%92%E5%8B%95/id1474197892&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.engchallenge&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=31&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;新挑戰英語單字王_觸控互動　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%8C%91%E6%88%B0%E8%8B%B1%E8%AA%9E%E5%96%AE%E5%AD%97%E7%8E%8B-%E8%A7%B8%E6%8E%A7%E4%BA%92%E5%8B%95/id1474197892&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.engchallenge&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=31&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2021/02 - 2023/04&lt;/dt&gt;
-&lt;dd&gt;康軒翻滾吧圖學　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E7%BF%BB%E6%BB%BE%E5%90%A7%E5%9C%96%E5%AD%B8/id1474588832&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;康軒翻滾吧圖學　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E7%BF%BB%E6%BB%BE%E5%90%A7%E5%9C%96%E5%AD%B8/id1474588832&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2021/03 - 2021/05&lt;/dt&gt;
 &lt;dd&gt;糖的科普知識　&lt;a href=&#34;https://www.youtube.com/watch?v=inlLMzOoc60&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2021/05 - 2021/05&lt;/dt&gt;
@@ -2002,25 +2002,25 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 &lt;dt&gt;2021/05 - 2021/08&lt;/dt&gt;
 &lt;dd&gt;年長者失智預防 環遊世界&lt;/dd&gt;
 &lt;dt&gt;2021/09 - 2023/07&lt;/dt&gt;
-&lt;dd&gt;雲林好 Young 　&lt;a href=&#34;https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/e3VVoea3EBg&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;雲林好 Young 　&lt;a href=&#34;https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/e3VVoea3EBg&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2021/08 - 2021/11&lt;/dt&gt;
-&lt;dd&gt;FunPark 玩童書　&lt;a href=&#34;https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Company.FunPark&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;FunPark 玩童書　&lt;a href=&#34;https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Company.FunPark&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2020&#34;&gt;2020&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2020/03 - 2023/07&lt;/dt&gt;
-&lt;dd&gt;Booster 教学系统　&lt;a href=&#34;https://apps.apple.com/tw/app/booster-%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F/id1480475182&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Melody.TeachBooster&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;Booster 教学系统　&lt;a href=&#34;https://apps.apple.com/tw/app/booster-%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F/id1480475182&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Melody.TeachBooster&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2020/05 - 2023/07&lt;/dt&gt;
-&lt;dd&gt;Fingerprints 教學系統　&lt;a href=&#34;https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.FingerPrints&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;Fingerprints 教學系統　&lt;a href=&#34;https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.FingerPrints&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2020/08 - 2020/10&lt;/dt&gt;
-&lt;dd&gt;鈎 GO 釣手　&lt;a href=&#34;https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/uPXzoWxgxoo&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;鈎 GO 釣手　&lt;a href=&#34;https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/uPXzoWxgxoo&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2020/11 - 2021/05&lt;/dt&gt;
-&lt;dd&gt;細胞分裂、減數分裂與生物的遺傳　&lt;a href=&#34;https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;細胞分裂、減數分裂與生物的遺傳　&lt;a href=&#34;https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2019&#34;&gt;2019&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2019/01 - 2019/11&lt;/dt&gt;
-&lt;dd&gt;康軒國中小課文輕鬆聽　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E5%9C%8B%E4%B8%AD%E5%B0%8F%E8%AA%B2%E6%96%87%E8%BC%95%E9%AC%86%E8%81%BD/id1480191322&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GE76CD7FEFDE74CA7A1ED6EC6D252D5D7&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;康軒國中小課文輕鬆聽　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E5%9C%8B%E4%B8%AD%E5%B0%8F%E8%AA%B2%E6%96%87%E8%BC%95%E9%AC%86%E8%81%BD/id1480191322&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GE76CD7FEFDE74CA7A1ED6EC6D252D5D7&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2019/04 - 2019/06&lt;/dt&gt;
 &lt;dd&gt;康軒學習遊戲王　&lt;a href=&#34;https://youtu.be/J4M59wBFR3U&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2019/08 - 2023/07&lt;/dt&gt;
@@ -2028,27 +2028,27 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 &lt;dt&gt;2019/11 - 2020/12&lt;/dt&gt;
 &lt;dd&gt;越語致用　&lt;a href=&#34;https://youtu.be/crGavyM_Cjs&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2019/10 - 2019/11&lt;/dt&gt;
-&lt;dd&gt;震銲 AR 　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=59&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;震銲 AR 　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=59&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2019/12 - 2022/12&lt;/dt&gt;
-&lt;dd&gt;英語村_VR 　&lt;a href=&#34;https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;英語村_VR 　&lt;a href=&#34;https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2018&#34;&gt;2018&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2018/05 - 2023/07&lt;/dt&gt;
 &lt;dd&gt;QC Cube 　&lt;a href=&#34;https://apps.apple.com/tw/app/qc-cube/id1480811031&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/uPXzoWxgxoo&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2018/05 - 2018/12&lt;/dt&gt;
-&lt;dd&gt;風華再現千里眼　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.ouorange.Fenghua&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;風華再現千里眼　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.ouorange.Fenghua&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2018/06 - 2023/02&lt;/dt&gt;
-&lt;dd&gt;新尋寶記_AR 　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=27&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;新尋寶記_AR 　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=27&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2018/08 - 2023/04&lt;/dt&gt;
-&lt;dd&gt;新悠遊記_360VR 　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=28&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;新悠遊記_360VR 　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360&#34;&gt;GooglePlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=28&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;h2 id=&#34;2017&#34;&gt;2017&lt;/h2&gt;
 &lt;dl&gt;
 &lt;dt&gt;2017/03 - 2020/02&lt;/dt&gt;
 &lt;dd&gt;康軒動課本　&lt;a href=&#34;https://youtu.be/rr3BgsDc4BA&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=30&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2017/05 - 2018/11&lt;/dt&gt;
-&lt;dd&gt;VR 妙視界：大地的撼動　&lt;a href=&#34;https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.VR0003&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;VR 妙視界：大地的撼動　&lt;a href=&#34;https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.VR0003&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2017/05 - 2018/06&lt;/dt&gt;
 &lt;dd&gt;VR 妙視界：微太空之旅　&lt;a href=&#34;https://www.facebook.com/JTQCDE/posts/379486789313837/?paipv=0&amp;amp;eav=AfbMwPAYhGyCDqtOaD1t8b09DUPMKcgX17RyYcqf9cLKpjW0SmB3t__QNrWEfmnna_8&amp;amp;_rdr&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
@@ -2057,33 +2057,33 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 &lt;dt&gt;2016/05 - 2017/02&lt;/dt&gt;
 &lt;dd&gt;台達魔法小學堂能源篇　&lt;a href=&#34;https://youtu.be/PH2O5FLfrek&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
 &lt;dt&gt;2016/10 - 2017/04&lt;/dt&gt;
-&lt;dd&gt;台達魔法小學堂之生活用電王　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Delta.ESSBD.powerAR&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dd&gt;台達魔法小學堂之生活用電王　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Delta.ESSBD.powerAR&#34;&gt;GooglePlay&lt;/a&gt;&lt;/dd&gt;
 &lt;/dl&gt;
 &lt;hr&gt;</description>
       <content:encoded><![CDATA[<h2 id="2023">2023</h2>
 <dl>
 <dt>2023/05 - 2023/07</dt>
-<dd>AIR 英語未來城　<a href="https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity">GoolgPlay</a>　<a href="https://youtu.be/__rgNu0EP08">Youtube</a></dd>
+<dd>AIR 英語未來城　<a href="https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity">GooglePlay</a>　<a href="https://youtu.be/__rgNu0EP08">Youtube</a></dd>
 </dl>
 <h2 id="2022">2022</h2>
 <dl>
 <dt>2022/01 - 2022/11</dt>
-<dd>滅蚊大作戰　<a href="https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito">GoolgPlay</a>　<a href="https://jt-qc.com/product-pages?p_id=34">介紹網站</a></dd>
+<dd>滅蚊大作戰　<a href="https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito">GooglePlay</a>　<a href="https://jt-qc.com/product-pages?p_id=34">介紹網站</a></dd>
 <dt>2022/08 - 2022/09</dt>
 <dd>寶馬曳引機 VR 　<a href="https://www.youtube.com/watch?v=JwodlwHqAhU">Youtube</a></dd>
 <dt>2022/06 - 2022/12</dt>
 <dd>變動的大地　<a href="https://www.youtube.com/watch?v=pWr71RNmNHE">Youtube</a>　<a href="https://moevrar.tku.edu.tw/material_detail.cshtml?id=145">介紹網站</a></dd>
 <dt>2022/06 - 2022/11</dt>
-<dd>密室逃脫 AR : 生化危機　<a href="https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis">GoolgPlay</a>　<a href="">Youtube</a>　<a href="https://jt-qc.com/product-pages?p_id=35">介紹網站</a></dd>
+<dd>密室逃脫 AR : 生化危機　<a href="https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis">GooglePlay</a>　<a href="">Youtube</a>　<a href="https://jt-qc.com/product-pages?p_id=35">介紹網站</a></dd>
 <dt>2022/11 - 2022/12</dt>
-<dd>阿拉丁教學平台入口　<a href="https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII">GoolgPlay</a></dd>
+<dd>阿拉丁教學平台入口　<a href="https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII">GooglePlay</a></dd>
 <dt>2022/11 - 2023/02</dt>
-<dd>新挑戰英語單字王_觸控互動　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%8C%91%E6%88%B0%E8%8B%B1%E8%AA%9E%E5%96%AE%E5%AD%97%E7%8E%8B-%E8%A7%B8%E6%8E%A7%E4%BA%92%E5%8B%95/id1474197892">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.engchallenge">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=31">介紹網站</a></dd>
+<dd>新挑戰英語單字王_觸控互動　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%8C%91%E6%88%B0%E8%8B%B1%E8%AA%9E%E5%96%AE%E5%AD%97%E7%8E%8B-%E8%A7%B8%E6%8E%A7%E4%BA%92%E5%8B%95/id1474197892">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.engchallenge">GooglePlay</a>　<a href="https://jt-qc.com/works-pages?w_id=31">介紹網站</a></dd>
 </dl>
 <h2 id="2021">2021</h2>
 <dl>
 <dt>2021/02 - 2023/04</dt>
-<dd>康軒翻滾吧圖學　<a href="https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E7%BF%BB%E6%BB%BE%E5%90%A7%E5%9C%96%E5%AD%B8/id1474588832">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733">GoolgPlay</a></dd>
+<dd>康軒翻滾吧圖學　<a href="https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E7%BF%BB%E6%BB%BE%E5%90%A7%E5%9C%96%E5%AD%B8/id1474588832">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733">GooglePlay</a></dd>
 <dt>2021/03 - 2021/05</dt>
 <dd>糖的科普知識　<a href="https://www.youtube.com/watch?v=inlLMzOoc60">Youtube</a>　<a href="https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116">介紹網站</a></dd>
 <dt>2021/05 - 2021/05</dt>
@@ -2091,25 +2091,25 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <dt>2021/05 - 2021/08</dt>
 <dd>年長者失智預防 環遊世界</dd>
 <dt>2021/09 - 2023/07</dt>
-<dd>雲林好 Young 　<a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap">GoolgPlay</a>　<a href="https://youtu.be/e3VVoea3EBg">Youtube</a></dd>
+<dd>雲林好 Young 　<a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap">GooglePlay</a>　<a href="https://youtu.be/e3VVoea3EBg">Youtube</a></dd>
 <dt>2021/08 - 2021/11</dt>
-<dd>FunPark 玩童書　<a href="https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.Company.FunPark">GoolgPlay</a></dd>
+<dd>FunPark 玩童書　<a href="https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.Company.FunPark">GooglePlay</a></dd>
 </dl>
 <h2 id="2020">2020</h2>
 <dl>
 <dt>2020/03 - 2023/07</dt>
-<dd>Booster 教学系统　<a href="https://apps.apple.com/tw/app/booster-%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F/id1480475182">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.Melody.TeachBooster">GoolgPlay</a></dd>
+<dd>Booster 教学系统　<a href="https://apps.apple.com/tw/app/booster-%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F/id1480475182">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.Melody.TeachBooster">GooglePlay</a></dd>
 <dt>2020/05 - 2023/07</dt>
-<dd>Fingerprints 教學系統　<a href="https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.FingerPrints">GoolgPlay</a></dd>
+<dd>Fingerprints 教學系統　<a href="https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.FingerPrints">GooglePlay</a></dd>
 <dt>2020/08 - 2020/10</dt>
-<dd>鈎 GO 釣手　<a href="https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish">GoolgPlay</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
+<dd>鈎 GO 釣手　<a href="https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish">GooglePlay</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
 <dt>2020/11 - 2021/05</dt>
-<dd>細胞分裂、減數分裂與生物的遺傳　<a href="https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance">GoolgPlay</a></dd>
+<dd>細胞分裂、減數分裂與生物的遺傳　<a href="https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance">GooglePlay</a></dd>
 </dl>
 <h2 id="2019">2019</h2>
 <dl>
 <dt>2019/01 - 2019/11</dt>
-<dd>康軒國中小課文輕鬆聽　<a href="https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E5%9C%8B%E4%B8%AD%E5%B0%8F%E8%AA%B2%E6%96%87%E8%BC%95%E9%AC%86%E8%81%BD/id1480191322">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.com.knsh.GE76CD7FEFDE74CA7A1ED6EC6D252D5D7">GoolgPlay</a></dd>
+<dd>康軒國中小課文輕鬆聽　<a href="https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E5%9C%8B%E4%B8%AD%E5%B0%8F%E8%AA%B2%E6%96%87%E8%BC%95%E9%AC%86%E8%81%BD/id1480191322">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=tw.com.knsh.GE76CD7FEFDE74CA7A1ED6EC6D252D5D7">GooglePlay</a></dd>
 <dt>2019/04 - 2019/06</dt>
 <dd>康軒學習遊戲王　<a href="https://youtu.be/J4M59wBFR3U">Youtube</a></dd>
 <dt>2019/08 - 2023/07</dt>
@@ -2117,27 +2117,27 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <dt>2019/11 - 2020/12</dt>
 <dd>越語致用　<a href="https://youtu.be/crGavyM_Cjs">Youtube</a></dd>
 <dt>2019/10 - 2019/11</dt>
-<dd>震銲 AR 　<a href="https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=59">介紹網站</a></dd>
+<dd>震銲 AR 　<a href="https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR">GooglePlay</a>　<a href="https://jt-qc.com/works-pages?w_id=59">介紹網站</a></dd>
 <dt>2019/12 - 2022/12</dt>
-<dd>英語村_VR 　<a href="https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp">GoolgPlay</a></dd>
+<dd>英語村_VR 　<a href="https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp">GooglePlay</a></dd>
 </dl>
 <h2 id="2018">2018</h2>
 <dl>
 <dt>2018/05 - 2023/07</dt>
 <dd>QC Cube 　<a href="https://apps.apple.com/tw/app/qc-cube/id1480811031">AppleStore</a>　<a href="https://youtu.be/uPXzoWxgxoo">Youtube</a></dd>
 <dt>2018/05 - 2018/12</dt>
-<dd>風華再現千里眼　<a href="https://play.google.com/store/apps/details?id=com.ouorange.Fenghua">GoolgPlay</a></dd>
+<dd>風華再現千里眼　<a href="https://play.google.com/store/apps/details?id=com.ouorange.Fenghua">GooglePlay</a></dd>
 <dt>2018/06 - 2023/02</dt>
-<dd>新尋寶記_AR 　<a href="https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=27">介紹網站</a></dd>
+<dd>新尋寶記_AR 　<a href="https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap">GooglePlay</a>　<a href="https://jt-qc.com/works-pages?w_id=27">介紹網站</a></dd>
 <dt>2018/08 - 2023/04</dt>
-<dd>新悠遊記_360VR 　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360">GoolgPlay</a>　<a href="https://jt-qc.com/works-pages?w_id=28">介紹網站</a></dd>
+<dd>新悠遊記_360VR 　<a href="https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360">GooglePlay</a>　<a href="https://jt-qc.com/works-pages?w_id=28">介紹網站</a></dd>
 </dl>
 <h2 id="2017">2017</h2>
 <dl>
 <dt>2017/03 - 2020/02</dt>
 <dd>康軒動課本　<a href="https://youtu.be/rr3BgsDc4BA">Youtube</a>　<a href="https://jt-qc.com/works-pages?w_id=30">介紹網站</a></dd>
 <dt>2017/05 - 2018/11</dt>
-<dd>VR 妙視界：大地的撼動　<a href="https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.VR0003">GoolgPlay</a></dd>
+<dd>VR 妙視界：大地的撼動　<a href="https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943">AppleStore</a>　<a href="https://play.google.com/store/apps/details?id=com.JTQC.VR0003">GooglePlay</a></dd>
 <dt>2017/05 - 2018/06</dt>
 <dd>VR 妙視界：微太空之旅　<a href="https://www.facebook.com/JTQCDE/posts/379486789313837/?paipv=0&amp;eav=AfbMwPAYhGyCDqtOaD1t8b09DUPMKcgX17RyYcqf9cLKpjW0SmB3t__QNrWEfmnna_8&amp;_rdr">介紹網站</a></dd>
 </dl>
@@ -2146,7 +2146,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <dt>2016/05 - 2017/02</dt>
 <dd>台達魔法小學堂能源篇　<a href="https://youtu.be/PH2O5FLfrek">Youtube</a></dd>
 <dt>2016/10 - 2017/04</dt>
-<dd>台達魔法小學堂之生活用電王　<a href="https://play.google.com/store/apps/details?id=com.Delta.ESSBD.powerAR">GoolgPlay</a></dd>
+<dd>台達魔法小學堂之生活用電王　<a href="https://play.google.com/store/apps/details?id=com.Delta.ESSBD.powerAR">GooglePlay</a></dd>
 </dl>
 <hr>
 ]]></content:encoded>
@@ -2207,9 +2207,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity ParticleBezierPath</title>
-      <link>https://wenrong-nexus.com/posts/particlebezierpath/</link>
+      <link>https://wenrong-nexus.com/posts/particle-bezier-path/</link>
       <pubDate>Wed, 18 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/particlebezierpath/</guid>
+      <guid>https://wenrong-nexus.com/posts/particle-bezier-path/</guid>
       <description>Unity 實作粒子路徑系統。並且使用 Job System 優化效能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此篇是優化原本的 <a href="https://wenrongdev.com/posts/unity-particlepath/">Unity ParticlePath</a></p>
@@ -2226,9 +2226,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Oculus Sample</title>
-      <link>https://wenrong-nexus.com/posts/oculussample/</link>
+      <link>https://wenrong-nexus.com/posts/oculus-sample/</link>
       <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/oculussample/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculus-sample/</guid>
       <description>簡易的 Oculus 功能介紹專案</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>這是簡易的 Oculus 功能介紹專案，是我製作 VR 專案以來經常使用到的操作行為，我把這些操作行為歸類起來。</p>
@@ -2240,9 +2240,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Deep Link -2</title>
-      <link>https://wenrong-nexus.com/posts/unitydeeplink_2/</link>
+      <link>https://wenrong-nexus.com/posts/unity-deep-link-2/</link>
       <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitydeeplink_2/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-deep-link-2/</guid>
       <description>介紹 Unity Deep Link 呼叫方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>deep link 可以用網址來當 link id，類似像手機點開 Youtube 網址時，假如裝置內有 Youtube App 就會自動開啟 App，並且切換至該影片內容。而 deep link 也可以用網址來當 link id 達到這樣的效果。</p>
@@ -2290,9 +2290,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Deep Link -1</title>
-      <link>https://wenrong-nexus.com/posts/unitydeeplink_1/</link>
+      <link>https://wenrong-nexus.com/posts/unity-deep-link-1/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitydeeplink_1/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-deep-link-1/</guid>
       <description>介紹 Unity Deep Link 使用方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>DeepLink 是可以直接用網址呼叫 App 的方式之一，以前有提到可以利用 <a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">Get Android Intent Data for Unity</a> 這邊文章提到的方式，呼叫 App，不過這只限定 Android，iOS 則還是需要用 Deeplink 的方式呼叫。主要是當時 Unity 版本並不支援 DeepLink，所以只能自己寫原生的，才會有之前的<a href="https://wenrongdev.com/posts/get-android-intent-data-for-unity/">這篇</a>文章，更重要的是，使用之前的呼叫方式是需要某些權限，但目前 Google 也把這些權限關閉，無法正常上架需要自己寫信去解釋才會願意讓你正常上架。所以建議是棄用這種方法改用 Deeplink。</p>
@@ -2347,9 +2347,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Text Breaking Space</title>
-      <link>https://wenrong-nexus.com/posts/unitytextbreakingspace/</link>
+      <link>https://wenrong-nexus.com/posts/unity-text-breaking-space/</link>
       <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unitytextbreakingspace/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-text-breaking-space/</guid>
       <description>Unity Text 中英混雜字串，導致 Space 字串跳行問題</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
@@ -2375,9 +2375,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Oculus Auto Set Build Setting &amp;&amp; Build</title>
-      <link>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</link>
+      <link>https://wenrong-nexus.com/posts/oculus-auto-set-build-setting-and-build/</link>
       <pubDate>Thu, 01 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/oculusautosetbuildsettingandbuild/</guid>
+      <guid>https://wenrong-nexus.com/posts/oculus-auto-set-build-setting-and-build/</guid>
       <description>自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
@@ -2510,9 +2510,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Open Shader For VSCode</title>
-      <link>https://wenrong-nexus.com/posts/openshaderforvscode/</link>
+      <link>https://wenrong-nexus.com/posts/open-shader-for-vs-code/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/openshaderforvscode/</guid>
+      <guid>https://wenrong-nexus.com/posts/open-shader-for-vs-code/</guid>
       <description>自動對應 Shader 檔案使用 VSCode 開啟</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>針對 Unity Shader 檔案打開時，使用 VSCode 開啟而不是 Visual Studio，假如預設是 VSCode 則無需使用這功能。</p>
@@ -2578,9 +2578,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Addressable Load Assets</title>
-      <link>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable-load-assets/</link>
       <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-addressable_load_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable-load-assets/</guid>
       <description>介紹 Unity Addressable 讀取、生成、釋放方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>介紹我使用 Addressable 的讀取、生成、釋放方式。</p>
@@ -2633,9 +2633,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity Addressable Download Assets</title>
-      <link>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</link>
+      <link>https://wenrong-nexus.com/posts/unity-addressable-download-assets/</link>
       <pubDate>Mon, 14 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-addressable_download_assets/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-addressable-download-assets/</guid>
       <description>介紹 Unity Addressable 多個下載方式</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在前一篇 <a href="../unity-addressable">Unity Addressable</a> 介紹了簡易使用的方式，此篇是介紹下載 Asset 方法。</p>
@@ -2703,9 +2703,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Android Build Failed Build tools 3X.0.0 Bug</title>
-      <link>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</link>
+      <link>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</guid>
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>輸出 Apk 遇到的錯誤</p>
@@ -2964,9 +2964,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity MathQuiz</title>
-      <link>https://wenrong-nexus.com/posts/unity-mathquiz/</link>
+      <link>https://wenrong-nexus.com/posts/unity-math-quiz/</link>
       <pubDate>Mon, 29 Nov 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-mathquiz/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-math-quiz/</guid>
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此專案為 Unity math quiz，是基於 <a href="https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-2-create-a-timed-math-quiz">Tutorial 2: Create a timed math quiz</a> 文件改寫出來的專案。</p>
@@ -3185,9 +3185,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Unity ParticlePath</title>
-      <link>https://wenrong-nexus.com/posts/unity-particlepath/</link>
+      <link>https://wenrong-nexus.com/posts/unity-particle-path/</link>
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-particlepath/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-particle-path/</guid>
       <description>Unity 實作粒子路徑系統。</description>
       <content:encoded><![CDATA[<p><img alt="demogif" loading="lazy" src="https://i.imgur.com/tNmcGdz.gif"></p>
 <h2 id="github"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
@@ -3410,9 +3410,9 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
     </item>
     <item>
       <title>Data Access WebGL</title>
-      <link>https://wenrong-nexus.com/posts/data-access-webgl/</link>
+      <link>https://wenrong-nexus.com/posts/data-access-web-gl/</link>
       <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/data-access-webgl/</guid>
+      <guid>https://wenrong-nexus.com/posts/data-access-web-gl/</guid>
       <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。</p>
@@ -4000,9 +4000,9 @@ end;
     </item>
     <item>
       <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+      <link>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</link>
       <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+      <guid>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</guid>
       <description>Vuforia iOS Build and Run Error。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <ul>
@@ -4136,9 +4136,9 @@ end;
     </item>
     <item>
       <title>Unity 5.3 Native System Language</title>
-      <link>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</link>
+      <link>https://wenrong-nexus.com/posts/unity-5-3-native-system-language/</link>
       <pubDate>Fri, 04 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-5.3-native-system-language/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-5-3-native-system-language/</guid>
       <description>使用 Unity 取得 Windows、Android、iOS 原生語系。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
@@ -4207,9 +4207,9 @@ end;
     </item>
     <item>
       <title>Unity WebGL Template</title>
-      <link>https://wenrong-nexus.com/posts/unity-webgl-template/</link>
+      <link>https://wenrong-nexus.com/posts/unity-web-gl-template/</link>
       <pubDate>Thu, 05 Sep 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-webgl-template/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-web-gl-template/</guid>
       <description>執行 WebGL 時都會有 Unity Logo &amp;amp; Loading。目前此專案修改 Unity Logo 的部分。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>執行 WebGL 時都會有 Unity Logo &amp; Loading。目前此專案修改 Unity Logo 的部分。</p>
@@ -4239,9 +4239,9 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
     </item>
     <item>
       <title>Unity WebGL RectMask2D Does Not Work</title>
-      <link>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</link>
+      <link>https://wenrong-nexus.com/posts/unity-web-gl-rect-mask2-d-does-not-work/</link>
       <pubDate>Thu, 29 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-webgl-rectmask2d-does-not-work/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-web-gl-rect-mask2-d-does-not-work/</guid>
       <description>用於 WebGL RectMask2D 失去作用的簡易修正。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此 Script 用於 WebGL RectMask2D 失去作用的簡易修正。</p>

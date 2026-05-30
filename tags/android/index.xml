@@ -10,9 +10,9 @@
     <atom:link href="https://wenrong-nexus.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Android Build Failed Build tools 3X.0.0 Bug</title>
-      <link>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</link>
+      <link>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</link>
       <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-android_failed_buildtoolsbug/</guid>
+      <guid>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</guid>
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>輸出 Apk 遇到的錯誤</p>
