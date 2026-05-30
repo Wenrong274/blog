@@ -1,0 +1,234 @@
+<!doctype html><html lang=zh-Hant dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。"><meta name=keywords content="Effective C#,C#,Covariance,Contravariance,Generics,delegate,IEnumerable,LINQ,.NET"><title>Effective C# 做法 22-23</title><link rel=canonical href=https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-22-23/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.f189295952649f4a48b745ca22e58cc0eb209a67fd63fe149f59d5943428bcc5.css><meta property='og:title' content="Effective C# 做法 22-23"><meta property='og:description' content="Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。"><meta property='og:url' content='https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-22-23/'><meta property='og:site_name' content='Wenrong Nexus'><meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='C#'><meta property='article:published_time' content='2024-10-13T03:11:00+08:00'><meta property='article:modified_time' content='2024-10-13T03:11:00+08:00'><meta name=twitter:title content="Effective C# 做法 22-23"><meta name=twitter:description content="Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。"><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GRV3BQC1BQ")}</script><meta name=keywords content="Effective C#,C#,Covariance,Contravariance,Generics,delegate,IEnumerable,LINQ,.NET"><meta property="og:image" content="https://wenrong-nexus.com/images/og-bg_hu_b33cc38b988e6671.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:image content="https://wenrong-nexus.com/images/og-bg_hu_b33cc38b988e6671.png"><meta name=twitter:card content="summary_large_image"><link rel=manifest href=/site.webmanifest><meta name=theme-color content="#5856d6"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/android-chrome-512x512.png width height class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🎮</span></figure><div class=site-meta><h1 class=site-name><a href=/>Wenrong Nexus</a></h1><h2 class=site-description>我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。</h2></div></header><ol class=menu-social><li><a href=mailto:me@wenrong-nexus.com target=_blank title=Email rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></a></li><li><a href=https://github.com/Wenrong274 target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜尋</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>歸檔</span></a></li><li><a href=/tags/><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg>
+<span>標籤</span></a></li><li><a href=/profile/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>關於我</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span></span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ul><li><a href=#做法-22>做法 22</a><ul><li><a href=#1-這個-out-也是-共變數>1. 這個 out 也是 共變數?</a></li><li><a href=#簡單解釋共變數與反變數>簡單解釋共變數與反變數</a></li><li><a href=#心得>心得</a></li></ul></li><li><a href=#做法-23>做法 23</a><ul><li><a href=#做法-23-心得>做法 23 心得</a></li></ul></li></ul></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-22-23/>Effective C# 做法 22-23</a></h2><h3 class=article-subtitle>Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2024-10-13T03:11:00+08:00>2024年10月13日 星期日</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading></time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span></span></div></summary><nav class=toc-nav><ul><li><a href=#做法-22>做法 22</a><ul><li><a href=#1-這個-out-也是-共變數>1. 這個 out 也是 共變數?</a></li><li><a href=#簡單解釋共變數與反變數>簡單解釋共變數與反變數</a></li><li><a href=#心得>心得</a></li></ul></li><li><a href=#做法-23>做法 23</a><ul><li><a href=#做法-23-心得>做法 23 心得</a></li></ul></li></ul></nav></details></aside><section class=article-content><h2 id=做法-22><a href=#%e5%81%9a%e6%b3%95-22 class=header-anchor></a>做法 22</h2><p><code>支援泛型的共變數與反變數</code></p><h3 id=1-這個-out-也是-共變數><a href=#1-%e9%80%99%e5%80%8b-out-%e4%b9%9f%e6%98%af-%e5%85%b1%e8%ae%8a%e6%95%b8 class=header-anchor></a>1. 這個 out 也是 共變數?</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> TryParse (<span style=color:#66d9ef>string?</span> s, IFormatProvider? provider, <span style=color:#66d9ef>out</span> <span style=color:#66d9ef>int</span> result);
+</span></span></code></pre></div><p>方法參數中的 out 關鍵字：
+在 TryParse 方法中的 out int result 是一個輸出參數。這個 out 關鍵字的作用是：</p><ul><li>表示這個參數是一個輸出參數。</li><li>方法必須在返回前為這個參數賦值。</li><li>呼叫方法時，不需要初始化這個參數，但必須在呼叫後使用它。</li></ul><p>在泛型接口或委託定義中使用的 out 關鍵字表示協變。例如：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IEnumerable</span>&lt;<span style=color:#66d9ef>out</span> T&gt; { ... }
+</span></span></code></pre></div><p>這裡的 out 表示：</p><ul><li>T 只能用作輸出（返回值），不能用作輸入（參數）。</li><li>允許將更具體（派生）類型的集合賦值給更一般（基類）類型的集合變量。</li></ul><p>區別總結：</p><ol><li>用途不同：<ul><li>方法參數的 out：用於指定輸出參數。</li><li>泛型的 out：用於指定類型參數的協變性。</li></ul></li><li>位置不同：<ul><li>方法參數的 out：用在方法參數列表中。</li><li>泛型的 out：用在泛型類型參數定義中。</li></ul></li><li>功能不同：<ul><li>方法參數的 out：確保方法將值賦給參數。</li><li>泛型的 out：允許更靈活的類型轉換和賦值。</li></ul></li><li>編譯時行為： - 方法參數的 out：編譯器確保方法內部對參數賦值。 - 泛型的 out：編譯器允許特定的類型轉換。
+所以， TryParse 方法中的 out 不是用於協變的，而是一個輸出參數標記。這兩種 out 雖然使用相同的關鍵字，但在 C# 中代表完全不同的概念。</li></ol><h3 id=簡單解釋共變數與反變數><a href=#%e7%b0%a1%e5%96%ae%e8%a7%a3%e9%87%8b%e5%85%b1%e8%ae%8a%e6%95%b8%e8%88%87%e5%8f%8d%e8%ae%8a%e6%95%b8 class=header-anchor></a>簡單解釋共變數與反變數</h3><h4 id=共變數covariance><a href=#%e5%85%b1%e8%ae%8a%e6%95%b8covariance class=header-anchor></a>共變數（Covariance）</h4><p>定義：允許使用比原本指定的類別更具體（更繼承）的類型。
+關鍵字：out
+應用：通常用於返回類別或只讀泛型介面。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span>IEnumerable&lt;<span style=color:#66d9ef>string</span>&gt; strings = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>string</span>&gt;();
+</span></span><span style=display:flex><span>IEnumerable&lt;<span style=color:#66d9ef>object</span>&gt; objects = strings; <span style=color:#75715e>// 合法，因為 IEnumerable&lt;T&gt; 是共變數</span>
+</span></span></code></pre></div><h4 id=反變數contravariance><a href=#%e5%8f%8d%e8%ae%8a%e6%95%b8contravariance class=header-anchor></a>反變數（Contravariance）</h4><p>定義：允許使用比原本指定的類別更一般（更基礎）的類別。
+關鍵字：in
+應用：通常用於參數類別或只寫泛型介面。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span>Action&lt;<span style=color:#66d9ef>object</span>&gt; objectAction = (<span style=color:#66d9ef>object</span> obj) =&gt; Console.WriteLine(obj);
+</span></span><span style=display:flex><span>Action&lt;<span style=color:#66d9ef>string</span>&gt; stringAction = objectAction; <span style=color:#75715e>// 合法，因為 Action&lt;T&gt; 是反變數</span>
+</span></span></code></pre></div><h4 id=詳細解釋和更多例子><a href=#%e8%a9%b3%e7%b4%b0%e8%a7%a3%e9%87%8b%e5%92%8c%e6%9b%b4%e5%a4%9a%e4%be%8b%e5%ad%90 class=header-anchor></a>詳細解釋和更多例子</h4><p>共變數例子：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span> { }
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> : Animal { }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>IEnumerable&lt;Dog&gt; dogs = <span style=color:#66d9ef>new</span> List&lt;Dog&gt;();
+</span></span><span style=display:flex><span>IEnumerable&lt;Animal&gt; animals = dogs; <span style=color:#75715e>// 共變數允許這種賦值</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 使用場景</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> ProcessAnimals(IEnumerable&lt;Animal&gt; animals) { ... }
+</span></span><span style=display:flex><span>ProcessAnimals(dogs); <span style=color:#75715e>// 可以傳入 Dog 的集合</span>
+</span></span></code></pre></div><p>反變數例子：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IComparer</span>&lt;<span style=color:#66d9ef>in</span> T&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> Compare(T x, T y);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>IComparer&lt;Animal&gt; animalComparer = <span style=color:#66d9ef>new</span> AnimalComparer();
+</span></span><span style=display:flex><span>IComparer&lt;Dog&gt; dogComparer = animalComparer; <span style=color:#75715e>// 反變數允許這種賦值</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 使用場景</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AnimalComparer</span> : IComparer&lt;Animal&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> Compare(Animal x, Animal y) { ... }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>List&lt;Dog&gt; dogs = <span style=color:#66d9ef>new</span> List&lt;Dog&gt;();
+</span></span><span style=display:flex><span>dogs.Sort(dogComparer); <span style=color:#75715e>// 可以使用 Animal 的比較器來比較 Dog</span>
+</span></span></code></pre></div><p>共變數和反變數的組合</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IConverter</span>&lt;<span style=color:#66d9ef>in</span> TInput, <span style=color:#66d9ef>out</span> TOutput&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    TOutput Convert(TInput input);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>IConverter&lt;Animal, Dog&gt; animalToDog = <span style=color:#66d9ef>new</span> AnimalToDogConverter();
+</span></span><span style=display:flex><span>IConverter&lt;Dog, Animal&gt; dogToAnimal = animalToDog; <span style=color:#75715e>// 合法</span>
+</span></span></code></pre></div><h4 id=限制和注意事項><a href=#%e9%99%90%e5%88%b6%e5%92%8c%e6%b3%a8%e6%84%8f%e4%ba%8b%e9%a0%85 class=header-anchor></a>限制和注意事項</h4><ul><li>共變數和反變數只適用於引用類型，不適用於值類型。</li><li>只能用於介面和委託的定義，不能用於類別。</li><li>一個類別參數不能同時標記為共變數和反變數。</li><li>共變數類別參數不能用作方法參數，反變數類別參數不能用作方法返回類型。</li></ul><ol><li>實際應用</li></ol><ul><li>LINQ: LINQ 大量使用共變數和反變數來提高其靈活性。</li><li>事件處理：允許更靈活地處理不同類別的事件。</li><li>依賴注入：在依賴注入框架中常用，提高容器的靈活性。</li></ul><ol><li>性能考慮
+共變數和反變數主要是編譯時特性，不會對運行時性能產生顯著影響。
+總結：
+共變數和反變數強大的特性，能夠提高程式碼的靈活性和可重用性。
+共變數（out）允許使用更具體的類型，而反變數（in）允許使用更一般的類型。正確理解和使用這些概念可以幫助設計更靈活、更強大的 API 和框架。</li></ol><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-CSharp data-lang=CSharp><span style=display:flex><span><span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> Main(<span style=color:#66d9ef>string</span>[] args)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    Dog dog = <span style=color:#66d9ef>new</span> Dog(<span style=color:#e6db74>&#34;doggy&#34;</span>);
+</span></span><span style=display:flex><span>    IOutDog&lt;Dog&gt; dogProvider = <span style=color:#66d9ef>new</span> DogProvider(dog);
+</span></span><span style=display:flex><span>    IOutDog&lt;Animal&gt; animalProvider = dogProvider;
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>$&#34;{animalProvider.Value.GetName()}, {dogProvider.Value.GetName()}&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 使用基本的 AnimalSetter</span>
+</span></span><span style=display:flex><span>    IInDog&lt;Animal&gt; animalSetter = <span style=color:#66d9ef>new</span> AnimalSetter();
+</span></span><span style=display:flex><span>    animalSetter.SetValue(<span style=color:#66d9ef>new</span> Animal());
+</span></span><span style=display:flex><span>    animalSetter.SetValue(<span style=color:#66d9ef>new</span> Dog()); <span style=color:#75715e>// 這也是有效的，因為 Dog 是 Animal 的子類</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 使用 DogSetter，展示反變數</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// IInDog&lt;Animal&gt; dogSetterAsAnimal = (IInDog&lt;Animal&gt;)new DogSetter();</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// dogSetterAsAnimal.SetValue(new Animal()); // 注意：這在運行時可能會拋出異常，因為實際的實現期望一個 Dog</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 使用泛型實現</span>
+</span></span><span style=display:flex><span>    IInDog&lt;Dog&gt; dogSetter = <span style=color:#66d9ef>new</span> GenericAnimalSetter&lt;Dog&gt;();
+</span></span><span style=display:flex><span>    dogSetter.SetValue(<span style=color:#66d9ef>new</span> Dog());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    IConverter&lt;Animal, Dog&gt; animalToDog = <span style=color:#66d9ef>new</span> AnimalToDogConverter();
+</span></span><span style=display:flex><span>    IConverter&lt;Dog, Animal&gt; dogToAnimal = animalToDog; <span style=color:#75715e>// 合法</span>
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Animal</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> <span style=color:#66d9ef>string</span> name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Animal(<span style=color:#66d9ef>string</span> name = <span style=color:#e6db74>&#34;&#34;</span>) =&gt; <span style=color:#66d9ef>this</span>.name = name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>virtual</span> <span style=color:#66d9ef>string</span> GetName() =&gt; name;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Dog</span> : Animal
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Dog(<span style=color:#66d9ef>string</span> name = <span style=color:#e6db74>&#34;&#34;</span>) : <span style=color:#66d9ef>base</span>(name) { }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>override</span> <span style=color:#66d9ef>string</span> GetName() =&gt; <span style=color:#e6db74>$&#34;Dog {base.GetName()}&#34;</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IOutDog</span>&lt;<span style=color:#66d9ef>out</span> T&gt; <span style=color:#66d9ef>where</span> T : Animal
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    T Value { <span style=color:#66d9ef>get</span>; }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DogProvider</span> : IOutDog&lt;Dog&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Dog Value { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> DogProvider(Dog <span style=color:#66d9ef>value</span>) =&gt; Value = <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IInDog</span>&lt;<span style=color:#66d9ef>in</span> T&gt; <span style=color:#66d9ef>where</span> T : Animal
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> SetValue(T <span style=color:#66d9ef>value</span>);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AnimalSetter</span> : IInDog&lt;Animal&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> Animal <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> SetValue(Animal <span style=color:#66d9ef>value</span>) =&gt; <span style=color:#66d9ef>this</span>.<span style=color:#66d9ef>value</span> = <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>DogSetter</span> : IInDog&lt;Dog&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> Dog <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> SetValue(Dog <span style=color:#66d9ef>value</span>) =&gt; <span style=color:#66d9ef>this</span>.<span style=color:#66d9ef>value</span> = <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GenericAnimalSetter</span>&lt;T&gt; : IInDog&lt;T&gt; <span style=color:#66d9ef>where</span> T : Animal
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> T <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> SetValue(T <span style=color:#66d9ef>value</span>) =&gt; <span style=color:#66d9ef>this</span>.<span style=color:#66d9ef>value</span> = <span style=color:#66d9ef>value</span>;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IConverter</span>&lt;<span style=color:#66d9ef>in</span> TInput, <span style=color:#66d9ef>out</span> TOutput&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    TOutput Convert(TInput input);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>AnimalToDogConverter</span> : IConverter&lt;Animal, Dog&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Dog Convert(Animal input) =&gt; <span style=color:#66d9ef>new</span> Dog(input.GetName());
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=心得><a href=#%e5%bf%83%e5%be%97 class=header-anchor></a>心得</h3><p>如果編譯器告訴你錯了 就要小心是不是有什麼地方搞錯了
+做 cast 時要了解自己在做什麼 不然能編譯成功也會在 runtime 時炸掉</p><h2 id=做法-23><a href=#%e5%81%9a%e6%b3%95-23 class=header-anchor></a>做法 23</h2><p><code>使用 delegate 定義型別參數的方法約束</code></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#75715e>// double[] xValues = { 0,1,2,3,4,5,6,7,8,9,</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//                 0,1,2,3,4,5,6,7,8,9,};</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// double[] yValues = { 0,1,2,3,4,5,6,7,8,9,</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//                 0,1,2,3,4,5,6,7,8,9,};</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// List&lt;Point&gt; values = new List&lt;Point&gt;(Zip(xValues, yValues, (x, y) =&gt; new Point(x, y)));</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> IEnumerable&lt;TOutput&gt; Zip&lt;T1, T2, TOutput&gt;(IEnumerable&lt;T1&gt; left, IEnumerable&lt;T2&gt; right, Func&lt;T1, T2, TOutput&gt; generator)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    IEnumerator&lt;T1&gt; leftEnumerator = left.GetEnumerator();
+</span></span><span style=display:flex><span>    IEnumerator&lt;T2&gt; rightEnumerator = right.GetEnumerator();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>while</span> (leftEnumerator.MoveNext() &amp;&amp; rightEnumerator.MoveNext())
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>yield</span> <span style=color:#66d9ef>return</span> generator(leftEnumerator.Current, rightEnumerator.Current);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    leftEnumerator.Dispose();
+</span></span><span style=display:flex><span>    rightEnumerator.Dispose();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Point</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>double</span> X { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>double</span> Y { <span style=color:#66d9ef>get</span>; <span style=color:#66d9ef>set</span>; }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Point(<span style=color:#66d9ef>double</span> x, <span style=color:#66d9ef>double</span> y)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        X = x;
+</span></span><span style=display:flex><span>        Y = y;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Point(TextReader textReader) { }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>/// InputCollection&lt;Point&gt; points = new InputCollection&lt;Point&gt;((InputStream) =&gt; new Point(InputStream));</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>delegate</span> T CreateFromStream&lt;T&gt;(System.IO.TextReader textReader);
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>InputCollection</span>&lt;T&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> List&lt;T&gt; thingsRead = <span style=color:#66d9ef>new</span> List&lt;T&gt;();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> CreateFromStream&lt;T&gt; readFunc;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> InputCollection(CreateFromStream&lt;T&gt; readFunc)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.readFunc = readFunc;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> ReadFromStream(System.IO.TextReader textReader)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        thingsRead.Add(readFunc(textReader));
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> IEnumerable&lt;T&gt; Values =&gt; thingsRead;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=做法-23-心得><a href=#%e5%81%9a%e6%b3%95-23-%e5%bf%83%e5%be%97 class=header-anchor></a>做法 23 心得</h3><p>可以利用 這種方式，讓不同類別擁有相同介面，使用相同的方法，讓程式彈性變高</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#75715e>// ForeachIn(items,(item, i) =&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// {</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//      item.SetIcon(icon[i]);</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// });</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// ForeachIn(items,(item, i) =&gt;</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// {</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//      item.SetPosition(positions[i]);</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// });</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> ForeachIn&lt;T&gt;(T[] arr, Action&lt;T, <span style=color:#66d9ef>int</span>&gt; action)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>int</span> i = <span style=color:#ae81ff>0</span>; i &lt; arr.Length; i++)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        action(arr[i], i);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr></section><footer class="article-meta article-footer"><section class=article-tags><a href=/tags/c%23/>C#</a></section></footer></article><aside><h2 class=section-title></h2><div class=subsection-list><div class=article-list--tile><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-18-19/><div class=article-details><h2 class=article-title>Effective C# 做法 18-19</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-20-21/><div class=article-details><h2 class=article-title>Effective C# 做法 20-21</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-07-10/><div class=article-details><h2 class=article-title>Effective C# 做法 07-10</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-16-17/><div class=article-details><h2 class=article-title>Effective C# 做法 16-17</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-14-15/><div class=article-details><h2 class=article-title>Effective C# 做法 14-15</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//wenrongdev.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2019 -
+2026 Wenrong Nexus</section><section class=powerby>Wenrong Nexus<br><br></section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.d00997a2f4a6ce525f496da0c3ae6ad392b0468b8a9024f23309fdfc75c67a35.js defer></script></body></html>

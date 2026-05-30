@@ -1,44 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Profiles on Wenrong Nexus</title>
-    <link>https://wenrong-nexus.com/profile/</link>
-    <description>Recent content in Profiles on Wenrong Nexus</description>
-    <generator>Hugo</generator>
-    <language>zh-Hant</language>
-    <lastBuildDate>Thu, 03 Feb 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrong-nexus.com/profile/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>About</title>
-      <link>https://wenrong-nexus.com/profile/about/</link>
-      <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/profile/about/</guid>
-      <description>&lt;p&gt;五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。&lt;/p&gt;
-&lt;p&gt;擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。&lt;/p&gt;
-&lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式&lt;/h2&gt;
-&lt;p&gt;📧 &lt;a href=&#34;mailto:me@wenrong-nexus.com&#34;&gt;me@wenrong-nexus.com&lt;/a&gt;&lt;/p&gt;</description>
-      <content:encoded><![CDATA[<p>五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。</p>
-<p>擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。</p>
-<h2 id="聯絡方式">聯絡方式</h2>
-<p>📧 <a href="mailto:me@wenrong-nexus.com">me@wenrong-nexus.com</a></p>
-<h2 id="工作經歷">工作經歷</h2>
-<dl>
-<dt><em>2025/07 – present</em></dt>
-<dd><a href="https://www.wanin.tw/">網銀國際</a>．<em>組長</em></dd>
-<dt><em>2023/12 – 2025/07</em></dt>
-<dd><a href="https://www.wanin.tw/">網銀國際</a>．<em>高級工程師</em></dd>
-<dt><em>2015/11 – 2023/07</em></dt>
-<dd><a href="https://jt-qc.com/">錦田雲端科技</a>．<em>程式設計師</em></dd>
-</dl>
-<h2 id="skills">Skills</h2>
-<dl>
-<dt>Tech Stack</dt>
-<dd>Android Studio, C#, Git, Lua, Unity, Visual Studio, XCode</dd>
-<dt>Unity Tools</dt>
-<dd>Addressables, AR Foundation, Cardboard, DOTween, Meta Quest, UniTask, Vuforia, Odin</dd>
-</dl>
-<hr>
-]]></content:encoded>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Profiles on Wenrong Nexus</title>
+        <link>https://wenrong-nexus.com/profile/</link>
+        <description>Recent content in Profiles on Wenrong Nexus</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-Hant</language>
+        <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrong-nexus.com/profile/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>About</title>
+            <link>https://wenrong-nexus.com/profile/about/</link>
+            <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/profile/about/</guid>
+            <description>&lt;p&gt;五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。&lt;/p&gt;&#xA;&lt;p&gt;擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。&lt;/p&gt;&#xA;&lt;h2 id=&#34;聯絡方式&#34;&gt;&lt;a href=&#34;#%e8%81%af%e7%b5%a1%e6%96%b9%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;聯絡方式&#xA;&lt;/h2&gt;&lt;p&gt;📧 &lt;a class=&#34;link&#34; href=&#34;mailto:me@wenrong-nexus.com&#34; &gt;me@wenrong-nexus.com&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;工作經歷&#34;&gt;&lt;a href=&#34;#%e5%b7%a5%e4%bd%9c%e7%b6%93%e6%ad%b7&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;工作經歷&#xA;&lt;/h2&gt;&lt;dl&gt;&#xA;&lt;dt&gt;&lt;em&gt;2025/07 – present&lt;/em&gt;&lt;/dt&gt;&#xA;&lt;dd&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wanin.tw/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;網銀國際&lt;/a&gt;．&lt;em&gt;組長&lt;/em&gt;&lt;/dd&gt;&#xA;&lt;dt&gt;&lt;em&gt;2023/12 – 2025/07&lt;/em&gt;&lt;/dt&gt;&#xA;&lt;dd&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wanin.tw/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;網銀國際&lt;/a&gt;．&lt;em&gt;高級工程師&lt;/em&gt;&lt;/dd&gt;&#xA;&lt;dt&gt;&lt;em&gt;2015/11 – 2023/07&lt;/em&gt;&lt;/dt&gt;&#xA;&lt;dd&gt;&lt;a class=&#34;link&#34; href=&#34;https://jt-qc.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;錦田雲端科技&lt;/a&gt;．&lt;em&gt;程式設計師&lt;/em&gt;&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;h2 id=&#34;skills&#34;&gt;&lt;a href=&#34;#skills&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Skills&#xA;&lt;/h2&gt;&lt;dl&gt;&#xA;&lt;dt&gt;Tech Stack&lt;/dt&gt;&#xA;&lt;dd&gt;Android Studio, C#, Git, Lua, Unity, Visual Studio, XCode&lt;/dd&gt;&#xA;&lt;dt&gt;Unity Tools&lt;/dt&gt;&#xA;&lt;dd&gt;Addressables, AR Foundation, Cardboard, DOTween, Meta Quest, UniTask, Vuforia, Odin&lt;/dd&gt;&#xA;&lt;/dl&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item></channel>
 </rss>

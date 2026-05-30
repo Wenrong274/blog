@@ -1,0 +1,225 @@
+<!doctype html><html lang=zh-Hant dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable 實作預設排序、以 IComparer 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy 應用。"><meta name=keywords content="Effective C#,C#,IComparable,IComparer,IDisposable,Generics,Lazy,sorting,.NET"><title>Effective C# 做法 20-21</title><link rel=canonical href=https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-20-21/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.f189295952649f4a48b745ca22e58cc0eb209a67fd63fe149f59d5943428bcc5.css><meta property='og:title' content="Effective C# 做法 20-21"><meta property='og:description' content="Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable 實作預設排序、以 IComparer 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy 應用。"><meta property='og:url' content='https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-20-21/'><meta property='og:site_name' content='Wenrong Nexus'><meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='C#'><meta property='article:published_time' content='2024-10-07T00:57:47+08:00'><meta property='article:modified_time' content='2024-10-07T00:57:47+08:00'><meta name=twitter:title content="Effective C# 做法 20-21"><meta name=twitter:description content="Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable 實作預設排序、以 IComparer 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy 應用。"><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GRV3BQC1BQ")}</script><meta name=keywords content="Effective C#,C#,IComparable,IComparer,IDisposable,Generics,Lazy,sorting,.NET"><meta property="og:image" content="https://wenrong-nexus.com/images/og-bg_hu_a7fd102a42c08a.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:image content="https://wenrong-nexus.com/images/og-bg_hu_a7fd102a42c08a.png"><meta name=twitter:card content="summary_large_image"><link rel=manifest href=/site.webmanifest><meta name=theme-color content="#5856d6"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/android-chrome-512x512.png width height class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🎮</span></figure><div class=site-meta><h1 class=site-name><a href=/>Wenrong Nexus</a></h1><h2 class=site-description>我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。</h2></div></header><ol class=menu-social><li><a href=mailto:me@wenrong-nexus.com target=_blank title=Email rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></a></li><li><a href=https://github.com/Wenrong274 target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜尋</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>歸檔</span></a></li><li><a href=/tags/><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg>
+<span>標籤</span></a></li><li><a href=/profile/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>關於我</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span></span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ul><li><a href=#做法-20>做法 20</a><ul><li><a href=#實作>實作</a></li><li><a href=#使用方式>使用方式</a></li></ul></li><li><a href=#做法-21>做法 21</a><ul><li><a href=#若-t-沒有實作-idisposable-則此區域變數的值為-null>若 T 沒有實作 IDisposable ，則此區域變數的值為 null。</a></li></ul></li></ul></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-20-21/>Effective C# 做法 20-21</a></h2><h3 class=article-subtitle>Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable&lt;T> 實作預設排序、以 IComparer&lt;T> 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy&lt;T> 應用。</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2024-10-07T00:57:47+08:00>2024年10月7日 星期一</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading></time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span></span></div></summary><nav class=toc-nav><ul><li><a href=#做法-20>做法 20</a><ul><li><a href=#實作>實作</a></li><li><a href=#使用方式>使用方式</a></li></ul></li><li><a href=#做法-21>做法 21</a><ul><li><a href=#若-t-沒有實作-idisposable-則此區域變數的值為-null>若 T 沒有實作 IDisposable ，則此區域變數的值為 null。</a></li></ul></li></ul></nav></details></aside><section class=article-content><h2 id=做法-20><a href=#%e5%81%9a%e6%b3%95-20 class=header-anchor></a>做法 20</h2><p><code>以 IComparable&lt;T> 與 IComparer&lt;T> 實作排序關係</code></p><h3 id=實作><a href=#%e5%af%a6%e4%bd%9c class=header-anchor></a>實作</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>struct</span> <span style=color:#a6e22e>Customer</span> : IComparable&lt;Customer&gt;, IComparable
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>readonly</span> <span style=color:#66d9ef>string</span> name;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>double</span> revenue;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> Customer(<span style=color:#66d9ef>string</span> name)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.name = name;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> CompareTo(Customer other)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> name.CompareTo(other.name);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>int</span> IComparable.CompareTo(<span style=color:#66d9ef>object?</span> obj)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (obj <span style=color:#66d9ef>is</span> Customer other)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.CompareTo(other);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>throw</span> <span style=color:#66d9ef>new</span> ArgumentException(<span style=color:#e6db74>&#34;Argument must be a Customer&#34;</span>, nameof(obj));
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> &lt;(Customer left, Customer right) =&gt; left.CompareTo(right) &lt; <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> &lt;=(Customer left, Customer right) =&gt; left.CompareTo(right) &lt;= <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> &gt;(Customer left, Customer right) =&gt; left.CompareTo(right) &gt; <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> <span style=color:#66d9ef>operator</span> &gt;=(Customer left, Customer right) =&gt; left.CompareTo(right) &gt;= <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> Lazy&lt;RevenueComparer&gt; revComp = <span style=color:#66d9ef>new</span> Lazy&lt;RevenueComparer&gt;(() =&gt; <span style=color:#66d9ef>new</span>());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> IComparer&lt;Customer&gt; RevenueCompare =&gt; revComp.Value;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> Comparison&lt;Customer&gt; CompareByRevenue =&gt; (left, right) =&gt; left.revenue.CompareTo(right.revenue);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>RevenueComparer</span> : IComparer&lt;Customer&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>int</span> Compare(Customer left, Customer right)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> left.revenue.CompareTo(right.revenue);
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=使用方式><a href=#%e4%bd%bf%e7%94%a8%e6%96%b9%e5%bc%8f class=header-anchor></a>使用方式</h3><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> Main(<span style=color:#66d9ef>string</span>[] args)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 創建一些 Customer 實例</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> customers = <span style=color:#66d9ef>new</span> List&lt;Customer&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;Alice&#34;</span>,<span style=color:#ae81ff>1000</span>) ,
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;Bob&#34;</span>,<span style=color:#ae81ff>1500</span>) ,
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;Charlie&#34;</span>,<span style=color:#ae81ff>1200</span>),
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;David&#34;</span>,<span style=color:#ae81ff>800</span>)
+</span></span><span style=display:flex><span>    };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 1. 使用默認比較（按名稱）</span>
+</span></span><span style=display:flex><span>    customers.Sort();
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>&#34;Sorted by name:&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice: 1000</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Bob: 1500</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Charlie: 1200</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// David: 800</span>
+</span></span><span style=display:flex><span>    PrintCustomers(customers);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 2. 使用運算符比較</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> alice = <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;Alice&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> bob = <span style=color:#66d9ef>new</span> Customer(<span style=color:#e6db74>&#34;Bob&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice &lt; Bob: True</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice &lt;= Bob: True</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice &gt; Bob: False</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice &gt;= Bob: False</span>
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>$&#34;Alice &lt; Bob: {alice &lt; bob}&#34;</span>);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>$&#34;Alice &lt;= Bob: {alice &lt;= bob}&#34;</span>);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>$&#34;Alice &gt; Bob: {alice &gt; bob}&#34;</span>);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>$&#34;Alice &gt;= Bob: {alice &gt;= bob}&#34;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 3. 使用 RevenueCompare</span>
+</span></span><span style=display:flex><span>    customers.Sort(Customer.RevenueCompare);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>&#34;\nSorted by revenue (using RevenueCompare):&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// David: 800</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice: 1000</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Charlie: 1200</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Bob: 1500</span>
+</span></span><span style=display:flex><span>    PrintCustomers(customers);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 4. 使用 CompareByRevenue</span>
+</span></span><span style=display:flex><span>    customers.Sort(Customer.CompareByRevenue);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>&#34;\nSorted by revenue (using CompareByRevenue):&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// David: 800</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice: 1000</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Charlie: 1200</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Bob: 1500</span>
+</span></span><span style=display:flex><span>    PrintCustomers(customers);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// 5. 使用 LINQ 排序</span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> sortedByName = customers.OrderBy(c =&gt; c);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>&#34;\nSorted by name (using LINQ):&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// lice: 1000</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Bob: 1500</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Charlie: 1200</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// David: 800</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    PrintCustomers(sortedByName);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> sortedByRevenue = customers.OrderBy(c =&gt; c, Customer.RevenueCompare);
+</span></span><span style=display:flex><span>    Console.WriteLine(<span style=color:#e6db74>&#34;\nSorted by revenue (using LINQ and RevenueCompare):&#34;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// David: 800</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Alice: 1000</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Charlie: 1200</span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Bob: 1500</span>
+</span></span><span style=display:flex><span>    PrintCustomers(sortedByRevenue);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> PrintCustomers(IEnumerable&lt;Customer&gt; customers)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> customer <span style=color:#66d9ef>in</span> customers)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Console.WriteLine(<span style=color:#e6db74>$&#34;{customer.ToString()}&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h2 id=做法-21><a href=#%e5%81%9a%e6%b3%95-21 class=header-anchor></a>做法 21</h2><p><code>建構支援 Disposable 型別參數的泛型類別</code></p><blockquote><p>如果你建構的泛型類別的型別參數描述的任何型別實例，你必須考慮到這些型別可能有實作 IDisposable。你必須防衛性的撰寫程式並確保這些物件離開範圍後不會洩漏資源。</p></blockquote><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>interface</span> <span style=color:#a6e22e>IEngine</span>
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>void</span> DoWork();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Engine</span> : IEngine
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> DoWork()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Console.WriteLine(<span style=color:#e6db74>&#34;Hello World!&#34;</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>EngineDriver1</span>&lt;T&gt; <span style=color:#66d9ef>where</span> T : IEngine, <span style=color:#66d9ef>new</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> GetThingsDone()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        T engine = <span style=color:#66d9ef>new</span> T();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>using</span> (engine <span style=color:#66d9ef>as</span> IDisposable)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            engine.DoWork();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// using (var x = new EngineDriver2&lt;Engine&gt;())</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// {</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>//     x.GetThingsDone();</span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// }</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>EngineDriver2</span>&lt;T&gt; : IDisposable <span style=color:#66d9ef>where</span> T : IEngine, <span style=color:#66d9ef>new</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> Lazy&lt;T&gt; engine = <span style=color:#66d9ef>new</span> Lazy&lt;T&gt;(() =&gt; <span style=color:#66d9ef>new</span> T());
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> GetThingsDone()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>using</span> (engine.Value <span style=color:#66d9ef>as</span> IDisposable)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            engine.Value.DoWork();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Dispose()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (engine.IsValueCreated)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>var</span> resource = engine.Value <span style=color:#66d9ef>as</span> IDisposable;
+</span></span><span style=display:flex><span>            resource?.Dispose();
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>EngineDriver3</span>&lt;T&gt; <span style=color:#66d9ef>where</span> T : IEngine
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> T engine;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> EngineDriver3(T engine)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>this</span>.engine = engine;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> GetThingsDone()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        engine.DoWork();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h3 id=若-t-沒有實作-idisposable-則此區域變數的值為-null><a href=#%e8%8b%a5-t-%e6%b2%92%e6%9c%89%e5%af%a6%e4%bd%9c-idisposable-%e5%89%87%e6%ad%a4%e5%8d%80%e5%9f%9f%e8%ae%8a%e6%95%b8%e7%9a%84%e5%80%bc%e7%82%ba-null class=header-anchor></a>若 T 沒有實作 IDisposable ，則此區域變數的值為 null。</h3><p>如果 T（在這個例子中是 Engine）沒有實作 IDisposable 接口，那麼 engine as IDisposable 的結果就會是 null。
+這個 null 值並不會導致異常或錯誤。 using 語句被設計為可以安全地處理 null 值。當 disposable 為 null 時， using 語句簡單地不執行任何釋放資源的操作。
+這就是為什麼即使 Engine 類沒有實作 IDisposable，代碼仍然可以正常運行。 using 語句在這種情況下實際上不會做任何特殊的事情，代碼會繼續執行 engine.DoWork()。</p><hr></section><footer class="article-meta article-footer"><section class=article-tags><a href=/tags/c%23/>C#</a></section></footer></article><aside><h2 class=section-title></h2><div class=subsection-list><div class=article-list--tile><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-18-19/><div class=article-details><h2 class=article-title>Effective C# 做法 18-19</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-16-17/><div class=article-details><h2 class=article-title>Effective C# 做法 16-17</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-14-15/><div class=article-details><h2 class=article-title>Effective C# 做法 14-15</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-11-13/><div class=article-details><h2 class=article-title>Effective C# 做法 11-13</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-07-10/><div class=article-details><h2 class=article-title>Effective C# 做法 07-10</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//wenrongdev.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2019 -
+2026 Wenrong Nexus</section><section class=powerby>Wenrong Nexus<br><br></section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.d00997a2f4a6ce525f496da0c3ae6ad392b0468b8a9024f23309fdfc75c67a35.js defer></script></body></html>

@@ -1,133 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Android on Wenrong Nexus</title>
-    <link>https://wenrong-nexus.com/tags/android/</link>
-    <description>Recent content in Android on Wenrong Nexus</description>
-    <generator>Hugo</generator>
-    <language>zh-Hant</language>
-    <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrong-nexus.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Android Build Failed Build tools 3X.0.0 Bug</title>
-      <link>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</link>
-      <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unity-android-failed-buildtools-bug/</guid>
-      <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>輸出 Apk 遇到的錯誤</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Fix Installed Build Tools revision 3X.0.0 is corrupted.
-</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://imgur.com/CziTHbS.jpg"></p>
-<h2 id="修改方式">修改方式</h2>
-<h3 id="修改-d8bat">修改 d8.bat</h3>
-<p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0</code></p>
-<p><img alt="simg_1" loading="lazy" src="https://imgur.com/YwqG9ek.jpg"></p>
-<p>將 <code>d8.bat</code> 改為 <code>dx.bat</code>。</p>
-<h3 id="修改-d8jar">修改 d8.jar</h3>
-<p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0\lib</code></p>
-<p><img alt="simg_2" loading="lazy" src="https://imgur.com/sLwOhQx.jpg"></p>
-<p>將 <code>d8.jar</code> 改為 <code>dx.jar</code>。</p>
-<p>就完成修改。</p>
-<h2 id="參考連結">參考連結</h2>
-<p><a href="https://stackoverflow.com/a/68430992">Android Studio error &ldquo;Installed Build Tools revision 31.0.0 is corrupted&rdquo;</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>FCM Notifications Not Received on Android</title>
-      <link>https://wenrong-nexus.com/posts/fcm-notifications-not-received-on-android/</link>
-      <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/fcm-notifications-not-received-on-android/</guid>
-      <description>沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息解決方式。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。</p>
-<p>測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。</p>
-<p>後來發現主因是<code>省電模式（Doze mode）</code>導致 APP 無法接受任何推波內容。</p>
-<h2 id="參考連結">參考連結</h2>
-<p><a href="https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn">https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn</a></p>
-<p><a href="https://blog.csdn.net/pkorochi/article/details/87186659">https://blog.csdn.net/pkorochi/article/details/87186659</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Android P HTTP Error</title>
-      <link>https://wenrong-nexus.com/posts/android-p-http-error/</link>
-      <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/android-p-http-error/</guid>
-      <description>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（<a href="https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p">Google Doc</a>）</p>
-<p>Error Log：<code>Cleartext HTTP traffic to 45.xx.xxx.xx not permitted</code></p>
-<h2 id="solution">Solution</h2>
-<p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 加入 <code>android:usesCleartextTraffic=&quot;true&quot;</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    <span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;manifest</span> <span style="color:#960050;background-color:#1e0010">...</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span> <span style="color:#f92672">/&gt;</span>
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;application</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">...</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">android:usesCleartextTraffic=</span><span style="color:#e6db74">&#34;true&#34;</span>
-</span></span><span style="display:flex;"><span>            <span style="color:#960050;background-color:#1e0010">...</span><span style="color:#f92672">&gt;</span>
-</span></span><span style="display:flex;"><span>            ...
-</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/application&gt;</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/manifest&gt;</span>
-</span></span></code></pre></div><h2 id="參考連結">參考連結</h2>
-<p><a href="https://michaelyb.top/2018/08/Android-HTTP/">Android 中 HTTP 网络请求相关问题</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>Launch From Within a Unity App Another Unity App Android</title>
-      <link>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
-      <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
-      <description>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
-<h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementC = <span style="color:#66d9ef">string</span>.Empty;
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Launch(<span style="color:#66d9ef">string</span> bundleId, <span style="color:#66d9ef">string</span> storelink)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">bool</span> fail = <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>    AndroidJavaClass up = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;com.unity3d.player.UnityPlayer&#34;</span>);
-</span></span><span style="display:flex;"><span>    AndroidJavaObject ca = up.GetStatic&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;currentActivity&#34;</span>);
-</span></span><span style="display:flex;"><span>    AndroidJavaObject packageManager = ca.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getPackageManager&#34;</span>);
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    AndroidJavaObject launchIntent = <span style="color:#66d9ef">null</span>;
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        launchIntent = packageManager.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;getLaunchIntentForPackage&#34;</span>, bundleId);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">catch</span> (Exception e)
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        fail = <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (fail || launchIntent == <span style="color:#66d9ef">null</span>)
-</span></span><span style="display:flex;"><span>        Application.OpenURL(storelink);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
-</span></span><span style="display:flex;"><span>    {
-</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementA&#34;</span>, LaunchData.elementA);
-</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementB&#34;</span>, LaunchData.elementB);
-</span></span><span style="display:flex;"><span>        launchIntent.Call&lt;AndroidJavaObject&gt;(<span style="color:#e6db74">&#34;putExtra&#34;</span>, <span style="color:#e6db74">&#34;elementC&#34;</span>, LaunchData.elementC);
-</span></span><span style="display:flex;"><span>        ca.Call(<span style="color:#e6db74">&#34;startActivity&#34;</span>, launchIntent);
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    up.Dispose();
-</span></span><span style="display:flex;"><span>    ca.Dispose();
-</span></span><span style="display:flex;"><span>    packageManager.Dispose();
-</span></span><span style="display:flex;"><span>    launchIntent.Dispose();
-</span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="property">Property</h2>
-<p>PropertyInfo 是用來接受資訊的 class，這邊可以自行修改。</p>
-<hr>
-<p><a href="https://wenrongdev.com/get-android-intent-data-for-unity/">Get Android intent Data for Unity</a></p>
-]]></content:encoded>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Android on Wenrong Nexus</title>
+        <link>https://wenrong-nexus.com/tags/android/</link>
+        <description>Recent content in Android on Wenrong Nexus</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-Hant</language>
+        <lastBuildDate>Mon, 07 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrong-nexus.com/tags/android/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Android Build Failed Build tools 3X.0.0 Bug</title>
+            <link>https://wenrong-nexus.com/posts/android-build-failed-build-tools-3x.0.0-bug/</link>
+            <pubDate>Mon, 07 Mar 2022 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/android-build-failed-build-tools-3x.0.0-bug/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;輸出 Apk 遇到的錯誤&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Fix Installed Build Tools revision 3X.0.0 is corrupted.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;img_1&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;367px&#34; data-flex-grow=&#34;153&#34; height=&#34;733&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://imgur.com/CziTHbS.jpg&#34; srcset=&#34;https://wenrong-nexus.com/CziTHbS_14125499126355769804_hu_b669bbb01919f304.png 800w, https://imgur.com/CziTHbS.jpg 1123w&#34; width=&#34;1123&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;修改方式&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e6%94%b9%e6%96%b9%e5%bc%8f&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修改方式&#xA;&lt;/h2&gt;&lt;h3 id=&#34;修改-d8bat&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e6%94%b9-d8bat&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修改 d8.bat&#xA;&lt;/h3&gt;&lt;p&gt;檔案路徑 &lt;code&gt;&amp;lt;Android SDK root&amp;gt;\build-tools\3X.0.0&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;simg_1&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;312px&#34; data-flex-grow=&#34;130&#34; height=&#34;703&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://imgur.com/YwqG9ek.jpg&#34; srcset=&#34;https://wenrong-nexus.com/YwqG9ek_5740327984153030229_hu_7ef88382d91022d8.jpg 800w, https://imgur.com/YwqG9ek.jpg 916w&#34; width=&#34;916&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;將 &lt;code&gt;d8.bat&lt;/code&gt; 改為 &lt;code&gt;dx.bat&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;h3 id=&#34;修改-d8jar&#34;&gt;&lt;a href=&#34;#%e4%bf%ae%e6%94%b9-d8jar&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;修改 d8.jar&#xA;&lt;/h3&gt;&lt;p&gt;檔案路徑 &lt;code&gt;&amp;lt;Android SDK root&amp;gt;\build-tools\3X.0.0\lib&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;simg_2&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;309px&#34; data-flex-grow=&#34;129&#34; height=&#34;710&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://imgur.com/sLwOhQx.jpg&#34; srcset=&#34;https://wenrong-nexus.com/sLwOhQx_1093924686849632880_hu_7f4a5c386e7d898a.jpg 800w, https://imgur.com/sLwOhQx.jpg 916w&#34; width=&#34;916&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;將 &lt;code&gt;d8.jar&lt;/code&gt; 改為 &lt;code&gt;dx.jar&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;p&gt;就完成修改。&lt;/p&gt;&#xA;&lt;h2 id=&#34;參考連結&#34;&gt;&lt;a href=&#34;#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;參考連結&#xA;&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/68430992&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Android Studio error &amp;ldquo;Installed Build Tools revision 31.0.0 is corrupted&amp;rdquo;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item><item>
+            <title>FCM Notifications Not Received on Android</title>
+            <link>https://wenrong-nexus.com/posts/fcm-notifications-not-received-on-android/</link>
+            <pubDate>Thu, 16 Jan 2020 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/fcm-notifications-not-received-on-android/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;前陣子因為專案需要後台推播功能，所以開始測試 FCM(Firebase Cloud Messaging）功能。&lt;/p&gt;&#xA;&lt;p&gt;測試的過程一直沒辦法在 APP 不活躍或不喚醒（not active）狀態推送推播訊息。&lt;/p&gt;&#xA;&lt;p&gt;後來發現主因是&lt;code&gt;省電模式（Doze mode）&lt;/code&gt;導致 APP 無法接受任何推波內容。&lt;/p&gt;&#xA;&lt;h2 id=&#34;參考連結&#34;&gt;&lt;a href=&#34;#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;參考連結&#xA;&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://developer.android.com/training/monitoring-device-state/doze-standby?hl=zh_cn&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/pkorochi/article/details/87186659&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;https://blog.csdn.net/pkorochi/article/details/87186659&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item><item>
+            <title>Android P HTTP Error</title>
+            <link>https://wenrong-nexus.com/posts/android-p-http-error/</link>
+            <pubDate>Thu, 09 Jan 2020 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/android-p-http-error/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。（&lt;a class=&#34;link&#34; href=&#34;https://developer.android.com/about/versions/pie/android-9.0-changes-28?hl=zh-cn#apache-p&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Google Doc&lt;/a&gt;）&lt;/p&gt;&#xA;&lt;p&gt;Error Log：&lt;code&gt;Cleartext HTTP traffic to 45.xx.xxx.xx not permitted&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;&lt;a href=&#34;#solution&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Solution&#xA;&lt;/h2&gt;&lt;p&gt;在 &lt;code&gt;AndroidManifest.xml&lt;/code&gt; 的 &lt;code&gt;application&lt;/code&gt; 加入 &lt;code&gt;android:usesCleartextTraffic=&amp;quot;true&amp;quot;&lt;/code&gt;。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;utf-8&amp;#34;?&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;manifest&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;uses-permission&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;android:name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;android.permission.INTERNET&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;application&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#a6e22e&#34;&gt;android:usesCleartextTraffic=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;...&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/application&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/manifest&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;參考連結&#34;&gt;&lt;a href=&#34;#%e5%8f%83%e8%80%83%e9%80%a3%e7%b5%90&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;參考連結&#xA;&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://michaelyb.top/2018/08/Android-HTTP/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Android 中 HTTP 网络请求相关问题&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item><item>
+            <title>Launch From Within a Unity App Another Unity App Android</title>
+            <link>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</link>
+            <pubDate>Thu, 02 Jan 2020 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/launch-from-within-a-unity-app-another-unity-app-android/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;主要用來 Unity app A 如何傳遞資訊給 Unity app B。&lt;/p&gt;&#xA;&lt;h3 id=&#34;demo-script&#34;&gt;&lt;a href=&#34;#demo-script&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Demo Script&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-CSharp&#34; data-lang=&#34;CSharp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PropertyInfo&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; elementA = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Empty;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; elementB = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Empty;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; elementC = &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;.Empty;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; Launch(&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; bundleId, &lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt; storelink)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;bool&lt;/span&gt; fail = &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    AndroidJavaClass up = &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; AndroidJavaClass(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.unity3d.player.UnityPlayer&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    AndroidJavaObject ca = up.GetStatic&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;currentActivity&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    AndroidJavaObject packageManager = ca.Call&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;getPackageManager&amp;#34;&lt;/span&gt;);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    AndroidJavaObject launchIntent = &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        launchIntent = packageManager.Call&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;getLaunchIntentForPackage&amp;#34;&lt;/span&gt;, bundleId);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; (Exception e)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        fail = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (fail || launchIntent == &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        Application.OpenURL(storelink);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    {&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        launchIntent.Call&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;putExtra&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;elementA&amp;#34;&lt;/span&gt;, LaunchData.elementA);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        launchIntent.Call&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;putExtra&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;elementB&amp;#34;&lt;/span&gt;, LaunchData.elementB);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        launchIntent.Call&amp;lt;AndroidJavaObject&amp;gt;(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;putExtra&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;elementC&amp;#34;&lt;/span&gt;, LaunchData.elementC);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        ca.Call(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;startActivity&amp;#34;&lt;/span&gt;, launchIntent);&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    up.Dispose();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ca.Dispose();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    packageManager.Dispose();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    launchIntent.Dispose();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;property&#34;&gt;&lt;a href=&#34;#property&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Property&#xA;&lt;/h2&gt;&lt;p&gt;PropertyInfo 是用來接受資訊的 class，這邊可以自行修改。&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://wenrongdev.com/get-android-intent-data-for-unity/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Get Android intent Data for Unity&lt;/a&gt;&lt;/p&gt;&#xA;</description>
+        </item></channel>
 </rss>

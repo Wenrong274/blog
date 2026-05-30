@@ -1,47 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>WebGL on Wenrong Nexus</title>
-    <link>https://wenrong-nexus.com/tags/webgl/</link>
-    <description>Recent content in WebGL on Wenrong Nexus</description>
-    <generator>Hugo</generator>
-    <language>zh-Hant</language>
-    <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrong-nexus.com/tags/webgl/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Data Access WebGL</title>
-      <link>https://wenrong-nexus.com/posts/data-access-web-gl/</link>
-      <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/data-access-web-gl/</guid>
-      <description>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。是有容量大小限制，所以需要注意存儲的檔案大小。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。</p>
-<p><code>IndexedDB</code> 是有容量大小限制，所以需要注意存儲的檔案大小。</p>
-<h2 id="about-indexeddb">About IndexedDB</h2>
-<p><a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a></p>
-<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png"></p>
-<h2 id="github"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
-<h2 id="introduction">Introduction</h2>
-<ul>
-<li>
-<p>File Path</p>
-<p><code>string.Format(&quot;{0}/{1}.dat&quot;, Application.persistentDataPath, FileName);</code></p>
-</li>
-<li>
-<p>Save Method</p>
-<p>DataAccess.Save(fileName, bytes);</p>
-</li>
-<li>
-<p>Load Method</p>
-<p>byte[] bytes = DataAccess.Load(fileName);</p>
-</li>
-<li>
-<p>Example Scene</p>
-<p><code>root\Assets\WebGL\Example\Scenes\Example</code></p>
-</li>
-</ul>
-<hr>
-]]></content:encoded>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>WebGL on Wenrong Nexus</title>
+        <link>https://wenrong-nexus.com/tags/webgl/</link>
+        <description>Recent content in WebGL on Wenrong Nexus</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-Hant</language>
+        <lastBuildDate>Thu, 27 Feb 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrong-nexus.com/tags/webgl/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Data Access WebGL</title>
+            <link>https://wenrong-nexus.com/posts/data-access-webgl/</link>
+            <pubDate>Thu, 27 Feb 2020 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/data-access-webgl/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;p&gt;Unity 在 WebGL 時存/讀檔案的方式，檔案是放在 IndexedDB。&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;IndexedDB&lt;/code&gt; 是有容量大小限制，所以需要注意存儲的檔案大小。&lt;/p&gt;&#xA;&lt;h2 id=&#34;about-indexeddb&#34;&gt;&lt;a href=&#34;#about-indexeddb&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;About IndexedDB&#xA;&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.html5rocks.com/en/tutorials/offline/quota-research/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Working with quota on mobile browsers&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;img_1&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;182px&#34; data-flex-grow=&#34;76&#34; height=&#34;874&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png&#34; width=&#34;666&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;github&#34;&gt;&lt;a href=&#34;#github&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/Wenrong274/DataAccessWebGL&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;GitHub&lt;/a&gt;&#xA;&lt;/h2&gt;&lt;h2 id=&#34;introduction&#34;&gt;&lt;a href=&#34;#introduction&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Introduction&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;File Path&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;string.Format(&amp;quot;{0}/{1}.dat&amp;quot;, Application.persistentDataPath, FileName);&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Save Method&lt;/p&gt;&#xA;&lt;p&gt;DataAccess.Save(fileName, bytes);&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Load Method&lt;/p&gt;&#xA;&lt;p&gt;byte[] bytes = DataAccess.Load(fileName);&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Example Scene&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;root\Assets\WebGL\Example\Scenes\Example&lt;/code&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item></channel>
 </rss>

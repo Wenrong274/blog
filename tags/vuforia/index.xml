@@ -1,62 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Vuforia on Wenrong Nexus</title>
-    <link>https://wenrong-nexus.com/tags/vuforia/</link>
-    <description>Recent content in Vuforia on Wenrong Nexus</description>
-    <generator>Hugo</generator>
-    <language>zh-Hant</language>
-    <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://wenrong-nexus.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>IOS Build Note for Unity 2019 Vuforia</title>
-      <link>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</link>
-      <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/i-os-build-note-for-unity-2019-vuforia/</guid>
-      <description>Vuforia iOS Build and Run Error。</description>
-      <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<ul>
-<li>Unity 2019.2.11f1</li>
-<li>Vuforia 8.5.9</li>
-</ul>
-<h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg"></p>
-<h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
-<p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
-<p>移除 <code>&quot;$(SECROOT)&quot;</code> 參數</p>
-<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg"></p>
-<h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</span></span></code></pre></div><p><img alt="img_3" loading="lazy" src="https://i.imgur.com/7YCtki6.jpg"></p>
-<h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
-<p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
-<ul>
-<li>
-<p>設定 iOS architectures</p>
-<p>Build Setting -&gt; Architectures -&gt; Architectures</p>
-<p>Architectures 改為 <code>Standard architectures</code></p>
-<p><img alt="img_5" loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg"></p>
-</li>
-<li>
-<p>設定 iOS 版本</p>
-<p>Build Setting -&gt; Deployment -&gt; iOS Deployment Target</p>
-<p>iOS Deployment Target 改為 <code>iOS 11.0</code></p>
-<p><img alt="img_4" loading="lazy" src="https://i.imgur.com/rPGArpU.jpg"></p>
-</li>
-</ul>
-<h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
-</span></span></code></pre></div><p><img alt="img_6" loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg"></p>
-<h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
-<p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
-<h2 id="參考文章">參考文章</h2>
-<p><a href="https://qiita.com/Narinii/items/d571ac9a4b2193f19bef">Unity Xcode Error &ldquo;library not found for -&rdquo; の解決方法</a></p>
-<p><a href="https://stackoverflow.com/a/58747930">Can&rsquo;t submit apps to AppStore: ERROR ITMS-90534: &ldquo;Invalid Toolchain</a></p>
-<hr>
-]]></content:encoded>
-    </item>
-  </channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Vuforia on Wenrong Nexus</title>
+        <link>https://wenrong-nexus.com/tags/vuforia/</link>
+        <description>Recent content in Vuforia on Wenrong Nexus</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-Hant</language>
+        <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://wenrong-nexus.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>IOS Build Note for Unity 2019 Vuforia</title>
+            <link>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</link>
+            <pubDate>Thu, 17 Oct 2019 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/posts/ios-build-note-for-unity-2019-vuforia/</guid>
+            <description>&lt;h2 id=&#34;前言&#34;&gt;&lt;a href=&#34;#%e5%89%8d%e8%a8%80&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;前言&#xA;&lt;/h2&gt;&lt;ul&gt;&#xA;&lt;li&gt;Unity 2019.2.11f1&lt;/li&gt;&#xA;&lt;li&gt;Vuforia 8.5.9&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;ios-build-and-run-error&#34;&gt;&lt;a href=&#34;#ios-build-and-run-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;iOS Build and Run Error&#xA;&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ld: library not found for -liPhone-lib&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;clang: error: linker command failed with exit code 1 (use -v to see invocation)&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;img_1&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;1519px&#34; data-flex-grow=&#34;633&#34; height=&#34;274&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/VfEWoVv.jpg&#34; srcset=&#34;https://wenrong-nexus.com/VfEWoVv_5497906314978930669_hu_bd1f3b2d4755eaba.jpg 800w, https://wenrong-nexus.com/VfEWoVv_5497906314978930669_hu_b0914bf320751ccb.jpg 1600w, https://i.imgur.com/VfEWoVv.jpg 1735w&#34; width=&#34;1735&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;solution---ios-build-and-run-error&#34;&gt;&lt;a href=&#34;#solution---ios-build-and-run-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Solution - iOS Build and Run Error&#xA;&lt;/h4&gt;&lt;p&gt;Build Setting -&amp;gt; Search Paths -&amp;gt; Library Search Paths&lt;/p&gt;&#xA;&lt;p&gt;移除 &lt;code&gt;&amp;quot;$(SECROOT)&amp;quot;&lt;/code&gt; 參數&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;img_2&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;526px&#34; data-flex-grow=&#34;219&#34; height=&#34;581&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/mHa5XkT.jpg&#34; srcset=&#34;https://wenrong-nexus.com/mHa5XkT_12845696746095481859_hu_77425f678b039054.jpg 800w, https://i.imgur.com/mHa5XkT.jpg 1275w&#34; width=&#34;1275&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;ios-archive-error&#34;&gt;&lt;a href=&#34;#ios-archive-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;iOS Archive Error&#xA;&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;img_3&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;1138px&#34; data-flex-grow=&#34;474&#34; height=&#34;346&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/7YCtki6.jpg&#34; srcset=&#34;https://wenrong-nexus.com/7YCtki6_1992840428158013346_hu_dc2b0c35c633fea7.jpg 800w, https://wenrong-nexus.com/7YCtki6_1992840428158013346_hu_df8e75de766c596a.jpg 1600w, https://i.imgur.com/7YCtki6.jpg 1642w&#34; width=&#34;1642&#34;&gt;&lt;/p&gt;&#xA;&lt;h4 id=&#34;solution---ios-archive-error&#34;&gt;&lt;a href=&#34;#solution---ios-archive-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Solution - iOS Archive Error&#xA;&lt;/h4&gt;&lt;p&gt;根據 &lt;a class=&#34;link&#34; href=&#34;https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Vuforia Engine Release Notes&lt;/a&gt; 在 &lt;code&gt;v8.1.7&lt;/code&gt;之後不支援 &lt;code&gt;32-bit&lt;/code&gt;，並且最低支援 &lt;code&gt;iOS 11&lt;/code&gt;，因此需要把專案版本最低版本設定為 iOS。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;設定 iOS architectures&lt;/p&gt;&#xA;&lt;p&gt;Build Setting -&amp;gt; Architectures -&amp;gt; Architectures&lt;/p&gt;&#xA;&lt;p&gt;Architectures 改為 &lt;code&gt;Standard architectures&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;img_5&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;799px&#34; data-flex-grow=&#34;333&#34; height=&#34;212&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/1fcwuH9.jpg&#34; width=&#34;706&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;設定 iOS 版本&lt;/p&gt;&#xA;&lt;p&gt;Build Setting -&amp;gt; Deployment -&amp;gt; iOS Deployment Target&lt;/p&gt;&#xA;&lt;p&gt;iOS Deployment Target 改為 &lt;code&gt;iOS 11.0&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;img_4&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;735px&#34; data-flex-grow=&#34;306&#34; height=&#34;368&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/rPGArpU.jpg&#34; srcset=&#34;https://wenrong-nexus.com/rPGArpU_7009181936743823563_hu_35bb8d79590128a9.jpg 800w, https://i.imgur.com/rPGArpU.jpg 1127w&#34; width=&#34;1127&#34;&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;ios-distribution-error&#34;&gt;&lt;a href=&#34;#ios-distribution-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;iOS Distribution Error&#xA;&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ERROR ITMS-90534&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img alt=&#34;img_6&#34; class=&#34;gallery-image&#34; data-flex-basis=&#34;398px&#34; data-flex-grow=&#34;166&#34; height=&#34;830&#34; loading=&#34;lazy&#34; sizes=&#34;(max-width: 767px) calc(100vw - 30px), (max-width: 1023px) 700px, (max-width: 1279px) 950px, 1232px&#34; src=&#34;https://i.imgur.com/0KoHlnL.jpg&#34; srcset=&#34;https://wenrong-nexus.com/0KoHlnL_2305146279328518930_hu_ad8ac277e9c34fc0.jpg 800w, https://i.imgur.com/0KoHlnL.jpg 1379w&#34; width=&#34;1379&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;solution---ios-distribution-error&#34;&gt;&lt;a href=&#34;#solution---ios-distribution-error&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Solution - iOS Distribution Error&#xA;&lt;/h3&gt;&lt;p&gt;請使用 &lt;a class=&#34;link&#34; href=&#34;https://developer.apple.com/download/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;&lt;strong&gt;Xcode 11.2.1&lt;/strong&gt;&lt;/a&gt; 輸出，即可修正。&lt;/p&gt;&#xA;&lt;h2 id=&#34;參考文章&#34;&gt;&lt;a href=&#34;#%e5%8f%83%e8%80%83%e6%96%87%e7%ab%a0&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;參考文章&#xA;&lt;/h2&gt;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://qiita.com/Narinii/items/d571ac9a4b2193f19bef&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Unity Xcode Error &amp;ldquo;library not found for -&amp;rdquo; の解決方法&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://stackoverflow.com/a/58747930&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;&#xA;    &gt;Can&amp;rsquo;t submit apps to AppStore: ERROR ITMS-90534: &amp;ldquo;Invalid Toolchain&lt;/a&gt;&lt;/p&gt;&#xA;&lt;hr&gt;&#xA;</description>
+        </item></channel>
 </rss>

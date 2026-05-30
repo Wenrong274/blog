@@ -1,0 +1,221 @@
+<!doctype html><html lang=zh-Hant dir=ltr><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><meta name=description content="Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。"><meta name=keywords content="Effective C#,C#,Generics,type constraints,JIT,IEnumerable,runtime type checking,.NET"><title>Effective C# 做法 18-19</title><link rel=canonical href=https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-18-19/><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=preload as=style href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"><link rel=stylesheet href=/scss/style.min.f189295952649f4a48b745ca22e58cc0eb209a67fd63fe149f59d5943428bcc5.css><meta property='og:title' content="Effective C# 做法 18-19"><meta property='og:description' content="Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。"><meta property='og:url' content='https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-18-19/'><meta property='og:site_name' content='Wenrong Nexus'><meta property='og:type' content='article'><meta property='article:section' content='Posts'><meta property='article:tag' content='C#'><meta property='article:published_time' content='2024-09-28T01:48:09+08:00'><meta property='article:modified_time' content='2024-09-28T01:48:09+08:00'><meta name=twitter:title content="Effective C# 做法 18-19"><meta name=twitter:description content="Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。"><link rel="shortcut icon" href=/favicon.ico><script async src="https://www.googletagmanager.com/gtag/js?id=G-GRV3BQC1BQ"></script><script>var doNotTrack=!1,dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes";if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-GRV3BQC1BQ")}</script><meta name=keywords content="Effective C#,C#,Generics,type constraints,JIT,IEnumerable,runtime type checking,.NET"><meta property="og:image" content="https://wenrong-nexus.com/images/og-bg_hu_8023dd6c8653bcbf.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name=twitter:image content="https://wenrong-nexus.com/images/og-bg_hu_8023dd6c8653bcbf.png"><meta name=twitter:card content="summary_large_image"><link rel=manifest href=/site.webmanifest><meta name=theme-color content="#5856d6"><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png></head><body class=article-page><script>(function(){const e="StackColorScheme";localStorage.getItem(e)||localStorage.setItem(e,"auto")})()</script><script>(function(){const t="StackColorScheme",e=localStorage.getItem(t),n=window.matchMedia("(prefers-color-scheme: dark)").matches===!0;e=="dark"||e==="auto"&&n?document.documentElement.dataset.scheme="dark":document.documentElement.dataset.scheme="light"})()</script><div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky"><button class="hamburger hamburger--spin" type=button id=toggle-menu aria-label>
+<span class=hamburger-box><span class=hamburger-inner></span></span></button><header><figure class=site-avatar><a href=/><img src=/android-chrome-512x512.png width height class=site-logo loading=lazy alt=Avatar>
+</a><span class=emoji>🎮</span></figure><div class=site-meta><h1 class=site-name><a href=/>Wenrong Nexus</a></h1><h2 class=site-description>我是 Wenrong 也是一位 Unity 工程師，開發常常會碰到跨平台觸坑問題，因此想寫個 Blog 紀錄填坑歷程。</h2></div></header><ol class=menu-social><li><a href=mailto:me@wenrong-nexus.com target=_blank title=Email rel=me><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="2,4 12,13 22,4"/></svg></a></li><li><a href=https://github.com/Wenrong274 target=_blank title=GitHub rel=me><svg class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6.0 00-1.3-3.2 4.2 4.2.0 00-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3.0 00-6.2.0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2.0 00-.1 3.2A4.6 4.6.0 004 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></a></li><li><a href=/index.xml target=_blank title=RSS rel=me><svg class="icon icon-tabler icon-tabler-rss" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="5" cy="19" r="1"/><path d="M4 4a16 16 0 0116 16"/><path d="M4 11a9 9 0 019 9"/></svg></a></li></ol><ol class=menu id=main-menu><li><a href=/><svg class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><polyline points="5 12 3 12 12 3 21 12 19 12"/><path d="M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7"/><path d="M9 21v-6a2 2 0 012-2h2a2 2 0 012 2v6"/></svg>
+<span>首頁</span></a></li><li><a href=/search/><svg class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="10" cy="10" r="7"/><line x1="21" y1="21" x2="15" y2="15"/></svg>
+<span>搜尋</span></a></li><li><a href=/archives/><svg class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><rect x="3" y="4" width="18" height="4" rx="2"/><path d="M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8"/><line x1="10" y1="12" x2="14" y2="12"/></svg>
+<span>歸檔</span></a></li><li><a href=/tags/><svg class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11 3l9 9a1.5 1.5.0 010 2l-6 6a1.5 1.5.0 01-2 0L3 11V7a4 4 0 014-4h4"/><circle cx="9" cy="9" r="2"/></svg>
+<span>標籤</span></a></li><li><a href=/profile/about/><svg class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="7" r="4"/><path d="M6 21v-2a4 4 0 014-4h4a4 4 0 014 4v2"/></svg>
+<span>關於我</span></a></li><li class=menu-bottom-section><ol class=menu><li id=dark-mode-toggle><svg class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="8" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<svg class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="16" cy="12" r="2"/><rect x="2" y="6" width="20" height="12" rx="6"/></svg>
+<span></span></li></ol></li></ol></aside><aside class="sidebar right-sidebar sticky"><section class="widget archives"><div class=widget-icon><svg class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><line x1="5" y1="9" x2="19" y2="9"/><line x1="5" y1="15" x2="19" y2="15"/><line x1="11" y1="4" x2="7" y2="20"/><line x1="17" y1="4" x2="13" y2="20"/></svg></div><h2 class="widget-title section-title"></h2><div class=widget--toc><nav class=toc-nav id=TableOfContents><ul><li><a href=#做法-18>做法 18</a><ul><li><a href=#使用泛型>使用泛型</a></li><li><a href=#class-約束>class 約束</a></li><li><a href=#總結>總結</a></li></ul></li><li><a href=#做法-19>做法 19</a></li></ul></nav></div></section></aside><main class="main full-width"><article class=main-article><header class=article-header><div class=article-details><div class=article-title-wrapper><h2 class=article-title><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-18-19/>Effective C# 做法 18-19</a></h2><h3 class=article-subtitle>Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。</h3></div><footer class=article-meta><div class=inline-meta><svg class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><path d="M11.795 21H5a2 2 0 01-2-2V7a2 2 0 012-2h12a2 2 0 012 2v4"/><circle cx="18" cy="18" r="4"/><path d="M15 3v4"/><path d="M7 3v4"/><path d="M3 11h16"/><path d="M18 16.496V18l1 1"/></svg>
+<time class=article-time--published datetime=2024-09-28T01:48:09+08:00>2024年9月28日 星期六</time>
+<svg class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z"/><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 15"/></svg>
+<time class=article-time--reading></time></div></footer></div></header><aside class=article-toc><details><summary><div class=article-toc-title><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6-6 6"/></svg>
+<span></span></div></summary><nav class=toc-nav><ul><li><a href=#做法-18>做法 18</a><ul><li><a href=#使用泛型>使用泛型</a></li><li><a href=#class-約束>class 約束</a></li><li><a href=#總結>總結</a></li></ul></li><li><a href=#做法-19>做法 19</a></li></ul></nav></details></aside><section class=article-content><h2 id=做法-18><a href=#%e5%81%9a%e6%b3%95-18 class=header-anchor></a>做法 18</h2><p><code>使用泛型 & 定義最少與足夠的約束</code></p><h3 id=使用泛型><a href=#%e4%bd%bf%e7%94%a8%e6%b3%9b%e5%9e%8b class=header-anchor></a>使用泛型</h3><ul><li><p>為什麼這三組執行期都共用相同的程式</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span>List&lt;<span style=color:#66d9ef>string</span>&gt; strings = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>string</span>&gt;();
+</span></span><span style=display:flex><span>List&lt;Stream&gt; streams=newList&lt;Stream&gt;();
+</span></span><span style=display:flex><span>List&lt;MyClassType&gt; myClassTypes=newList&lt;MyClassType&gt;();
+</span></span></code></pre></div></li></ul><p>JIT 編譯器識別出這些類型都是引用類型，因此可以使用相同的機器代碼。</p><ul><li><p>為什麼這三組有不同的機械碼?</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span>List&lt;<span style=color:#66d9ef>double</span>&gt; doubles = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>double</span>&gt;();
+</span></span><span style=display:flex><span>List&lt;<span style=color:#66d9ef>int</span>&gt; ints = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;();
+</span></span><span style=display:flex><span>List&lt;MyStruct&gt; myStructs = <span style=color:#66d9ef>new</span> List&lt;MyStruct&gt;();
+</span></span></code></pre></div><p>CLR 為每種值類型參數生成特定的代碼，以優化性能和類型安全性。</p></li></ul><h4 id=1-泛型類別使用-default><a href=#1-%e6%b3%9b%e5%9e%8b%e9%a1%9e%e5%88%a5%e4%bd%bf%e7%94%a8-default class=header-anchor></a>1. 泛型類別使用 default()</h4><p>在講到泛型類別使用 default() 的方法寫時，需要把 T 改成 T?，因為 Value Type 的 Default = 0，而 Reference Type 是沒有 Default，回傳的結果會是 null。
+需要告訴使用者可能會回傳 null 建議還是要回傳 T?，也提高程式碼閱讀性。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> T? FirstOrDefault&lt;T&gt;(<span style=color:#66d9ef>this</span> IEnumerable&lt;T&gt; source, Predicate&lt;T&gt; predicate)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>var</span> item <span style=color:#66d9ef>in</span> source)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (predicate(item))
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> item;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>default</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=2-少了-null-確認><a href=#2-%e5%b0%91%e4%ba%86-null-%e7%a2%ba%e8%aa%8d class=header-anchor></a>2. 少了 null 確認</h4><p>原本課本的判斷，少了 null 確認</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> AreEqual(T left, T right) =&gt;	left.Equals(right);
+</span></span></code></pre></div><p>可以改這種寫法，多了做法 03 的寫法，用來判斷 null。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>bool</span> AreEqual&lt;T&gt;(T left, T right)
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (left <span style=color:#66d9ef>is</span> T qu)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> qu.Equals(right);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> right == <span style=color:#66d9ef>null</span>;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=3-使用-t><a href=#3-%e4%bd%bf%e7%94%a8-t class=header-anchor></a>3. 使用 T?</h4><p>使用 T? 明確表示 factory 方法可能返回 null。這增加了代碼的可讀性和意圖的清晰度。</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span>MyClass obj1 = Factory(() =&gt; <span style=color:#66d9ef>new</span> MyClass { Name = <span style=color:#e6db74>&#34;Object 1&#34;</span> });
+</span></span><span style=display:flex><span>Console.WriteLine(obj1.Name); <span style=color:#75715e>// 輸出: Object 1</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// 使用返回 null 的工廠方法</span>
+</span></span><span style=display:flex><span>MyClass obj2 = Factory&lt;MyClass&gt;(() =&gt; <span style=color:#66d9ef>null</span>);
+</span></span><span style=display:flex><span>Console.WriteLine(obj2.Name); <span style=color:#75715e>// 輸出: Default Name</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>delegate</span> T FactoryFunc&lt;T&gt;();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> T Factory&lt;T&gt;(FactoryFunc&lt;T?&gt; factory) <span style=color:#66d9ef>where</span> T : <span style=color:#66d9ef>new</span>()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    T? resultVal = factory();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (resultVal == <span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        resultVal = <span style=color:#66d9ef>new</span> T();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>return</span> resultVal;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><h4 id=4-為什麼要盡量避免約束-newstructclass><a href=#4-%e7%82%ba%e4%bb%80%e9%ba%bc%e8%a6%81%e7%9b%a1%e9%87%8f%e9%81%bf%e5%85%8d%e7%b4%84%e6%9d%9f-newstructclass class=header-anchor></a>4. 為什麼要盡量避免約束 new()、struct、class</h4><h4 id=new-約束><a href=#new-%e7%b4%84%e6%9d%9f class=header-anchor></a>new() 約束</h4><p>優點：</p><ul><li>保證類型有無參數構造函數。
+缺點：</li><li>限制了類型的靈活性，排除了沒有公共無參數構造函數的類型。</li><li>可能導致不必要的對象創建，影響性能。</li><li>難以進行單元測試，因為無法輕易模擬或替換對象。</li></ul><h4 id=struct-約束><a href=#struct-%e7%b4%84%e6%9d%9f class=header-anchor></a>struct 約束</h4><p>優點：</p><ul><li>確保類型是值類型。</li></ul><p>缺點：</p><ul><li>過度限制了類型，排除了可能同樣適用的引用類型。</li><li>可能導致不必要的裝箱和拆箱操作。</li><li>限制了代碼的重用性和靈活性。</li></ul><h3 id=class-約束><a href=#class-%e7%b4%84%e6%9d%9f class=header-anchor></a>class 約束</h3><p>優點：</p><ul><li>確保類型是引用類型。</li></ul><p>缺點：</p><ul><li>排除了可能同樣適用的值類型。</li><li>限制了代碼的通用性。</li><li>可能導致不必要的堆分配。</li></ul><p>一般建議：</p><ol><li><p>優先使用接口約束：接口約束更靈活，能同時適用於值類型和引用類型。例如：</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>GenericClass</span>&lt;T&gt; <span style=color:#66d9ef>where</span> T : IComparable&lt;T&gt;
+</span></span></code></pre></div></li><li><p>基於行為而非類型種類進行約束：關注類型能做什麼，而不是類型是什麼。</p></li><li><p>考慮使用泛型約束的組合：在必要時，可以組合多個接口約束來精確定義所需的功能。</p></li><li><p>使用 default 關鍵字：代替 new()，使用 default(T) 來獲取類型的默認值。</p></li><li><p>設計靈活的 API：避免過度約束，以增加代碼的重用性和適應性。</p></li><li><p>考慮性能影響：某些約束（如 struct）可能導致意外的性能問題。</p></li></ol><h3 id=總結><a href=#%e7%b8%bd%e7%b5%90 class=header-anchor></a>總結</h3><p>避免使用 new()、 struct 和 class 約束主要是為了提高代碼的靈活性、可重用性和可測試性。通過使用更通用的約束（如接口），我們可以編寫出更加靈活和強大的泛型代碼，適用於更廣泛的類型。</p><h2 id=做法-19><a href=#%e5%81%9a%e6%b3%95-19 class=header-anchor></a>做法 19</h2><p>使用執行期型別檢查特化泛型演算法
+實作</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>sealed</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ReverseEnumerable</span>&lt;T&gt; : IEnumerable&lt;T&gt;
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ReverseEnumerator</span> : IEnumerator&lt;T&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>int</span> currentIndex = <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> IList&lt;T&gt; collection;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> T Current =&gt; collection[currentIndex];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>object</span> IEnumerator.Current =&gt; Current;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ReverseEnumerator(List&lt;T&gt; collection) : <span style=color:#66d9ef>this</span>(collection.ToArray())
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ReverseEnumerator(IList&lt;T&gt; collection)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            currentIndex = collection.Count;
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>this</span>.collection = collection;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Dispose()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>bool</span> MoveNext()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> --currentIndex &gt;= <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Reset()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            currentIndex = collection.Count;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>sealed</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>ReverseStringEnumerator</span> : IEnumerator&lt;<span style=color:#66d9ef>char</span>&gt;
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>string</span> sourceSequence;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>private</span> <span style=color:#66d9ef>int</span> currentIndex;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> ReverseStringEnumerator(<span style=color:#66d9ef>string</span> source)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            sourceSequence = source;
+</span></span><span style=display:flex><span>            currentIndex = source.Length;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>char</span> Current =&gt; sourceSequence[currentIndex];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>object</span> IEnumerator.Current =&gt; sourceSequence[currentIndex];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Dispose() { }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>bool</span> MoveNext()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> --currentIndex &gt;= <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>void</span> Reset()
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            currentIndex = sourceSequence.Length;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> IEnumerable&lt;T&gt;? sourceSequence;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>private</span> IList&lt;T&gt;? originalSequence;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> ReverseEnumerable(IEnumerable&lt;T&gt; source)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (source <span style=color:#66d9ef>is</span> ReverseEnumerable&lt;T&gt; reverseEnumerable)
+</span></span><span style=display:flex><span>            sourceSequence = reverseEnumerable;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (source <span style=color:#66d9ef>is</span> <span style=color:#66d9ef>string</span> str)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            originalSequence = str.ToArray() <span style=color:#66d9ef>as</span> IList&lt;T&gt;;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            originalSequence = source <span style=color:#66d9ef>as</span> IList&lt;T&gt;;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> ReverseEnumerable(IList&lt;T&gt; source) : <span style=color:#66d9ef>this</span>((IEnumerable&lt;T&gt;)source)
+</span></span><span style=display:flex><span>    { }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>public</span> IEnumerator&lt;T&gt; GetEnumerator()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (sourceSequence <span style=color:#66d9ef>is</span> <span style=color:#66d9ef>string</span> str)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> ReverseStringEnumerator(str) <span style=color:#66d9ef>as</span> IEnumerator&lt;T&gt;;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (originalSequence == <span style=color:#66d9ef>null</span>)
+</span></span><span style=display:flex><span>        {
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>if</span> (sourceSequence <span style=color:#66d9ef>is</span> ICollection&lt;T&gt; source)
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                originalSequence = <span style=color:#66d9ef>new</span> List&lt;T&gt;(source.Count);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>            <span style=color:#66d9ef>else</span>
+</span></span><span style=display:flex><span>            {
+</span></span><span style=display:flex><span>                originalSequence = <span style=color:#66d9ef>new</span> List&lt;T&gt;(sourceSequence);
+</span></span><span style=display:flex><span>            }
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>new</span> ReverseEnumerator(originalSequence);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    IEnumerator IEnumerable.GetEnumerator()
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> GetEnumerator();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>使用方式</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none><code class=language-Csharp data-lang=Csharp><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> StringEnumerable()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>string</span> str = <span style=color:#e6db74>&#34;Hello, World!&#34;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> reverseEnumerable = <span style=color:#66d9ef>new</span> ReverseEnumerable&lt;<span style=color:#66d9ef>char</span>&gt;(str);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>char</span> c <span style=color:#66d9ef>in</span> reverseEnumerable)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Console.Write(c);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/// !dlroW ,olleH</span>
+</span></span><span style=display:flex><span>    Console.WriteLine();
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>private</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> ListEnumerable()
+</span></span><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    List&lt;<span style=color:#66d9ef>int</span>&gt; list = <span style=color:#66d9ef>new</span> List&lt;<span style=color:#66d9ef>int</span>&gt;() { <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>7</span> };
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>var</span> reverseEnumerable = <span style=color:#66d9ef>new</span> ReverseEnumerable&lt;<span style=color:#66d9ef>int</span>&gt;(list);
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>foreach</span> (<span style=color:#66d9ef>int</span> i <span style=color:#66d9ef>in</span> reverseEnumerable)
+</span></span><span style=display:flex><span>    {
+</span></span><span style=display:flex><span>        Console.Write(i);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#75715e>/// 76543210</span>
+</span></span><span style=display:flex><span>    Console.WriteLine();
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><hr></section><footer class="article-meta article-footer"><section class=article-tags><a href=/tags/c%23/>C#</a></section></footer></article><aside><h2 class=section-title></h2><div class=subsection-list><div class=article-list--tile><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-16-17/><div class=article-details><h2 class=article-title>Effective C# 做法 16-17</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-14-15/><div class=article-details><h2 class=article-title>Effective C# 做法 14-15</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-07-10/><div class=article-details><h2 class=article-title>Effective C# 做法 07-10</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-04-06/><div class=article-details><h2 class=article-title>Effective C# 做法 04-06</h2></div></a></article><article><a href=/posts/effective-c%23-%E5%81%9A%E6%B3%95-01-03/><div class=article-details><h2 class=article-title>Effective C# 做法 01-03</h2></div></a></article></div></div></aside><div class=disqus-container><div id=disqus_thread></div><script>window.disqus_config=function(){},function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById("disqus_thread").innerHTML="Disqus comments not available by default when the website is previewed locally.";return}var t=document,e=t.createElement("script");e.async=!0,e.src="//wenrongdev.disqus.com/embed.js",e.setAttribute("data-timestamp",+new Date),(t.head||t.body).appendChild(e)}()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><style>.disqus-container{background-color:var(--card-background);border-radius:var(--card-border-radius);box-shadow:var(--shadow-l1);padding:var(--card-padding)}</style><script>window.addEventListener("onColorSchemeChange",e=>{typeof DISQUS=="object"&&DISQUS.reset({reload:!0})})</script><footer class=site-footer><section class=copyright>&copy;
+2019 -
+2026 Wenrong Nexus</section><section class=powerby>Wenrong Nexus<br><br></section></footer><script type=module>
+    import gallery from '\/ts\/gallery.js';
+
+    const articleContent = document.querySelector('.article-content');
+    const shouldLoad = articleContent && (articleContent.querySelectorAll('figure').length > 0 || articleContent.querySelectorAll('img.gallery-image').length > 0);
+    
+    if (shouldLoad) {
+        gallery(articleContent);
+
+        const PhotoSwipeLightbox = (await import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe-lightbox.esm.min.js")).default;
+        const styleHref = "https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.css";
+
+        const styleTag = document.createElement('link');
+        styleTag.rel = 'stylesheet';
+        styleTag.href = styleHref;
+        document.head.appendChild(styleTag);
+
+        const lightbox = new PhotoSwipeLightbox({
+            gallerySelector: '.article-content',
+            childSelector: 'figure a.image-link',
+            pswpModule: () => import("https:\/\/cdn.jsdelivr.net\/npm\/photoswipe@5.4.4\/dist\/photoswipe.esm.min.js")
+        });
+        lightbox.init();
+    }
+</script></main></div><script type=text/javascript src=/ts/main.d00997a2f4a6ce525f496da0c3ae6ad392b0468b8a9024f23309fdfc75c67a35.js defer></script></body></html>
