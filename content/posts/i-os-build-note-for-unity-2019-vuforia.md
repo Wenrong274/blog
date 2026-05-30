@@ -39,7 +39,7 @@ ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link wi
 
 ![img_3](https://i.imgur.com/7YCtki6.jpg)
 
-#### Solution - iOS Archive Error
+### Solution - iOS Archive Error
 
 根據 [Vuforia Engine Release Notes](https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html) 在 `v8.1.7`之後不支援 `32-bit`，並且最低支援 `iOS 11`，因此需要把專案版本最低版本設定為 iOS。
 

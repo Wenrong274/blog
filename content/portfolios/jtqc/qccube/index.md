@@ -25,6 +25,5 @@ comments: false
 ---
 
 [img_appstore]: https://imgur.com/APiZmgH.png
-[img_googleplay]: https://imgur.com/GyhUzK3.png
 [mainUrl]: https://jt-qc.com/product-pages?p_id=1
 [appstore]: https://apps.apple.com/tw/app/qc-cube/id1480811031

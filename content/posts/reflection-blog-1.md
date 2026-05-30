@@ -66,6 +66,4 @@ tags: ["Blog"]
 [siteground]: https://www.siteground.com/
 [namecheap]: https://www.namecheap.com/
 [medium]: https://medium.com/
-[nextpost]: /posts/reflection-blog-2/
-[CoderBridge]: https://zh-tw.coderbridge.com/
 [img_1]: https://imgur.com/pJBH4Q6.jpg

@@ -1,0 +1,9 @@
+globs:
+  - "**/*.md"
+  - "!themes/**"
+  - "!node_modules/**"
+  - "!public/**"
+  - "!resources/**"
+
+config:
+  MD013: false

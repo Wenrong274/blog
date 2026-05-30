@@ -14,7 +14,7 @@ aliases:
 
 建議先看完 「[30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列][30d]」，能夠把 80% 以上的問題解決。
 
-### 輸出 Wix 文件方法
+## 輸出 Wix 文件方法
 
 先到 [WiX Toolset Release][wix3] 安裝需要的工具。
 
@@ -26,7 +26,7 @@ C:\Program Files (x86)\WiX Toolset v3.11\bin
 
 ![img_1]
 
-#### heat.exe
+### heat.exe
 
 可以掃描目錄中的所有文件和子目錄，並生成 WiX 文件中所需的 Component、Directory、File 和其他元素的定義。
 

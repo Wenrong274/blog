@@ -58,7 +58,7 @@ public static T? FirstOrDefault<T>(this IEnumerable<T> source, Predicate<T> pred
 原本課本的判斷，少了 null 確認
 
 ```Csharp
-public static bool AreEqual(T left, T right) =>	left.Equals(right);
+public static bool AreEqual(T left, T right) =>    left.Equals(right);
 ```
 
 可以改這種寫法，多了做法 03 的寫法，用來判斷 null。

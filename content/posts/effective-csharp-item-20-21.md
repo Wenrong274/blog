@@ -216,7 +216,7 @@ public class EngineDriver3<T> where T : IEngine
 }
 ```
 
-### 若 T 沒有實作 IDisposable ，則此區域變數的值為 null。
+### 若 T 沒有實作 IDisposable ，則此區域變數的值為 null
 
 如果 T（在這個例子中是 Engine）沒有實作 IDisposable 接口，那麼 engine as IDisposable 的結果就會是 null。
 這個 null 值並不會導致異常或錯誤。 using 語句被設計為可以安全地處理 null 值。當 disposable 為 null 時， using 語句簡單地不執行任何釋放資源的操作。

@@ -40,7 +40,7 @@ Push 到 `main` 分支後，GitHub Actions 自動執行建置並部署至 GitHub
 
 ## 專案結構
 
-```
+```text
 assets/
   fonts/          # NotoSansTC-Bold.ttf（OG 圖片中文渲染用）
   icons/          # 自訂 SVG icons（mail.svg 等）

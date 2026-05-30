@@ -64,7 +64,7 @@ aliases:
 - 不管理任何資源的類別
   不是每的類別都蓄要繼承 IDisposable 。僅當你的類別管理 Unmanaged 資源或者包含實現 IDisposable 介面的成員，才考慮繼承 IDisposable。
 
-### 1.除非你的類別直接持有 Unmanaged 資源，否則你不應該實作 finalizer。
+### 1.除非你的類別直接持有 Unmanaged 資源，否則你不應該實作 finalizer
 
 [實作 Dispose 方法](https://learn.microsoft.com/zh-tw/dotnet/standard/garbage-collection/implementing-dispose)
 

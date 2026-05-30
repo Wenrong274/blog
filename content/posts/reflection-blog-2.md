@@ -46,6 +46,5 @@ Wordpress、Medium、CoderBridge 我覺得各有優缺點，假如自己從一�
 ---
 
 [siteground]: https://www.siteground.com/
-[Medium]: https://medium.com/
 [CoderBridge]: https://zh-tw.coderbridge.com/
 [m_1]: https://hulitw.medium.com/tech-blog-coderbridge-to-the-rescue-2ba5b52d8bcd

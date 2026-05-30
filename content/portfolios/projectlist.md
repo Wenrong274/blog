@@ -21,7 +21,7 @@ comments: false
 : 變動的大地　[Youtube](https://www.youtube.com/watch?v=pWr71RNmNHE)　[介紹網站](https://moevrar.tku.edu.tw/material_detail.cshtml?id=145)
 
 2022/06 - 2022/11
-: 密室逃脫 AR : 生化危機　[AppleStore](https://apps.apple.com/cn/app/密室逃脫ar-生化危機/id1471088520)　[GooglePlay](https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis)　[Youtube]()　[介紹網站](https://jt-qc.com/product-pages?p_id=35)
+: 密室逃脫 AR : 生化危機　[AppleStore](https://apps.apple.com/cn/app/密室逃脫ar-生化危機/id1471088520)　[GooglePlay](https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis)　[介紹網站](https://jt-qc.com/product-pages?p_id=35)
 
 2022/11 - 2022/12
 : 阿拉丁教學平台入口　[AppleStore](https://apps.apple.com/gr/app/阿拉丁-xr教學平台入口/id1475224492)　[GooglePlay](https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII)

@@ -111,7 +111,6 @@ IEnumerator UpdateAsset(AssetReference asset)
 ---
 
 [blog-1]: ../unity-addressable
-[ref_1]: https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/DownloadDependenciesAsync.html
 [ref_LoadingAddressableAssets]: https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html
 [ref_AssetReference]: https://docs.unity3d.com/Packages/com.unity.addressables@0.4/api/UnityEngine.AddressableAssets.AssetReference.html
 [img-1]: https://imgur.com/aPKLTt3.jpg
