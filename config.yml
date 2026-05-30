@@ -1,4 +1,5 @@
 baseURL: "https://wenrong-nexus.com/"
+defaultContentLanguage: zh-hant
 locale: zh-Hant # en-us
 title: Wenrong Nexus
 paginate: 5
@@ -135,15 +136,15 @@ menu:
       weight: 2
     - identifier: tags
       name: Tags
-      url: tags
+      url: /tags/
       weight: 15
     - identifier: archives
       name: Archives
-      url: archives/
+      url: /archives/
       weight: 20
     - identifier: about
       name: About
-      url: profile/about/
+      url: /profile/about/
       weight: 50
 
 # Read: https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#using-hugos-syntax-highlighter-chroma
