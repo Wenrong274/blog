@@ -1,0 +1,49 @@
+{{- if not .Params.image -}}
+{{- $title := .Title | default site.Title -}}
+{{- $count := strings.RuneCount $title -}}
+{{- $maxLine := 22 -}}
+{{- $line1 := $title -}}
+{{- $line2 := "" -}}
+
+{{- if gt $count $maxLine -}}
+  {{- $line1 = substr $title 0 $maxLine -}}
+  {{- $rest := substr $title $maxLine -}}
+  {{- if gt (strings.RuneCount $rest) $maxLine -}}
+    {{- $line2 = printf "%s…" (substr $rest 0 (sub $maxLine 1)) -}}
+  {{- else -}}
+    {{- $line2 = $rest -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $bg := resources.Get "images/og-bg.png" -}}
+{{- $font := resources.Get "fonts/NotoSansTC-Bold.ttf" -}}
+
+{{- if $bg -}}
+  {{- $titleY := 310 -}}
+  {{- $line2Y := 385 -}}
+  {{- if $line2 -}}
+    {{- $titleY = 255 -}}
+    {{- $line2Y = 335 -}}
+  {{- end -}}
+
+  {{- $t1Opts := dict "color" "#e8e8f0" "size" 60 "x" 80 "y" $titleY -}}
+  {{- $t2Opts := dict "color" "#e8e8f0" "size" 60 "x" 80 "y" $line2Y -}}
+  {{- $siteOpts := dict "color" "#8888b8" "size" 28 "x" 80 "y" 614 -}}
+  {{- if $font -}}
+    {{- $t1Opts = merge $t1Opts (dict "font" $font) -}}
+    {{- $t2Opts = merge $t2Opts (dict "font" $font) -}}
+    {{- $siteOpts = merge $siteOpts (dict "font" $font) -}}
+  {{- end -}}
+
+  {{- $img := $bg | images.Filter (images.Text $line1 $t1Opts) (images.Text site.Title $siteOpts) -}}
+  {{- if $line2 -}}
+    {{- $img = $img | images.Filter (images.Text $line2 $t2Opts) -}}
+  {{- end -}}
+
+  <meta property="og:image" content="{{ $img.Permalink }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="{{ $img.Permalink }}">
+  <meta name="twitter:card" content="summary_large_image">
+{{- end -}}
+{{- end -}}

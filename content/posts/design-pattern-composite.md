@@ -1,10 +1,10 @@
 ---
 title: "心得 組合模式"
 date: 2024-04-01
-description: "主要是針對深入淺出設計模式書籍，提到的組合模式的心得。"
-keywords: ["Design Pattern", "Composite Pattern"]
+summary: "Composite 也繼承了 Component，那 Leaf 存在的意義是什麼？本文分享讀完《深入淺出設計模式》後對組合模式的疑惑與理解，一起釐清 Composite、Leaf、Component 各自的職責！"
+description: "《深入淺出設計模式》組合模式（Composite Pattern）讀書心得。探討 Component、Leaf、Composite 三者的明確職責分工，以及組合模式適合應用在資料搜尋、物件樹狀結構等場景的實際思考。"
+keywords: ["Design Pattern", "Composite Pattern", "GoF", "OOP", "C#", "software architecture"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-composite/

@@ -1,19 +1,10 @@
 ---
 title: "C# 淺複製與深複製"
 date: 2024-06-22T19:02:04+08:00
-description: "C# 淺複製與深複製"
-keywords:
-  [
-    "C#",
-    "Class",
-    "Struct",
-    "Reference Type",
-    "Value Type",
-    "Shallow Copy",
-    "Deep Copy",
-  ]
+summary: "複製物件後改了 copy，卻意外動到 origin？這就是淺複製的陷阱！本文用程式碼實例清楚示範淺複製與深複製的差異，讓你不再踩坑。"
+description: "C# 淺複製（Shallow Copy）與深複製（Deep Copy）的差異與實作方式。透過 MemberwiseClone 示範淺複製對 Reference Type 的共享問題，以及如何手動實作深複製讓每個物件獨立，附完整程式碼範例。"
+keywords: ["C#", "Shallow Copy", "Deep Copy", "MemberwiseClone", "Reference Type", "Value Type", ".NET"]
 draft: false
-showtoc: true
 tags: ["CSharp"]
 aliases:
   - /posts/csharpshallowcopyanddeepcopy/

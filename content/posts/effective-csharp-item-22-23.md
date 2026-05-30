@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 22-23"
 date: 2024-10-13T03:11:00+08:00
-description: "Effective C# 做法 22-23 心得"
-keywords: ["Effective C#", "C#"]
+summary: "泛型的 out 關鍵字和方法參數的 out 是同一個東西嗎？Covariance 和 Contravariance 怎麼讓 API 更靈活？本文整理 Effective C# 做法 22-23 的泛型進階技巧！"
+description: "Effective C# 做法 22-23 讀書心得，涵蓋：泛型共變數（Covariance）與反變數（Contravariance）的 out/in 關鍵字差異與應用場景、LINQ 和事件處理中的實際運用，以及使用 delegate 定義型別參數方法約束以提升泛型 API 彈性的技巧。"
+keywords: ["Effective C#", "C#", "Covariance", "Contravariance", "Generics", "delegate", "IEnumerable", "LINQ", ".NET"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme22-23/

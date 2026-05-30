@@ -1,10 +1,10 @@
 ---
 title: "Unity2021 Video Player Crash"
 date: 2023-02-01
-description: "在 Android 11 以上的版本使用 VideoPlayer 呼叫 Stop 時會造成 App Crash。"
-keywords: ["Unity"]
+summary: "Unity 2021 在 Android 11 呼叫 VideoPlayer.Stop() 會直接 Crash？本文分享官方暫時沒解的情況下，如何用 Pause 加新建 VideoPlayer 物件來繞過這個 bug！"
+description: "Unity 2021 在 Android 11 以上裝置呼叫 VideoPlayer.Stop() 導致 App Crash（SIGSEGV null pointer dereference）的問題說明與暫時解決方案。因官方尚未修復，採用 VideoPlayer.Pause() 並建立新 VideoPlayer 物件的方式繞過 Crash，保留舊物件不刪除以避免觸發問題。"
+keywords: ["Unity", "VideoPlayer", "Android", "crash", "SIGSEGV", "bug fix", "Android 11", "Unity 2021"]
 draft: false
-showtoc: true
 tags: ["Unity"]
 aliases:
   - /posts/unity2021-videoplayercrush/

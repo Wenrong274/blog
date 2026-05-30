@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 18-19"
 date: 2024-09-28T01:48:09+08:00
-description: "Effective C# 做法 18-19 心得"
-keywords: ["Effective C#", "C#"]
+summary: "為什麼泛型要避免 new()、struct、class 約束？執行期型別檢查如何讓泛型演算法更靈活？本文整理 Effective C# 做法 18-19 的泛型設計精華！"
+description: "Effective C# 做法 18-19 讀書心得，涵蓋：正確使用泛型與最少足夠約束的設計原則、JIT 對參考型別與值型別泛型的不同處理方式、T? 的正確使用、避免 new()/struct/class 約束的理由，以及利用執行期型別檢查（runtime type checking）特化泛型演算法的實作。"
+keywords: ["Effective C#", "C#", "Generics", "type constraints", "JIT", "IEnumerable", "runtime type checking", ".NET"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme18-19/

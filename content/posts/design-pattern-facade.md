@@ -1,10 +1,10 @@
 ---
 title: "心得 表象模式"
 date: 2024-03-12
-description: "主要是針對深入淺出設計模式書籍，提到的表象模式的心得。"
-keywords: ["Design Pattern", "Facade Pattern"]
+summary: "什麼時候該用表象模式？不是「這邊很複雜就用」！本文整理讀書會討論重點，釐清 Facade Pattern 與「封裝成方法」的差異，還有迪米特守則的使用邊界。"
+description: "《深入淺出設計模式》表象模式（Facade Pattern）讀書心得。說明表象模式的正確使用時機、與封裝成方法的差異對比、迪米特守則的適度應用，以及避免過度設計的實務建議。"
+keywords: ["Design Pattern", "Facade Pattern", "Law of Demeter", "GoF", "OOP", "software architecture"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-facade/

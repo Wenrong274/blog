@@ -1,10 +1,10 @@
 ---
 title: "心得 虛擬代理模式"
 date: 2024-04-30T00:39:46+08:00
-description: "主要是針對深入淺出設計模式書籍，提到的代理模式的心得。"
-keywords: ["Design Pattern", "Proxy Pattern", "Virtual Proxy"]
+summary: "等待 API 回應期間要怎麼顯示「資料更新中」？虛擬代理模式就是解法！本文示範用中央氣象署 API 實作 WeatherProxy，讓資料載入過程更優雅。"
+description: "《深入淺出設計模式》虛擬代理模式（Virtual Proxy Pattern）實作心得。以呼叫中央氣象署 Open API 取得天氣資料為例，示範 WeatherProxy 如何在資料載入期間回傳暫時訊息，防止重複請求，附完整 C# 程式碼與 UML。"
+keywords: ["Design Pattern", "Proxy Pattern", "Virtual Proxy", "async", "Task", "HttpClient", "C#", "GoF"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-virtualproxy/

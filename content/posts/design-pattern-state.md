@@ -1,10 +1,10 @@
 ---
 title: "心得 狀態模式"
 date: 2024-04-10
-description: "主要是針對深入淺出設計模式書籍，提到的狀態模式的心得。"
-keywords: ["Design Pattern", "Composite Pattern"]
+summary: "狀態切換到底應該由 State 自己控制，還是交給 Context 管理？這個問題在讀書會引發有趣討論。本文釐清狀態模式與策略模式的核心差異！"
+description: "《深入淺出設計模式》狀態模式（State Pattern）讀書心得。探討由 State 自我切換與由 Context 控制切換的優缺點差異，以及狀態模式如何解決多個 if-else 問題，並與策略模式（Strategy Pattern）的邊界比較。"
+keywords: ["Design Pattern", "State Pattern", "Strategy Pattern", "GoF", "OOP", "C#", "software architecture"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-state/

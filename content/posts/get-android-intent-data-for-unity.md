@@ -1,13 +1,11 @@
 ---
 title: "Get Android Intent Data for Unity"
 date: 2019-12-26
-summary: "主要用來 A App 呼叫 B App 時，B App 該如何接受資料。而 B App 是使用 `Unity` 接收。"
-keywords: ["Unity", "Android"]
+summary: "Android App A 呼叫 App B 時，要怎麼在 Unity 接收 Intent 夾帶的資料？本文提供完整 AndroidJavaObject 範例程式，直接複製修改即可使用！"
+description: "說明如何在 Unity Android 應用中，使用 AndroidJavaObject 接收另一個 App 透過 Intent 傳遞的資料。示範 getIntent、hasExtra、getExtras、getString 等 Android Native API 的呼叫方式，附完整 C# 程式碼。"
+keywords: ["Unity", "Android", "Intent", "AndroidJavaObject", "AndroidJavaClass", "inter-app communication", "native API"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/get-android-intent-data-for-unity/
 ---
 
 ## 前言

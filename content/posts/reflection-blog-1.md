@@ -1,13 +1,11 @@
 ---
 title: "Blog 心得（1）"
 date: 2022-02-14
-description: "從 2019 開始架設自己的 Blog 的心路歷程。使用過 Wordpress、Medium、CoderBridge、Blogger，最後選擇了 Hugo 並且自討苦吃。"
-keywords: ["Hugo", "Medium", "Wordpress", "Blog"]
+summary: "從 Blogger、Wordpress 到 Medium，折騰了好幾個平台才找到適合自己的部落格！本文分享三年 Wordpress 使用心得，以及第一年和第二年費用竟然差了 3912 元的血淚故事。"
+description: "個人部落格架設心路歷程分享（第一篇）。記錄從 Blogger、Wordpress（SiteGround）、Medium 到 Hugo 的平台選擇過程，包含三年 Wordpress 費用明細（SiteGround + NameCheap）、二年費用暴漲的親身經歷，以及為何最終選擇 Hugo 自架的原因。"
+keywords: ["Hugo", "Wordpress", "Medium", "SiteGround", "Blog", "static site", "self-hosted blog"]
 draft: false
-showtoc: true
 tags: ["Blog"]
-aliases:
-  - /posts/reflection-blog-1/
 ---
 
 其實我的 Blog 是寫給自己看的。因為我時常忘記怎麼解決問題、怎麼製作功能、忘記是做了什麼蠢事。因此產生這個 Blog 用來記錄我的跌跌撞撞的過程。
@@ -68,6 +66,6 @@ aliases:
 [siteground]: https://www.siteground.com/
 [namecheap]: https://www.namecheap.com/
 [medium]: https://medium.com/
-[nextpost]: ../reflection-blog-2
+[nextpost]: /posts/reflection-blog-2/
 [CoderBridge]: https://zh-tw.coderbridge.com/
 [img_1]: https://imgur.com/pJBH4Q6.jpg

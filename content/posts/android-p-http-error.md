@@ -1,13 +1,11 @@
 ---
 title: "Android P HTTP Error"
 date: 2020-01-09
-summary: "在 Android 9.0 中使用 WebRequest 時，URL 是需要用 Https 才能正常使用，不然 Response 都是 Error。"
-keywords: ["Android"]
+summary: "Android 9.0 升級後 HTTP 請求全部失敗？錯誤訊息 Cleartext HTTP traffic not permitted 的快速解法，一行設定搞定！"
+description: "Android 9.0（Android P）預設封鎖明文 HTTP 流量，導致 WebRequest 回傳錯誤。本文說明如何在 AndroidManifest.xml 加入 usesCleartextTraffic 設定來解決此問題。"
+keywords: ["Android", "Android P", "HTTP", "AndroidManifest", "Cleartext", "WebRequest", "Unity"]
 draft: false
-showtoc: true
 tags: ["Android"]
-aliases:
-  - /posts/android-p-http-error/
 ---
 
 ## 前言

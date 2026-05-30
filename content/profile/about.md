@@ -1,12 +1,6 @@
 ---
 title: "About"
-date: 2022-02-03
-hideMeta: true
-disableShare: true
-ShowBreadCrumbs: false
-ShowPostNavLinks: false
-ShowFullTextinRSS: false
-searchHidden: true
+date: 2026-05-30
 comments: false
 ---
 

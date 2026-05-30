@@ -1,32 +1,134 @@
-/* Place your custom SCSS in HUGO_SITE_FOLDER/assets/scss/custom.scss */
+/* CJK Font Stack */
+:root {
+    --sys-font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+}
 
+/* Global Horizontal Scrollbar Prevention & Sidebar Scrollbar Suppression */
+html, body {
+    overflow-x: hidden !important;
+}
+
+.main-container {
+    overflow-x: hidden !important;
+}
+
+.sidebar,
+.left-sidebar {
+    overflow: hidden !important; /* Force hide all scrollbars on all sidebar containers globally */
+}
+
+/* Refined Main Menu Styles */
 #main-menu {
-    font-size: 1.6rem; /* Make the left side menu text size larger (default: 1.4rem) */
+    font-size: 1.5rem; /* Balanced menu font size (theme default: 1.4rem) */
+    font-weight: 500;
+    overflow: hidden !important; /* Force hide all scrollbars on the menu container globally */
+    
+    .menu-bottom-section,
+    .menu-bottom-section ol {
+        overflow: hidden !important; /* Hide scrollbars on nested footer/toggle menus */
+    }
     
     li {
+        margin-bottom: 4px; /* Separation between menu items */
+        
         a {
-            transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-                        color 0.25s ease, 
+            transition: color 0.25s ease, 
                         background-color 0.25s ease;
             padding: 10px 16px;
-            border-radius: 10px;
+            border-radius: 12px; /* Smooth rounded pill */
             width: 100%;
             display: inline-flex;
             align-items: center;
+            position: relative;
+            white-space: nowrap; /* Prevent menu text from wrapping */
+            overflow: hidden; /* Clip any inner translation at the link level to prevent layout overflow */
+            
+            /* Animate the elements inside the menu link, rather than the link wrapper itself */
+            svg {
+                transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                            stroke 0.25s ease;
+                margin-right: 12px;
+                flex-shrink: 0;
+            }
+            
+            span {
+                transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            }
             
             &:hover {
-                transform: translateX(6px); /* Micro-interaction: slide out slightly on hover */
-                background-color: color-mix(in srgb, var(--accent-color) 10%, transparent);
+                background-color: color-mix(in srgb, var(--accent-color) 8%, transparent);
                 color: var(--accent-color) !important;
+                
+                svg {
+                    transform: translateX(4px); /* Shift icon slightly to the right */
+                    stroke: var(--accent-color) !important;
+                }
+                
+                span {
+                    transform: translateX(4px); /* Shift text slightly to the right */
+                }
             }
         }
         
         &.current {
             a {
-                background-color: color-mix(in srgb, var(--accent-color) 8%, transparent) !important; /* Soft highlight for active page */
+                background-color: color-mix(in srgb, var(--accent-color) 12%, transparent) !important; /* Slightly more distinct active background */
                 color: var(--accent-color) !important;
                 font-weight: 600;
+                
+                /* Sleek left-side indicator line inside the pill */
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 25%;
+                    height: 50%;
+                    width: 4px;
+                    background-color: var(--accent-color);
+                    border-radius: 0 4px 4px 0;
+                }
+                
+                /* Keep the items slightly shifted to align nicely with the vertical indicator */
+                svg, span {
+                    transform: translateX(4px);
+                }
             }
+        }
+    }
+}
+
+/* Sidebar Profile Info Typography Styles */
+.sidebar header {
+    .site-avatar {
+        .site-logo {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                        box-shadow 0.3s ease;
+            
+            &:hover {
+                transform: scale(1.06) rotate(2deg); /* Micro-interaction: slight tilt and zoom */
+                box-shadow: var(--shadow-l2);
+            }
+        }
+    }
+    
+    .site-meta {
+        .site-name {
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            
+            a {
+                transition: color 0.25s ease;
+                &:hover {
+                    color: var(--accent-color);
+                }
+            }
+        }
+        
+        .site-description {
+            font-size: 1.3rem;
+            line-height: 1.6;
+            opacity: 0.85;
+            color: var(--body-text-color);
         }
     }
 }
@@ -49,15 +151,3 @@
     }
 }
 
-/* Avatar hover micro-interaction */
-.sidebar .site-avatar {
-    .avatar {
-        transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
-                    box-shadow 0.3s ease;
-        
-        &:hover {
-            transform: scale(1.06) rotate(2deg); /* Micro-interaction: slight tilt and zoom */
-            box-shadow: var(--shadow-l2);
-        }
-    }
-}

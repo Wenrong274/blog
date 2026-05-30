@@ -1,13 +1,11 @@
 ---
 title: "Install IPA With OTA"
 date: 2019-10-10
-summary: "由於 iTunes 12.6 之後不提供 .ipa 檔安裝，導致無法提供測試 App，所以有人研究出很多安裝方式。不過這邊主要是介紹 OTA 的方式。"
-keywords: ["iOS", "OTA", "iPA"]
+summary: "iTunes 不能裝 IPA 了怎麼辦？OTA（Over-the-Air）安裝是測試 iOS App 的好方法！本文手把手示範用 Dropbox + GitHub Pages 建立 OTA 安裝連結。"
+description: "iTunes 12.6 後移除 .ipa 安裝功能，本文介紹使用 OTA（Over-the-Air）方式安裝 iOS Ad-Hoc IPA 的完整流程：上傳 .ipa 至 Dropbox 取得公開連結、建立 manifest.plist 與 index.html，以及使用 GitHub Pages 作為 Host 的詳細步驟。"
+keywords: ["iOS", "OTA", "IPA", "Ad-Hoc", "Dropbox", "GitHub Pages", "manifest.plist", "itms-services"]
 draft: false
-showtoc: true
 tags: ["iOS"]
-aliases:
-  - /posts/install-ipa-with-ota/
 ---
 
 ## 前言

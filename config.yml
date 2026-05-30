@@ -1,8 +1,8 @@
 baseURL: "https://wenrong-nexus.com/"
 defaultContentLanguage: zh-hant
-locale: zh-Hant # en-us
+locale: zh-Hant
 title: Wenrong Nexus
-paginate: 5
+paginate: 10
 theme: hugo-theme-stack
 
 enableRobotsTXT: true
@@ -29,6 +29,10 @@ permalinks:
   posts: "/posts/:slug/"
 
 params:
+  description: "Wenrong Nexus - 專注於 Unity 遊戲開發、跨平台開發技術與程式設計的技術部落格。提供 Unity 跨平台填坑歷程、C# 程式開發教學、遊戲優化與實務經驗紀錄。"
+  opengraph:
+    twitter:
+      card: "summary_large_image"
   mainSections: ["posts"]
   rssFullContent: true
   favicon: "/favicon.ico"
@@ -107,7 +111,7 @@ menu:
       name: Email
       url: mailto:me@wenrong-nexus.com
       params:
-        icon: user
+        icon: mail
         newTab: true
     - identifier: rss
       name: RSS

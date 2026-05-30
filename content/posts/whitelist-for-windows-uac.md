@@ -1,13 +1,11 @@
 ---
 title: "Whitelist for Windows UAC"
 date: 2019-11-04
-summary: "為了ㄧ般使用者的權限問題也不能關閉 Windows UAC。 也不可能修改一般使用者的權限，所以需要讓 Windows UAC 加入此程式為白名單，這樣就不會每次都會跳出權限要求。"
-keywords: ["C#"]
+summary: "每次開程式都要輸入管理員密碼很煩？不能關 UAC 又不能改使用者權限，解法是寫入 Registry 白名單！本文提供 C# 自動寫入 Regedit 的完整程式碼。"
+description: "解決 Windows 程式每次啟動都跳出 UAC 管理員權限請求的問題，在不關閉 Windows UAC 的前提下，透過寫入 Registry（HKEY_CURRENT_USER\\Software\\Microsoft\\Windows NT\\CurrentVersion\\AppCompatFlags\\Layers）加入 RunAsInvoker 白名單，附完整 C# RegEditWhiteList 類別實作。"
+keywords: ["C#", "Windows UAC", "Registry", "RunAsInvoker", "Regedit", "administrator", "Windows", ".NET"]
 draft: false
-showtoc: true
 tags: ["CSharp"]
-aliases:
-  - /posts/whitelist-for-windows-uac/
 ---
 
 ## 前言

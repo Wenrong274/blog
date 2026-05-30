@@ -1,10 +1,10 @@
 ---
 title: "Wix Examples"
 date: 2023-10-20
-description: "主要是用來打包程式輸出成 .msi 檔"
-keywords: [".msi", "wix"]
+summary: "想把程式打包成專業的 .msi 安裝檔？本文提供 WiX Toolset 完整範例，包含桌面捷徑、Windows Menu、資料夾權限設定，比 Inno Setup 更有彈性！"
+description: "WiX Toolset 打包 .msi 安裝程式的完整範例教學，涵蓋使用 heat.exe 自動產生 WiX 文件、Product.wxs 完整設定範例、桌面捷徑（Shortcut）建立、Windows 開始功能表（Program Menu）捷徑與解安裝程式、安裝資料夾權限設定（Everyone/Users），以及重要的 GUID 替換說明。"
+keywords: ["WiX Toolset", "MSI", "Windows Installer", "installer", "deployment", "packaging", "heat.exe", "Product.wxs"]
 draft: false
-showtoc: true
 tags: ["tool"]
 aliases:
   - /posts/wixexamples/

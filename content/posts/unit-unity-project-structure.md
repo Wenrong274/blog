@@ -1,11 +1,11 @@
 ---
 title: "Unity Project Structure"
 date: 2022-10-05
-description: "自動建立簡易專案資料夾結構"
-keywords: [Unity, Project Structure]
+summary: "每次開新 Unity 專案都要手動建立一堆資料夾？本工具一鍵自動建立標準化的專案目錄結構，讓 Art 和 Program 資源各就各位！"
+description: "Unity 編輯器工具，透過選單 Tools > Generate Project Structure 自動建立標準化的專案資料夾結構，包含 Art（Prefabs、Shaders、Models、UI、Audio、Video）和 Program（Scenes、Scripts、Tests、Prefabs）分類目錄，提升團隊協作一致性。"
+keywords: ["Unity", "project structure", "Editor tool", "folder structure", "Unity Editor extension"]
 draft: true
-showtoc: true
-tags: [Unity]
+tags: ["Unity"]
 aliases:
   - /posts/unit-unity-projectstructure/
 ---

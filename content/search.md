@@ -8,6 +8,6 @@ summary: "search"
 outputs:
   - html
   - json
-placeholder: "placeholder text in search input box"
+placeholder: "搜尋文章、標籤..."
 robotsNoIndex: true
 ---

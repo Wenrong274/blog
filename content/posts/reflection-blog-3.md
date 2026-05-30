@@ -1,13 +1,11 @@
 ---
 title: "Blog 心得（3）"
 date: 2022-02-28
-description: "使用 Hugo 心得，並且使用 PaperMod 當主題時遇到的問題。"
-keywords: ["Hugo", "PaperMod", "Blog"]
+summary: "Hugo + PaperMod + GitHub Actions 怎麼部署？本文整理搜尋功能、留言系統設定，以及 Custom Domain 每次更新都被清掉的解法！"
+description: "Hugo 靜態網站搭配 PaperMod 主題的架設與部署心得，涵蓋：config.yml 搜尋頁面設定（JSON output）、GitHub Actions 自動部署工作流程、Custom Domain 不被清除的 cname 設定，以及 Disqus/giscus 留言系統的整合方式。"
+keywords: ["Hugo", "PaperMod", "GitHub Pages", "GitHub Actions", "static site", "config.yml", "deployment", "SEO"]
 draft: false
-showtoc: true
 tags: ["Blog"]
-aliases:
-  - /posts/reflection-blog-3/
 ---
 
 ## 前言

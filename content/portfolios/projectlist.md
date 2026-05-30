@@ -1,14 +1,7 @@
 ---
 title: "Projects"
 date: 2023-07-25
-hideMeta: true
-disableShare: true
-ShowBreadCrumbs: false
-ShowPostNavLinks: false
-ShowFullTextinRSS: false
-searchHidden: true
 comments: false
-showtoc: true
 ---
 
 ## 2023

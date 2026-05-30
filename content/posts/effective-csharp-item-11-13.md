@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 11-13"
 date: 2024-09-07T13:54:06+08:00
-description: "Effective C# 做法 11-13 心得"
-keywords: ["Effective C#", "C#"]
+summary: ".NET 的 GC 層代機制是什麼？為什麼要用 Dispose 而不是 Finalizer？Singleton 初始化放哪才正確？本文整理 Effective C# 做法 11-13 的資源管理重點！"
+description: "Effective C# 做法 11-13 讀書心得，涵蓋：.NET 垃圾回收（GC）的層代（Generation）機制、使用 IDisposable 與 Dispose 正確釋放資源、偏好成員初始化程序而非建構子賦值，以及靜態類別成員（包含 Singleton）的正確初始化方式。"
+keywords: ["Effective C#", "C#", "Garbage Collection", "IDisposable", "Dispose", "Finalizer", "Singleton", ".NET memory management"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme11-13/

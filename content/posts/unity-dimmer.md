@@ -1,13 +1,11 @@
 ---
 title: "Unity Dimmer"
 date: 2020-10-21
-summary: "Unity 調整 Android、iOS 系統亮度功能。"
-keywords: ["Unity", "iOS"]
+summary: "想在 Unity 遊戲中控制手機螢幕亮度？一行 code 搞定 Android 和 iOS 雙平台！本文提供完整封裝好的 Dimmer 功能，直接呼叫 SetBrightness.DoAction(value) 即可。"
+description: "Unity 跨平台螢幕亮度控制功能實作，支援 Android 和 iOS 系統亮度調整，透過封裝好的 Dimmer.SetBrightness.DoAction(value) 方法一行呼叫即可控制螢幕亮度，基於日語文章移植的原生實作。"
+keywords: ["Unity", "Android", "iOS", "screen brightness", "dimmer", "native plugin", "SetBrightness"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/unity-dimmer/
 ---
 
 ## 前言

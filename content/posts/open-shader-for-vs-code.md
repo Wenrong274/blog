@@ -1,11 +1,11 @@
 ---
 title: "Unity Open Shader For VSCode"
 date: 2022-08-09
-description: "自動對應 Shader 檔案使用 VSCode 開啟"
-keywords: [Unity, Shader, Shaderlab, VSCode]
+summary: "平常用 Visual Studio 寫 C#，但 Shader 想用 VSCode 開？本文提供 Unity Editor 擴充腳本，雙擊 .shader 檔案自動用 VSCode 開啟，不用每次手動切換！"
+description: "Unity 編輯器擴充：讓雙擊 .shader 檔案時自動以 VSCode 開啟（而非 Visual Studio），透過讀取使用者環境變數 Path 動態找到 VSCode 路徑，搭配 OnOpenAsset Callback 實作，享有 ShaderlabVSCode 擴充的語法支援。"
+keywords: ["Unity", "Shader", "ShaderLab", "VSCode", "Visual Studio Code", "Editor extension", "OnOpenAsset"]
 draft: false
-showtoc: true
-tags: [Unity]
+tags: ["Unity"]
 aliases:
   - /posts/openshaderforvscode/
 ---

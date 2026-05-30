@@ -1,13 +1,11 @@
 ---
 title: "Mobile Joystick"
 date: 2020-03-30
-summary: "主要是用來測試 Unity 虛擬搖桿功能。"
-keywords: ["Unity", "Joystick"]
+summary: "想在 Unity 手遊中加入虛擬搖桿？本文示範整合 Joystick Pack 套件實作多輸入端支援的虛擬搖桿功能，附 GitHub 範例專案！"
+description: "介紹在 Unity 行動遊戲中實作虛擬搖桿（Virtual Joystick）的方式，使用 Asset Store 的 Joystick Pack 支援多種輸入接口，提供完整示範專案供參考。"
+keywords: ["Unity", "Joystick", "mobile game", "virtual joystick", "input", "touch control", "Asset Store"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/mobile-joystick/
 ---
 
 ## 前言

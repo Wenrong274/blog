@@ -1,13 +1,11 @@
 ---
 title: "Unity WebGL Template"
 date: 2019-09-05
-summary: "執行 WebGL 時都會有 Unity Logo & Loading。目前此專案修改 Unity Logo 的部分。"
-keywords: ["Unity", "WebGL"]
+summary: "不想在 WebGL 遊戲中顯示 Unity Logo？本文提供自訂 WebGL Template 的步驟，替換 Loading 頁面的 Logo，讓你的 WebGL 更有品牌感！"
+description: "Unity WebGL 自訂 Loading 頁面模板教學，說明如何替換預設 Unity Logo，透過 Player Settings > Resolution and Presentation 選擇自訂 Template，修改 logo.png 路徑，以及使用 Responsive WebGL Template 套件省去手動調整的步驟。"
+keywords: ["Unity", "WebGL", "WebGL template", "custom loading", "Unity Logo", "Player Settings", "HTML template"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/unity-webgl-template/
 ---
 
 ## 前言
