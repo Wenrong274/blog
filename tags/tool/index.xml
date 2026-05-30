@@ -4,7 +4,7 @@
     <title>Tool on Wenrong Nexus</title>
     <link>https://wenrong-nexus.com/tags/tool/</link>
     <description>Recent content in Tool on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Fri, 20 Oct 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/tool/index.xml" rel="self" type="application/rss+xml" />
@@ -19,37 +19,35 @@
 <h3 id="輸出-wix-文件方法">輸出 Wix 文件方法</h3>
 <p>先到 <a href="https://github.com/wixtoolset/wix3/releases">WiX Toolset Release</a> 安裝需要的工具。</p>
 <p>需要開啟 <a href="https://zh.wikipedia.org/zh-tw/cmd.exe">CMD</a> 且必須要用<code>工作管理員權限</code>打開，之後 cd 到 WiX Toolset 的安裝資料夾。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>C:\Program Files (x86)\WiX Toolset v3.11\bin
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/ovuJCka.png" alt="img_1"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>C:\Program Files (x86)\WiX Toolset v3.11\bin
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/ovuJCka.png"></p>
 <h4 id="heatexe">heat.exe</h4>
 <p>可以掃描目錄中的所有文件和子目錄，並生成 WiX 文件中所需的 Component、Directory、File 和其他元素的定義。</p>
 <p>使用下面的參數可以拿到 <code>myKeyIn.wxs</code>。需要把 [MyDemo] 替換成正確的路徑，可以參考我的 <code>Product.wxs</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th style="text-align:left">參數名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PUT_YOUR_PATH]</td>
-<td style="text-align:left">需要打包的路徑資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">[MyDemo]</td>
-<td style="text-align:left">WiX 文件中要使用的變數</td>
-</tr>
-<tr>
-<td style="text-align:left">[PUT_YOUR_OUTPUT_PATH]</td>
-<td style="text-align:left">WiX 文件的路徑</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">參數名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PUT_YOUR_PATH]</td>
+          <td style="text-align: left">需要打包的路徑資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[MyDemo]</td>
+          <td style="text-align: left">WiX 文件中要使用的變數</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[PUT_YOUR_OUTPUT_PATH]</td>
+          <td style="text-align: left">WiX 文件的路徑</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://i.imgur.com/SbjBwmv.png" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/SbjBwmv.png"></p>
 <h2 id="wix-productwxs">Wix Product.wxs</h2>
 <p><a href="https://raw.githubusercontent.com/Wenrong274/WixExamples/master/WixInstaller/WixToolset/Product.wxs">Product.wxs</a></p>
 <h3 id="桌面捷徑">桌面捷徑</h3>
@@ -95,7 +93,7 @@
         &lt;/Component&gt;
     &lt;/Directory&gt;
 &lt;/Directory&gt;
-</code></pre><h3 id="githubgithub"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
+</code></pre><h3 id="github"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world">用 WiX 制作安装包：创建一个简单的 msi 安装包</a></p>
 <p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
@@ -116,8 +114,7 @@
 <h2 id="add-language">Add Language</h2>
 <ol>
 <li>下載官方提供的 <a href="https://github.com/jrsoftware/issrc">Github</a>，直接下載 <strong>Releases</strong> 版本，完成後解壓縮。</li>
-<li>複製 <code>root/Files/Languages</code> 資料夾，貼上並且覆蓋 <strong>Inno Setup 安裝資料夾</strong>。<img loading="lazy" src="https://imgur.com/3gD0X18.jpg" alt="img_1"  />
-</li>
+<li>複製 <code>root/Files/Languages</code> 資料夾，貼上並且覆蓋 <strong>Inno Setup 安裝資料夾</strong>。<img alt="img_1" loading="lazy" src="https://imgur.com/3gD0X18.jpg"></li>
 </ol>
 <h2 id="使用方式">使用方式</h2>
 <p>可以參考以下腳本，也可以自己寫，不知道寫法可以參考<a href="http://www.jrsoftware.org/ishelp/">官方文件</a>。</p>
@@ -287,29 +284,28 @@ end;
 <p>假如是使用複製舊有的 <code>.iss 檔</code>，只需要修改幾個需要注意的文字即可。</p>
 <p>正常的資料夾結構</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Folder</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ExampleFolder</td>
-<td style="text-align:left">打包前的資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">Setup</td>
-<td style="text-align:left">Inno Setup 輸出的資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">.iss</td>
-<td style="text-align:left">Inno Setup Script</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Folder</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">ExampleFolder</td>
+          <td style="text-align: left">打包前的資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Setup</td>
+          <td style="text-align: left">Inno Setup 輸出的資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">.iss</td>
+          <td style="text-align: left">Inno Setup Script</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/AXDhz5x.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://imgur.com/AXDhz5x.jpg"></p>
 <h3 id="修改-iss">修改 .iss</h3>
 <pre tabindex="0"><code class="language-Pascal" data-lang="Pascal">#define MyAppGUID &#34;GUID&#34;
 #define MyAppName &#34;Examle&#34;
@@ -320,35 +316,34 @@ end;
 #define MyAppPublisher &#34;wen rong studio&#34;
 </code></pre><h3 id="需修改地方">需修改地方</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Arg</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">MyAppGUID</td>
-<td style="text-align:left">安裝系統 GUID，產生方式為 <code>Tools/Generated GUID</code>。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppName</td>
-<td style="text-align:left">桌面路徑名稱 。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppFolder</td>
-<td style="text-align:left">安裝目錄名稱。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppSetupExeName</td>
-<td style="text-align:left">Inno Setup 輸出安裝檔名稱 。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Arg</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">MyAppGUID</td>
+          <td style="text-align: left">安裝系統 GUID，產生方式為 <code>Tools/Generated GUID</code>。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppName</td>
+          <td style="text-align: left">桌面路徑名稱 。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppFolder</td>
+          <td style="text-align: left">安裝目錄名稱。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppSetupExeName</td>
+          <td style="text-align: left">Inno Setup 輸出安裝檔名稱 。</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="取得-guid-方法">取得 GUID 方法</h4>
-<p><img loading="lazy" src="https://imgur.com/d05PwU1.jpg" alt="img_3"  />
-</p>
-<h2 id="githubhttpsgithubcomwenrong274exampleinnosetup"><a href="https://github.com/Wenrong274/ExampleInnoSetup">Github</a></h2>
+<p><img alt="img_3" loading="lazy" src="https://imgur.com/d05PwU1.jpg"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/ExampleInnoSetup">Github</a></h2>
 <hr>
 ]]></content:encoded>
     </item>

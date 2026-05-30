@@ -4,7 +4,7 @@
     <title>Wenrong Nexus</title>
     <link>https://wenrong-nexus.com/</link>
     <description>Recent content on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 13 Oct 2024 03:11:00 +0800</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,7 @@
       <content:encoded><![CDATA[<h2 id="做法-22">做法 22</h2>
 <p><code>支援泛型的共變數與反變數</code></p>
 <h3 id="1-這個-out-也是-共變數">1. 這個 out 也是 共變數?</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> TryParse (<span style="color:#66d9ef">string?</span> s, IFormatProvider? provider, <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">int</span> result);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> TryParse (<span style="color:#66d9ef">string?</span> s, IFormatProvider? provider, <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">int</span> result);
 </span></span></code></pre></div><p>方法參數中的 out 關鍵字：
 在 TryParse 方法中的 out int result 是一個輸出參數。這個 out 關鍵字的作用是：</p>
 <ul>
@@ -26,7 +26,7 @@
 <li>呼叫方法時，不需要初始化這個參數，但必須在呼叫後使用它。</li>
 </ul>
 <p>在泛型接口或委託定義中使用的 out 關鍵字表示協變。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEnumerable</span>&lt;<span style="color:#66d9ef">out</span> T&gt; { ... }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEnumerable</span>&lt;<span style="color:#66d9ef">out</span> T&gt; { ... }
 </span></span></code></pre></div><p>這裡的 out 表示：</p>
 <ul>
 <li>T 只能用作輸出（返回值），不能用作輸入（參數）。</li>
@@ -60,17 +60,17 @@
 <p>定義：允許使用比原本指定的類別更具體（更繼承）的類型。
 關鍵字：out
 應用：通常用於返回類別或只讀泛型介面。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">object</span>&gt; objects = strings; <span style="color:#75715e">// 合法，因為 IEnumerable&lt;T&gt; 是共變數</span>
 </span></span></code></pre></div><h4 id="反變數contravariance">反變數（Contravariance）</h4>
 <p>定義：允許使用比原本指定的類別更一般（更基礎）的類別。
 關鍵字：in
 應用：通常用於參數類別或只寫泛型介面。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">object</span>&gt; objectAction = (<span style="color:#66d9ef">object</span> obj) =&gt; Console.WriteLine(obj);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">object</span>&gt; objectAction = (<span style="color:#66d9ef">object</span> obj) =&gt; Console.WriteLine(obj);
 </span></span><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">string</span>&gt; stringAction = objectAction; <span style="color:#75715e">// 合法，因為 Action&lt;T&gt; 是反變數</span>
 </span></span></code></pre></div><h4 id="詳細解釋和更多例子">詳細解釋和更多例子</h4>
 <p>共變數例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> { }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> { }
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> : Animal { }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>IEnumerable&lt;Dog&gt; dogs = <span style="color:#66d9ef">new</span> List&lt;Dog&gt;();
@@ -80,7 +80,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> ProcessAnimals(IEnumerable&lt;Animal&gt; animals) { ... }
 </span></span><span style="display:flex;"><span>ProcessAnimals(dogs); <span style="color:#75715e">// 可以傳入 Dog 的集合</span>
 </span></span></code></pre></div><p>反變數例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IComparer</span>&lt;<span style="color:#66d9ef">in</span> T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IComparer</span>&lt;<span style="color:#66d9ef">in</span> T&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> Compare(T x, T y);
 </span></span><span style="display:flex;"><span>}
@@ -97,7 +97,7 @@
 </span></span><span style="display:flex;"><span>List&lt;Dog&gt; dogs = <span style="color:#66d9ef">new</span> List&lt;Dog&gt;();
 </span></span><span style="display:flex;"><span>dogs.Sort(dogComparer); <span style="color:#75715e">// 可以使用 Animal 的比較器來比較 Dog</span>
 </span></span></code></pre></div><p>共變數和反變數的組合</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IConverter</span>&lt;<span style="color:#66d9ef">in</span> TInput, <span style="color:#66d9ef">out</span> TOutput&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IConverter</span>&lt;<span style="color:#66d9ef">in</span> TInput, <span style="color:#66d9ef">out</span> TOutput&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    TOutput Convert(TInput input);
 </span></span><span style="display:flex;"><span>}
@@ -126,7 +126,7 @@
 共變數和反變數強大的特性，能夠提高程式碼的靈活性和可重用性。
 共變數（out）允許使用更具體的類型，而反變數（in）允許使用更一般的類型。正確理解和使用這些概念可以幫助設計更靈活、更強大的 API 和框架。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Dog dog = <span style="color:#66d9ef">new</span> Dog(<span style="color:#e6db74">&#34;doggy&#34;</span>);
 </span></span><span style="display:flex;"><span>    IOutDog&lt;Dog&gt; dogProvider = <span style="color:#66d9ef">new</span> DogProvider(dog);
@@ -211,7 +211,7 @@
 做 cast 時要了解自己在做什麼 不然能編譯成功也會在 runtime 時炸掉</p>
 <h2 id="做法-23">做法 23</h2>
 <p><code>使用 delegate 定義型別參數的方法約束</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// double[] xValues = { 0,1,2,3,4,5,6,7,8,9,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// double[] xValues = { 0,1,2,3,4,5,6,7,8,9,</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//                 0,1,2,3,4,5,6,7,8,9,};</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// double[] yValues = { 0,1,2,3,4,5,6,7,8,9,</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//                 0,1,2,3,4,5,6,7,8,9,};</span>
@@ -263,7 +263,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="做法-23-心得">做法 23 心得</h3>
 <p>可以利用 這種方式，讓不同類別擁有相同介面，使用相同的方法，讓程式彈性變高</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// ForeachIn(items,(item, i) =&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// ForeachIn(items,(item, i) =&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// {</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//      item.SetIcon(icon[i]);</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// });</span>
@@ -290,7 +290,7 @@
       <content:encoded><![CDATA[<h2 id="做法-20">做法 20</h2>
 <p><code>以 IComparable&lt;T&gt; 與 IComparer&lt;T&gt; 實作排序關係</code></p>
 <h3 id="實作">實作</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Customer</span> : IComparable&lt;Customer&gt;, IComparable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Customer</span> : IComparable&lt;Customer&gt;, IComparable
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> name;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> revenue;
@@ -333,7 +333,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="使用方式">使用方式</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 創建一些 Customer 實例</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> customers = <span style="color:#66d9ef">new</span> List&lt;Customer&gt;
@@ -414,7 +414,7 @@
 <blockquote>
 <p>如果你建構的泛型類別的型別參數描述的任何型別實例，你必須考慮到這些型別可能有實作 IDisposable。你必須防衛性的撰寫程式並確保這些物件離開範圍後不會洩漏資源。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEngine</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEngine</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> DoWork();
 </span></span><span style="display:flex;"><span>}
@@ -498,7 +498,7 @@
 <ul>
 <li>
 <p>為什麼這三組執行期都共用相同的程式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;Stream&gt; streams=newList&lt;Stream&gt;();
 </span></span><span style="display:flex;"><span>List&lt;MyClassType&gt; myClassTypes=newList&lt;MyClassType&gt;();
 </span></span></code></pre></div></li>
@@ -507,7 +507,7 @@
 <ul>
 <li>
 <p>為什麼這三組有不同的機械碼?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">double</span>&gt; doubles = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">double</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">double</span>&gt; doubles = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">double</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; ints = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;MyStruct&gt; myStructs = <span style="color:#66d9ef">new</span> List&lt;MyStruct&gt;();
 </span></span></code></pre></div><p>CLR 為每種值類型參數生成特定的代碼，以優化性能和類型安全性。</p>
@@ -516,7 +516,7 @@
 <h4 id="1-泛型類別使用-default">1. 泛型類別使用 default()</h4>
 <p>在講到泛型類別使用 default() 的方法寫時，需要把 T 改成 T?，因為 Value Type 的 Default = 0，而 Reference Type 是沒有 Default，回傳的結果會是 null。
 需要告訴使用者可能會回傳 null 建議還是要回傳 T?，也提高程式碼閱讀性。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> T? FirstOrDefault&lt;T&gt;(<span style="color:#66d9ef">this</span> IEnumerable&lt;T&gt; source, Predicate&lt;T&gt; predicate)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> T? FirstOrDefault&lt;T&gt;(<span style="color:#66d9ef">this</span> IEnumerable&lt;T&gt; source, Predicate&lt;T&gt; predicate)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> item <span style="color:#66d9ef">in</span> source)
 </span></span><span style="display:flex;"><span>    {
@@ -527,9 +527,9 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="2-少了-null-確認">2. 少了 null 確認</h4>
 <p>原本課本的判斷，少了 null 確認</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual(T left, T right) =&gt;	left.Equals(right);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual(T left, T right) =&gt;	left.Equals(right);
 </span></span></code></pre></div><p>可以改這種寫法，多了做法 03 的寫法，用來判斷 null。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual&lt;T&gt;(T left, T right)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual&lt;T&gt;(T left, T right)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#66d9ef">is</span> T qu)
 </span></span><span style="display:flex;"><span>    {
@@ -539,7 +539,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="3-使用-t">3. 使用 T?</h4>
 <p>使用 T? 明確表示 factory 方法可能返回 null。這增加了代碼的可讀性和意圖的清晰度。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>MyClass obj1 = Factory(() =&gt; <span style="color:#66d9ef">new</span> MyClass { Name = <span style="color:#e6db74">&#34;Object 1&#34;</span> });
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>MyClass obj1 = Factory(() =&gt; <span style="color:#66d9ef">new</span> MyClass { Name = <span style="color:#e6db74">&#34;Object 1&#34;</span> });
 </span></span><span style="display:flex;"><span>Console.WriteLine(obj1.Name); <span style="color:#75715e">// 輸出: Object 1</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 使用返回 null 的工廠方法</span>
@@ -593,7 +593,7 @@
 <ol>
 <li>
 <p>優先使用接口約束：接口約束更靈活，能同時適用於值類型和引用類型。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GenericClass</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IComparable&lt;T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GenericClass</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IComparable&lt;T&gt;
 </span></span></code></pre></div></li>
 <li>
 <p>基於行為而非類型種類進行約束：關注類型能做什麼，而不是類型是什麼。</p>
@@ -616,7 +616,7 @@
 <h2 id="做法-19">做法 19</h2>
 <p>使用執行期型別檢查特化泛型演算法
 實作</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerable</span>&lt;T&gt; : IEnumerable&lt;T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerable</span>&lt;T&gt; : IEnumerable&lt;T&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerator</span> : IEnumerator&lt;T&gt;
 </span></span><span style="display:flex;"><span>    {
@@ -728,7 +728,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>使用方式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> StringEnumerable()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> StringEnumerable()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
 </span></span><span style="display:flex;"><span>
@@ -832,7 +832,7 @@
       <content:encoded><![CDATA[<h2 id="做法-14">做法 14</h2>
 <p><code>減少重複的初始化邏輯</code></p>
 <h3 id="1-建構子初始化程序讓一個建構子呼叫其他的建構子">1. 建構子初始化程序讓一個建構子呼叫其他的建構子。</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List&lt;<span style="color:#66d9ef">string</span>&gt; coll;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> name;
@@ -851,7 +851,7 @@
 <p>readonly 欄位只能在宣告時或在定義該欄位的類別建構子中賦值。</p>
 <h2 id="做法-15">做法 15</h2>
 <p><code>避免建構不必要的物件</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// 劣</span>
 </span></span><span style="display:flex;"><span>    using(Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>)){
@@ -859,7 +859,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>推薦方式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
 </span></span><span style="display:flex;"><span>{
@@ -890,14 +890,11 @@
       <content:encoded><![CDATA[<h2 id="做法-11">做法 11</h2>
 <p><code>認識 .NET 資源管理</code></p>
 <h3 id="1-簡易圖示記憶體區塊的關聯圖">1. 簡易圖示記憶體區塊的關聯圖</h3>
-<p><img loading="lazy" src="https://i.imgur.com/dfX2Obh.png" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://i.imgur.com/dfX2Obh.png"></p>
 <h3 id="2-記憶體排列物件的放置位址">2. 記憶體排列物件的放置位址</h3>
-<p><img loading="lazy" src="https://i.imgur.com/FOmH0z0.png" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/FOmH0z0.png"></p>
 <p>呼叫 GC 後，記憶體位置改變了，這就是記憶體回收的概念</p>
-<p><img loading="lazy" src="https://i.imgur.com/JNXcMs0.png" alt="img_3"  />
-</p>
+<p><img alt="img_3" loading="lazy" src="https://i.imgur.com/JNXcMs0.png"></p>
 <h3 id="3-記憶體層代">3. 記憶體層代</h3>
 <ul>
 <li>
@@ -923,14 +920,14 @@
 <p>initobj 指令用於將值類型的變量初始化為其默認值，因此 initobj 不會導致 boxing 或 unboxing。
 使用 initobj 時，是直接記憶體操作，不涉及對象的創建或類型的轉換。</p>
 <p>推薦用法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List&lt;<span style="color:#66d9ef">string</span>&gt; labels = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="做法-13">做法 13</h2>
 <p><code>對靜態類別成員進行適當的初始化</code></p>
 <p>Singleton 初始化具有複雜的邏輯，可以在 <code>static</code> 建構子中寫。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySingleton</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySingleton</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> MySingleton instance = <span style="color:#66d9ef">new</span> MySingleton();
 </span></span><span style="display:flex;"><span>
@@ -964,7 +961,7 @@
       <content:encoded><![CDATA[<h2 id="做法-07">做法 07</h2>
 <p><code>以 delegate 表示 callback</code></p>
 <p>可以利用 delegate 回傳 bool 當判斷或者是回傳類別等功能降低城市耦合。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = Enumerable.Range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>).ToList();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = Enumerable.Range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>).ToList();
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> oddNumbers = numbers.Find(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> test = numbers.TrueForAll(x =&gt; x &lt; <span style="color:#ae81ff">50</span>);
 </span></span><span style="display:flex;"><span>numbers.RemoveAll(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>);
@@ -985,14 +982,14 @@
 </span></span></code></pre></div><h2 id="做法-08">做法 08</h2>
 <p><code>對事件叫用使用空條件運算子</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    counter++;
 </span></span><span style="display:flex;"><span>    Updated?.Invoke(<span style="color:#66d9ef">this</span>, counter);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="做法-09">做法 09</h2>
 <p><code>減少 boxing 與 unboxing</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">25</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">25</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = i; <span style="color:#75715e">/// box</span>
 </span></span><span style="display:flex;"><span>Console.WriteLine(o.ToString()); <span style="color:#75715e">/// 25</span>
 </span></span><span style="display:flex;"><span>
@@ -1031,7 +1028,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </ol>
 <h2 id="做法-10">做法 10</h2>
 <p><code>只對基底類別更新使用 new 修飾詞</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> MagicMethod() { }
 </span></span><span style="display:flex;"><span>}
@@ -1050,7 +1047,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="做法-04">做法 04</h2>
 <p><code>以內插字串取代 string.Format()</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#e6db74">&#34;test&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#e6db74">&#34;test&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> height = <span style="color:#ae81ff">180</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age = <span style="color:#ae81ff">20</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">$&#34;userName: {name}, age: {age}, height: {height}&#34;</span>;
@@ -1062,7 +1059,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="做法-06">做法 06</h2>
 <p><code>避免字串型別 API</code></p>
 <p>使用 <code>nameof</code> 運算子時，任何對於屬性名稱的改變都會正確的反應在用於事件參數的字串中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> name; }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">set</span>
@@ -1117,7 +1114,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="做法-03">做法 03</h2>
 <p><code>偏好 is 或 as 運算子而非型別轉換</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = <span style="color:#66d9ef">new</span> MyType();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = <span style="color:#66d9ef">new</span> MyType();
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/// 不推薦</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> t = (MyType)o;
@@ -1142,7 +1139,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="淺複製">淺複製</h2>
 <p>將原有物件的欄位依照其型別來複製，Value Type 欄位複製其數值到另一個空間，Reference Type 欄位則是複製其參考到另一個空間，因此此兩物件的 Refetence Type 都是參考到同一 instance。</p>
 <h3 id="淺複製方式">淺複製方式</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Street = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> City = <span style="color:#66d9ef">string</span>.Empty;
@@ -1159,7 +1156,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> (Person)<span style="color:#66d9ef">this</span>.MemberwiseClone();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Sam&#34;</span>,
 </span></span><span style="display:flex;"><span>    Age = <span style="color:#ae81ff">20</span>,
@@ -1190,7 +1187,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="深複製">深複製</h2>
 <p>ValueType 與<code>淺複製</code>相同，主要差異是<code>深複製</code>的 Reference Type 欄位會產生新的 instance，所以其倆欄位是參考到不同 instance 的。</p>
 <h3 id="深複製方式">深複製方式</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Street = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> City = <span style="color:#66d9ef">string</span>.Empty;
@@ -1213,7 +1210,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> clone;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span>Person origin = <span style="color:#66d9ef">new</span> Person()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Name = <span style="color:#e6db74">&#34;Sam&#34;</span>,
 </span></span><span style="display:flex;"><span>    Age = <span style="color:#ae81ff">20</span>,
@@ -1250,26 +1247,26 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <guid>https://wenrong-nexus.com/posts/csharpreferencetypestring/</guid>
       <description>淺談 C# Reference Type String</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p>之前有提到 <a href=".../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
+<p>之前有提到 <a href="../csharpvaluetypereferencetype">C# Value Type、Reference Type 的差異</a>，提到 String 是 Reference Type，可是在使用時卻很像 Value Type。</p>
 <h3 id="比較值">比較值</h3>
 <p>Value Type 以 <code>int</code> 為舉例</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b = a;
 </span></span><span style="display:flex;"><span>a = <span style="color:#ae81ff">2</span>;
 </span></span><span style="display:flex;"><span>Console.WriteLine(a == b); <span style="color:#75715e">// 輸出: false</span>
 </span></span></code></pre></div><p><code>b</code> 並沒有隨著 <code>a</code> 改變，看得出 int 是 Value Type。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 = str1;
 </span></span><span style="display:flex;"><span>str1 = <span style="color:#e6db74">&#34;def&#34;</span>;
 </span></span><span style="display:flex;"><span>Console.WriteLine(str1 == str2); <span style="color:#75715e">// 輸出:  false</span>
 </span></span></code></pre></div><p>修改 str1 卻沒有影響到 str2，所以會覺得 string 也是 Value Type(?)。</p>
 <h3 id="比較地址">比較地址</h3>
 <p>使用 <code>object.ReferenceEquals</code> 來比較，假如是 Value Type，則會輸出 <code>false</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> a = <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> b = <span style="color:#ae81ff">1</span>;
 </span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#66d9ef">object</span>.ReferenceEquals(a, b)); <span style="color:#75715e">// 輸出: false</span>
 </span></span></code></pre></div><p><code>int</code> 確實是 Value Type，所以會輸出 false。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 =  <span style="color:#e6db74">&#34;abc&#34;</span>;
 </span></span><span style="display:flex;"><span>Console.WriteLine(<span style="color:#66d9ef">object</span>.ReferenceEquals(str1, str2)); <span style="color:#75715e">// 輸出: true</span>
 </span></span></code></pre></div><p>比較結果為 true，假如 String 是 Value Type，應該會與 int 的結果一樣會是 false。</p>
@@ -1285,7 +1282,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>String 對象，若值不等，則其引用地址不等。</p>
 </li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>; <span style="color:#75715e">//str1指向記憶體位置 addressA 為 abc</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str1 = <span style="color:#e6db74">&#34;abc&#34;</span>; <span style="color:#75715e">//str1指向記憶體位置 addressA 為 abc</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str2 = str1; <span style="color:#75715e">//str2指向記憶體位置 addressA</span>
 </span></span><span style="display:flex;"><span>str1 = <span style="color:#e6db74">&#34;def&#34;</span>; <span style="color:#75715e">//str1新指向記憶體位置 addressB 為 def</span>
 </span></span><span style="display:flex;"><span>Console.WriteLine(str1 == str2); <span style="color:#75715e">// 輸出:  false</span>
@@ -1474,13 +1471,11 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>這篇主要是在講虛擬代理人的實作部分。</p>
 <p>實作的主題的方向是讀取<a href="https://opendata.cwa.gov.tw">中央氣象署</a>的氣象資訊。利用中央氣象署的 <a href="https://opendata.cwa.gov.tw/dist/opendata-swagger.html">API</a> 呼叫後，取得氣象資訊，並且在等待回應時實作虛擬代理設計。</p>
 <h2 id="uml--build">UML &amp; Build</h2>
-<p><img loading="lazy" src="https://i.imgur.com/FmnyNhG.png" alt="uml"  />
-</p>
-<p><img loading="lazy" src="https://i.imgur.com/r8KdOgM.png" alt="build"  />
-</p>
+<p><img alt="uml" loading="lazy" src="https://i.imgur.com/FmnyNhG.png"></p>
+<p><img alt="build" loading="lazy" src="https://i.imgur.com/r8KdOgM.png"></p>
 <h2 id="weatherproxy">WeatherProxy</h2>
 <p>使用 weather is null 判斷是否成功取得資料，並且 <code>weatherDataTask == null || weatherDataTask.Status != TaskStatus.Running</code> 來防止重複取得資料。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> GetWeather(<span style="color:#66d9ef">string</span> area)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> GetWeather(<span style="color:#66d9ef">string</span> area)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (weather != <span style="color:#66d9ef">null</span>)
 </span></span><span style="display:flex;"><span>        {
@@ -1496,7 +1491,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>        }
 </span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><p>完整程式碼</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherProxy</span> : IWeather
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WeatherProxy</span> : IWeather
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// &lt;summary&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// https://opendata.cwa.gov.tw</span>
@@ -1543,7 +1538,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">string</span>.IsNullOrEmpty(responseJson) ? <span style="color:#66d9ef">null</span> : JsonSerializer.Deserialize&lt;Root&gt;(responseJson);
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubrepo"><a href="https://github.com/Wenrong274/WeatherForecast">GitHub</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/WeatherForecast">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1633,7 +1628,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>A：這是 Unity 舊版 bug。一般用法還好除非是在 Update 使用 foreach 才會有明顯的差異。</p>
 <p>A：因為 Unity C# 與 MS C# 不太一樣，在使用 Unity 物件時不要使用 <code>?.</code> 的方式。</p>
 <p><a href="https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/member-access-operators#null-conditional-operators--and-">Null 條件運算子 ?. 和 ?[]</a></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>A?.B();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>A?.B();
 </span></span></code></pre></div><h2 id="更理解迭代器運作方式">更理解迭代器運作方式</h2>
 <p>可以先理解 LinQ 運作方式，就可以知道內部迭代跟外部的差異。</p>
 <p>再來可以理解 C# IEnumerator、IEnumerable，要搭配 for、foreach，並且搭配 yield return，就可以理解 yield return 在迭代器的概念。</p>
@@ -1694,30 +1689,30 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="觀念">觀念</h2>
 <h3 id="封裝成方法跟使用表象模式的差異">封裝成方法跟使用表象模式的差異</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">特性</th>
-<th style="text-align:left">表象模式</th>
-<th style="text-align:left">封裝成方法</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">目的</td>
-<td style="text-align:left">簡化介面</td>
-<td style="text-align:left">提高模組化和可重用性</td>
-</tr>
-<tr>
-<td style="text-align:left">應用範圍</td>
-<td style="text-align:left">複雜的系統</td>
-<td style="text-align:left">任何程式碼</td>
-</tr>
-<tr>
-<td style="text-align:left">實現方式</td>
-<td style="text-align:left">使用介面類別來封裝系統</td>
-<td style="text-align:left">使用方法來封裝邏輯</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">特性</th>
+          <th style="text-align: left">表象模式</th>
+          <th style="text-align: left">封裝成方法</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">目的</td>
+          <td style="text-align: left">簡化介面</td>
+          <td style="text-align: left">提高模組化和可重用性</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">應用範圍</td>
+          <td style="text-align: left">複雜的系統</td>
+          <td style="text-align: left">任何程式碼</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">實現方式</td>
+          <td style="text-align: left">使用介面類別來封裝系統</td>
+          <td style="text-align: left">使用方法來封裝邏輯</td>
+      </tr>
+  </tbody>
 </table>
 <p>表象模式和封裝成方法都是有用的設計模式。表象模式可以用於簡化複雜系統的介面，而封裝成方法可以用於提高程式碼的模組化和可重用性。兩者可以結合使用以獲得更好的效果。</p>
 <h2 id="迪米特守則">迪米特守則</h2>
@@ -1736,37 +1731,35 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h3 id="輸出-wix-文件方法">輸出 Wix 文件方法</h3>
 <p>先到 <a href="https://github.com/wixtoolset/wix3/releases">WiX Toolset Release</a> 安裝需要的工具。</p>
 <p>需要開啟 <a href="https://zh.wikipedia.org/zh-tw/cmd.exe">CMD</a> 且必須要用<code>工作管理員權限</code>打開，之後 cd 到 WiX Toolset 的安裝資料夾。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>C:\Program Files (x86)\WiX Toolset v3.11\bin
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/ovuJCka.png" alt="img_1"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>C:\Program Files (x86)\WiX Toolset v3.11\bin
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/ovuJCka.png"></p>
 <h4 id="heatexe">heat.exe</h4>
 <p>可以掃描目錄中的所有文件和子目錄，並生成 WiX 文件中所需的 Component、Directory、File 和其他元素的定義。</p>
 <p>使用下面的參數可以拿到 <code>myKeyIn.wxs</code>。需要把 [MyDemo] 替換成正確的路徑，可以參考我的 <code>Product.wxs</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>heat.exe dir &#34;[PUT_YOUR_PATH]&#34; -dr INSTALLFOLDER -cg ProductComponents -gg -gl -sf -srd -var &#34;[MyDemo]&#34; -out &#34;[PUT_YOUR_OUTPUT_PATH]\myKeyIn.wxs&#34;
 </span></span></code></pre></div><table>
-<thead>
-<tr>
-<th style="text-align:left">參數名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PUT_YOUR_PATH]</td>
-<td style="text-align:left">需要打包的路徑資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">[MyDemo]</td>
-<td style="text-align:left">WiX 文件中要使用的變數</td>
-</tr>
-<tr>
-<td style="text-align:left">[PUT_YOUR_OUTPUT_PATH]</td>
-<td style="text-align:left">WiX 文件的路徑</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">參數名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PUT_YOUR_PATH]</td>
+          <td style="text-align: left">需要打包的路徑資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[MyDemo]</td>
+          <td style="text-align: left">WiX 文件中要使用的變數</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[PUT_YOUR_OUTPUT_PATH]</td>
+          <td style="text-align: left">WiX 文件的路徑</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://i.imgur.com/SbjBwmv.png" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/SbjBwmv.png"></p>
 <h2 id="wix-productwxs">Wix Product.wxs</h2>
 <p><a href="https://raw.githubusercontent.com/Wenrong274/WixExamples/master/WixInstaller/WixToolset/Product.wxs">Product.wxs</a></p>
 <h3 id="桌面捷徑">桌面捷徑</h3>
@@ -1812,7 +1805,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
         &lt;/Component&gt;
     &lt;/Directory&gt;
 &lt;/Directory&gt;
-</code></pre><h3 id="githubgithub"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
+</code></pre><h3 id="github"><a href="https://github.com/Wenrong274/WixExamples">GitHub</a></h3>
 <h3 id="參考文章">參考文章</h3>
 <p><a href="https://blog.walterlv.com/post/getting-started-with-wix-toolset-msi-hello-world">用 WiX 制作安装包：创建一个简单的 msi 安装包</a></p>
 <p><a href="https://ithelp.ithome.com.tw/users/20139206/ironman/3901">30 天 | C# WixToolset + WPF 帥到不行的安裝包 系列</a></p>
@@ -1827,11 +1820,15 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/jtqc/qccube/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/jtqc/qccube/</guid>
-      <description>介紹 集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。 使用 sLua 製作主選單架構、互動式動畫。 課程內容可以</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/IBSUoFfay-A" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/IBSUoFfay-A?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/IBSUoFfay-A?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="介紹">介紹</h2>
 <p>集合數以百計的互動式動畫，內容涵蓋國高中範圍的自然學科，分為化學、物理、生物、地科四大科。</p>
@@ -1848,8 +1845,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </ul>
 <h2 id="連結">連結</h2>
 <p><a href="https://jt-qc.com/product-pages?p_id=1">官網介紹</a></p>
-<p><a href="https://apps.apple.com/tw/app/qc-cube/id1480811031"><img loading="lazy" src="https://imgur.com/APiZmgH.png" alt="appstore"  />
-</a></p>
+<p><a href="https://apps.apple.com/tw/app/qc-cube/id1480811031"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1858,11 +1854,21 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/jtqc/tractorvr/</guid>
-      <description>介紹 模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。 使用 Unity 搭配 Meta Quest 製作而成。 模擬駕駛手排車 連結 新聞介紹</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/JwodlwHqAhU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Unity 搭配 Meta Quest 製作而成。&lt;/li&gt;
+&lt;li&gt;模擬駕駛手排車&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://tw.news.yahoo.com/%E5%BD%B0%E5%8C%96%E4%B8%AD%E8%BE%B2%E5%8D%9Avr%E6%9B%B3%E5%BC%95%E6%A9%9F%E6%A8%A1%E6%93%AC%E8%89%99-%E5%85%A8%E5%9C%8B%E9%A6%96%E6%AC%A1%E6%9B%9D%E5%85%89%E5%8A%A0%E7%A2%BC%E9%AB%94%E9%A9%97%E5%A0%B4%E6%AC%A1-110113353.html&#34;&gt;新聞介紹&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/JwodlwHqAhU?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="介紹">介紹</h2>
 <p>模擬駕駛曳引機 VR 遊戲，搭配任務目標體驗駕駛模式、詳細觀賞外觀模式。</p>
@@ -1880,11 +1886,21 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/jtqc/sugarfactory/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/jtqc/sugarfactory/</guid>
-      <description>介紹 Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。 使用 Unity 搭配 Kinect SDK 製作而成。 支援多人遊玩。 連結 介紹網址</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/inlLMzOoc60" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/inlLMzOoc60?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 Unity 搭配 Kinect SDK 製作而成。&lt;/li&gt;
+&lt;li&gt;支援多人遊玩。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;連結&#34;&gt;連結&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116&#34;&gt;介紹網址&lt;/a&gt;&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/inlLMzOoc60?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="介紹">介紹</h2>
 <p>Kinect 體感操作方式體驗製糖過程，最多可以三人遊玩一起完成鍋爐任務。</p>
@@ -1902,11 +1918,15 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/jtqc/elegeoscience/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/jtqc/elegeoscience/</guid>
-      <description>介紹 使用 VR 裝置了解台灣各類岩⽯和地形變化，每關關卡有任務目標跟題目作答來加深學習記憶，任務目標有判斷拿起岩石碰撞判斷硬度、呼叫海嘯使海岸侵蝕</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/pWr71RNmNHE" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/pWr71RNmNHE?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;使用 VR 裝置了解台灣各類岩⽯和地形變化，每關關卡有任務目標跟題目作答來加深學習記憶，任務目標有判斷拿起岩石碰撞判斷硬度、呼叫海嘯使海岸侵蝕、時光槍變化岩石時間等。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/pWr71RNmNHE?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="介紹">介紹</h2>
 <p>使用 VR 裝置了解台灣各類岩⽯和地形變化，每關關卡有任務目標跟題目作答來加深學習記憶，任務目標有判斷拿起岩石碰撞判斷硬度、呼叫海嘯使海岸侵蝕、時光槍變化岩石時間等。</p>
@@ -1923,11 +1943,15 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</link>
       <pubDate>Sun, 15 Oct 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/jtqc/yunlinyoung/</guid>
-      <description>介紹 以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨</description>
-      <content:encoded><![CDATA[
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/e3VVoea3EBg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
-</div>
+      <description>&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;amp;controls=1&amp;amp;end=0&amp;amp;loop=0&amp;amp;mute=0&amp;amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;h2 id=&#34;介紹&#34;&gt;介紹&lt;/h2&gt;
+&lt;p&gt;以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。&lt;/p&gt;</description>
+      <content:encoded><![CDATA[<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/e3VVoea3EBg?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
 
 <h2 id="介紹">介紹</h2>
 <p>以「品德教育」為核心出發，為孩子設計出一系列與品德素養、雲林特產特色、英文、數學等的互動遊戲，提升學習動機。遊戲類型包括圖形辨識、平面辨識、打地鼠、大富翁、實境解謎等。</p>
@@ -1937,10 +1961,8 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <li>有 7 款不同類型的遊戲</li>
 </ul>
 <h2 id="連結">連結</h2>
-<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img loading="lazy" src="https://imgur.com/APiZmgH.png" alt="appstore"  />
-</a></p>
-<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img loading="lazy" src="https://imgur.com/GyhUzK3.png" alt="googleplay"  />
-</a></p>
+<p><a href="https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988"><img alt="appstore" loading="lazy" src="https://imgur.com/APiZmgH.png"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap"><img alt="googleplay" loading="lazy" src="https://imgur.com/GyhUzK3.png"></a></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1949,7 +1971,95 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/portfolios/projectlist/</link>
       <pubDate>Tue, 25 Jul 2023 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/portfolios/projectlist/</guid>
-      <description>2023 2023/05 - 2023/07 AIR 英語未來城 AppleStore GoolgPlay Youtube 2022 2022/01 - 2022/11 滅蚊大作戰 AppleStore GoolgPlay 介紹網站 2022/08 - 2022/09 寶馬曳引機 VR Youtube 2022/06 - 2022/12 變動的大地 Youtube 介紹網站 2022/06 - 2022/11 密室逃脫 AR : 生化危機 AppleStore GoolgPlay Youtube 介紹網</description>
+      <description>&lt;h2 id=&#34;2023&#34;&gt;2023&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2023/05 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;AIR 英語未來城　&lt;a href=&#34;https://apps.apple.com/us/app/air-%E8%8B%B1%E8%AA%9E%E6%9C%AA%E4%BE%86%E5%9F%8E/id6450970647&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.YunDongEducation.AirEnglishFutureCity&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/__rgNu0EP08&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2022&#34;&gt;2022&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2022/01 - 2022/11&lt;/dt&gt;
+&lt;dd&gt;滅蚊大作戰　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%BB%85%E8%9A%8A%E5%A4%A7%E4%BD%9C%E6%88%B0-endofthemosquito/id1179197223&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.EndOfTheMosquito&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=34&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2022/08 - 2022/09&lt;/dt&gt;
+&lt;dd&gt;寶馬曳引機 VR 　&lt;a href=&#34;https://www.youtube.com/watch?v=JwodlwHqAhU&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2022/06 - 2022/12&lt;/dt&gt;
+&lt;dd&gt;變動的大地　&lt;a href=&#34;https://www.youtube.com/watch?v=pWr71RNmNHE&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://moevrar.tku.edu.tw/material_detail.cshtml?id=145&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2022/06 - 2022/11&lt;/dt&gt;
+&lt;dd&gt;密室逃脫 AR : 生化危機　&lt;a href=&#34;https://apps.apple.com/cn/app/%E5%AF%86%E5%AE%A4%E9%80%83%E8%84%ABar-%E7%94%9F%E5%8C%96%E5%8D%B1%E6%A9%9F/id1471088520&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.BioCrisis&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/product-pages?p_id=35&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2022/11 - 2022/12&lt;/dt&gt;
+&lt;dd&gt;阿拉丁教學平台入口　&lt;a href=&#34;https://apps.apple.com/gr/app/%E9%98%BF%E6%8B%89%E4%B8%81-xr%E6%95%99%E5%AD%B8%E5%B9%B3%E5%8F%B0%E5%85%A5%E5%8F%A3/id1475224492&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newXRPlatfomMkII&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2022/11 - 2023/02&lt;/dt&gt;
+&lt;dd&gt;新挑戰英語單字王_觸控互動　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%8C%91%E6%88%B0%E8%8B%B1%E8%AA%9E%E5%96%AE%E5%AD%97%E7%8E%8B-%E8%A7%B8%E6%8E%A7%E4%BA%92%E5%8B%95/id1474197892&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.engchallenge&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=31&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2021&#34;&gt;2021&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2021/02 - 2023/04&lt;/dt&gt;
+&lt;dd&gt;康軒翻滾吧圖學　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E7%BF%BB%E6%BB%BE%E5%90%A7%E5%9C%96%E5%AD%B8/id1474588832&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GC8EE18F5824146BD9EF93B8768FBF733&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2021/03 - 2021/05&lt;/dt&gt;
+&lt;dd&gt;糖的科普知識　&lt;a href=&#34;https://www.youtube.com/watch?v=inlLMzOoc60&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2021/05 - 2021/05&lt;/dt&gt;
+&lt;dd&gt;蒜頭糖廠歷史　&lt;a href=&#34;https://www.youtube.com/watch?v=Rhx6K21m1vQ&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://rhs.boch.gov.tw/rhs/plan_listview.aspx?pl=116&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2021/05 - 2021/08&lt;/dt&gt;
+&lt;dd&gt;年長者失智預防 環遊世界&lt;/dd&gt;
+&lt;dt&gt;2021/09 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;雲林好 Young 　&lt;a href=&#34;https://apps.apple.com/al/app/%E9%9B%B2%E6%9E%97%E5%A5%BD-young-%E5%93%81%E5%BE%B7%E8%97%8F%E5%AF%B6%E5%9C%96/id1605719988&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.yunlin.charactertreasuremap&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/e3VVoea3EBg&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2021/08 - 2021/11&lt;/dt&gt;
+&lt;dd&gt;FunPark 玩童書　&lt;a href=&#34;https://apps.apple.com/tw/app/funpark-%E7%8E%A9%E7%AB%A5%E6%9B%B8/id1534886979&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Company.FunPark&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2020&#34;&gt;2020&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2020/03 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;Booster 教学系统　&lt;a href=&#34;https://apps.apple.com/tw/app/booster-%E6%95%99%E5%AD%A6%E7%B3%BB%E7%BB%9F/id1480475182&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Melody.TeachBooster&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2020/05 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;Fingerprints 教學系統　&lt;a href=&#34;https://apps.apple.com/tw/app/fingerprints-%E6%95%99%E5%AD%B8%E7%B3%BB%E7%B5%B1/id1383640936&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.FingerPrints&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2020/08 - 2020/10&lt;/dt&gt;
+&lt;dd&gt;鈎 GO 釣手　&lt;a href=&#34;https://apps.apple.com/tw/app/%E9%88%8EGO%E9%87%A3%E6%89%8B/id1538385180&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.gov.pingtung.goodfish&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/uPXzoWxgxoo&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2020/11 - 2021/05&lt;/dt&gt;
+&lt;dd&gt;細胞分裂、減數分裂與生物的遺傳　&lt;a href=&#34;https://apps.apple.com/us/app/%E7%B4%B0%E8%83%9E%E5%88%86%E8%A3%82-%E6%B8%9B%E6%95%B8%E5%88%86%E8%A3%82%E8%88%87%E7%94%9F%E7%89%A9%E7%9A%84%E9%81%BA%E5%82%B3/id1562301603&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.csmu.biologicalinheritance&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2019&#34;&gt;2019&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2019/01 - 2019/11&lt;/dt&gt;
+&lt;dd&gt;康軒國中小課文輕鬆聽　&lt;a href=&#34;https://apps.apple.com/tw/app/%E5%BA%B7%E8%BB%92%E5%9C%8B%E4%B8%AD%E5%B0%8F%E8%AA%B2%E6%96%87%E8%BC%95%E9%AC%86%E8%81%BD/id1480191322&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=tw.com.knsh.GE76CD7FEFDE74CA7A1ED6EC6D252D5D7&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2019/04 - 2019/06&lt;/dt&gt;
+&lt;dd&gt;康軒學習遊戲王　&lt;a href=&#34;https://youtu.be/J4M59wBFR3U&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2019/08 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;數學一點也不無聊　&lt;a href=&#34;https://youtu.be/6swrBWThjtI&#34;&gt;Youtube 1&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/9AZqCJJGFNw&#34;&gt;Youtube 2&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=51&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2019/11 - 2020/12&lt;/dt&gt;
+&lt;dd&gt;越語致用　&lt;a href=&#34;https://youtu.be/crGavyM_Cjs&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2019/10 - 2019/11&lt;/dt&gt;
+&lt;dd&gt;震銲 AR 　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.wda.gov.JhenHanAR&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=59&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2019/12 - 2022/12&lt;/dt&gt;
+&lt;dd&gt;英語村_VR 　&lt;a href=&#34;https://apps.apple.com/gr/app/%E8%8B%B1%E8%AA%9E%E6%9D%91-vr/id1474188352&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.newAviationCityVRapp&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2018&#34;&gt;2018&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2018/05 - 2023/07&lt;/dt&gt;
+&lt;dd&gt;QC Cube 　&lt;a href=&#34;https://apps.apple.com/tw/app/qc-cube/id1480811031&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://youtu.be/uPXzoWxgxoo&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2018/05 - 2018/12&lt;/dt&gt;
+&lt;dd&gt;風華再現千里眼　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.ouorange.Fenghua&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2018/06 - 2023/02&lt;/dt&gt;
+&lt;dd&gt;新尋寶記_AR 　&lt;a href=&#34;https://apps.apple.com/us/app/%E6%96%B0%E5%B0%8B%E5%AF%B6%E8%A8%98-ar/id1474197976&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTreasureMap&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=27&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2018/08 - 2023/04&lt;/dt&gt;
+&lt;dd&gt;新悠遊記_360VR 　&lt;a href=&#34;https://apps.apple.com/tw/app/%E6%96%B0%E6%82%A0%E9%81%8A%E8%A8%98-360vr/id1474197874&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.GTOrganization.XRTravels360&#34;&gt;GoolgPlay&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=28&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2017&#34;&gt;2017&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2017/03 - 2020/02&lt;/dt&gt;
+&lt;dd&gt;康軒動課本　&lt;a href=&#34;https://youtu.be/rr3BgsDc4BA&#34;&gt;Youtube&lt;/a&gt;　&lt;a href=&#34;https://jt-qc.com/works-pages?w_id=30&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2017/05 - 2018/11&lt;/dt&gt;
+&lt;dd&gt;VR 妙視界：大地的撼動　&lt;a href=&#34;https://apps.apple.com/us/app/vr%E5%A6%99%E8%A6%96%E7%95%8C-%E5%A4%A7%E5%9C%B0%E7%9A%84%E6%92%BC%E5%8B%95/id1247781943&#34;&gt;AppleStore&lt;/a&gt;　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.JTQC.VR0003&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2017/05 - 2018/06&lt;/dt&gt;
+&lt;dd&gt;VR 妙視界：微太空之旅　&lt;a href=&#34;https://www.facebook.com/JTQCDE/posts/379486789313837/?paipv=0&amp;amp;eav=AfbMwPAYhGyCDqtOaD1t8b09DUPMKcgX17RyYcqf9cLKpjW0SmB3t__QNrWEfmnna_8&amp;amp;_rdr&#34;&gt;介紹網站&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;h2 id=&#34;2016&#34;&gt;2016&lt;/h2&gt;
+&lt;dl&gt;
+&lt;dt&gt;2016/05 - 2017/02&lt;/dt&gt;
+&lt;dd&gt;台達魔法小學堂能源篇　&lt;a href=&#34;https://youtu.be/PH2O5FLfrek&#34;&gt;Youtube&lt;/a&gt;&lt;/dd&gt;
+&lt;dt&gt;2016/10 - 2017/04&lt;/dt&gt;
+&lt;dd&gt;台達魔法小學堂之生活用電王　&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.Delta.ESSBD.powerAR&#34;&gt;GoolgPlay&lt;/a&gt;&lt;/dd&gt;
+&lt;/dl&gt;
+&lt;hr&gt;</description>
       <content:encoded><![CDATA[<h2 id="2023">2023</h2>
 <dl>
 <dt>2023/05 - 2023/07</dt>
@@ -2049,9 +2159,8 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Command PhaseScriptExecution failed with a nonzero exit code
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/AvL0uqn.png" alt="img"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Command PhaseScriptExecution failed with a nonzero exit code
+</span></span></code></pre></div><p><img alt="img" loading="lazy" src="https://i.imgur.com/AvL0uqn.png"></p>
 <h2 id="解決方式">解決方式</h2>
 <p>因為專案有使用 Cardboard，且 Unity 是使用 2022，才會出現此問題，之前使用 2021 輸出上架都沒問題。</p>
 <p>我的解決方法是把專案改成在 MacOS 上輸出就能完美解決此問題。</p>
@@ -2075,7 +2184,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
 <p>官方論壇討論此問題<a href="https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/">文章</a>。</p>
 <h2 id="錯誤-log">錯誤 log</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
 </span></span><span style="display:flex;"><span>Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
 </span></span><span style="display:flex;"><span>Error AndroidRuntime Cause: null pointer dereference
 </span></span><span style="display:flex;"><span>Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002
@@ -2110,9 +2219,8 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>可能因為測試的硬體裝置數據優化有所不同，建議還是實際測試後才決定。</p>
 <h2 id="使用方式">使用方式</h2>
 <p>可以先使用 demo 場景測試，必須要打開 <code>IsJob</code>，才會啟動 Job System。</p>
-<p><img loading="lazy" src="https://imgur.com/lfos4S0.gif" alt="demogif"  />
-</p>
-<h2 id="githubgithub"><a href="https://github.com/Wenrong274/ParticleBezierPath">GitHub</a></h2>
+<p><img alt="demogif" loading="lazy" src="https://imgur.com/lfos4S0.gif"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/ParticleBezierPath">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2144,7 +2252,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <ul>
 <li>url 呼叫方式</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -2159,7 +2267,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <ul>
 <li>自訂 id</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -2170,8 +2278,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="ios">iOS</h2>
 <p>Unity 設定 link id 的方式在 <a href="https://docs.unity3d.com/Manual/deep-linking-ios.html">Deep linking on iOS</a> 有介紹如何設定，而 Xcode 也能設定，不過建議是在 Unity 中設定非必要不建議額外自己在手動設置，主要是怕輸出時忘記導致功能失效。</p>
 <p>Xcode 詳細設定可以參考這邊 <a href="https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97">IOS Deep linking: URL Scheme vs Universal Links</a></p>
-<p><img loading="lazy" src="https://imgur.com/WIvC4gC.png" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://imgur.com/WIvC4gC.png"></p>
 <p>這樣設定後就會與 Android 一樣的功能，在瀏覽器輸出該 link id 就會自動對應到 app。</p>
 <h2 id="其他">其他</h2>
 <ul>
@@ -2207,7 +2314,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>官方也有文件解釋 Deep link 的基礎設定。</p>
 <h2 id="script-start">Script Start</h2>
 <p>需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 <code>Application.absoluteURL</code> 才能讀取道 deep link 的資料。<code>Application.deepLinkActivated</code> 部分則是 app 的 deep link feedback。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        Application.deepLinkActivated += OnDeepLinkActivated;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(Application.absoluteURL))
@@ -2215,7 +2322,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><h2 id="script-url-arg">Script Url Arg</h2>
 <p>拆解 Deep link 夾帶的參數，格式大概與 web 的 url get 類似，可以用這種方式去解析，夾帶的參數。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] urlArg = url.Split(<span style="color:#e6db74">&#39;?&#39;</span>);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[<span style="color:#ae81ff">0</span>];
@@ -2247,7 +2354,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
 <h2 id="code">Code</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> ReplaceSpace(<span style="color:#66d9ef">string</span> context)
 </span></span><span style="display:flex;"><span>{
@@ -2258,13 +2365,11 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <ul>
 <li>使用前</li>
 </ul>
-<p><img loading="lazy" src="https://imgur.com/4dSyVJL.jpg" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://imgur.com/4dSyVJL.jpg"></p>
 <ul>
 <li>使用後</li>
 </ul>
-<p><img loading="lazy" src="https://imgur.com/GhMA0mV.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://imgur.com/GhMA0mV.jpg"></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2278,7 +2383,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
 <h2 id="xr-setting">XR Setting</h2>
 <p>可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
 </span></span><span style="display:flex;"><span>    EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
@@ -2289,11 +2394,10 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
 </span></span><span style="display:flex;"><span>        XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/l0ovOpl.png" alt="img_1"  />
-</p>
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/l0ovOpl.png"></p>
 <h2 id="build">Build</h2>
 <p>利用這段自動輸出，options 可以設定 <code>BuildOptions.None</code>、<code>BuildOptions.AutoRunPlayer</code>，一般的 Build 和 Build and Run。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Console.Clear();
 </span></span><span style="display:flex;"><span>    BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
@@ -2313,7 +2417,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="完整-script">完整 Script</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> AppName =&gt; PlayerSettings.productName;
 </span></span><span style="display:flex;"><span>
@@ -2405,56 +2509,6 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 ]]></content:encoded>
     </item>
     <item>
-      <title>Unity Project Structure</title>
-      <link>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</link>
-      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</guid>
-      <description>自動建立簡易專案資料夾結構</description>
-      <content:encoded><![CDATA[<h2 id="unity-project-structure">Unity Project Structure</h2>
-<p>主要是建立一個自動建立簡易專案資料夾結構。</p>
-<p>此參考 <a href="https://github.com/dkoprowski/UnityProjectTreeGenerator">UnityProjectTreeGenerator</a> 方法建立資料夾，</p>
-<h3 id="使用方式">使用方式</h3>
-<p><code>Tools &gt; Generate Project Structure</code></p>
-<p>必須要設定 Root Name 才能點擊 <code>Create Structure</code></p>
-<p><img loading="lazy" src="https://imgur.com/iBAEGNO.png" alt="img_1"  />
-</p>
-<h3 id="資料夾結構">資料夾結構</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>|- Assets
-</span></span><span style="display:flex;"><span>    |- Project Name /// 自己設定
-</span></span><span style="display:flex;"><span>        |- 00_Art
-</span></span><span style="display:flex;"><span>        |   |- 00_Profabs
-</span></span><span style="display:flex;"><span>        |   |   |- Models
-</span></span><span style="display:flex;"><span>        |   |   |- UI
-</span></span><span style="display:flex;"><span>        |   |- 01_Shaders
-</span></span><span style="display:flex;"><span>        |   |   |- UI_Shaders
-</span></span><span style="display:flex;"><span>        |   |- 02_Timeline
-</span></span><span style="display:flex;"><span>        |   |- 03_Models
-</span></span><span style="display:flex;"><span>        |   |   |- Example_Model
-</span></span><span style="display:flex;"><span>        |   |   |   |- 3D
-</span></span><span style="display:flex;"><span>        |   |   |   |- Animation
-</span></span><span style="display:flex;"><span>        |   |   |   |- Textures
-</span></span><span style="display:flex;"><span>        |   |   |- Example_Effect
-</span></span><span style="display:flex;"><span>        |   |       |- Textures
-</span></span><span style="display:flex;"><span>        |   |- 04_Scenes
-</span></span><span style="display:flex;"><span>        |   |- 05_UI
-</span></span><span style="display:flex;"><span>        |   |   |- Textures
-</span></span><span style="display:flex;"><span>        |   |   |- Effect
-</span></span><span style="display:flex;"><span>        |   |       |- Textures
-</span></span><span style="display:flex;"><span>        |   |       |- Animation
-</span></span><span style="display:flex;"><span>        |   |       |- Material
-</span></span><span style="display:flex;"><span>        |   |- 07_Audio
-</span></span><span style="display:flex;"><span>        |   |- 08_Video
-</span></span><span style="display:flex;"><span>        |- 01_Program
-</span></span><span style="display:flex;"><span>           |- 00_Scenes
-</span></span><span style="display:flex;"><span>           |- 01_Scripts
-</span></span><span style="display:flex;"><span>           |- 02_Tests
-</span></span><span style="display:flex;"><span>           |- 03_Prefabs
-</span></span><span style="display:flex;"><span>           |- 05_UI
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-ProjectStructure">Github</a></h2>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Unity Open Shader For VSCode</title>
       <link>https://wenrong-nexus.com/posts/openshaderforvscode/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
@@ -2466,18 +2520,16 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>因為平常開發時都是使用 Visual Studio，想開啟 Shader 時可以直接使用 VSCode 編輯，因此才參考 <a href="https://blog.csdn.net/weixin_44293055/article/details/120340635">Sublime Text &amp; Unity Shader</a>，把 Sublime Text 改成使用 VSCode。</p>
 <h2 id="環境變數">環境變數</h2>
 <p>需要注意<code>環境變數</code>裡的使用者變數的 <code>Path</code> 需要有 VSCode 的路徑</p>
-<p><img loading="lazy" src="https://imgur.com/MZN9Wgs.jpg" alt="env_1"  />
-</p>
+<p><img alt="env_1" loading="lazy" src="https://imgur.com/MZN9Wgs.jpg"></p>
 <p>也可以使用 CMD 測試有無環境變數</p>
-<p><img loading="lazy" src="https://imgur.com/ME4qXZs.jpg" alt="env_2"  />
-</p>
+<p><img alt="env_2" loading="lazy" src="https://imgur.com/ME4qXZs.jpg"></p>
 <h2 id="vscode-cli-args">VSCode CLI Args</h2>
 <p>根據 Unity 開啟 VSCode Args，可以使用 <code>Process</code> 填寫對應路徑就可以了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
 </span></span></code></pre></div><h3 id="script">Script</h3>
 <p>詳細的方法可以參考 <a href="https://blog.csdn.net/weixin_44293055/article/details/120340635">Sublime Text &amp; Unity Shader</a>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [UnityEditor.Callbacks.OnOpenAsset(0)]</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> CallbackShader(<span style="color:#66d9ef">int</span> instanceID, <span style="color:#66d9ef">int</span> line)
@@ -2520,7 +2572,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2534,11 +2586,10 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>介紹我使用 Addressable 的讀取、生成、釋放方式。</p>
 <p>詳細設定還是可以先觀看<a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.3/manual/MemoryManagement.html">官方文件</a>。</p>
 <h2 id="event-viewer">Event Viewer</h2>
-<p><img loading="lazy" src="https://imgur.com/ohiBIeL.jpg" alt="img-1"  />
-</p>
+<p><img alt="img-1" loading="lazy" src="https://imgur.com/ohiBIeL.jpg"></p>
 <p>可以利用 Event Viewer 在 Editor Runtime 時，隨時監控記憶體使用情況。就可以很明顯的發現，那些東西是忘記釋放掉的，或者不需要釋放的。</p>
 <h2 id="load-asset">Load Asset</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -2562,7 +2613,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span></code></pre></div><p>可以利用這三種方式讀取 Asset，並且把物件生成出來，當然我還是最推薦使用 AssetReference，除非有什麼特殊需求要使用字串，不然我不會換成其他方式。</p>
 <h2 id="release-asset">Release Asset</h2>
 <p>釋放掉 Asset 也記得要把物件<code>刪除</code>，不然場上會遺留破圖的物件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
 </span></span><span style="display:flex;"><span>}
@@ -2591,23 +2642,21 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。</p>
 <h2 id="addressablesloadassetasync">Addressables.LoadAssetAsync</h2>
 <p>官方範例提供的下載方式 <a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html">Addressables.LoadAsset(s)Async</a>，雖然這個是要把 Asset 讀取出來，其實他也有下載功能</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
 </span></span></code></pre></div><p>我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。</p>
 <h2 id="update-addressable-name-addressable-label">Update Addressable Name/ Addressable Label</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
 </span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>這個是下載 <code>Addressable Name</code> 或 <code>Label</code>的方法，可以利用 Label 下載多個不同 Group 的 Asset。</p>
-<p><img loading="lazy" src="https://imgur.com/aPKLTt3.jpg" alt="img-1"  />
-</p>
+<p><img alt="img-1" loading="lazy" src="https://imgur.com/aPKLTt3.jpg"></p>
 <p><code>Addressable Name</code>、<code>Label</code> 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Addressable Name、Label 是必須要<code>重新輸出</code> App 才會更新。</p>
-<p><img loading="lazy" src="https://imgur.com/2j7oGN0.jpg" alt="img-2"  />
-</p>
+<p><img alt="img-2" loading="lazy" src="https://imgur.com/2j7oGN0.jpg"></p>
 <h2 id="update-asset-reference">Update Asset Reference</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
@@ -2617,7 +2666,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>例如用一個物件或場景夾帶了多個不同的需要更新的物件，缺點就是這包 pack 輸出會過大，可能需要把每個物件獨立分成多個 AssetReference，利用系統特性夾帶物件變小。不過要是不喜歡這種方式可以看 <a href="#update-multiple-asset-references">Update Multiple Asset References</a>。</p>
 <p>不過 AssetReference 最方便還是使用它來生成、釋放、等等，才是最好用的方式。</p>
 <h2 id="update-multiple-asset-references">Update Multiple Asset References</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> assetKeys = assets.Cast&lt;AssetReference&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(assetKeys, Addressables.MergeMode.Union);
@@ -2626,7 +2675,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>多個 AssetReference 更新的方式，然後可以一起更新。可以完成一個簡單的多個物件更新，不用利用 Label、整合包、等方式更新。</p>
 <h2 id="取得下載容量大小方法">取得下載容量大小方法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(asset);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -2638,7 +2687,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="更新進度條寫法">更新進度條寫法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
@@ -2660,19 +2709,16 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <description>Fix Installed Build Tools revision 3X.0.0 is corrupted.</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>輸出 Apk 遇到的錯誤</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Fix Installed Build Tools revision 3X.0.0 is corrupted.
-</span></span></code></pre></div><p><img loading="lazy" src="https://imgur.com/CziTHbS.jpg" alt="img_1"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Fix Installed Build Tools revision 3X.0.0 is corrupted.
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://imgur.com/CziTHbS.jpg"></p>
 <h2 id="修改方式">修改方式</h2>
 <h3 id="修改-d8bat">修改 d8.bat</h3>
 <p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0</code></p>
-<p><img loading="lazy" src="https://imgur.com/YwqG9ek.jpg" alt="simg_1"  />
-</p>
+<p><img alt="simg_1" loading="lazy" src="https://imgur.com/YwqG9ek.jpg"></p>
 <p>將 <code>d8.bat</code> 改為 <code>dx.bat</code>。</p>
 <h3 id="修改-d8jar">修改 d8.jar</h3>
 <p>檔案路徑 <code>&lt;Android SDK root&gt;\build-tools\3X.0.0\lib</code></p>
-<p><img loading="lazy" src="https://imgur.com/sLwOhQx.jpg" alt="simg_2"  />
-</p>
+<p><img alt="simg_2" loading="lazy" src="https://imgur.com/sLwOhQx.jpg"></p>
 <p>將 <code>d8.jar</code> 改為 <code>dx.jar</code>。</p>
 <p>就完成修改。</p>
 <h2 id="參考連結">參考連結</h2>
@@ -2703,7 +2749,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h3 id="configyml">config.yml</h3>
 <h4 id="search-post">Search Post</h4>
 <p>先在 config menu main 新增一個 Search 頁面</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>menu:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>menu:
 </span></span><span style="display:flex;"><span>    main:
 </span></span><span style="display:flex;"><span>        - identifier: archives
 </span></span><span style="display:flex;"><span>          name: Archives
@@ -2718,13 +2764,13 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>          url: /search/
 </span></span><span style="display:flex;"><span>          weight: 20
 </span></span></code></pre></div><p>且在最底下此內容。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>outputs:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>outputs:
 </span></span><span style="display:flex;"><span>    home:
 </span></span><span style="display:flex;"><span>        - HTML
 </span></span><span style="display:flex;"><span>        - RSS
 </span></span><span style="display:flex;"><span>        - JSON # is necessary
 </span></span></code></pre></div><p>最後在專案的 <code>content</code> 底下新增 <code>search.md</code>，即可完成功能。（<a href="https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page">參考文件</a>）</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
 </span></span><span style="display:flex;"><span>title: &#34;Search&#34; # in any language you want
 </span></span><span style="display:flex;"><span>layout: &#34;search&#34; # is necessary
 </span></span><span style="display:flex;"><span># url: &#34;/archive&#34;
@@ -2737,7 +2783,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="github-action">Github Action</h2>
 <p>有使用 Custom domain 的話，且 workflows 沒有設定 domain 的話，會造成每次更新文章時，都會清掉 Custom domain，變回原本的 github.io。</p>
 <h3 id="github-pages-workflowyml">GitHub Pages workflow.yml</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yml" data-lang="yml"><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">GitHub Pages</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">on</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">push</span>:
@@ -2780,8 +2826,6 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>這次架起來的感覺各方面都不錯，不管是讀取 Blog 速度、支援 Markdown、架設 Github 上且保留原始檔，到目前為止沒有明顯的缺點。</p>
 <p>目前最大問題就是 <code>SEO</code>，這是我完全沒有接觸過的。問題在於 Google 搜尋不到我的 Blog，所以這是之後要研究的部分。</p>
 <hr>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
 ]]></content:encoded>
     </item>
     <item>
@@ -2840,40 +2884,40 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>當時是看著 <a href="https://jessielab.com/wordpress%E6%95%99%E5%AD%B8-setting-up-a-website/">教學</a> 文章邊看邊選擇，過程除了刷卡付錢沒有什麼難度，我在 <a href="https://www.namecheap.com/">NameCheap</a> 買網址，虛擬主機則是使用 <a href="https://www.siteground.com/">SiteGround</a>。</p>
 <h3 id="使用三年心得-20192020">使用三年心得 (2019~2020)</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:center">年分</th>
-<th style="text-align:right">SiteGround</th>
-<th style="text-align:right">NameCheap</th>
-<th style="text-align:right">花費(NTD)</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">第一年</td>
-<td style="text-align:right">1493</td>
-<td style="text-align:right">285</td>
-<td style="text-align:right">1778</td>
-</tr>
-<tr>
-<td style="text-align:center">第二年</td>
-<td style="text-align:right">5375</td>
-<td style="text-align:right">315</td>
-<td style="text-align:right">5690</td>
-</tr>
-<tr>
-<td style="text-align:center">第三年</td>
-<td style="text-align:right">0</td>
-<td style="text-align:right">368</td>
-<td style="text-align:right">368</td>
-</tr>
-<tr>
-<td style="text-align:center">總花費</td>
-<td style="text-align:right"></td>
-<td style="text-align:right"></td>
-<td style="text-align:right">7836</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: center">年分</th>
+          <th style="text-align: right">SiteGround</th>
+          <th style="text-align: right">NameCheap</th>
+          <th style="text-align: right">花費(NTD)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">第一年</td>
+          <td style="text-align: right">1493</td>
+          <td style="text-align: right">285</td>
+          <td style="text-align: right">1778</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">第二年</td>
+          <td style="text-align: right">5375</td>
+          <td style="text-align: right">315</td>
+          <td style="text-align: right">5690</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">第三年</td>
+          <td style="text-align: right">0</td>
+          <td style="text-align: right">368</td>
+          <td style="text-align: right">368</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">總花費</td>
+          <td style="text-align: right"></td>
+          <td style="text-align: right"></td>
+          <td style="text-align: right">7836</td>
+      </tr>
+  </tbody>
 </table>
 <p>第一年 1778 元。而且很多功能可以玩、可以使用，整體使用是很滿意的。而到了第二年，沒有認真確認第一年花費多少就直接續約了，收到扣款通知才知道收費真的<strong>很貴</strong>。</p>
 <p>第一年跟第二年價格差了 <strong>3912</strong> 元，當時也沒有想到要退款，想說明年扣款時再來處理。</p>
@@ -2882,8 +2926,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="結論">結論</h2>
 <p>整體而言 Wordpress 對於新手的我架設 Blog，確實是不錯的體驗，只要有錢基本都能處理。不過續約的花費太貴，所以才放棄使用 SiteGround，尋找一些免費的方式。</p>
 <p>當時使用 NameCheap 時也有被盜刷過，記得要綁定 2FA、密碼不要重複。
-<img loading="lazy" src="https://imgur.com/pJBH4Q6.jpg" alt="img_1"  />
-</p>
+<img alt="img_1" loading="lazy" src="https://imgur.com/pJBH4Q6.jpg"></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -2892,7 +2935,10 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <link>https://wenrong-nexus.com/profile/about/</link>
       <pubDate>Thu, 03 Feb 2022 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/profile/about/</guid>
-      <description>五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。 擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。</description>
+      <description>&lt;p&gt;五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。&lt;/p&gt;
+&lt;p&gt;擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。&lt;/p&gt;
+&lt;h2 id=&#34;聯絡方式&#34;&gt;聯絡方式&lt;/h2&gt;
+&lt;p&gt;📧 &lt;a href=&#34;mailto:me@wenrong-nexus.com&#34;&gt;me@wenrong-nexus.com&lt;/a&gt;&lt;/p&gt;</description>
       <content:encoded><![CDATA[<p>五年以上遊戲開發經驗，多數專案都是一人製作完成，涵蓋上架、維護及效能優化等。</p>
 <p>擁有 iOS、Android 遊戲上架經驗， 以及多款 AR/VR/MR/Kinect/Oculus 遊戲開發經驗。</p>
 <h2 id="聯絡方式">聯絡方式</h2>
@@ -2924,8 +2970,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此專案為 Unity math quiz，是基於 <a href="https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-2-create-a-timed-math-quiz">Tutorial 2: Create a timed math quiz</a> 文件改寫出來的專案。</p>
-<p><img loading="lazy" src="https://i.imgur.com/Igy3NfA.gif" alt="img"  />
-</p>
+<p><img alt="img" loading="lazy" src="https://i.imgur.com/Igy3NfA.gif"></p>
 <h2 id="github"><a href="https://github.com/Wenrong274/MathQuiz">Github</a></h2>
 <hr>
 ]]></content:encoded>
@@ -2937,13 +2982,12 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <guid>https://wenrong-nexus.com/posts/unity-calendar/</guid>
       <description>Unity 實做日曆功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p><img loading="lazy" src="https://i.imgur.com/Pe4nXry.gif" alt="gif"  />
-</p>
+<p><img alt="gif" loading="lazy" src="https://i.imgur.com/Pe4nXry.gif"></p>
 <h2 id="使用方式">使用方式</h2>
 <p>預設日期為<code>當天日期</code>。</p>
 <p>可以直接使用 <code>UnityCalendar.GetDate()</code> 取得使用者設定日期，假如有錯誤會回報錯誤。</p>
 <p><code>testGetDate.cs</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    DateTime dt = unityCalendar.GetDate();
 </span></span><span style="display:flex;"><span>    text.text = dt.ToString(<span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span>);
@@ -2974,7 +3018,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h3 id="initialization">Initialization</h3>
 <p>Initial Addressable System 是<code>必要</code>的假如不初始化會造成一些使用上的問題。</p>
 <p>在 Start 上可直接初始化 Addressable System</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Start()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Start()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> InitAddressablesAsync = Addressables.InitializeAsync();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> InitAddressablesAsync;
@@ -2985,30 +3029,29 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>依 Window 為例，Catalog 更新後會放自動放置在</p>
 <p><code>C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addressables</code></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PC Name]</td>
-<td style="text-align:left">系統使用者名稱</td>
-</tr>
-<tr>
-<td style="text-align:left">[Company Name]</td>
-<td style="text-align:left">Unity 專案 Company Name</td>
-</tr>
-<tr>
-<td style="text-align:left">[Product Name]</td>
-<td style="text-align:left">Unity 專案 Product Name</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PC Name]</td>
+          <td style="text-align: left">系統使用者名稱</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Company Name]</td>
+          <td style="text-align: left">Unity 專案 Company Name</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Product Name]</td>
+          <td style="text-align: left">Unity 專案 Product Name</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/QAbjzCM.jpg" alt="asset_1"  />
-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateCatalogCoro()
+<p><img alt="asset_1" loading="lazy" src="https://imgur.com/QAbjzCM.jpg"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateCatalogCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    List&lt;<span style="color:#66d9ef">string</span>&gt; catalogsToUpdate = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> checkCatalogHandle = Addressables.CheckForCatalogUpdates(<span style="color:#66d9ef">false</span>);
@@ -3029,32 +3072,31 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>依 Window 為例，下載好的 Asset 更新後會放自動放置在</p>
 <p><code>C:\Users\[PC Name]\AppData\LocalLow\Unity\[Company Name]_[Product Name]</code></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PC Name]</td>
-<td style="text-align:left">系統使用者名稱</td>
-</tr>
-<tr>
-<td style="text-align:left">[Company Name]</td>
-<td style="text-align:left">Unity 專案 Company Name</td>
-</tr>
-<tr>
-<td style="text-align:left">[Product Name]</td>
-<td style="text-align:left">Unity 專案 Product Name</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PC Name]</td>
+          <td style="text-align: left">系統使用者名稱</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Company Name]</td>
+          <td style="text-align: left">Unity 專案 Company Name</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Product Name]</td>
+          <td style="text-align: left">Unity 專案 Product Name</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/Av0faq4.jpg" alt="asset_2"  />
-</p>
+<p><img alt="asset_2" loading="lazy" src="https://imgur.com/Av0faq4.jpg"></p>
 <h4 id="update-all-asset">Update All Asset</h4>
 <p>這個方式是使用 AA 系統紀錄 Catalog 取得出來的位置（Locator），在使用 <code>GetDownloadSizeAsync</code> 來確認檔案有無更新，來達成更新所有檔案。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateAllGroupsCoro()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateAllGroupsCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> loc <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
 </span></span><span style="display:flex;"><span>    {
@@ -3081,7 +3123,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="update-label-asset">Update label Asset</h4>
 <p>這個方式是使用 Label 下載特定資源。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> updateLabelSize = <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(label);
@@ -3115,7 +3157,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>刪除 <a href="#asset-path">Asset Path</a> 路徑下載的檔案。</p>
 <h4 id="clear-all-asset">Clear All Asset</h4>
 <p><code>Caching.ClearCache()</code> 是能夠完整的清除下載的所有檔案，但是不能單獨使用，還要搭配 <code>Addressables.ClearDependencyCacheAsync</code> 才能清除 Catalog 紀錄的下載資訊。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAllAssetCoro()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAllAssetCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locats <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
 </span></span><span style="display:flex;"><span>    {
@@ -3126,7 +3168,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    Caching.ClearCache();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="clear-label-asset">Clear Label Asset</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.LoadResourceLocationsAsync(label);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -3134,7 +3176,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locat <span style="color:#66d9ef">in</span> locats)
 </span></span><span style="display:flex;"><span>        Addressables.ClearDependencyCacheAsync(locat.PrimaryKey);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
 <h2 id="小結">小結</h2>
 <p>write something cool&hellip;</p>
 <h2 id="參考連結">參考連結</h2>
@@ -3147,9 +3189,8 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/posts/unity-particlepath/</guid>
       <description>Unity 實作粒子路徑系統。</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="https://i.imgur.com/tNmcGdz.gif" alt="demogif"  />
-</p>
-<h2 id="githubgithub"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
+      <content:encoded><![CDATA[<p><img alt="demogif" loading="lazy" src="https://i.imgur.com/tNmcGdz.gif"></p>
+<h2 id="github"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -3162,7 +3203,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 調整 Android、iOS 系統亮度功能。</p>
 <h2 id="使用方式">使用方式</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
 </span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Dimmer">Github</a></h2>
 <h2 id="參考連結">參考連結</h2>
 <p><a href="https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85">Unity から iOS&amp;Android の画面輝度を MAX にする方法</a></p>
@@ -3178,7 +3219,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 <code>UnityEngine.UI.Text</code> 增加 TextSpacing，且調整 TextSpacing 的 <code>Spacing</code> 調整文字間格。</p>
 <h2 id="scripts">Scripts</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine.UI;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">
@@ -3341,7 +3382,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來測試虛擬搖桿功能。</p>
 <p>使用 <a href="https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631">Joystick Pack</a> 支援各輸入端接口偛件。</p>
-<h2 id="tutorialtutorial"><a href="https://www.youtube.com/watch?v=8-X3BmvtXT0">Tutorial</a></h2>
+<h2 id="tutorial"><a href="https://www.youtube.com/watch?v=8-X3BmvtXT0">Tutorial</a></h2>
 <h2 id="github"><a href="https://github.com/Wenrong274/MobileJoystick">Github</a></h2>
 <hr>
 <hr>
@@ -3357,8 +3398,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>視覺化管理使用路徑，不過目前功能還是很粗糙。</p>
 <h2 id="feature">Feature</h2>
 <p>視覺化管理</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/FolderManager/master/doc/img/img_1.jpg" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/FolderManager/master/doc/img/img_1.jpg"></p>
 <h2 id="usage">Usage</h2>
 <p>Create path 之後會在
 <code>Assets\FolderManager\StreamingAssets\FolderManager.asset</code>
@@ -3379,9 +3419,8 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p><code>IndexedDB</code> 是有容量大小限制，所以需要注意存儲的檔案大小。</p>
 <h2 id="about-indexeddb">About IndexedDB</h2>
 <p><a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png" alt="img_1"  />
-</p>
-<h2 id="githubhttpsgithubcomwenrong274dataaccesswebgl"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>
@@ -3419,21 +3458,18 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Configure System -&gt; Global properties</code>。</p>
 <p>設定如下圖：</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG"></p>
 <p><code>Name</code>：<code>ANDROID_HOME</code></p>
 <p><code>Value</code>：AndroidSDK 路徑。</p>
 <h3 id="jenkins-jdk">Jenkins JDK</h3>
 <p>JDK 版本請選 <code>Java SE 8</code>，因為 Unity 只支援 Java SE 8。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Global Tool Configuration -&gt; JDK</code>。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG"></p>
 <h3 id="jenkins-unity3d-plugin">Jenkins Unity3d Plugin</h3>
 <p>需要至 Plugin Manager 安裝 Unity3d Plugin。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Plugin Manager -&gt; Available</code></p>
 <p>安裝完成後，需要設定 Unity Editor 路徑。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG" alt="img_3"  />
-</p>
+<p><img alt="img_3" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG"></p>
 <p><code>Name</code>：unity version</p>
 <p><code>Installation directory</code>：unity installed path</p>
 <h3 id="jenkins-item">Jenkins item</h3>
@@ -3442,12 +3478,11 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
 <p>在 Editor command line arguments 輸入</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
 </span></span></code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
 <p><code>-android</code> 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG" alt="img_4"  />
-</p>
-<h2 id="github-repogithub"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
+<p><img alt="img_4" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG"></p>
+<h2 id="github-repo"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
 <h2 id="reference">reference</h2>
 <p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a></p>
 <p><a href="https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/">Jenkins for Unity with DigitalOcean</a></p>
@@ -3462,13 +3497,12 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <description>Unity uGUI Text support insert link and image。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>測試 <a href="https://github.com/akof1314/uGUI_LinkImageText">LinkImageText</a> 應用。</p>
-<p><img loading="lazy" src="https://github.com/Wenrong274/HyperlinksText/blob/master/doc/img/1.png" alt="Img_1"  />
-</p>
+<p><img alt="Img_1" loading="lazy" src="https://github.com/Wenrong274/HyperlinksText/blob/master/doc/img/1.png"></p>
 <h2 id="主要內容">主要內容</h2>
 <p>使用 <a href="https://github.com/kimsama/Unity-QuickSheet">QuickSheet</a> 當資料庫，讓 <a href="https://github.com/setchi/FancyScrollView">FancyScrollView</a> 顯示資料庫名字。</p>
 <p>點擊 FancyScrollView button 會在 <a href="https://github.com/akof1314/uGUI_LinkImageText">HypeLinkText</a> 顯示 name。</p>
 <p>點擊 HypeLinkText 超連結文字，會顯示<code>超連結</code>內容。</p>
-<h2 id="github-repohttpsgithubcomwenrong274hyperlinkstext"><a href="https://github.com/Wenrong274/HyperlinksText">GitHub repo</a></h2>
+<h2 id="github-repo"><a href="https://github.com/Wenrong274/HyperlinksText">GitHub repo</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -3499,7 +3533,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>Error Log：<code>Cleartext HTTP traffic to 45.xx.xxx.xx not permitted</code></p>
 <h2 id="solution">Solution</h2>
 <p>在 <code>AndroidManifest.xml</code> 的 <code>application</code> 加入 <code>android:usesCleartextTraffic=&quot;true&quot;</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    <span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span>    <span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;utf-8&#34;?&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;manifest</span> <span style="color:#960050;background-color:#1e0010">...</span><span style="color:#f92672">&gt;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;uses-permission</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.permission.INTERNET&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;application</span>
@@ -3523,7 +3557,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
@@ -3578,7 +3612,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <p>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。</p>
 <p>而 B App 是使用 <code>Unity</code> 接收。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
@@ -3683,8 +3717,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="add-language">Add Language</h2>
 <ol>
 <li>下載官方提供的 <a href="https://github.com/jrsoftware/issrc">Github</a>，直接下載 <strong>Releases</strong> 版本，完成後解壓縮。</li>
-<li>複製 <code>root/Files/Languages</code> 資料夾，貼上並且覆蓋 <strong>Inno Setup 安裝資料夾</strong>。<img loading="lazy" src="https://imgur.com/3gD0X18.jpg" alt="img_1"  />
-</li>
+<li>複製 <code>root/Files/Languages</code> 資料夾，貼上並且覆蓋 <strong>Inno Setup 安裝資料夾</strong>。<img alt="img_1" loading="lazy" src="https://imgur.com/3gD0X18.jpg"></li>
 </ol>
 <h2 id="使用方式">使用方式</h2>
 <p>可以參考以下腳本，也可以自己寫，不知道寫法可以參考<a href="http://www.jrsoftware.org/ishelp/">官方文件</a>。</p>
@@ -3854,29 +3887,28 @@ end;
 <p>假如是使用複製舊有的 <code>.iss 檔</code>，只需要修改幾個需要注意的文字即可。</p>
 <p>正常的資料夾結構</p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Folder</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">ExampleFolder</td>
-<td style="text-align:left">打包前的資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">Setup</td>
-<td style="text-align:left">Inno Setup 輸出的資料夾</td>
-</tr>
-<tr>
-<td style="text-align:left">.iss</td>
-<td style="text-align:left">Inno Setup Script</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Folder</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">ExampleFolder</td>
+          <td style="text-align: left">打包前的資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Setup</td>
+          <td style="text-align: left">Inno Setup 輸出的資料夾</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">.iss</td>
+          <td style="text-align: left">Inno Setup Script</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/AXDhz5x.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://imgur.com/AXDhz5x.jpg"></p>
 <h3 id="修改-iss">修改 .iss</h3>
 <pre tabindex="0"><code class="language-Pascal" data-lang="Pascal">#define MyAppGUID &#34;GUID&#34;
 #define MyAppName &#34;Examle&#34;
@@ -3887,35 +3919,34 @@ end;
 #define MyAppPublisher &#34;wen rong studio&#34;
 </code></pre><h3 id="需修改地方">需修改地方</h3>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">Arg</th>
-<th style="text-align:left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">MyAppGUID</td>
-<td style="text-align:left">安裝系統 GUID，產生方式為 <code>Tools/Generated GUID</code>。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppName</td>
-<td style="text-align:left">桌面路徑名稱 。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppFolder</td>
-<td style="text-align:left">安裝目錄名稱。</td>
-</tr>
-<tr>
-<td style="text-align:left">MyAppSetupExeName</td>
-<td style="text-align:left">Inno Setup 輸出安裝檔名稱 。</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">Arg</th>
+          <th style="text-align: left">Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">MyAppGUID</td>
+          <td style="text-align: left">安裝系統 GUID，產生方式為 <code>Tools/Generated GUID</code>。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppName</td>
+          <td style="text-align: left">桌面路徑名稱 。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppFolder</td>
+          <td style="text-align: left">安裝目錄名稱。</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">MyAppSetupExeName</td>
+          <td style="text-align: left">Inno Setup 輸出安裝檔名稱 。</td>
+      </tr>
+  </tbody>
 </table>
 <h4 id="取得-guid-方法">取得 GUID 方法</h4>
-<p><img loading="lazy" src="https://imgur.com/d05PwU1.jpg" alt="img_3"  />
-</p>
-<h2 id="githubhttpsgithubcomwenrong274exampleinnosetup"><a href="https://github.com/Wenrong274/ExampleInnoSetup">Github</a></h2>
+<p><img alt="img_3" loading="lazy" src="https://imgur.com/d05PwU1.jpg"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/ExampleInnoSetup">Github</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -3941,7 +3972,7 @@ end;
 <li>右鍵新增字串值，名稱為程式（exe）路徑、資料為<code>~ RunAsInvoker</code></li>
 </ol>
 <h2 id="c-解決方式">C# 解決方式</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RegEditWhiteList</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RegEditWhiteList</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> keyName { <span style="color:#66d9ef">get</span>; <span style="color:#66d9ef">set</span>; }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> root = <span style="color:#e6db74">@&#34;Software\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers&#34;</span>;
@@ -3959,7 +3990,7 @@ end;
 </span></span><span style="display:flex;"><span>        key.Close();
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubrepo"><a href="https://github.com/Wenrong274/UACWhitelist">GitHub</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/UACWhitelist">GitHub</a></h2>
 <h3 id="使用方式">使用方式</h3>
 <p>因為修改註冊碼是修正當前使用者的註冊碼，因此只要換使用者就需要再新增一次白名單。</p>
 <h2 id="參考資料">參考資料</h2>
@@ -3979,20 +4010,17 @@ end;
 <li>Vuforia 8.5.9</li>
 </ul>
 <h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
-</p>
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg"></p>
 <h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
 <p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
 <p>移除 <code>&quot;$(SECROOT)&quot;</code> 參數</p>
-<p><img loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg"></p>
 <h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
+</span></span></code></pre></div><p><img alt="img_3" loading="lazy" src="https://i.imgur.com/7YCtki6.jpg"></p>
 <h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
 <p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
 <ul>
@@ -4000,21 +4028,18 @@ end;
 <p>設定 iOS architectures</p>
 <p>Build Setting -&gt; Architectures -&gt; Architectures</p>
 <p>Architectures 改為 <code>Standard architectures</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg" alt="img_5"  />
-</p>
+<p><img alt="img_5" loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg"></p>
 </li>
 <li>
 <p>設定 iOS 版本</p>
 <p>Build Setting -&gt; Deployment -&gt; iOS Deployment Target</p>
 <p>iOS Deployment Target 改為 <code>iOS 11.0</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/rPGArpU.jpg" alt="img_4"  />
-</p>
+<p><img alt="img_4" loading="lazy" src="https://i.imgur.com/rPGArpU.jpg"></p>
 </li>
 </ul>
 <h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
+</span></span></code></pre></div><p><img alt="img_6" loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg"></p>
 <h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
 <p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
 <h2 id="參考文章">參考文章</h2>
@@ -4084,7 +4109,7 @@ end;
 &lt;/plist&gt;
 </code></pre><p>修改好 <code>public link</code>、<code>app info</code> 就完成 <code>.plist</code>。</p>
 <h4 id="create-indexhtml">Create index.html</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;App install&lt;/<span style="color:#f92672">title</span>&gt;
@@ -4119,11 +4144,11 @@ end;
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
 <h3 id="windows-platform">Windows Platform</h3>
 <p>利用 <a href="https://docs.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid">GetSystemDefaultLCID</a> 取得本機端語系，再利用 <a href="https://docs.microsoft.com/zh-tw/dotnet/api/system.globalization.cultureinfo.getcultureinfo?view=netframework-3.5">CultureInfo.GetCultureInfo</a> 轉化為本機端語系文化。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
 </span></span></code></pre></div><p><a href="http://answers.unity.com/answers/1323282/view.html">參考文章</a></p>
 <h3 id="android-platform">Android Platform</h3>
 <p>直接呼叫原生系統 API 取得。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
 </span></span><span style="display:flex;"><span> {
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">&#34;&#34;</span>;
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">using</span> (AndroidJavaClass cls = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;java.util.Locale&#34;</span>))
@@ -4153,7 +4178,7 @@ end;
 </span></span></code></pre></div><p><a href="https://forum.unity.com/threads/application-systemlanguage.211171/#post-1423369">參考文章</a></p>
 <h3 id="ios-platfrom">iOS Platfrom</h3>
 <p>製作一個 .mm 文件，內容如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
 </span></span><span style="display:flex;"><span> {
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span>(string <span style="color:#f92672">==</span> NULL){
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> NULL;
@@ -4172,12 +4197,12 @@ end;
 </span></span><span style="display:flex;"><span>   }
 </span></span><span style="display:flex;"><span> }
 </span></span></code></pre></div><p>在 C# 寫出 CurIOSLang 的接口</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">string</span> CurIOSLang();
 </span></span></code></pre></div><p>這樣就可以在 Unity 直接呼叫 CurIOSLan 取得 iOS 語系了。</p>
 <p><a href="https://blog.csdn.net/teng_ontheway/article/details/50277169">參考文章</a></p>
 <hr>
-<h3 id="github-repohttpsgithubcomwenrong274nativesystemlanguage"><a href="https://github.com/Wenrong274/NativeSystemLanguage">Github repo</a></h3>
+<h3 id="github-repo"><a href="https://github.com/Wenrong274/NativeSystemLanguage">Github repo</a></h3>
 ]]></content:encoded>
     </item>
     <item>
@@ -4198,18 +4223,16 @@ end;
 <li>
 <p>Set up Unity Player Setting
 Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and Presentation -&gt; <strong>Selcet LogoTemplates</strong></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/logotemplate.jpg" alt="image_1"  />
-</p>
+<p><img alt="image_1" loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/logotemplate.jpg"></p>
 </li>
 <li>
 <p>Change Your Logo</p>
 <p>Logo 規格建議不要太大張。</p>
 <p>Path: root/Assets/WebGLTemplates/LogoTemplate/<strong>logo.png</strong></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/setinglogo.JPG" alt="image_2"  />
-</p>
+<p><img alt="image_2" loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/setinglogo.JPG"></p>
 </li>
 </ol>
-<h3 id="github-repohttpsgithubcomwenrong274unitywebgltemplate"><a href="https://github.com/Wenrong274/UnityWebGLTemplate">GitHub repo</a></h3>
+<h3 id="github-repo"><a href="https://github.com/Wenrong274/UnityWebGLTemplate">GitHub repo</a></h3>
 <p><a href="https://ocias.com/blog/how-to-set-up-a-unity-webgl-template/">參考文章</a></p>
 <hr>
 ]]></content:encoded>
@@ -4226,7 +4249,7 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
 <h3 id="使用方式">使用方式</h3>
 <p>直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。</p>
 <h3 id="script">Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#if</span> PlatformWebGL
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()

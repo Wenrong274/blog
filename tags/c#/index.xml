@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>C# on Wenrong Nexus</title>
-    <link>https://wenrong-nexus.com/tags/c</link>
+    <link>https://wenrong-nexus.com/tags/c%23/</link>
     <description>Recent content in C# on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Sun, 13 Oct 2024 03:11:00 +0800</lastBuildDate>
-    <atom:link href="https://wenrong-nexus.com/tags/c" rel="self" type="application/rss+xml" />
+    <atom:link href="https://wenrong-nexus.com/tags/c%23/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Effective C# 做法 22-23</title>
       <link>https://wenrong-nexus.com/posts/effectivecsharpitme22-23/</link>
@@ -17,7 +17,7 @@
       <content:encoded><![CDATA[<h2 id="做法-22">做法 22</h2>
 <p><code>支援泛型的共變數與反變數</code></p>
 <h3 id="1-這個-out-也是-共變數">1. 這個 out 也是 共變數?</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> TryParse (<span style="color:#66d9ef">string?</span> s, IFormatProvider? provider, <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">int</span> result);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> TryParse (<span style="color:#66d9ef">string?</span> s, IFormatProvider? provider, <span style="color:#66d9ef">out</span> <span style="color:#66d9ef">int</span> result);
 </span></span></code></pre></div><p>方法參數中的 out 關鍵字：
 在 TryParse 方法中的 out int result 是一個輸出參數。這個 out 關鍵字的作用是：</p>
 <ul>
@@ -26,7 +26,7 @@
 <li>呼叫方法時，不需要初始化這個參數，但必須在呼叫後使用它。</li>
 </ul>
 <p>在泛型接口或委託定義中使用的 out 關鍵字表示協變。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEnumerable</span>&lt;<span style="color:#66d9ef">out</span> T&gt; { ... }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEnumerable</span>&lt;<span style="color:#66d9ef">out</span> T&gt; { ... }
 </span></span></code></pre></div><p>這裡的 out 表示：</p>
 <ul>
 <li>T 只能用作輸出（返回值），不能用作輸入（參數）。</li>
@@ -60,17 +60,17 @@
 <p>定義：允許使用比原本指定的類別更具體（更繼承）的類型。
 關鍵字：out
 應用：通常用於返回類別或只讀泛型介面。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>IEnumerable&lt;<span style="color:#66d9ef">object</span>&gt; objects = strings; <span style="color:#75715e">// 合法，因為 IEnumerable&lt;T&gt; 是共變數</span>
 </span></span></code></pre></div><h4 id="反變數contravariance">反變數（Contravariance）</h4>
 <p>定義：允許使用比原本指定的類別更一般（更基礎）的類別。
 關鍵字：in
 應用：通常用於參數類別或只寫泛型介面。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">object</span>&gt; objectAction = (<span style="color:#66d9ef">object</span> obj) =&gt; Console.WriteLine(obj);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">object</span>&gt; objectAction = (<span style="color:#66d9ef">object</span> obj) =&gt; Console.WriteLine(obj);
 </span></span><span style="display:flex;"><span>Action&lt;<span style="color:#66d9ef">string</span>&gt; stringAction = objectAction; <span style="color:#75715e">// 合法，因為 Action&lt;T&gt; 是反變數</span>
 </span></span></code></pre></div><h4 id="詳細解釋和更多例子">詳細解釋和更多例子</h4>
 <p>共變數例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> { }
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Animal</span> { }
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Dog</span> : Animal { }
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>IEnumerable&lt;Dog&gt; dogs = <span style="color:#66d9ef">new</span> List&lt;Dog&gt;();
@@ -80,7 +80,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> ProcessAnimals(IEnumerable&lt;Animal&gt; animals) { ... }
 </span></span><span style="display:flex;"><span>ProcessAnimals(dogs); <span style="color:#75715e">// 可以傳入 Dog 的集合</span>
 </span></span></code></pre></div><p>反變數例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IComparer</span>&lt;<span style="color:#66d9ef">in</span> T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IComparer</span>&lt;<span style="color:#66d9ef">in</span> T&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> Compare(T x, T y);
 </span></span><span style="display:flex;"><span>}
@@ -97,7 +97,7 @@
 </span></span><span style="display:flex;"><span>List&lt;Dog&gt; dogs = <span style="color:#66d9ef">new</span> List&lt;Dog&gt;();
 </span></span><span style="display:flex;"><span>dogs.Sort(dogComparer); <span style="color:#75715e">// 可以使用 Animal 的比較器來比較 Dog</span>
 </span></span></code></pre></div><p>共變數和反變數的組合</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IConverter</span>&lt;<span style="color:#66d9ef">in</span> TInput, <span style="color:#66d9ef">out</span> TOutput&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IConverter</span>&lt;<span style="color:#66d9ef">in</span> TInput, <span style="color:#66d9ef">out</span> TOutput&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    TOutput Convert(TInput input);
 </span></span><span style="display:flex;"><span>}
@@ -126,7 +126,7 @@
 共變數和反變數強大的特性，能夠提高程式碼的靈活性和可重用性。
 共變數（out）允許使用更具體的類型，而反變數（in）允許使用更一般的類型。正確理解和使用這些概念可以幫助設計更靈活、更強大的 API 和框架。</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Dog dog = <span style="color:#66d9ef">new</span> Dog(<span style="color:#e6db74">&#34;doggy&#34;</span>);
 </span></span><span style="display:flex;"><span>    IOutDog&lt;Dog&gt; dogProvider = <span style="color:#66d9ef">new</span> DogProvider(dog);
@@ -211,7 +211,7 @@
 做 cast 時要了解自己在做什麼 不然能編譯成功也會在 runtime 時炸掉</p>
 <h2 id="做法-23">做法 23</h2>
 <p><code>使用 delegate 定義型別參數的方法約束</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// double[] xValues = { 0,1,2,3,4,5,6,7,8,9,</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// double[] xValues = { 0,1,2,3,4,5,6,7,8,9,</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//                 0,1,2,3,4,5,6,7,8,9,};</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// double[] yValues = { 0,1,2,3,4,5,6,7,8,9,</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//                 0,1,2,3,4,5,6,7,8,9,};</span>
@@ -263,7 +263,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="做法-23-心得">做法 23 心得</h3>
 <p>可以利用 這種方式，讓不同類別擁有相同介面，使用相同的方法，讓程式彈性變高</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// ForeachIn(items,(item, i) =&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#75715e">// ForeachIn(items,(item, i) =&gt;</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// {</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">//      item.SetIcon(icon[i]);</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// });</span>
@@ -290,7 +290,7 @@
       <content:encoded><![CDATA[<h2 id="做法-20">做法 20</h2>
 <p><code>以 IComparable&lt;T&gt; 與 IComparer&lt;T&gt; 實作排序關係</code></p>
 <h3 id="實作">實作</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Customer</span> : IComparable&lt;Customer&gt;, IComparable
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Customer</span> : IComparable&lt;Customer&gt;, IComparable
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> name;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">double</span> revenue;
@@ -333,7 +333,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h3 id="使用方式">使用方式</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> Main(<span style="color:#66d9ef">string</span>[] args)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 創建一些 Customer 實例</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> customers = <span style="color:#66d9ef">new</span> List&lt;Customer&gt;
@@ -414,7 +414,7 @@
 <blockquote>
 <p>如果你建構的泛型類別的型別參數描述的任何型別實例，你必須考慮到這些型別可能有實作 IDisposable。你必須防衛性的撰寫程式並確保這些物件離開範圍後不會洩漏資源。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEngine</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">IEngine</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">void</span> DoWork();
 </span></span><span style="display:flex;"><span>}
@@ -498,7 +498,7 @@
 <ul>
 <li>
 <p>為什麼這三組執行期都共用相同的程式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">string</span>&gt; strings = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;Stream&gt; streams=newList&lt;Stream&gt;();
 </span></span><span style="display:flex;"><span>List&lt;MyClassType&gt; myClassTypes=newList&lt;MyClassType&gt;();
 </span></span></code></pre></div></li>
@@ -507,7 +507,7 @@
 <ul>
 <li>
 <p>為什麼這三組有不同的機械碼?</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">double</span>&gt; doubles = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">double</span>&gt;();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">double</span>&gt; doubles = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">double</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; ints = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">int</span>&gt;();
 </span></span><span style="display:flex;"><span>List&lt;MyStruct&gt; myStructs = <span style="color:#66d9ef">new</span> List&lt;MyStruct&gt;();
 </span></span></code></pre></div><p>CLR 為每種值類型參數生成特定的代碼，以優化性能和類型安全性。</p>
@@ -516,7 +516,7 @@
 <h4 id="1-泛型類別使用-default">1. 泛型類別使用 default()</h4>
 <p>在講到泛型類別使用 default() 的方法寫時，需要把 T 改成 T?，因為 Value Type 的 Default = 0，而 Reference Type 是沒有 Default，回傳的結果會是 null。
 需要告訴使用者可能會回傳 null 建議還是要回傳 T?，也提高程式碼閱讀性。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> T? FirstOrDefault&lt;T&gt;(<span style="color:#66d9ef">this</span> IEnumerable&lt;T&gt; source, Predicate&lt;T&gt; predicate)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> T? FirstOrDefault&lt;T&gt;(<span style="color:#66d9ef">this</span> IEnumerable&lt;T&gt; source, Predicate&lt;T&gt; predicate)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> item <span style="color:#66d9ef">in</span> source)
 </span></span><span style="display:flex;"><span>    {
@@ -527,9 +527,9 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="2-少了-null-確認">2. 少了 null 確認</h4>
 <p>原本課本的判斷，少了 null 確認</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual(T left, T right) =&gt;	left.Equals(right);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual(T left, T right) =&gt;	left.Equals(right);
 </span></span></code></pre></div><p>可以改這種寫法，多了做法 03 的寫法，用來判斷 null。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual&lt;T&gt;(T left, T right)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> AreEqual&lt;T&gt;(T left, T right)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#66d9ef">is</span> T qu)
 </span></span><span style="display:flex;"><span>    {
@@ -539,7 +539,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="3-使用-t">3. 使用 T?</h4>
 <p>使用 T? 明確表示 factory 方法可能返回 null。這增加了代碼的可讀性和意圖的清晰度。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>MyClass obj1 = Factory(() =&gt; <span style="color:#66d9ef">new</span> MyClass { Name = <span style="color:#e6db74">&#34;Object 1&#34;</span> });
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>MyClass obj1 = Factory(() =&gt; <span style="color:#66d9ef">new</span> MyClass { Name = <span style="color:#e6db74">&#34;Object 1&#34;</span> });
 </span></span><span style="display:flex;"><span>Console.WriteLine(obj1.Name); <span style="color:#75715e">// 輸出: Object 1</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">// 使用返回 null 的工廠方法</span>
@@ -593,7 +593,7 @@
 <ol>
 <li>
 <p>優先使用接口約束：接口約束更靈活，能同時適用於值類型和引用類型。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GenericClass</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IComparable&lt;T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">GenericClass</span>&lt;T&gt; <span style="color:#66d9ef">where</span> T : IComparable&lt;T&gt;
 </span></span></code></pre></div></li>
 <li>
 <p>基於行為而非類型種類進行約束：關注類型能做什麼，而不是類型是什麼。</p>
@@ -616,7 +616,7 @@
 <h2 id="做法-19">做法 19</h2>
 <p>使用執行期型別檢查特化泛型演算法
 實作</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerable</span>&lt;T&gt; : IEnumerable&lt;T&gt;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">sealed</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerable</span>&lt;T&gt; : IEnumerable&lt;T&gt;
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ReverseEnumerator</span> : IEnumerator&lt;T&gt;
 </span></span><span style="display:flex;"><span>    {
@@ -728,7 +728,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>使用方式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> StringEnumerable()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> StringEnumerable()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">&#34;Hello, World!&#34;</span>;
 </span></span><span style="display:flex;"><span>
@@ -832,7 +832,7 @@
       <content:encoded><![CDATA[<h2 id="做法-14">做法 14</h2>
 <p><code>減少重複的初始化邏輯</code></p>
 <h3 id="1-建構子初始化程序讓一個建構子呼叫其他的建構子">1. 建構子初始化程序讓一個建構子呼叫其他的建構子。</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List&lt;<span style="color:#66d9ef">string</span>&gt; coll;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">string</span> name;
@@ -851,7 +851,7 @@
 <p>readonly 欄位只能在宣告時或在定義該欄位的類別建構子中賦值。</p>
 <h2 id="做法-15">做法 15</h2>
 <p><code>避免建構不必要的物件</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#75715e">/// 劣</span>
 </span></span><span style="display:flex;"><span>    using(Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>)){
@@ -859,7 +859,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>推薦方式</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">readonly</span> Font myFont = <span style="color:#66d9ef">new</span> Font(<span style="color:#e6db74">&#34;Arial&#34;</span>, <span style="color:#ae81ff">12.0f</span>);
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> OnPaint(PaintEventArgs e)
 </span></span><span style="display:flex;"><span>{
@@ -890,14 +890,11 @@
       <content:encoded><![CDATA[<h2 id="做法-11">做法 11</h2>
 <p><code>認識 .NET 資源管理</code></p>
 <h3 id="1-簡易圖示記憶體區塊的關聯圖">1. 簡易圖示記憶體區塊的關聯圖</h3>
-<p><img loading="lazy" src="https://i.imgur.com/dfX2Obh.png" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://i.imgur.com/dfX2Obh.png"></p>
 <h3 id="2-記憶體排列物件的放置位址">2. 記憶體排列物件的放置位址</h3>
-<p><img loading="lazy" src="https://i.imgur.com/FOmH0z0.png" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/FOmH0z0.png"></p>
 <p>呼叫 GC 後，記憶體位置改變了，這就是記憶體回收的概念</p>
-<p><img loading="lazy" src="https://i.imgur.com/JNXcMs0.png" alt="img_3"  />
-</p>
+<p><img alt="img_3" loading="lazy" src="https://i.imgur.com/JNXcMs0.png"></p>
 <h3 id="3-記憶體層代">3. 記憶體層代</h3>
 <ul>
 <li>
@@ -923,14 +920,14 @@
 <p>initobj 指令用於將值類型的變量初始化為其默認值，因此 initobj 不會導致 boxing 或 unboxing。
 使用 initobj 時，是直接記憶體操作，不涉及對象的創建或類型的轉換。</p>
 <p>推薦用法</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> List&lt;<span style="color:#66d9ef">string</span>&gt; labels = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="做法-13">做法 13</h2>
 <p><code>對靜態類別成員進行適當的初始化</code></p>
 <p>Singleton 初始化具有複雜的邏輯，可以在 <code>static</code> 建構子中寫。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySingleton</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MySingleton</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> MySingleton instance = <span style="color:#66d9ef">new</span> MySingleton();
 </span></span><span style="display:flex;"><span>
@@ -964,7 +961,7 @@
       <content:encoded><![CDATA[<h2 id="做法-07">做法 07</h2>
 <p><code>以 delegate 表示 callback</code></p>
 <p>可以利用 delegate 回傳 bool 當判斷或者是回傳類別等功能降低城市耦合。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = Enumerable.Range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>).ToList();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span>List&lt;<span style="color:#66d9ef">int</span>&gt; numbers = Enumerable.Range(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">10</span>).ToList();
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> oddNumbers = numbers.Find(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">1</span>);
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> test = numbers.TrueForAll(x =&gt; x &lt; <span style="color:#ae81ff">50</span>);
 </span></span><span style="display:flex;"><span>numbers.RemoveAll(x =&gt; x % <span style="color:#ae81ff">2</span> == <span style="color:#ae81ff">0</span>);
@@ -985,14 +982,14 @@
 </span></span></code></pre></div><h2 id="做法-08">做法 08</h2>
 <p><code>對事件叫用使用空條件運算子</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> RaiseUpdate()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    counter++;
 </span></span><span style="display:flex;"><span>    Updated?.Invoke(<span style="color:#66d9ef">this</span>, counter);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="做法-09">做法 09</h2>
 <p><code>減少 boxing 與 unboxing</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">25</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> i = <span style="color:#ae81ff">25</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = i; <span style="color:#75715e">/// box</span>
 </span></span><span style="display:flex;"><span>Console.WriteLine(o.ToString()); <span style="color:#75715e">/// 25</span>
 </span></span><span style="display:flex;"><span>
@@ -1031,7 +1028,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 </ol>
 <h2 id="做法-10">做法 10</h2>
 <p><code>只對基底類別更新使用 new 修飾詞</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">void</span> MagicMethod() { }
 </span></span><span style="display:flex;"><span>}
@@ -1050,7 +1047,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
       <content:encoded><![CDATA[<h2 id="做法-04">做法 04</h2>
 <p><code>以內插字串取代 string.Format()</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#e6db74">&#34;test&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">string</span> name = <span style="color:#e6db74">&#34;test&#34;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">float</span> height = <span style="color:#ae81ff">180</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> age = <span style="color:#ae81ff">20</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">string</span> str = <span style="color:#e6db74">$&#34;userName: {name}, age: {age}, height: {height}&#34;</span>;
@@ -1062,7 +1059,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="做法-06">做法 06</h2>
 <p><code>避免字串型別 API</code></p>
 <p>使用 <code>nameof</code> 運算子時，任何對於屬性名稱的改變都會正確的反應在用於事件參數的字串中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> Name
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">get</span> { <span style="color:#66d9ef">return</span> name; }
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">set</span>
@@ -1117,7 +1114,7 @@ boxing 與 unboxing 操作會在你預料之外的複製拷貝，這導致 bug�
 <h2 id="做法-03">做法 03</h2>
 <p><code>偏好 is 或 as 運算子而非型別轉換</code></p>
 <p>推薦這樣寫</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = <span style="color:#66d9ef">new</span> MyType();
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-Csharp" data-lang="Csharp"><span style="display:flex;"><span><span style="color:#66d9ef">object</span> o = <span style="color:#66d9ef">new</span> MyType();
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">/// 不推薦</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> t = (MyType)o;

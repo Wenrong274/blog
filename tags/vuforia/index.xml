@@ -4,7 +4,7 @@
     <title>Vuforia on Wenrong Nexus</title>
     <link>https://wenrong-nexus.com/tags/vuforia/</link>
     <description>Recent content in Vuforia on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Thu, 17 Oct 2019 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/vuforia/index.xml" rel="self" type="application/rss+xml" />
@@ -20,20 +20,17 @@
 <li>Vuforia 8.5.9</li>
 </ul>
 <h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
-</p>
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg"></p>
 <h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
 <p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
 <p>移除 <code>&quot;$(SECROOT)&quot;</code> 參數</p>
-<p><img loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg"></p>
 <h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
+</span></span></code></pre></div><p><img alt="img_3" loading="lazy" src="https://i.imgur.com/7YCtki6.jpg"></p>
 <h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
 <p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
 <ul>
@@ -41,21 +38,18 @@
 <p>設定 iOS architectures</p>
 <p>Build Setting -&gt; Architectures -&gt; Architectures</p>
 <p>Architectures 改為 <code>Standard architectures</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg" alt="img_5"  />
-</p>
+<p><img alt="img_5" loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg"></p>
 </li>
 <li>
 <p>設定 iOS 版本</p>
 <p>Build Setting -&gt; Deployment -&gt; iOS Deployment Target</p>
 <p>iOS Deployment Target 改為 <code>iOS 11.0</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/rPGArpU.jpg" alt="img_4"  />
-</p>
+<p><img alt="img_4" loading="lazy" src="https://i.imgur.com/rPGArpU.jpg"></p>
 </li>
 </ul>
 <h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
+</span></span></code></pre></div><p><img alt="img_6" loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg"></p>
 <h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
 <p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
 <h2 id="參考文章">參考文章</h2>

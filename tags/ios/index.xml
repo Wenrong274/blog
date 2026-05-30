@@ -4,7 +4,7 @@
     <title>IOS on Wenrong Nexus</title>
     <link>https://wenrong-nexus.com/tags/ios/</link>
     <description>Recent content in IOS on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 08 Mar 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/ios/index.xml" rel="self" type="application/rss+xml" />
@@ -16,9 +16,8 @@
       <description>write something</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 Windwos 環境使用 Unity 輸出 XCode，之後使用 Mac 測試、上傳，出現了錯誤。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Command PhaseScriptExecution failed with a nonzero exit code
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/AvL0uqn.png" alt="img"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Command PhaseScriptExecution failed with a nonzero exit code
+</span></span></code></pre></div><p><img alt="img" loading="lazy" src="https://i.imgur.com/AvL0uqn.png"></p>
 <h2 id="解決方式">解決方式</h2>
 <p>因為專案有使用 Cardboard，且 Unity 是使用 2022，才會出現此問題，之前使用 2021 輸出上架都沒問題。</p>
 <p>我的解決方法是把專案改成在 MacOS 上輸出就能完美解決此問題。</p>
@@ -93,7 +92,7 @@
 &lt;/plist&gt;
 </code></pre><p>修改好 <code>public link</code>、<code>app info</code> 就完成 <code>.plist</code>。</p>
 <h4 id="create-indexhtml">Create index.html</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
 </span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;App install&lt;/<span style="color:#f92672">title</span>&gt;

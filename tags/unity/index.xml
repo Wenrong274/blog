@@ -4,7 +4,7 @@
     <title>Unity on Wenrong Nexus</title>
     <link>https://wenrong-nexus.com/tags/unity/</link>
     <description>Recent content in Unity on Wenrong Nexus</description>
-    <generator>Hugo -- 0.124.1</generator>
+    <generator>Hugo</generator>
     <language>zh</language>
     <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://wenrong-nexus.com/tags/unity/index.xml" rel="self" type="application/rss+xml" />
@@ -18,7 +18,7 @@
 <p>在 Android 11 以上的版本使用 VideoPlayer 呼叫 <code>Stop();</code> 時會造成 App Crush。</p>
 <p>官方論壇討論此問題<a href="https://forum.unity.com/threads/android-crash-when-videoplayer-stop-is-executed.1361863/">文章</a>。</p>
 <h2 id="錯誤-log">錯誤 log</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>Stack trace:
 </span></span><span style="display:flex;"><span>Error AndroidRuntime signal 11 (SIGSEGV), code 1 (SEGV_MAPERR), fault addr 0x0
 </span></span><span style="display:flex;"><span>Error AndroidRuntime Cause: null pointer dereference
 </span></span><span style="display:flex;"><span>Error AndroidRuntime r0 00000000 r1 00003f06 r2 71303e68 r3 00000002
@@ -53,9 +53,8 @@
 <p>可能因為測試的硬體裝置數據優化有所不同，建議還是實際測試後才決定。</p>
 <h2 id="使用方式">使用方式</h2>
 <p>可以先使用 demo 場景測試，必須要打開 <code>IsJob</code>，才會啟動 Job System。</p>
-<p><img loading="lazy" src="https://imgur.com/lfos4S0.gif" alt="demogif"  />
-</p>
-<h2 id="githubgithub"><a href="https://github.com/Wenrong274/ParticleBezierPath">GitHub</a></h2>
+<p><img alt="demogif" loading="lazy" src="https://imgur.com/lfos4S0.gif"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/ParticleBezierPath">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -87,7 +86,7 @@
 <ul>
 <li>url 呼叫方式</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -102,7 +101,7 @@
 <ul>
 <li>自訂 id</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;intent-filter&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;action</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#f92672">/&gt;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;category</span> <span style="color:#a6e22e">android:name=</span><span style="color:#e6db74">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#f92672">/&gt;</span>
@@ -113,8 +112,7 @@
 <h2 id="ios">iOS</h2>
 <p>Unity 設定 link id 的方式在 <a href="https://docs.unity3d.com/Manual/deep-linking-ios.html">Deep linking on iOS</a> 有介紹如何設定，而 Xcode 也能設定，不過建議是在 Unity 中設定非必要不建議額外自己在手動設置，主要是怕輸出時忘記導致功能失效。</p>
 <p>Xcode 詳細設定可以參考這邊 <a href="https://medium.com/wolox/ios-deep-linking-url-scheme-vs-universal-links-50abd3802f97">IOS Deep linking: URL Scheme vs Universal Links</a></p>
-<p><img loading="lazy" src="https://imgur.com/WIvC4gC.png" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://imgur.com/WIvC4gC.png"></p>
 <p>這樣設定後就會與 Android 一樣的功能，在瀏覽器輸出該 link id 就會自動對應到 app。</p>
 <h2 id="其他">其他</h2>
 <ul>
@@ -150,7 +148,7 @@
 <p>官方也有文件解釋 Deep link 的基礎設定。</p>
 <h2 id="script-start">Script Start</h2>
 <p>需要再被喚醒 app 的瞬間也就是 Awake 時，先讀取 <code>Application.absoluteURL</code> 才能讀取道 deep link 的資料。<code>Application.deepLinkActivated</code> 部分則是 app 的 deep link feedback。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        Application.deepLinkActivated += OnDeepLinkActivated;
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (!<span style="color:#66d9ef">string</span>.IsNullOrEmpty(Application.absoluteURL))
@@ -158,7 +156,7 @@
 </span></span><span style="display:flex;"><span>    }
 </span></span></code></pre></div><h2 id="script-url-arg">Script Url Arg</h2>
 <p>拆解 Deep link 夾帶的參數，格式大概與 web 的 url get 類似，可以用這種方式去解析，夾帶的參數。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> OnDeepLinkActivated(<span style="color:#66d9ef">string</span> url)
 </span></span><span style="display:flex;"><span>    {
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] urlArg = url.Split(<span style="color:#e6db74">&#39;?&#39;</span>);
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">string</span>[] args = <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">string</span>[<span style="color:#ae81ff">0</span>];
@@ -190,7 +188,7 @@
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity Text 中英混雜導致英文字跳行問題，主要是 Space 字串的問題，可以用 <code>\u00A0</code> 替代 Space。</p>
 <h2 id="code">Code</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">readonly</span> <span style="color:#66d9ef">string</span> no_breaking_space = <span style="color:#e6db74">&#34;\u00A0&#34;</span>;
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> ReplaceSpace(<span style="color:#66d9ef">string</span> context)
 </span></span><span style="display:flex;"><span>{
@@ -201,13 +199,11 @@
 <ul>
 <li>使用前</li>
 </ul>
-<p><img loading="lazy" src="https://imgur.com/4dSyVJL.jpg" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://imgur.com/4dSyVJL.jpg"></p>
 <ul>
 <li>使用後</li>
 </ul>
-<p><img loading="lazy" src="https://imgur.com/GhMA0mV.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://imgur.com/GhMA0mV.jpg"></p>
 <hr>
 ]]></content:encoded>
     </item>
@@ -221,7 +217,7 @@
 <p>之前因為遇到多平台功能，要輸出時各個平台 Player Setting 細項設定皆為不同，會因為某些沒有設定導致輸出時出包，所以才寫了一個自動輸出個平台功能。</p>
 <h2 id="xr-setting">XR Setting</h2>
 <p>可以利用這段來新增或移除 XR 裡面的 Oculus 勾選。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> SetOculusXRLoader(BuildTargetGroup buildTarget, <span style="color:#66d9ef">bool</span> active)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    XRGeneralSettingsPerBuildTarget buildTargetSettings = <span style="color:#66d9ef">null</span>;
 </span></span><span style="display:flex;"><span>    EditorBuildSettings.TryGetConfigObject(XRGeneralSettings.k_SettingsKey, <span style="color:#66d9ef">out</span> buildTargetSettings);
@@ -232,11 +228,10 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
 </span></span><span style="display:flex;"><span>        XRPackageMetadataStore.RemoveLoader(settings.Manager, <span style="color:#e6db74">&#34;Unity.XR.Oculus.OculusLoader&#34;</span>, buildTarget);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/l0ovOpl.png" alt="img_1"  />
-</p>
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/l0ovOpl.png"></p>
 <h2 id="build">Build</h2>
 <p>利用這段自動輸出，options 可以設定 <code>BuildOptions.None</code>、<code>BuildOptions.AutoRunPlayer</code>，一般的 Build 和 Build and Run。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> BuildRelease(<span style="color:#66d9ef">string</span> Path, BuildTarget Target, BuildOptions options)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Console.Clear();
 </span></span><span style="display:flex;"><span>    BuildPlayerOptions playerOptions = GetBuildPlayer(Path, Target, options);
@@ -256,7 +251,7 @@
 </span></span><span style="display:flex;"><span>    };
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="完整-script">完整 Script</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-C#" data-lang="C#"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SampleBuildRelease</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> AppName =&gt; PlayerSettings.productName;
 </span></span><span style="display:flex;"><span>
@@ -348,56 +343,6 @@
 ]]></content:encoded>
     </item>
     <item>
-      <title>Unity Project Structure</title>
-      <link>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</link>
-      <pubDate>Wed, 05 Oct 2022 00:00:00 +0000</pubDate>
-      <guid>https://wenrong-nexus.com/posts/unit-unity-projectstructure/</guid>
-      <description>自動建立簡易專案資料夾結構</description>
-      <content:encoded><![CDATA[<h2 id="unity-project-structure">Unity Project Structure</h2>
-<p>主要是建立一個自動建立簡易專案資料夾結構。</p>
-<p>此參考 <a href="https://github.com/dkoprowski/UnityProjectTreeGenerator">UnityProjectTreeGenerator</a> 方法建立資料夾，</p>
-<h3 id="使用方式">使用方式</h3>
-<p><code>Tools &gt; Generate Project Structure</code></p>
-<p>必須要設定 Root Name 才能點擊 <code>Create Structure</code></p>
-<p><img loading="lazy" src="https://imgur.com/iBAEGNO.png" alt="img_1"  />
-</p>
-<h3 id="資料夾結構">資料夾結構</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>|- Assets
-</span></span><span style="display:flex;"><span>    |- Project Name /// 自己設定
-</span></span><span style="display:flex;"><span>        |- 00_Art
-</span></span><span style="display:flex;"><span>        |   |- 00_Profabs
-</span></span><span style="display:flex;"><span>        |   |   |- Models
-</span></span><span style="display:flex;"><span>        |   |   |- UI
-</span></span><span style="display:flex;"><span>        |   |- 01_Shaders
-</span></span><span style="display:flex;"><span>        |   |   |- UI_Shaders
-</span></span><span style="display:flex;"><span>        |   |- 02_Timeline
-</span></span><span style="display:flex;"><span>        |   |- 03_Models
-</span></span><span style="display:flex;"><span>        |   |   |- Example_Model
-</span></span><span style="display:flex;"><span>        |   |   |   |- 3D
-</span></span><span style="display:flex;"><span>        |   |   |   |- Animation
-</span></span><span style="display:flex;"><span>        |   |   |   |- Textures
-</span></span><span style="display:flex;"><span>        |   |   |- Example_Effect
-</span></span><span style="display:flex;"><span>        |   |       |- Textures
-</span></span><span style="display:flex;"><span>        |   |- 04_Scenes
-</span></span><span style="display:flex;"><span>        |   |- 05_UI
-</span></span><span style="display:flex;"><span>        |   |   |- Textures
-</span></span><span style="display:flex;"><span>        |   |   |- Effect
-</span></span><span style="display:flex;"><span>        |   |       |- Textures
-</span></span><span style="display:flex;"><span>        |   |       |- Animation
-</span></span><span style="display:flex;"><span>        |   |       |- Material
-</span></span><span style="display:flex;"><span>        |   |- 07_Audio
-</span></span><span style="display:flex;"><span>        |   |- 08_Video
-</span></span><span style="display:flex;"><span>        |- 01_Program
-</span></span><span style="display:flex;"><span>           |- 00_Scenes
-</span></span><span style="display:flex;"><span>           |- 01_Scripts
-</span></span><span style="display:flex;"><span>           |- 02_Tests
-</span></span><span style="display:flex;"><span>           |- 03_Prefabs
-</span></span><span style="display:flex;"><span>           |- 05_UI
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-ProjectStructure">Github</a></h2>
-<hr>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Unity Open Shader For VSCode</title>
       <link>https://wenrong-nexus.com/posts/openshaderforvscode/</link>
       <pubDate>Tue, 09 Aug 2022 00:00:00 +0000</pubDate>
@@ -409,18 +354,16 @@
 <p>因為平常開發時都是使用 Visual Studio，想開啟 Shader 時可以直接使用 VSCode 編輯，因此才參考 <a href="https://blog.csdn.net/weixin_44293055/article/details/120340635">Sublime Text &amp; Unity Shader</a>，把 Sublime Text 改成使用 VSCode。</p>
 <h2 id="環境變數">環境變數</h2>
 <p>需要注意<code>環境變數</code>裡的使用者變數的 <code>Path</code> 需要有 VSCode 的路徑</p>
-<p><img loading="lazy" src="https://imgur.com/MZN9Wgs.jpg" alt="env_1"  />
-</p>
+<p><img alt="env_1" loading="lazy" src="https://imgur.com/MZN9Wgs.jpg"></p>
 <p>也可以使用 CMD 測試有無環境變數</p>
-<p><img loading="lazy" src="https://imgur.com/ME4qXZs.jpg" alt="env_2"  />
-</p>
+<p><img alt="env_2" loading="lazy" src="https://imgur.com/ME4qXZs.jpg"></p>
 <h2 id="vscode-cli-args">VSCode CLI Args</h2>
 <p>根據 Unity 開啟 VSCode Args，可以使用 <code>Process</code> 填寫對應路徑就可以了。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>&#34;$(ProjectPath)&#34; -g &#34;$(File)&#34;:$(Line):$(Column)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>startInfo.Arguments = <span style="color:#e6db74">$&#34;{projectPath} -g {fileName}&#34;</span>;
 </span></span></code></pre></div><h3 id="script">Script</h3>
 <p>詳細的方法可以參考 <a href="https://blog.csdn.net/weixin_44293055/article/details/120340635">Sublime Text &amp; Unity Shader</a>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">OpenShaderForVSCodeEditor</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">    [UnityEditor.Callbacks.OnOpenAsset(0)]</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">bool</span> CallbackShader(<span style="color:#66d9ef">int</span> instanceID, <span style="color:#66d9ef">int</span> line)
@@ -463,7 +406,7 @@
 </span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/OpenShaderForVSCode">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -477,11 +420,10 @@
 <p>介紹我使用 Addressable 的讀取、生成、釋放方式。</p>
 <p>詳細設定還是可以先觀看<a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.3/manual/MemoryManagement.html">官方文件</a>。</p>
 <h2 id="event-viewer">Event Viewer</h2>
-<p><img loading="lazy" src="https://imgur.com/ohiBIeL.jpg" alt="img-1"  />
-</p>
+<p><img alt="img-1" loading="lazy" src="https://imgur.com/ohiBIeL.jpg"></p>
 <p>可以利用 Event Viewer 在 Editor Runtime 時，隨時監控記憶體使用情況。就可以很明顯的發現，那些東西是忘記釋放掉的，或者不需要釋放的。</p>
 <h2 id="load-asset">Load Asset</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator InstantiateAsset(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    AsyncOperationHandle&lt;GameObject&gt; <span style="color:#66d9ef">async</span> = asset.LoadAssetAsync&lt;GameObject&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -505,7 +447,7 @@
 </span></span></code></pre></div><p>可以利用這三種方式讀取 Asset，並且把物件生成出來，當然我還是最推薦使用 AssetReference，除非有什麼特殊需求要使用字串，不然我不會換成其他方式。</p>
 <h2 id="release-asset">Release Asset</h2>
 <p>釋放掉 Asset 也記得要把物件<code>刪除</code>，不然場上會遺留破圖的物件。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> ReleaseAsset(AsyncOperationHandle&lt;T&gt; <span style="color:#66d9ef">async</span>)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
 </span></span><span style="display:flex;"><span>}
@@ -534,23 +476,21 @@
 <p>目前我個人使用過的方式有 Name、Label、AssetReference、Array AssetReference 的方式。</p>
 <h2 id="addressablesloadassetasync">Addressables.LoadAssetAsync</h2>
 <p>官方範例提供的下載方式 <a href="https://docs.unity3d.com/Packages/com.unity.addressables@1.15/manual/LoadingAddressableAssets.html">Addressables.LoadAsset(s)Async</a>，雖然這個是要把 Asset 讀取出來，其實他也有下載功能</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>    Addressables.LoadAssetAsync&lt;GameObject&gt;(asset);
 </span></span></code></pre></div><p>我是很少使用這種方式下載或更新 Asset，主因是我個人認為 Addressables.LoadAssetAsync 是讀取物件而不是更新物件的功能，所以我在需要更新時不會使用它。</p>
 <h2 id="update-addressable-name-addressable-label">Update Addressable Name/ Addressable Label</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
 </span></span><span style="display:flex;"><span>    Addressables.Release(downloadAsync);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>這個是下載 <code>Addressable Name</code> 或 <code>Label</code>的方法，可以利用 Label 下載多個不同 Group 的 Asset。</p>
-<p><img loading="lazy" src="https://imgur.com/aPKLTt3.jpg" alt="img-1"  />
-</p>
+<p><img alt="img-1" loading="lazy" src="https://imgur.com/aPKLTt3.jpg"></p>
 <p><code>Addressable Name</code>、<code>Label</code> 是無法利用 Hotfix 的方式產生，所以是要先創好需要的。若假如需要新的 Addressable Name、Label 是必須要<code>重新輸出</code> App 才會更新。</p>
-<p><img loading="lazy" src="https://imgur.com/2j7oGN0.jpg" alt="img-2"  />
-</p>
+<p><img alt="img-2" loading="lazy" src="https://imgur.com/2j7oGN0.jpg"></p>
 <h2 id="update-asset-reference">Update Asset Reference</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> downloadAsync;
@@ -560,7 +500,7 @@
 <p>例如用一個物件或場景夾帶了多個不同的需要更新的物件，缺點就是這包 pack 輸出會過大，可能需要把每個物件獨立分成多個 AssetReference，利用系統特性夾帶物件變小。不過要是不喜歡這種方式可以看 <a href="#update-multiple-asset-references">Update Multiple Asset References</a>。</p>
 <p>不過 AssetReference 最方便還是使用它來生成、釋放、等等，才是最好用的方式。</p>
 <h2 id="update-multiple-asset-references">Update Multiple Asset References</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator DonwloadMultipleAssets(AssetReference[] assets)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> assetKeys = assets.Cast&lt;AssetReference&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(assetKeys, Addressables.MergeMode.Union);
@@ -569,7 +509,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>多個 AssetReference 更新的方式，然後可以一起更新。可以完成一個簡單的多個物件更新，不用利用 Label、整合包、等方式更新。</p>
 <h2 id="取得下載容量大小方法">取得下載容量大小方法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator CheckSizeAsync(<span style="color:#66d9ef">string</span> asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(asset);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -581,7 +521,7 @@
 </span></span><span style="display:flex;"><span>    Addressables.Release(<span style="color:#66d9ef">async</span>);
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h2 id="更新進度條寫法">更新進度條寫法</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>IEnumerator UpdateAsset(AssetReference asset)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> downloadAsync = Addressables.DownloadDependenciesAsync(asset, <span style="color:#66d9ef">false</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (!downloadAsync.IsDone)
@@ -603,8 +543,7 @@
       <description>此專案為 Unity math quiz，是基於 Tutorial 2 Create a timed math quiz 文件改寫出來的專案。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>此專案為 Unity math quiz，是基於 <a href="https://docs.microsoft.com/en-us/visualstudio/ide/tutorial-2-create-a-timed-math-quiz">Tutorial 2: Create a timed math quiz</a> 文件改寫出來的專案。</p>
-<p><img loading="lazy" src="https://i.imgur.com/Igy3NfA.gif" alt="img"  />
-</p>
+<p><img alt="img" loading="lazy" src="https://i.imgur.com/Igy3NfA.gif"></p>
 <h2 id="github"><a href="https://github.com/Wenrong274/MathQuiz">Github</a></h2>
 <hr>
 ]]></content:encoded>
@@ -616,13 +555,12 @@
       <guid>https://wenrong-nexus.com/posts/unity-calendar/</guid>
       <description>Unity 實做日曆功能。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
-<p><img loading="lazy" src="https://i.imgur.com/Pe4nXry.gif" alt="gif"  />
-</p>
+<p><img alt="gif" loading="lazy" src="https://i.imgur.com/Pe4nXry.gif"></p>
 <h2 id="使用方式">使用方式</h2>
 <p>預設日期為<code>當天日期</code>。</p>
 <p>可以直接使用 <code>UnityCalendar.GetDate()</code> 取得使用者設定日期，假如有錯誤會回報錯誤。</p>
 <p><code>testGetDate.cs</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> OnClick_GetDate()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    DateTime dt = unityCalendar.GetDate();
 </span></span><span style="display:flex;"><span>    text.text = dt.ToString(<span style="color:#e6db74">&#34;yyyy-MM-dd&#34;</span>);
@@ -653,7 +591,7 @@
 <h3 id="initialization">Initialization</h3>
 <p>Initial Addressable System 是<code>必要</code>的假如不初始化會造成一些使用上的問題。</p>
 <p>在 Start 上可直接初始化 Addressable System</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Start()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator Start()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> InitAddressablesAsync = Addressables.InitializeAsync();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> InitAddressablesAsync;
@@ -664,30 +602,29 @@
 <p>依 Window 為例，Catalog 更新後會放自動放置在</p>
 <p><code>C:\Users\[PC Name]\AppData\LocalLow\[Company Name]\[Product Name]\com.unity.addressables</code></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PC Name]</td>
-<td style="text-align:left">系統使用者名稱</td>
-</tr>
-<tr>
-<td style="text-align:left">[Company Name]</td>
-<td style="text-align:left">Unity 專案 Company Name</td>
-</tr>
-<tr>
-<td style="text-align:left">[Product Name]</td>
-<td style="text-align:left">Unity 專案 Product Name</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PC Name]</td>
+          <td style="text-align: left">系統使用者名稱</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Company Name]</td>
+          <td style="text-align: left">Unity 專案 Company Name</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Product Name]</td>
+          <td style="text-align: left">Unity 專案 Product Name</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/QAbjzCM.jpg" alt="asset_1"  />
-</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateCatalogCoro()
+<p><img alt="asset_1" loading="lazy" src="https://imgur.com/QAbjzCM.jpg"></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateCatalogCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    List&lt;<span style="color:#66d9ef">string</span>&gt; catalogsToUpdate = <span style="color:#66d9ef">new</span> List&lt;<span style="color:#66d9ef">string</span>&gt;();
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> checkCatalogHandle = Addressables.CheckForCatalogUpdates(<span style="color:#66d9ef">false</span>);
@@ -708,32 +645,31 @@
 <p>依 Window 為例，下載好的 Asset 更新後會放自動放置在</p>
 <p><code>C:\Users\[PC Name]\AppData\LocalLow\Unity\[Company Name]_[Product Name]</code></p>
 <table>
-<thead>
-<tr>
-<th style="text-align:left">名稱</th>
-<th style="text-align:left">解釋</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">[PC Name]</td>
-<td style="text-align:left">系統使用者名稱</td>
-</tr>
-<tr>
-<td style="text-align:left">[Company Name]</td>
-<td style="text-align:left">Unity 專案 Company Name</td>
-</tr>
-<tr>
-<td style="text-align:left">[Product Name]</td>
-<td style="text-align:left">Unity 專案 Product Name</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">名稱</th>
+          <th style="text-align: left">解釋</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">[PC Name]</td>
+          <td style="text-align: left">系統使用者名稱</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Company Name]</td>
+          <td style="text-align: left">Unity 專案 Company Name</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">[Product Name]</td>
+          <td style="text-align: left">Unity 專案 Product Name</td>
+      </tr>
+  </tbody>
 </table>
-<p><img loading="lazy" src="https://imgur.com/Av0faq4.jpg" alt="asset_2"  />
-</p>
+<p><img alt="asset_2" loading="lazy" src="https://imgur.com/Av0faq4.jpg"></p>
 <h4 id="update-all-asset">Update All Asset</h4>
 <p>這個方式是使用 AA 系統紀錄 Catalog 取得出來的位置（Locator），在使用 <code>GetDownloadSizeAsync</code> 來確認檔案有無更新，來達成更新所有檔案。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateAllGroupsCoro()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateAllGroupsCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> loc <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
 </span></span><span style="display:flex;"><span>    {
@@ -760,7 +696,7 @@
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="update-label-asset">Update label Asset</h4>
 <p>這個方式是使用 Label 下載特定資源。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator UpdateLabelAsset(<span style="color:#66d9ef">string</span> label)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">long</span> updateLabelSize = <span style="color:#ae81ff">0</span>;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.GetDownloadSizeAsync(label);
@@ -794,7 +730,7 @@
 <p>刪除 <a href="#asset-path">Asset Path</a> 路徑下載的檔案。</p>
 <h4 id="clear-all-asset">Clear All Asset</h4>
 <p><code>Caching.ClearCache()</code> 是能夠完整的清除下載的所有檔案，但是不能單獨使用，還要搭配 <code>Addressables.ClearDependencyCacheAsync</code> 才能清除 Catalog 紀錄的下載資訊。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAllAssetCoro()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAllAssetCoro()
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locats <span style="color:#66d9ef">in</span> Addressables.ResourceLocators)
 </span></span><span style="display:flex;"><span>    {
@@ -805,7 +741,7 @@
 </span></span><span style="display:flex;"><span>    Caching.ClearCache();
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><h4 id="clear-label-asset">Clear Label Asset</h4>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span>IEnumerator ClearAssetCoro(<span style="color:#66d9ef">string</span> label)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">var</span> <span style="color:#66d9ef">async</span> = Addressables.LoadResourceLocationsAsync(label);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">async</span>;
@@ -813,7 +749,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">var</span> locat <span style="color:#66d9ef">in</span> locats)
 </span></span><span style="display:flex;"><span>        Addressables.ClearDependencyCacheAsync(locat.PrimaryKey);
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><h2 id="githubgithub"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
+</span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Addressable">Github</a></h2>
 <h2 id="小結">小結</h2>
 <p>write something cool&hellip;</p>
 <h2 id="參考連結">參考連結</h2>
@@ -826,9 +762,8 @@
       <pubDate>Sun, 09 May 2021 00:00:00 +0000</pubDate>
       <guid>https://wenrong-nexus.com/posts/unity-particlepath/</guid>
       <description>Unity 實作粒子路徑系統。</description>
-      <content:encoded><![CDATA[<p><img loading="lazy" src="https://i.imgur.com/tNmcGdz.gif" alt="demogif"  />
-</p>
-<h2 id="githubgithub"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
+      <content:encoded><![CDATA[<p><img alt="demogif" loading="lazy" src="https://i.imgur.com/tNmcGdz.gif"></p>
+<h2 id="github"><a href="https://github.com/hybrid274/ParticlePath">GitHub</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -841,7 +776,7 @@
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>Unity 調整 Android、iOS 系統亮度功能。</p>
 <h2 id="使用方式">使用方式</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span>Dimmer.SetBrightness.DoAction(<span style="color:#66d9ef">value</span>);
 </span></span></code></pre></div><h2 id="github"><a href="https://github.com/Wenrong274/Unity-Dimmer">Github</a></h2>
 <h2 id="參考連結">參考連結</h2>
 <p><a href="https://qiita.com/Shunsuke-Suzuki-Gen/items/5af162d7b169fd4c7e85">Unity から iOS&amp;Android の画面輝度を MAX にする方法</a></p>
@@ -857,7 +792,7 @@
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>在 <code>UnityEngine.UI.Text</code> 增加 TextSpacing，且調整 TextSpacing 的 <code>Spacing</code> 調整文字間格。</p>
 <h2 id="scripts">Scripts</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-csharp" data-lang="csharp"><span style="display:flex;"><span><span style="color:#66d9ef">using</span> System.Collections.Generic;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">using</span> UnityEngine.UI;
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">
@@ -1020,7 +955,7 @@
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要是用來測試虛擬搖桿功能。</p>
 <p>使用 <a href="https://assetstore.unity.com/packages/tools/input-management/joystick-pack-107631">Joystick Pack</a> 支援各輸入端接口偛件。</p>
-<h2 id="tutorialtutorial"><a href="https://www.youtube.com/watch?v=8-X3BmvtXT0">Tutorial</a></h2>
+<h2 id="tutorial"><a href="https://www.youtube.com/watch?v=8-X3BmvtXT0">Tutorial</a></h2>
 <h2 id="github"><a href="https://github.com/Wenrong274/MobileJoystick">Github</a></h2>
 <hr>
 <hr>
@@ -1036,8 +971,7 @@
 <p>視覺化管理使用路徑，不過目前功能還是很粗糙。</p>
 <h2 id="feature">Feature</h2>
 <p>視覺化管理</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/FolderManager/master/doc/img/img_1.jpg" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/FolderManager/master/doc/img/img_1.jpg"></p>
 <h2 id="usage">Usage</h2>
 <p>Create path 之後會在
 <code>Assets\FolderManager\StreamingAssets\FolderManager.asset</code>
@@ -1058,9 +992,8 @@
 <p><code>IndexedDB</code> 是有容量大小限制，所以需要注意存儲的檔案大小。</p>
 <h2 id="about-indexeddb">About IndexedDB</h2>
 <p><a href="https://www.html5rocks.com/en/tutorials/offline/quota-research/">Working with quota on mobile browsers</a></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png" alt="img_1"  />
-</p>
-<h2 id="githubhttpsgithubcomwenrong274dataaccesswebgl"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/DataAccessWebGL/master/doc/img/1.png"></p>
+<h2 id="github"><a href="https://github.com/Wenrong274/DataAccessWebGL">GitHub</a></h2>
 <h2 id="introduction">Introduction</h2>
 <ul>
 <li>
@@ -1098,21 +1031,18 @@
 <p>需要新增 Jenkins 環境變數（Environment variable），來設定 Android SDK 路徑。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Configure System -&gt; Global properties</code>。</p>
 <p>設定如下圖：</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG" alt="img_1"  />
-</p>
+<p><img alt="img_1" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/1.JPG"></p>
 <p><code>Name</code>：<code>ANDROID_HOME</code></p>
 <p><code>Value</code>：AndroidSDK 路徑。</p>
 <h3 id="jenkins-jdk">Jenkins JDK</h3>
 <p>JDK 版本請選 <code>Java SE 8</code>，因為 Unity 只支援 Java SE 8。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Global Tool Configuration -&gt; JDK</code>。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/2.JPG"></p>
 <h3 id="jenkins-unity3d-plugin">Jenkins Unity3d Plugin</h3>
 <p>需要至 Plugin Manager 安裝 Unity3d Plugin。</p>
 <p>Jenkins 頁面路徑為 <code>Manage Jenkins -&gt; Plugin Manager -&gt; Available</code></p>
 <p>安裝完成後，需要設定 Unity Editor 路徑。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG" alt="img_3"  />
-</p>
+<p><img alt="img_3" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/3.JPG"></p>
 <p><code>Name</code>：unity version</p>
 <p><code>Installation directory</code>：unity installed path</p>
 <h3 id="jenkins-item">Jenkins item</h3>
@@ -1121,12 +1051,11 @@
 <p>頁面路徑：<code>Configure -&gt; General -&gt; Build</code></p>
 <p>點選 Add build step -&gt; invoke Unity3d Editor，選擇對應的 Unity 編輯器版本。</p>
 <p>在 Editor command line arguments 輸入</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>-projectPath &#34;$WORKSPACE/&#34; -executeMethod JenkinsBuild.BuildPlatforms -buildPath &#34;$WORKSPACE\Builds&#34; -android -batchmode -nographics -quit
 </span></span></code></pre></div><p><code>-buildPath &quot;$WORKSPACE\Builds&quot;</code> &ldquo;$WORKSPACE\Builds 輸出放置資料夾路徑。</p>
 <p><code>-android</code> 為輸出平台，可改為 -windows32、-windows64、-linux64、-macos、-android、-ios、-webgl。</p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG" alt="img_4"  />
-</p>
-<h2 id="github-repogithub"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
+<p><img alt="img_4" loading="lazy" src="https://raw.githubusercontent.com/Wenrong274/UnityJenkinsBuild/master/doc/img/4.JPG"></p>
+<h2 id="github-repo"><a href="https://github.com/Wenrong274/UnityJenkinsBuild">GitHub Repo</a></h2>
 <h2 id="reference">reference</h2>
 <p><a href="http://hoseex.blogspot.com/2017/12/jenkinsunity3d.html">使用 jenkins 建置 unity3d 專案</a></p>
 <p><a href="https://github.com/CarlHalstead/Jenkins-for-Unity-with-DigitalOcean/">Jenkins for Unity with DigitalOcean</a></p>
@@ -1141,13 +1070,12 @@
       <description>Unity uGUI Text support insert link and image。</description>
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>測試 <a href="https://github.com/akof1314/uGUI_LinkImageText">LinkImageText</a> 應用。</p>
-<p><img loading="lazy" src="https://github.com/Wenrong274/HyperlinksText/blob/master/doc/img/1.png" alt="Img_1"  />
-</p>
+<p><img alt="Img_1" loading="lazy" src="https://github.com/Wenrong274/HyperlinksText/blob/master/doc/img/1.png"></p>
 <h2 id="主要內容">主要內容</h2>
 <p>使用 <a href="https://github.com/kimsama/Unity-QuickSheet">QuickSheet</a> 當資料庫，讓 <a href="https://github.com/setchi/FancyScrollView">FancyScrollView</a> 顯示資料庫名字。</p>
 <p>點擊 FancyScrollView button 會在 <a href="https://github.com/akof1314/uGUI_LinkImageText">HypeLinkText</a> 顯示 name。</p>
 <p>點擊 HypeLinkText 超連結文字，會顯示<code>超連結</code>內容。</p>
-<h2 id="github-repohttpsgithubcomwenrong274hyperlinkstext"><a href="https://github.com/Wenrong274/HyperlinksText">GitHub repo</a></h2>
+<h2 id="github-repo"><a href="https://github.com/Wenrong274/HyperlinksText">GitHub repo</a></h2>
 <hr>
 ]]></content:encoded>
     </item>
@@ -1160,7 +1088,7 @@
       <content:encoded><![CDATA[<h2 id="前言">前言</h2>
 <p>主要用來 Unity app A 如何傳遞資訊給 Unity app B。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
@@ -1215,7 +1143,7 @@
 <p>主要用來 A App 呼叫 B App 時，B App 該如何接受資料。</p>
 <p>而 B App 是使用 <code>Unity</code> 接收。</p>
 <h3 id="demo-script">Demo Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PropertyInfo</span>
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementA = <span style="color:#66d9ef">string</span>.Empty;
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">string</span> elementB = <span style="color:#66d9ef">string</span>.Empty;
@@ -1321,20 +1249,17 @@
 <li>Vuforia 8.5.9</li>
 </ul>
 <h3 id="ios-build-and-run-error">iOS Build and Run Error</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: library not found for -liPhone-lib
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>clang: error: linker command failed with exit code 1 (use -v to see invocation)
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg" alt="img_1"  />
-</p>
+</span></span></code></pre></div><p><img alt="img_1" loading="lazy" src="https://i.imgur.com/VfEWoVv.jpg"></p>
 <h4 id="solution---ios-build-and-run-error">Solution - iOS Build and Run Error</h4>
 <p>Build Setting -&gt; Search Paths -&gt; Library Search Paths</p>
 <p>移除 <code>&quot;$(SECROOT)&quot;</code> 參數</p>
-<p><img loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg" alt="img_2"  />
-</p>
+<p><img alt="img_2" loading="lazy" src="https://i.imgur.com/mHa5XkT.jpg"></p>
 <h2 id="ios-archive-error">iOS Archive Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/7YCtki6.jpg" alt="img_3"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ld: warning: ignoring file ...  building for iOS-armv7 but attempting to link with file built for iOS-arm64.
+</span></span></code></pre></div><p><img alt="img_3" loading="lazy" src="https://i.imgur.com/7YCtki6.jpg"></p>
 <h4 id="solution---ios-archive-error">Solution - iOS Archive Error</h4>
 <p>根據 <a href="https://library.vuforia.com/content/vuforia-library/en/articles/Release_Notes/Vuforia-SDK-Release-Notes.html">Vuforia Engine Release Notes</a> 在 <code>v8.1.7</code>之後不支援 <code>32-bit</code>，並且最低支援 <code>iOS 11</code>，因此需要把專案版本最低版本設定為 iOS。</p>
 <ul>
@@ -1342,21 +1267,18 @@
 <p>設定 iOS architectures</p>
 <p>Build Setting -&gt; Architectures -&gt; Architectures</p>
 <p>Architectures 改為 <code>Standard architectures</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg" alt="img_5"  />
-</p>
+<p><img alt="img_5" loading="lazy" src="https://i.imgur.com/1fcwuH9.jpg"></p>
 </li>
 <li>
 <p>設定 iOS 版本</p>
 <p>Build Setting -&gt; Deployment -&gt; iOS Deployment Target</p>
 <p>iOS Deployment Target 改為 <code>iOS 11.0</code></p>
-<p><img loading="lazy" src="https://i.imgur.com/rPGArpU.jpg" alt="img_4"  />
-</p>
+<p><img alt="img_4" loading="lazy" src="https://i.imgur.com/rPGArpU.jpg"></p>
 </li>
 </ul>
 <h2 id="ios-distribution-error">iOS Distribution Error</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
-</span></span></code></pre></div><p><img loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg" alt="img_6"  />
-</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>ERROR ITMS-90534
+</span></span></code></pre></div><p><img alt="img_6" loading="lazy" src="https://i.imgur.com/0KoHlnL.jpg"></p>
 <h3 id="solution---ios-distribution-error">Solution - iOS Distribution Error</h3>
 <p>請使用 <a href="https://developer.apple.com/download/"><strong>Xcode 11.2.1</strong></a> 輸出，即可修正。</p>
 <h2 id="參考文章">參考文章</h2>
@@ -1375,11 +1297,11 @@
 <p>在 Unity API 中有 <a href="https://docs.unity3d.com/530/Documentation/ScriptReference/Application-systemLanguage.html">Application.systemLanguage</a> 可以取得系統語言。可是 Unity 5.3 用於 iOS 上，只要是裝置為中文語系一律回傳 SystemLanguage.Chinese，無法判別簡 / 繁語系，因此才研究怎麼取得 Windows、Android、iOS 原生語系。</p>
 <h3 id="windows-platform">Windows Platform</h3>
 <p>利用 <a href="https://docs.microsoft.com/en-us/windows/win32/api/winnls/nf-winnls-getsystemdefaultlcid">GetSystemDefaultLCID</a> 取得本機端語系，再利用 <a href="https://docs.microsoft.com/zh-tw/dotnet/api/system.globalization.cultureinfo.getcultureinfo?view=netframework-3.5">CultureInfo.GetCultureInfo</a> 轉化為本機端語系文化。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;kernel32.dll&#34;)]</span>
 </span></span></code></pre></div><p><a href="http://answers.unity.com/answers/1323282/view.html">參考文章</a></p>
 <h3 id="android-platform">Android Platform</h3>
 <p>直接呼叫原生系統 API 取得。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">string</span> CurrentAndroidLanguage()
 </span></span><span style="display:flex;"><span> {
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">string</span> result = <span style="color:#e6db74">&#34;&#34;</span>;
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">using</span> (AndroidJavaClass cls = <span style="color:#66d9ef">new</span> AndroidJavaClass(<span style="color:#e6db74">&#34;java.util.Locale&#34;</span>))
@@ -1409,7 +1331,7 @@
 </span></span></code></pre></div><p><a href="https://forum.unity.com/threads/application-systemlanguage.211171/#post-1423369">參考文章</a></p>
 <h3 id="ios-platfrom">iOS Platfrom</h3>
 <p>製作一個 .mm 文件，內容如下</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-objc" data-lang="objc"><span style="display:flex;"><span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">cStringCopy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">char</span><span style="color:#f92672">*</span> string)
 </span></span><span style="display:flex;"><span> {
 </span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span>(string <span style="color:#f92672">==</span> NULL){
 </span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> NULL;
@@ -1428,12 +1350,12 @@
 </span></span><span style="display:flex;"><span>   }
 </span></span><span style="display:flex;"><span> }
 </span></span></code></pre></div><p>在 C# 寫出 CurIOSLang 的接口</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#a6e22e">[DllImport(&#34;__Internal&#34;)]</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">extern</span> <span style="color:#66d9ef">string</span> CurIOSLang();
 </span></span></code></pre></div><p>這樣就可以在 Unity 直接呼叫 CurIOSLan 取得 iOS 語系了。</p>
 <p><a href="https://blog.csdn.net/teng_ontheway/article/details/50277169">參考文章</a></p>
 <hr>
-<h3 id="github-repohttpsgithubcomwenrong274nativesystemlanguage"><a href="https://github.com/Wenrong274/NativeSystemLanguage">Github repo</a></h3>
+<h3 id="github-repo"><a href="https://github.com/Wenrong274/NativeSystemLanguage">Github repo</a></h3>
 ]]></content:encoded>
     </item>
     <item>
@@ -1454,18 +1376,16 @@
 <li>
 <p>Set up Unity Player Setting
 Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and Presentation -&gt; <strong>Selcet LogoTemplates</strong></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/logotemplate.jpg" alt="image_1"  />
-</p>
+<p><img alt="image_1" loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/logotemplate.jpg"></p>
 </li>
 <li>
 <p>Change Your Logo</p>
 <p>Logo 規格建議不要太大張。</p>
 <p>Path: root/Assets/WebGLTemplates/LogoTemplate/<strong>logo.png</strong></p>
-<p><img loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/setinglogo.JPG" alt="image_2"  />
-</p>
+<p><img alt="image_2" loading="lazy" src="https://raw.githubusercontent.com/hybrid274/UnityWebGLTemplate/master/images/setinglogo.JPG"></p>
 </li>
 </ol>
-<h3 id="github-repohttpsgithubcomwenrong274unitywebgltemplate"><a href="https://github.com/Wenrong274/UnityWebGLTemplate">GitHub repo</a></h3>
+<h3 id="github-repo"><a href="https://github.com/Wenrong274/UnityWebGLTemplate">GitHub repo</a></h3>
 <p><a href="https://ocias.com/blog/how-to-set-up-a-unity-webgl-template/">參考文章</a></p>
 <hr>
 ]]></content:encoded>
@@ -1482,7 +1402,7 @@ Edit -&gt; Project Settings -&gt; Player, On the WebGL tab -&gt; Resolution and 
 <h3 id="使用方式">使用方式</h3>
 <p>直接在 Canvas 物件底下 Add Component FixRectMask2dWebGL 即可。</p>
 <h3 id="script">Script</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-CSharp" data-lang="CSharp"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FixRectMask2dWebGL</span> : MonoBehaviour
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#if</span> PlatformWebGL
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake()
