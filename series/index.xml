@@ -4,5 +4,30 @@
         <link>https://wenrong-nexus.com/series/</link>
         <description>Recent content in Series on Wenrong Nexus</description>
         <generator>Hugo -- gohugo.io</generator>
-        <language>zh-Hant</language><atom:link href="https://wenrong-nexus.com/series/index.xml" rel="self" type="application/rss+xml" /></channel>
+        <language>zh-Hant</language>
+        <lastBuildDate>Sun, 13 Oct 2024 03:11:00 +0800</lastBuildDate><atom:link href="https://wenrong-nexus.com/series/index.xml" rel="self" type="application/rss+xml" /><item>
+            <title>Effective C#</title>
+            <link>https://wenrong-nexus.com/series/effective-c%23/</link>
+            <pubDate>Sun, 13 Oct 2024 03:11:00 +0800</pubDate>
+            <guid>https://wenrong-nexus.com/series/effective-c%23/</guid>
+            <description></description>
+        </item><item>
+            <title>Unity Deep Link</title>
+            <link>https://wenrong-nexus.com/series/unity-deep-link/</link>
+            <pubDate>Tue, 13 Dec 2022 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/series/unity-deep-link/</guid>
+            <description></description>
+        </item><item>
+            <title>Unity Addressable</title>
+            <link>https://wenrong-nexus.com/series/unity-addressable/</link>
+            <pubDate>Wed, 04 May 2022 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/series/unity-addressable/</guid>
+            <description></description>
+        </item><item>
+            <title>Blog 心得</title>
+            <link>https://wenrong-nexus.com/series/blog-%E5%BF%83%E5%BE%97/</link>
+            <pubDate>Mon, 28 Feb 2022 00:00:00 +0000</pubDate>
+            <guid>https://wenrong-nexus.com/series/blog-%E5%BF%83%E5%BE%97/</guid>
+            <description></description>
+        </item></channel>
 </rss>
