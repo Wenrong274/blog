@@ -1,10 +1,10 @@
 ---
 title: "心得 代理人模式"
 date: 2024-04-15
-description: "主要是針對深入淺出設計模式書籍，提到的代理人模式的心得。"
-keywords: ["Design Pattern", "Proxy Pattern"]
+summary: "需要與後端同步資料？代理人模式是最常見的解法！本文分享讀書會中對 Remote Proxy 的討論，以及 Java RMI、C# WCF、Android AIDL 都是怎麼做到記憶體資料同步的。"
+description: "《深入淺出設計模式》代理人模式（Proxy Pattern）讀書心得。探討遠端代理（Remote Proxy）在多人連線後端資料同步的應用，以及 Java RMI、C# WCF、Android AIDL 等技術如何實現跨程序記憶體同步。"
+keywords: ["Design Pattern", "Proxy Pattern", "Remote Proxy", "WCF", "RMI", "AIDL", "GoF", "C#"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-proxy/

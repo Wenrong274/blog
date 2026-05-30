@@ -1,10 +1,10 @@
 ---
 title: "心得 迭代器模式"
 date: 2024-03-26
-description: "主要是針對深入淺出設計模式書籍，提到的迭代器模式的心得。"
-keywords: ["Design Pattern", "Iterator Pattern"]
+summary: "IEnumerable 只能用 foreach、IEnumerator 只能用 for？Unity 的 foreach 效能問題是真的嗎？本文整理迭代器模式的讀書會 Q&A，解答各種讓人搞混的細節！"
+description: "《深入淺出設計模式》迭代器模式（Iterator Pattern）讀書心得。涵蓋 IEnumerator 與 IEnumerable 的差異、yield return 的延遲執行特性、LINQ 的內外部迭代器、Unity 中 foreach 效能問題的真相，以及 Coroutine 與迭代器的關係。"
+keywords: ["Design Pattern", "Iterator Pattern", "IEnumerator", "IEnumerable", "yield return", "LINQ", "C#", "Unity"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-iterator/

@@ -1,13 +1,11 @@
 ---
 title: "Unity Addressable"
 date: 2021-05-27
-summary: "主要是實作 Addressable hotfix 的寫法。"
-keywords: ["Unity", "Addressable"]
+summary: "想用 Addressable 做遊戲熱更新？本文從 Initialization、Update Catalog、Update Asset 到 Clear Asset，完整示範 Addressable Hotfix 的核心流程！"
+description: "Unity Addressable Asset System 熱更新（Hotfix）完整實作教學，涵蓋系統初始化（InitializeAsync）、Catalog 更新、特定 Label 更新、全量 Asset 更新，以及清除 Cache 的方法，附完整 C# Coroutine 程式碼與 Windows 路徑說明。"
+keywords: ["Unity", "Addressable", "hotfix", "asset bundle", "Catalog", "remote assets", "cache", "IEnumerator"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/unity-addressable/
 ---
 
 ## 前言

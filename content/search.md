@@ -3,7 +3,11 @@ title: "Search" # in any language you want
 layout: "search" # is necessary
 # url: "/archive"
 # description: "Description for Search"
+type: "page"
 summary: "search"
-placeholder: "placeholder text in search input box"
+outputs:
+  - html
+  - json
+placeholder: "搜尋文章、標籤..."
 robotsNoIndex: true
 ---

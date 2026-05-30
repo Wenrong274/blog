@@ -1,10 +1,10 @@
 ---
 title: "Xcode Command PhaseScriptExecution Failed"
 date: 2023-03-08
-description: "write something"
-keywords: ["iOS"]
+summary: "Unity 在 Windows 輸出 XCode 專案後，到 Mac 建置出現 Command PhaseScriptExecution failed？本文分享使用 Google Cardboard + Unity 2022 遇到此問題的解決方式！"
+description: "解決 Unity 在 Windows 環境輸出 XCode 專案後，在 Mac 進行建置時出現「Command PhaseScriptExecution failed with a nonzero exit code」錯誤的問題。本文記錄使用 Unity 2022 搭配 Google Cardboard 時的發生條件，以及改在 macOS 上輸出 XCode 專案的根本解法，並整理升級 Pod、修改 Build Phases 等測試過但無效的方法。"
+keywords: ["Unity", "Xcode", "iOS", "PhaseScriptExecution", "build error", "Cardboard", "macOS", "CocoaPods"]
 draft: false
-showtoc: true
 tags: ["iOS"]
 aliases:
   - /posts/xcode_command_phasescriptexecution_failed/

@@ -1,13 +1,11 @@
 ---
 title: "Unity Jenkins Build"
 date: 2020-02-25
-summary: "此為使用 Jenkins 輸出 Unity 專案注意事項。"
-keywords: ["Unity", "DevOps", "Jenkins"]
+summary: "Unity 專案要怎麼串 Jenkins 自動建置？本文整理 Android SDK、JDK、Unity3d Plugin 的 Jenkins 環境設定步驟，以及 Editor command line arguments 的完整寫法！"
+description: "Unity 專案搭配 Jenkins 持續整合（CI）的完整設定教學，包含 Jenkins 環境變數（ANDROID_HOME）設定、JDK 8 版本要求、Unity3d Plugin 安裝與 Unity Editor 路徑設定，以及 Editor command line arguments 的格式說明，支援 Android、iOS、WebGL 等多平台自動輸出。"
+keywords: ["Unity", "Jenkins", "CI/CD", "DevOps", "Android SDK", "build automation", "Unity3d Plugin", "continuous integration"]
 draft: false
-showtoc: true
 tags: ["Unity", "DevOps"]
-aliases:
-  - /posts/unity-jenkins-build/
 ---
 
 ## 前言

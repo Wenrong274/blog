@@ -1,10 +1,10 @@
 ---
 title: "Unity 5.3 Native System Language"
 date: 2019-10-04
-summary: "使用 Unity 取得 Windows、Android、iOS 原生語系。"
-keywords: ["Unity"]
+summary: "Unity 5.3 在 iOS 上無法區分簡體/繁體中文？透過呼叫 Windows、Android、iOS 原生語系 API 取得真正的語系設定，本文提供三平台完整程式碼！"
+description: "Unity 5.3 的 Application.systemLanguage 在 iOS 中文裝置無法區分簡繁體的問題解法。分別透過 Windows GetSystemDefaultLCID、Android Java.util.Locale Native API，以及 iOS Objective-C NSLocale preferredLanguages 取得原生語系，附完整 C# 與 .mm 程式碼。"
+keywords: ["Unity", "system language", "localization", "Android", "iOS", "Windows", "native API", "NSLocale"]
 draft: false
-showtoc: true
 tags: ["Unity"]
 aliases:
   - /posts/unity-5.3-native-system-language/

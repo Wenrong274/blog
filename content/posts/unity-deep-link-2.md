@@ -1,10 +1,10 @@
 ---
 title: "Unity Deep Link -2"
 date: 2022-12-13
-description: "介紹 Unity Deep Link 呼叫方式"
-keywords: ["Unity"]
+summary: "Deep Link 要怎麼從外部呼叫 App？本文示範 Android AndroidManifest 和 iOS Unity 設定方式，包含 URL Scheme 和自訂 ID 兩種呼叫模式！"
+description: "Unity Deep Link 呼叫設定教學（第二篇），說明如何在 Android AndroidManifest.xml 設定 intent-filter（支援 HTTP/HTTPS URL 與自訂 scheme），以及在 Unity iOS 設定 Deep Link ID（對應 Xcode Universal Links），讓瀏覽器或其他 App 能直接喚起指定 App。"
+keywords: ["Unity", "Deep Link", "Android", "iOS", "AndroidManifest", "URL scheme", "Universal Links", "intent-filter"]
 draft: false
-showtoc: true
 tags: ["Unity"]
 aliases:
   - /posts/unitydeeplink_2/

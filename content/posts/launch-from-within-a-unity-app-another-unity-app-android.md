@@ -1,13 +1,11 @@
 ---
 title: "Launch From Within a Unity App Another Unity App Android"
 date: 2020-01-02
-summary: "主要用來 Unity app A 如何傳遞資訊給 Unity app B。"
-keywords: ["Unity", "Android"]
+summary: "Unity App A 要啟動另一個 Unity App B 並且傳資料過去？本文提供完整的 AndroidJavaObject + putExtra 範例，還包含 App 未安裝時轉跳 Store 的邏輯！"
+description: "說明如何在 Android 平台上，從一個 Unity 應用透過 AndroidJavaObject 呼叫另一個 Unity 應用並傳遞資料，使用 getLaunchIntentForPackage 取得目標 App 的 Intent、透過 putExtra 附加資料，以及 App 未安裝時自動導向 App Store 的處理邏輯。"
+keywords: ["Unity", "Android", "AndroidJavaObject", "Intent", "putExtra", "inter-app launch", "package manager"]
 draft: false
-showtoc: true
 tags: ["Unity", "Android"]
-aliases:
-  - /posts/launch-from-within-a-unity-app-another-unity-app-android/
 ---
 
 ## 前言

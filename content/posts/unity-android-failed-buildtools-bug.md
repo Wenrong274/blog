@@ -1,11 +1,11 @@
 ---
 title: "Android Build Failed Build tools 3X.0.0 Bug"
 date: 2022-03-07
-description: "Fix Installed Build Tools revision 3X.0.0 is corrupted."
-keywords: [Android]
+summary: "輸出 APK 遇到 Installed Build Tools revision 3X.0.0 is corrupted？本文提供快速修復方法：改兩個檔名就搞定！"
+description: "解決 Android Build Tools 31.0.0（及以上版本）出現「Installed Build Tools revision 3X.0.0 is corrupted」錯誤的方法，透過將 Android SDK build-tools 目錄下的 d8.bat 重新命名為 dx.bat，以及 d8.jar 重新命名為 dx.jar 來修復此問題。"
+keywords: ["Android", "Android SDK", "Build Tools", "APK", "Unity", "build error", "dx.bat", "d8.bat"]
 draft: false
-showtoc: true
-tags: [Android]
+tags: ["Android"]
 aliases:
   - /posts/unity-android_failed_buildtoolsbug/
 ---

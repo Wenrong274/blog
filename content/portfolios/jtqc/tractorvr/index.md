@@ -1,14 +1,7 @@
 ---
 title: "寶馬曳引機 VR"
 date: 2023-10-15
-hideMeta: true
-disableShare: true
-ShowBreadCrumbs: false
-ShowPostNavLinks: false
-ShowFullTextinRSS: false
-searchHidden: true
 comments: false
-showtoc: true
 ---
 
 {{< youtube JwodlwHqAhU >}}

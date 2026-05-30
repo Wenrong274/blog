@@ -1,13 +1,11 @@
 ---
 title: "Hyperlinks in Unity Text"
 date: 2020-02-24
-summary: "Unity uGUI Text support insert link and image。"
-keywords: ["Unity"]
+summary: "想在 Unity uGUI Text 中顯示可點擊的超連結？本文示範整合 LinkImageText、QuickSheet 資料庫與 FancyScrollView，實作可互動的超連結文字效果！"
+description: "介紹如何在 Unity uGUI Text 中支援超連結與圖片插入，透過整合 uGUI_LinkImageText、QuickSheet 資料庫管理，以及 FancyScrollView 列表顯示，實現點擊超連結文字觸發互動內容的完整功能。"
+keywords: ["Unity", "uGUI", "HyperlinkText", "LinkImageText", "FancyScrollView", "QuickSheet", "UI", "rich text"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/hyperlinks-in-unity-text/
 ---
 
 ## 前言

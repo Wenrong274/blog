@@ -1,10 +1,10 @@
 ---
 title: "Oculus Auto Set Build Setting && Build"
 date: 2022-12-01
-description: "自動設定 Oculus XR 等細項設定，方便用於多平台多操作方式功能。"
-keywords: ["Unity", "Oculus"]
+summary: "每次輸出不同平台都要手動改 Player Setting 很煩？本文提供一鍵自動設定 Oculus XR Loader 並輸出的完整 Editor Script，支援 Oculus 和 Windows 雙平台！"
+description: "介紹如何在 Unity 中撰寫 Editor Script 自動設定 Oculus XR Loader 的啟用/停用狀態，並透過 BuildPipeline.BuildPlayer 實現一鍵輸出 Oculus（Android APK）與 Windows 的多平台建置腳本，避免手動切換設定造成的出包問題。"
+keywords: ["Unity", "Oculus", "VR", "XR", "BuildPipeline", "Editor Script", "XRGeneralSettings", "multi-platform build"]
 draft: false
-showtoc: true
 tags: ["Unity"]
 aliases:
   - /posts/oculusautosetbuildsettingandbuild/

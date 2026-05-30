@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 07-10"
 date: 2024-08-28T00:19:53+08:00
-description: "Effective C# 做法 07-10 心得"
-keywords: ["Effective C#", "C#"]
+summary: "delegate 怎麼當 callback 用？Boxing 在什麼情況下偷偷發生？new 修飾詞什麼時候才該用？本文整理 Effective C# 做法 07-10 的重點！"
+description: "Effective C# 做法 07-10 讀書心得，涵蓋：以 delegate 表示 callback 降低耦合、使用空條件運算子安全觸發事件、減少 Boxing 與 Unboxing 對效能的影響，以及 new 修飾詞在基底類別更新時的正確使用時機。"
+keywords: ["Effective C#", "C#", "delegate", "callback", "Boxing", "Unboxing", "null conditional operator", "new modifier", ".NET"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme07-10/

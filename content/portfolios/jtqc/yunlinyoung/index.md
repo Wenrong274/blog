@@ -1,14 +1,7 @@
 ---
 title: "雲林好 Young"
 date: 2023-10-15
-hideMeta: true
-disableShare: true
-ShowBreadCrumbs: false
-ShowPostNavLinks: false
-ShowFullTextinRSS: false
-searchHidden: true
 comments: false
-showtoc: true
 ---
 
 {{< youtube e3VVoea3EBg >}}

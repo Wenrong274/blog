@@ -1,13 +1,11 @@
 ---
 title: "Blog 心得（2）"
 date: 2022-02-21
-description: "Medium、CoderBridge、Hugo 之間的抉擇，最後選擇了 Hugo 自架。"
-keywords: ["Hugo", "Medium", "Wordpress", "CoderBridge", "Blog"]
+summary: "Medium 貼程式碼超不方便、CoderBridge 沒有備份檔，最後選了 Hugo。這篇聊聊我在三個平台各踩過的坑，以及為什麼技術 Blog 最後還是 Hugo 最合適。"
+description: "個人部落格架設心路歷程分享（第二篇）。比較 Medium、CoderBridge、Hugo 三個平台的優缺點，分析技術文章撰寫需求（程式碼片段、Markdown 支援、備份、免費伺服器），說明最終選擇 Hugo 架設在 GitHub Pages 的決策過程。"
+keywords: ["Hugo", "Medium", "CoderBridge", "Blog", "GitHub Pages", "Markdown", "static site generator"]
 draft: false
-showtoc: true
 tags: ["Blog"]
-aliases:
-  - /posts/reflection-blog-2/
 ---
 
 ## 前言

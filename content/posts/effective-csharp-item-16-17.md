@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 16-17"
 date: 2024-09-22T22:17:41+08:00
-description: "Effective C# 做法 16-17 心得"
-keywords: ["Effective C#", "C#"]
+summary: "建構子裡呼叫虛擬函式會出事？IDisposable 什麼時候需要實作？本文整理 Effective C# 做法 16-17，包含 Static Code Analyzer 工具推薦！"
+description: "Effective C# 做法 16-17 讀書心得，涵蓋：絕不在建構子中��叫虛擬函式的原因與 Static Code Analyzer 工具（JetBrains Rider、ReSharper）、標準 Dispose 模式的實作方式、Unmanaged 資源判斷準則，以及哪些類別才需要繼承 IDisposable。"
+keywords: ["Effective C#", "C#", "IDisposable", "Dispose pattern", "virtual method", "constructor", "Unmanaged resource", ".NET"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme16-17/

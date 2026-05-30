@@ -1,10 +1,10 @@
 ---
 title: "Effective C# 做法 20-21"
 date: 2024-10-07T00:57:47+08:00
-description: "Effective C# 做法 20-21 心得"
-keywords: ["Effective C#", "C#"]
+summary: "IComparable 和 IComparer 傻傻分不清楚？泛型類別含有 IDisposable 型別參數要怎麼安全處理？本文整理 Effective C# 做法 20-21 的實作重點！"
+description: "Effective C# 做法 20-21 讀書心得，涵蓋：以 IComparable<T> 實作預設排序、以 IComparer<T> 提供多種排序策略並搭配 LINQ 使用，以及建構支援 IDisposable 型別參數的泛型類別時的防衛性寫法與 Lazy<T> 應用。"
+keywords: ["Effective C#", "C#", "IComparable", "IComparer", "IDisposable", "Generics", "Lazy", "sorting", ".NET"]
 draft: false
-showtoc: true
 tags: ["C#"]
 aliases:
   - /posts/effectivecsharpitme20-21/

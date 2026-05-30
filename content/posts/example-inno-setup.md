@@ -1,13 +1,11 @@
 ---
 title: "Example Inno Setup"
 date: 2019-12-19
-summary: "簡易使用 Inno Setup 打包教學。"
-keywords: ["Inno Setup", "script-driven installation"]
+summary: "想把程式打包成安裝檔？本文提供 Inno Setup 完整腳本範例，包含多語系支援、版本比較、GUID 設定，複製修改幾個欄位就能直接用！"
+description: "Inno Setup 打包教學，提供完整的 .iss 腳本範例，包含安裝路徑設定、多語系（繁中/簡中/日文）、桌面圖示建立、版本比較邏輯、分割安裝包設定，以及修改時需注意的 GUID、AppName 等關鍵欄位說明。"
+keywords: ["Inno Setup", "installer", "Windows", "packaging", "setup script", ".iss", "deployment"]
 draft: false
-showtoc: true
 tags: ["tool"]
-aliases:
-  - /posts/example-inno-setup/
 ---
 
 ## Install

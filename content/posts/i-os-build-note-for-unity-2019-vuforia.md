@@ -1,13 +1,11 @@
 ---
 title: "IOS Build Note for Unity 2019 Vuforia"
 date: 2019-10-17
-summary: "Vuforia iOS Build and Run Error。"
-keywords: ["Unity", "Vuforia", "iOS"]
+summary: "Unity 2019 搭配 Vuforia 8.5 輸出 iOS 遇到 ld: library not found 或 ERROR ITMS-90534？本文整理三種常見錯誤與解法，快速排除 Xcode 建置問題！"
+description: "Unity 2019.2 搭配 Vuforia 8.5.9 輸出 iOS 時常見的三大錯誤排解：ld library not found for -liPhone-lib 的 Library Search Paths 修正、armv7/arm64 架構不符的 iOS Deployment Target 設定，以及 ERROR ITMS-90534 需使用 Xcode 11.2.1 的解決方法。"
+keywords: ["Unity", "Vuforia", "iOS", "Xcode", "ld linker error", "ITMS-90534", "arm64", "iOS build"]
 draft: false
-showtoc: true
 tags: ["Unity", "Vuforia"]
-aliases:
-  - /posts/ios-build-note-for-unity-2019-vuforia/
 ---
 
 ## 前言

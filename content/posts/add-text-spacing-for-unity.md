@@ -1,13 +1,11 @@
 ---
 title: "Add Text Spacing for Unity"
 date: 2020-04-08
-summary: "在 UnityEngine.UI.Text 增加 TextSpacing，且調整 TextSpacing 的 Spacing 調整文字間格。"
-keywords: ["Unity"]
+summary: "想讓 Unity uGUI Text 支援自訂字間距？這篇提供完整的 TextSpacing 元件實作，繼承 BaseMeshEffect 並支援左中右對齊，複製貼上就能用！"
+description: "本文介紹如何在 Unity UnityEngine.UI.Text 中實作 TextSpacing 元件，透過繼承 BaseMeshEffect 修改 Mesh 頂點位置來調整字間距，支援左中右三種水平對齊方式，附完整 C# 程式碼。"
+keywords: ["Unity", "uGUI", "TextSpacing", "BaseMeshEffect", "UI", "C#"]
 draft: false
-showtoc: true
 tags: ["Unity"]
-aliases:
-  - /posts/add-text-spacing-for-unity/
 ---
 
 ## 前言

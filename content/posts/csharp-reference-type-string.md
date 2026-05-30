@@ -1,10 +1,10 @@
 ---
 title: "C# Reference Type String"
 date: 2024-06-22T17:40:52+08:00
-description: "淺談 C# Reference Type String"
-keywords: ["C#", "Reference Type", "Value Type", "String"]
+summary: "String 看起來像 Value Type，但其實是 Reference Type？本文用 ReferenceEquals 實測帶你搞懂 String 的不可變性（immutability）與記憶體運作原理。"
+description: "C# 的 String 雖然是 Reference Type，卻表現得像 Value Type，原因在於其不可變性（immutability）。本文透過程式碼實驗與 ReferenceEquals 比較，解析 String Interning 與記憶體管理機制，以及為何需要使用 StringBuilder。"
+keywords: ["C#", "String", "Reference Type", "immutability", "String Interning", "StringBuilder", ".NET"]
 draft: false
-showtoc: true
 tags: ["CSharp"]
 aliases:
   - /posts/csharpreferencetypestring/

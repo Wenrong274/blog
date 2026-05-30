@@ -1,10 +1,10 @@
 ---
 title: "心得 模板模式"
 date: 2024-03-18
-description: "主要是針對深入淺出設計模式書籍，提到的模板模式的心得。"
-keywords: ["Design Pattern", "Composite Pattern"]
+summary: "模板模式跟策略模式傻傻分不清楚？本文用「骨架」的概念一次說清楚，並討論好萊塢守則與依賴反轉原則的異同，讀完馬上能區分！"
+description: "《深入淺出設計模式》模板模式（Template Method Pattern）讀書心得。說明以 abstract class 定義骨架流程的核心概念、掛勾（Hook）的彈性應用、與策略模式的差異，以及好萊塢守則和依賴反轉原則之間的關係。"
+keywords: ["Design Pattern", "Template Method Pattern", "Strategy Pattern", "Abstract Class", "Hollywood Principle", "Dependency Inversion", "GoF", "C#"]
 draft: false
-showtoc: true
 tags: ["Design Pattern"]
 aliases:
   - /posts/designpattern-template/

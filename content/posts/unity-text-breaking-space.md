@@ -1,10 +1,10 @@
 ---
 title: "Unity Text Breaking Space"
 date: 2022-12-03
-description: "Unity Text 中英混雜字串，導致 Space 字串跳行問題"
-keywords: ["Unity"]
+summary: "Unity Text 顯示中英混合文字時，英文總是跑到下一行？問題出在 Space 換行，用 \\u00A0 取代空格就能解決，一行 code 搞定！"
+description: "解決 Unity uGUI Text 在中英混雜字串中因空格（Space）導致英文換行的問題，使用 Unicode 非斷行空格（\\u00A0，No-Break Space）取代一般空格，附 C# 字串替換方法與修正前後的截圖對比。"
+keywords: ["Unity", "uGUI", "Text", "no-break space", "Unicode", "line break", "Chinese English mixed text", "UI bug"]
 draft: false
-showtoc: true
 tags: ["Unity"]
 aliases:
   - /posts/unitytextbreakingspace/
