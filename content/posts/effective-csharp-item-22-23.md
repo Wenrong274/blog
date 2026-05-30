@@ -6,6 +6,8 @@ keywords: ["Effective C#", "C#"]
 draft: false
 showtoc: true
 tags: ["C#"]
+aliases:
+  - /posts/effectivecsharpitme22-23/
 ---
 
 ## 做法 22

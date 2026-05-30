@@ -6,6 +6,8 @@ keywords: ["iOS"]
 draft: false
 showtoc: true
 tags: ["iOS"]
+aliases:
+  - /posts/xcode_command_phasescriptexecution_failed/
 ---
 
 ## 前言

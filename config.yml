@@ -1,5 +1,5 @@
 baseURL: "https://wenrong-nexus.com/"
-locale: zh # en-us
+locale: zh-Hant # en-us
 title: Wenrong Nexus
 paginate: 5
 theme: PaperMod
