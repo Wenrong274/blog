@@ -2,13 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://wenrong-nexus.com/tags/ai/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/tags/game-development/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/posts/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/tags/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/tags/unity/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
+    <loc>https://wenrong-nexus.com/posts/ai-heavy-solo-game-postmortem/</loc>
+    <lastmod>2026-07-21T00:27:52+08:00</lastmod>
+  </url><url>
     <loc>https://wenrong-nexus.com/profile/about/</loc>
     <lastmod>2026-05-31T00:33:46+08:00</lastmod>
   </url><url>
     <loc>https://wenrong-nexus.com/profile/</loc>
-    <lastmod>2026-05-31T00:33:46+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrong-nexus.com/</loc>
     <lastmod>2026-05-31T00:33:46+08:00</lastmod>
   </url><url>
     <loc>https://wenrong-nexus.com/tags/c%23/</loc>
@@ -20,13 +38,7 @@
     <loc>https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-22-23/</loc>
     <lastmod>2026-05-31T00:18:59+08:00</lastmod>
   </url><url>
-    <loc>https://wenrong-nexus.com/posts/</loc>
-    <lastmod>2026-05-31T00:33:46+08:00</lastmod>
-  </url><url>
     <loc>https://wenrong-nexus.com/series/</loc>
-    <lastmod>2026-05-31T00:33:46+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrong-nexus.com/tags/</loc>
     <lastmod>2026-05-31T00:33:46+08:00</lastmod>
   </url><url>
     <loc>https://wenrong-nexus.com/posts/effective-c%23-%E5%81%9A%E6%B3%95-20-21/</loc>
@@ -121,9 +133,6 @@
   </url><url>
     <loc>https://wenrong-nexus.com/posts/xcode-command-phasescriptexecution-failed/</loc>
     <lastmod>2026-05-30T23:58:48+08:00</lastmod>
-  </url><url>
-    <loc>https://wenrong-nexus.com/tags/unity/</loc>
-    <lastmod>2026-05-31T00:33:46+08:00</lastmod>
   </url><url>
     <loc>https://wenrong-nexus.com/posts/unity2021-video-player-crash/</loc>
     <lastmod>2026-05-30T23:58:48+08:00</lastmod>
