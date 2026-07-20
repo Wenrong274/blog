@@ -1,6 +1,6 @@
 ---
 title: "用重度 AI Workflow 做了一個 Solo 遊戲，然後砍掉——我學到什麼"
-date: 2026-07-21
+date: 2026-07-21T00:00:00+08:00
 slug: "ai-heavy-solo-game-postmortem"
 summary: "我用 Claude Code、Unity MCP、Subagent、Hooks 與 CI，在 29 天內完成一個 Unity Solo 遊戲 Demo，繳交後卻決定結案。這不是『AI 一天做完遊戲』的成功故事，而是一次關於工具鏈成本、驗證邊界與知道何時停手的誠實覆盤。"
 description: "Unity Solo 遊戲 Bulwark 的 AI-heavy 開發覆盤：29 天、541 個 commits、378 個測試，從 Claude Code、Unity MCP、DOER/CHECKER 到主動拆除 Skill 堆疊，整理 AI Coding 真正有效與失效的地方。"
